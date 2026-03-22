@@ -37,11 +37,11 @@ DEFAULT_KEYWORDS = [
     ("10X", "10x"),
     ("CosMx", "cosmx"),
     ("GeoMx", "geomx"),
+    ("MerFISH", "merfish"),
     ("nCounter", "ncounter"),
     ("CellScape", "cellscape"),
     ("PaintScape", "paintscape"),
-    ("Vizgen", "vizgen"),
-    ("Singular", "singular"),
+    ("G4X", "g4x"),
     ("Beacon + Bruker", "beacon +bruker"),
     ("Bruker", "bruker"),
 ]
@@ -54,13 +54,13 @@ TERM_PATTERNS = OrderedDict(
         ("10X", [r"\b10x\b", r"\b10x genomics\b"]),
         ("CosMx", [r"\bcosmx\b"]),
         ("GeoMx", [r"\bgeomx\b"]),
+        ("MerFISH", [r"\bmerfish\b"]),
         ("nCounter", [r"\bncounter\b"]),
         ("Bruker", [r"\bbruker\b"]),
         ("Beacon", [r"\bbeacon\b"]),
         ("CellScape", [r"\bcellscape\b"]),
         ("PaintScape", [r"\bpaintscape\b"]),
-        ("Vizgen", [r"\bvizgen\b"]),
-        ("Singular", [r"\bsingular\b"]),
+        ("G4X", [r"\bg4x\b"]),
     ]
 )
 
@@ -774,6 +774,21 @@ def render_summary_page(summary_rows: Sequence[dict]) -> str:
       <div class="summary-grid">
         {''.join(summary_items)}
       </div>
+      <div class="section-title">
+        <h2>Derived Views</h2>
+      </div>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <a href="cross_platform.html">Cross Platform</a> flags presentations that mention more than one tracked product keyword,
+          excluding 10X and Bruker.
+        </div>
+        <div class="summary-item">
+          <a href="combined_keyword_tables.html">Combined keyword tables</a> keep every tracked cohort on one page for copy-paste review.
+        </div>
+        <div class="summary-item">
+          <a href="insights.html">Insights dashboard</a> summarizes overlaps, institutions, and geography.
+        </div>
+      </div>
       <div class="footer-note">
         Counts are based on keyword searches run against the AACR Annual Meeting 2026 planner on {time.strftime('%Y-%m-%d')}.
       </div>
@@ -806,6 +821,9 @@ def render_combined_page(summary_rows: Sequence[dict], keyword_rows: Dict[str, L
       </div>
       {''.join(sections)}
       <div class="footer-note">
+        Derived views:
+        <a href="cross_platform.html">Cross Platform</a> |
+        <a href="insights.html">Insights Dashboard</a><br>
         Table columns follow the same structure as the reference flyer: abstract number, authors, affiliation, title, and detected products.
       </div>
     </div>
@@ -827,6 +845,33 @@ def render_single_keyword_page(keyword: str, rows: Sequence[dict]) -> str:
     </div>
     """
     return render_page(f"{keyword} Presentations", body)
+
+
+def compute_cross_platform_rows(unique_rows: Sequence[dict]) -> List[dict]:
+    rows = [row for row in unique_rows if len(set(row["products"])) > 1]
+    return sorted(
+        rows,
+        key=lambda row: (-len(set(row["products"])), natural_abstract_sort_key(row["presentation_number"])),
+    )
+
+
+def render_cross_platform_page(rows: Sequence[dict]) -> str:
+    body = f"""
+    <div class="hero">
+      <div class="eyebrow">AACR 2026</div>
+      <h1>Cross Platform</h1>
+    </div>
+    <div class="content">
+      <div class="footer-note">
+        {len(rows)} presentations mention more than one tracked product keyword. 10X and Bruker are excluded from this derived list.
+      </div>
+      {render_keyword_section("Cross Platform", rows, include_title=False)}
+      <div class="footer-note">
+        Products are derived from tracked platform names only, so this page is a quick shortlist of abstracts that bridge multiple product families.
+      </div>
+    </div>
+    """
+    return render_page("Cross Platform", body)
 
 
 def build_keyword_specs(values: Optional[Sequence[str]]) -> List[KeywordSpec]:
@@ -1473,6 +1518,7 @@ def main() -> int:
     keyword_geography = compute_keyword_geography(keyword_rows, search_summary_rows)
     product_rows = compute_product_rows(unique_rows)
     day_rows = compute_day_rows(unique_rows)
+    cross_platform_rows = compute_cross_platform_rows(unique_rows)
 
     write_json(data_dir / "keyword_summary.json", search_summary_rows)
     write_json(data_dir / "presentations_unique.json", unique_rows)
@@ -1484,6 +1530,7 @@ def main() -> int:
     write_json(data_dir / "keyword_geography.json", keyword_geography)
     write_json(data_dir / "product_counts.json", product_rows)
     write_json(data_dir / "day_counts.json", day_rows)
+    write_json(data_dir / "cross_platform.json", cross_platform_rows)
 
     write_csv(
         data_dir / "keyword_summary.csv",
@@ -1588,6 +1635,39 @@ def main() -> int:
         day_rows,
         ["day", "presentation_count"],
     )
+    write_csv(
+        data_dir / "cross_platform.csv",
+        [
+            {
+                **row,
+                "products": csv_join(row["products"]),
+                "source_keywords": csv_join(row["source_keywords"]),
+            }
+            for row in cross_platform_rows
+        ],
+        [
+            "presentation_id",
+            "presentation_number",
+            "title",
+            "session_title",
+            "session_id",
+            "start",
+            "end",
+            "posterboard_number",
+            "authors",
+            "affiliation",
+            "abstract",
+            "disclosures",
+            "presenter",
+            "activity",
+            "status",
+            "keywords_field",
+            "topics_field",
+            "products",
+            "source_keywords",
+            "presentation_url",
+        ],
+    )
 
     summary_html = render_summary_page(search_summary_rows)
     (html_dir / "index.html").parent.mkdir(parents=True, exist_ok=True)
@@ -1612,8 +1692,16 @@ def main() -> int:
         ),
         encoding="utf-8",
     )
+    (html_dir / "cross_platform.html").write_text(
+        render_cross_platform_page(cross_platform_rows),
+        encoding="utf-8",
+    )
 
     keyword_html_dir.mkdir(parents=True, exist_ok=True)
+    expected_keyword_files = {f"{table_slug(keyword)}.html" for keyword in keyword_rows}
+    for stale_path in keyword_html_dir.glob("*.html"):
+        if stale_path.name not in expected_keyword_files:
+            stale_path.unlink()
     for keyword, rows in keyword_rows.items():
         (keyword_html_dir / f"{table_slug(keyword)}.html").write_text(
             render_single_keyword_page(keyword, rows),
