@@ -1,0 +1,35 @@
+left,right,shared_presentations,jaccard_pct
+Visium,10X,41,23.7
+Xenium,10X,34,18.6
+Xenium,Visium,26,16.0
+Xenium,Xenium + 5K,26,27.1
+CosMx,Bruker,20,24.1
+nCounter,Bruker,8,12.1
+Chromium,10X,7,5.6
+Xenium,CosMx,7,5.1
+Xenium + 5K,10X,7,5.0
+Xenium + 5K,Visium,7,6.2
+CellScape,Bruker,5,9.1
+Visium,CosMx,5,3.6
+10X,CosMx,4,2.4
+CosMx,GeoMx,4,5.0
+GeoMx,Bruker,4,4.7
+PaintScape,Bruker,4,7.4
+10X,Bruker,3,1.7
+Beacon + Bruker,Bruker,3,5.6
+Visium,GeoMx,3,2.4
+Xenium,GeoMx,3,2.3
+CosMx,CellScape,2,3.8
+CosMx,nCounter,2,3.0
+Xenium + 5K,CosMx,2,2.7
+Xenium + 5K,GeoMx,2,3.4
+10X,CellScape,1,0.8
+10X,GeoMx,1,0.6
+Chromium,CosMx,1,1.7
+CosMx,Beacon + Bruker,1,2.0
+CosMx,PaintScape,1,1.9
+GeoMx,nCounter,1,1.9
+Visium,Bruker,1,0.7
+Visium,Chromium,1,1.0
+Xenium,Bruker,1,0.7
+Xenium,Chromium,1,0.9

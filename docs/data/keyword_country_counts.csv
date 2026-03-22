@@ -1,0 +1,114 @@
+keyword,country,iso3,presentation_count
+Xenium,United States,USA,169
+Xenium,Germany,DEU,59
+Xenium,Japan,JPN,35
+Xenium,South Korea,KOR,24
+Xenium,Switzerland,CHE,12
+Xenium,Spain,ESP,10
+Xenium,United Kingdom,GBR,10
+Xenium,Australia,AUS,6
+Xenium,China,CHN,6
+Xenium,Canada,CAN,4
+Xenium,Belgium,BEL,3
+Xenium,Austria,AUT,3
+Xenium,Italy,ITA,3
+Xenium,France,FRA,2
+Xenium,Ireland,IRL,1
+Xenium,Sweden,SWE,1
+Xenium,Taiwan,TWN,1
+Xenium,Israel,ISR,1
+Xenium + 5K,United States,USA,48
+Xenium + 5K,Japan,JPN,26
+Xenium + 5K,South Korea,KOR,16
+Xenium + 5K,China,CHN,4
+Xenium + 5K,Switzerland,CHE,2
+Xenium + 5K,Australia,AUS,1
+Xenium + 5K,Sweden,SWE,1
+Xenium + 5K,Canada,CAN,1
+Visium,United States,USA,178
+Visium,Japan,JPN,41
+Visium,South Korea,KOR,19
+Visium,Canada,CAN,15
+Visium,France,FRA,10
+Visium,Germany,DEU,8
+Visium,China,CHN,8
+Visium,Taiwan,TWN,6
+Visium,Australia,AUS,4
+Visium,United Kingdom,GBR,3
+Visium,Norway,NOR,1
+Visium,Italy,ITA,1
+Visium,Switzerland,CHE,1
+Visium,Brazil,BRA,1
+Visium,Israel,ISR,1
+Chromium,United States,USA,16
+Chromium,Spain,ESP,3
+Chromium,South Korea,KOR,3
+Chromium,France,FRA,2
+Chromium,Germany,DEU,1
+Chromium,China,CHN,1
+Chromium,Mexico,MEX,1
+10X,United States,USA,244
+10X,Japan,JPN,25
+10X,Germany,DEU,22
+10X,South Korea,KOR,20
+10X,Australia,AUS,15
+10X,United Kingdom,GBR,12
+10X,Spain,ESP,12
+10X,Canada,CAN,7
+10X,China,CHN,7
+10X,Switzerland,CHE,5
+10X,Italy,ITA,3
+10X,Hong Kong,HKG,3
+10X,Belgium,BEL,2
+10X,Austria,AUT,2
+10X,France,FRA,2
+10X,Norway,NOR,1
+10X,Taiwan,TWN,1
+10X,Israel,ISR,1
+CosMx,United States,USA,124
+CosMx,United Kingdom,GBR,13
+CosMx,Canada,CAN,9
+CosMx,China,CHN,6
+CosMx,Netherlands,NLD,5
+CosMx,Hong Kong,HKG,5
+CosMx,South Korea,KOR,3
+CosMx,Italy,ITA,3
+CosMx,Germany,DEU,2
+CosMx,Sweden,SWE,1
+CosMx,India,IND,1
+GeoMx,United States,USA,62
+GeoMx,Canada,CAN,19
+GeoMx,Italy,ITA,10
+GeoMx,South Korea,KOR,9
+GeoMx,Japan,JPN,6
+GeoMx,France,FRA,6
+GeoMx,Finland,FIN,4
+GeoMx,India,IND,3
+GeoMx,China,CHN,2
+GeoMx,United Kingdom,GBR,2
+GeoMx,Netherlands,NLD,1
+GeoMx,Taiwan,TWN,1
+nCounter,United States,USA,36
+nCounter,Taiwan,TWN,9
+nCounter,Italy,ITA,7
+nCounter,Spain,ESP,5
+nCounter,Hong Kong,HKG,1
+nCounter,United Kingdom,GBR,1
+nCounter,India,IND,1
+nCounter,Mexico,MEX,1
+CellScape,United States,USA,8
+CellScape,Germany,DEU,4
+CellScape,South Korea,KOR,3
+PaintScape,United States,USA,7
+Beacon + Bruker,United States,USA,4
+Beacon + Bruker,France,FRA,2
+Bruker,United States,USA,96
+Bruker,United Kingdom,GBR,13
+Bruker,Germany,DEU,7
+Bruker,Netherlands,NLD,4
+Bruker,France,FRA,2
+Bruker,Canada,CAN,2
+Bruker,Switzerland,CHE,2
+Bruker,Sweden,SWE,1
+Bruker,India,IND,1
+Bruker,Mexico,MEX,1

@@ -1,0 +1,86 @@
+[
+  {
+    "keyword": "Xenium",
+    "query": "xenium",
+    "count": 96,
+    "search_id": "16031",
+    "status": "Complete"
+  },
+  {
+    "keyword": "Xenium + 5K",
+    "query": "xenium +5k",
+    "count": 26,
+    "search_id": "48825",
+    "status": "Complete"
+  },
+  {
+    "keyword": "Visium",
+    "query": "visium",
+    "count": 93,
+    "search_id": "16030",
+    "status": "Complete"
+  },
+  {
+    "keyword": "Chromium",
+    "query": "chromium",
+    "count": 11,
+    "search_id": "48605",
+    "status": "Complete"
+  },
+  {
+    "keyword": "10X",
+    "query": "10x",
+    "count": 121,
+    "search_id": "2898",
+    "status": "Complete"
+  },
+  {
+    "keyword": "CosMx",
+    "query": "cosmx",
+    "count": 49,
+    "search_id": "16032",
+    "status": "Complete"
+  },
+  {
+    "keyword": "GeoMx",
+    "query": "geomx",
+    "count": 35,
+    "search_id": "48606",
+    "status": "Complete"
+  },
+  {
+    "keyword": "nCounter",
+    "query": "ncounter",
+    "count": 20,
+    "search_id": "48607",
+    "status": "Complete"
+  },
+  {
+    "keyword": "CellScape",
+    "query": "cellscape",
+    "count": 6,
+    "search_id": "48823",
+    "status": "Complete"
+  },
+  {
+    "keyword": "PaintScape",
+    "query": "paintscape",
+    "count": 4,
+    "search_id": "48824",
+    "status": "Complete"
+  },
+  {
+    "keyword": "Beacon + Bruker",
+    "query": "beacon +bruker",
+    "count": 3,
+    "search_id": "48897",
+    "status": "Complete"
+  },
+  {
+    "keyword": "Bruker",
+    "query": "bruker",
+    "count": 54,
+    "search_id": "8092",
+    "status": "Complete"
+  }
+]

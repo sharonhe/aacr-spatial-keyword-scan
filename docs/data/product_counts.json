@@ -1,0 +1,38 @@
+[
+  {
+    "product": "Xenium",
+    "presentation_count": 96
+  },
+  {
+    "product": "Visium",
+    "presentation_count": 93
+  },
+  {
+    "product": "CosMx",
+    "presentation_count": 49
+  },
+  {
+    "product": "GeoMx",
+    "presentation_count": 35
+  },
+  {
+    "product": "nCounter",
+    "presentation_count": 20
+  },
+  {
+    "product": "Chromium",
+    "presentation_count": 11
+  },
+  {
+    "product": "CellScape",
+    "presentation_count": 6
+  },
+  {
+    "product": "PaintScape",
+    "presentation_count": 4
+  },
+  {
+    "product": "Beacon",
+    "presentation_count": 3
+  }
+]

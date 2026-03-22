@@ -1,0 +1,1521 @@
+{
+  "Xenium": {
+    "count": 96,
+    "countries": [
+      {
+        "country": "United States",
+        "iso3": "USA",
+        "presentation_count": 169
+      },
+      {
+        "country": "Germany",
+        "iso3": "DEU",
+        "presentation_count": 59
+      },
+      {
+        "country": "Japan",
+        "iso3": "JPN",
+        "presentation_count": 35
+      },
+      {
+        "country": "South Korea",
+        "iso3": "KOR",
+        "presentation_count": 24
+      },
+      {
+        "country": "Switzerland",
+        "iso3": "CHE",
+        "presentation_count": 12
+      },
+      {
+        "country": "Spain",
+        "iso3": "ESP",
+        "presentation_count": 10
+      },
+      {
+        "country": "United Kingdom",
+        "iso3": "GBR",
+        "presentation_count": 10
+      },
+      {
+        "country": "Australia",
+        "iso3": "AUS",
+        "presentation_count": 6
+      },
+      {
+        "country": "China",
+        "iso3": "CHN",
+        "presentation_count": 6
+      },
+      {
+        "country": "Canada",
+        "iso3": "CAN",
+        "presentation_count": 4
+      },
+      {
+        "country": "Belgium",
+        "iso3": "BEL",
+        "presentation_count": 3
+      },
+      {
+        "country": "Austria",
+        "iso3": "AUT",
+        "presentation_count": 3
+      },
+      {
+        "country": "Italy",
+        "iso3": "ITA",
+        "presentation_count": 3
+      },
+      {
+        "country": "France",
+        "iso3": "FRA",
+        "presentation_count": 2
+      },
+      {
+        "country": "Ireland",
+        "iso3": "IRL",
+        "presentation_count": 1
+      },
+      {
+        "country": "Sweden",
+        "iso3": "SWE",
+        "presentation_count": 1
+      },
+      {
+        "country": "Taiwan",
+        "iso3": "TWN",
+        "presentation_count": 1
+      },
+      {
+        "country": "Israel",
+        "iso3": "ISR",
+        "presentation_count": 1
+      }
+    ],
+    "states": [
+      {
+        "state_code": "TX",
+        "state_name": "Texas",
+        "presentation_count": 35
+      },
+      {
+        "state_code": "CA",
+        "state_name": "California",
+        "presentation_count": 31
+      },
+      {
+        "state_code": "NY",
+        "state_name": "New York",
+        "presentation_count": 24
+      },
+      {
+        "state_code": "MD",
+        "state_name": "Maryland",
+        "presentation_count": 11
+      },
+      {
+        "state_code": "NC",
+        "state_name": "North Carolina",
+        "presentation_count": 11
+      },
+      {
+        "state_code": "MA",
+        "state_name": "Massachusetts",
+        "presentation_count": 9
+      },
+      {
+        "state_code": "CT",
+        "state_name": "Connecticut",
+        "presentation_count": 7
+      },
+      {
+        "state_code": "VA",
+        "state_name": "Virginia",
+        "presentation_count": 6
+      },
+      {
+        "state_code": "PA",
+        "state_name": "Pennsylvania",
+        "presentation_count": 4
+      },
+      {
+        "state_code": "MO",
+        "state_name": "Missouri",
+        "presentation_count": 4
+      },
+      {
+        "state_code": "WA",
+        "state_name": "Washington",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "FL",
+        "state_name": "Florida",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "MN",
+        "state_name": "Minnesota",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "IN",
+        "state_name": "Indiana",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "DC",
+        "state_name": "District of Columbia",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "IL",
+        "state_name": "Illinois",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "OR",
+        "state_name": "Oregon",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "NJ",
+        "state_name": "New Jersey",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "AL",
+        "state_name": "Alabama",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "GA",
+        "state_name": "Georgia",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "TN",
+        "state_name": "Tennessee",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "ME",
+        "state_name": "Maine",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "AZ",
+        "state_name": "Arizona",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "MI",
+        "state_name": "Michigan",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "DE",
+        "state_name": "Delaware",
+        "presentation_count": 1
+      }
+    ]
+  },
+  "Xenium + 5K": {
+    "count": 26,
+    "countries": [
+      {
+        "country": "United States",
+        "iso3": "USA",
+        "presentation_count": 48
+      },
+      {
+        "country": "Japan",
+        "iso3": "JPN",
+        "presentation_count": 26
+      },
+      {
+        "country": "South Korea",
+        "iso3": "KOR",
+        "presentation_count": 16
+      },
+      {
+        "country": "China",
+        "iso3": "CHN",
+        "presentation_count": 4
+      },
+      {
+        "country": "Switzerland",
+        "iso3": "CHE",
+        "presentation_count": 2
+      },
+      {
+        "country": "Australia",
+        "iso3": "AUS",
+        "presentation_count": 1
+      },
+      {
+        "country": "Sweden",
+        "iso3": "SWE",
+        "presentation_count": 1
+      },
+      {
+        "country": "Canada",
+        "iso3": "CAN",
+        "presentation_count": 1
+      }
+    ],
+    "states": [
+      {
+        "state_code": "TX",
+        "state_name": "Texas",
+        "presentation_count": 11
+      },
+      {
+        "state_code": "NY",
+        "state_name": "New York",
+        "presentation_count": 9
+      },
+      {
+        "state_code": "VA",
+        "state_name": "Virginia",
+        "presentation_count": 6
+      },
+      {
+        "state_code": "MD",
+        "state_name": "Maryland",
+        "presentation_count": 4
+      },
+      {
+        "state_code": "WA",
+        "state_name": "Washington",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "MA",
+        "state_name": "Massachusetts",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "PA",
+        "state_name": "Pennsylvania",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "IN",
+        "state_name": "Indiana",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "IL",
+        "state_name": "Illinois",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "NC",
+        "state_name": "North Carolina",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "TN",
+        "state_name": "Tennessee",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "FL",
+        "state_name": "Florida",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "CA",
+        "state_name": "California",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "DC",
+        "state_name": "District of Columbia",
+        "presentation_count": 1
+      }
+    ]
+  },
+  "Visium": {
+    "count": 93,
+    "countries": [
+      {
+        "country": "United States",
+        "iso3": "USA",
+        "presentation_count": 178
+      },
+      {
+        "country": "Japan",
+        "iso3": "JPN",
+        "presentation_count": 41
+      },
+      {
+        "country": "South Korea",
+        "iso3": "KOR",
+        "presentation_count": 19
+      },
+      {
+        "country": "Canada",
+        "iso3": "CAN",
+        "presentation_count": 15
+      },
+      {
+        "country": "France",
+        "iso3": "FRA",
+        "presentation_count": 10
+      },
+      {
+        "country": "Germany",
+        "iso3": "DEU",
+        "presentation_count": 8
+      },
+      {
+        "country": "China",
+        "iso3": "CHN",
+        "presentation_count": 8
+      },
+      {
+        "country": "Taiwan",
+        "iso3": "TWN",
+        "presentation_count": 6
+      },
+      {
+        "country": "Australia",
+        "iso3": "AUS",
+        "presentation_count": 4
+      },
+      {
+        "country": "United Kingdom",
+        "iso3": "GBR",
+        "presentation_count": 3
+      },
+      {
+        "country": "Norway",
+        "iso3": "NOR",
+        "presentation_count": 1
+      },
+      {
+        "country": "Italy",
+        "iso3": "ITA",
+        "presentation_count": 1
+      },
+      {
+        "country": "Switzerland",
+        "iso3": "CHE",
+        "presentation_count": 1
+      },
+      {
+        "country": "Brazil",
+        "iso3": "BRA",
+        "presentation_count": 1
+      },
+      {
+        "country": "Israel",
+        "iso3": "ISR",
+        "presentation_count": 1
+      }
+    ],
+    "states": [
+      {
+        "state_code": "CA",
+        "state_name": "California",
+        "presentation_count": 38
+      },
+      {
+        "state_code": "TX",
+        "state_name": "Texas",
+        "presentation_count": 26
+      },
+      {
+        "state_code": "MD",
+        "state_name": "Maryland",
+        "presentation_count": 13
+      },
+      {
+        "state_code": "IL",
+        "state_name": "Illinois",
+        "presentation_count": 12
+      },
+      {
+        "state_code": "PA",
+        "state_name": "Pennsylvania",
+        "presentation_count": 11
+      },
+      {
+        "state_code": "FL",
+        "state_name": "Florida",
+        "presentation_count": 10
+      },
+      {
+        "state_code": "NY",
+        "state_name": "New York",
+        "presentation_count": 8
+      },
+      {
+        "state_code": "VA",
+        "state_name": "Virginia",
+        "presentation_count": 6
+      },
+      {
+        "state_code": "OH",
+        "state_name": "Ohio",
+        "presentation_count": 6
+      },
+      {
+        "state_code": "MA",
+        "state_name": "Massachusetts",
+        "presentation_count": 5
+      },
+      {
+        "state_code": "NM",
+        "state_name": "New Mexico",
+        "presentation_count": 5
+      },
+      {
+        "state_code": "NC",
+        "state_name": "North Carolina",
+        "presentation_count": 5
+      },
+      {
+        "state_code": "OR",
+        "state_name": "Oregon",
+        "presentation_count": 5
+      },
+      {
+        "state_code": "NH",
+        "state_name": "New Hampshire",
+        "presentation_count": 4
+      },
+      {
+        "state_code": "CO",
+        "state_name": "Colorado",
+        "presentation_count": 4
+      },
+      {
+        "state_code": "GA",
+        "state_name": "Georgia",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "MN",
+        "state_name": "Minnesota",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "IN",
+        "state_name": "Indiana",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "MO",
+        "state_name": "Missouri",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "TN",
+        "state_name": "Tennessee",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "NJ",
+        "state_name": "New Jersey",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "CT",
+        "state_name": "Connecticut",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "WI",
+        "state_name": "Wisconsin",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "WA",
+        "state_name": "Washington",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "MI",
+        "state_name": "Michigan",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "AL",
+        "state_name": "Alabama",
+        "presentation_count": 1
+      }
+    ]
+  },
+  "Chromium": {
+    "count": 11,
+    "countries": [
+      {
+        "country": "United States",
+        "iso3": "USA",
+        "presentation_count": 16
+      },
+      {
+        "country": "Spain",
+        "iso3": "ESP",
+        "presentation_count": 3
+      },
+      {
+        "country": "South Korea",
+        "iso3": "KOR",
+        "presentation_count": 3
+      },
+      {
+        "country": "France",
+        "iso3": "FRA",
+        "presentation_count": 2
+      },
+      {
+        "country": "Germany",
+        "iso3": "DEU",
+        "presentation_count": 1
+      },
+      {
+        "country": "China",
+        "iso3": "CHN",
+        "presentation_count": 1
+      },
+      {
+        "country": "Mexico",
+        "iso3": "MEX",
+        "presentation_count": 1
+      }
+    ],
+    "states": [
+      {
+        "state_code": "MD",
+        "state_name": "Maryland",
+        "presentation_count": 6
+      },
+      {
+        "state_code": "CA",
+        "state_name": "California",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "NY",
+        "state_name": "New York",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "NM",
+        "state_name": "New Mexico",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "IN",
+        "state_name": "Indiana",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "TX",
+        "state_name": "Texas",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "MI",
+        "state_name": "Michigan",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "MN",
+        "state_name": "Minnesota",
+        "presentation_count": 1
+      }
+    ]
+  },
+  "10X": {
+    "count": 121,
+    "countries": [
+      {
+        "country": "United States",
+        "iso3": "USA",
+        "presentation_count": 244
+      },
+      {
+        "country": "Japan",
+        "iso3": "JPN",
+        "presentation_count": 25
+      },
+      {
+        "country": "Germany",
+        "iso3": "DEU",
+        "presentation_count": 22
+      },
+      {
+        "country": "South Korea",
+        "iso3": "KOR",
+        "presentation_count": 20
+      },
+      {
+        "country": "Australia",
+        "iso3": "AUS",
+        "presentation_count": 15
+      },
+      {
+        "country": "United Kingdom",
+        "iso3": "GBR",
+        "presentation_count": 12
+      },
+      {
+        "country": "Spain",
+        "iso3": "ESP",
+        "presentation_count": 12
+      },
+      {
+        "country": "Canada",
+        "iso3": "CAN",
+        "presentation_count": 7
+      },
+      {
+        "country": "China",
+        "iso3": "CHN",
+        "presentation_count": 7
+      },
+      {
+        "country": "Switzerland",
+        "iso3": "CHE",
+        "presentation_count": 5
+      },
+      {
+        "country": "Italy",
+        "iso3": "ITA",
+        "presentation_count": 3
+      },
+      {
+        "country": "Hong Kong",
+        "iso3": "HKG",
+        "presentation_count": 3
+      },
+      {
+        "country": "Belgium",
+        "iso3": "BEL",
+        "presentation_count": 2
+      },
+      {
+        "country": "Austria",
+        "iso3": "AUT",
+        "presentation_count": 2
+      },
+      {
+        "country": "France",
+        "iso3": "FRA",
+        "presentation_count": 2
+      },
+      {
+        "country": "Norway",
+        "iso3": "NOR",
+        "presentation_count": 1
+      },
+      {
+        "country": "Taiwan",
+        "iso3": "TWN",
+        "presentation_count": 1
+      },
+      {
+        "country": "Israel",
+        "iso3": "ISR",
+        "presentation_count": 1
+      }
+    ],
+    "states": [
+      {
+        "state_code": "CA",
+        "state_name": "California",
+        "presentation_count": 50
+      },
+      {
+        "state_code": "NY",
+        "state_name": "New York",
+        "presentation_count": 30
+      },
+      {
+        "state_code": "MD",
+        "state_name": "Maryland",
+        "presentation_count": 25
+      },
+      {
+        "state_code": "TX",
+        "state_name": "Texas",
+        "presentation_count": 22
+      },
+      {
+        "state_code": "MA",
+        "state_name": "Massachusetts",
+        "presentation_count": 13
+      },
+      {
+        "state_code": "PA",
+        "state_name": "Pennsylvania",
+        "presentation_count": 13
+      },
+      {
+        "state_code": "NC",
+        "state_name": "North Carolina",
+        "presentation_count": 12
+      },
+      {
+        "state_code": "MN",
+        "state_name": "Minnesota",
+        "presentation_count": 10
+      },
+      {
+        "state_code": "WA",
+        "state_name": "Washington",
+        "presentation_count": 10
+      },
+      {
+        "state_code": "FL",
+        "state_name": "Florida",
+        "presentation_count": 6
+      },
+      {
+        "state_code": "OR",
+        "state_name": "Oregon",
+        "presentation_count": 6
+      },
+      {
+        "state_code": "IN",
+        "state_name": "Indiana",
+        "presentation_count": 5
+      },
+      {
+        "state_code": "NJ",
+        "state_name": "New Jersey",
+        "presentation_count": 5
+      },
+      {
+        "state_code": "OH",
+        "state_name": "Ohio",
+        "presentation_count": 5
+      },
+      {
+        "state_code": "CT",
+        "state_name": "Connecticut",
+        "presentation_count": 4
+      },
+      {
+        "state_code": "MO",
+        "state_name": "Missouri",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "MI",
+        "state_name": "Michigan",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "GA",
+        "state_name": "Georgia",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "DC",
+        "state_name": "District of Columbia",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "NM",
+        "state_name": "New Mexico",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "IL",
+        "state_name": "Illinois",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "VA",
+        "state_name": "Virginia",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "AL",
+        "state_name": "Alabama",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "TN",
+        "state_name": "Tennessee",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "WI",
+        "state_name": "Wisconsin",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "LA",
+        "state_name": "Louisiana",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "VT",
+        "state_name": "Vermont",
+        "presentation_count": 1
+      }
+    ]
+  },
+  "CosMx": {
+    "count": 49,
+    "countries": [
+      {
+        "country": "United States",
+        "iso3": "USA",
+        "presentation_count": 124
+      },
+      {
+        "country": "United Kingdom",
+        "iso3": "GBR",
+        "presentation_count": 13
+      },
+      {
+        "country": "Canada",
+        "iso3": "CAN",
+        "presentation_count": 9
+      },
+      {
+        "country": "China",
+        "iso3": "CHN",
+        "presentation_count": 6
+      },
+      {
+        "country": "Netherlands",
+        "iso3": "NLD",
+        "presentation_count": 5
+      },
+      {
+        "country": "Hong Kong",
+        "iso3": "HKG",
+        "presentation_count": 5
+      },
+      {
+        "country": "South Korea",
+        "iso3": "KOR",
+        "presentation_count": 3
+      },
+      {
+        "country": "Italy",
+        "iso3": "ITA",
+        "presentation_count": 3
+      },
+      {
+        "country": "Germany",
+        "iso3": "DEU",
+        "presentation_count": 2
+      },
+      {
+        "country": "Sweden",
+        "iso3": "SWE",
+        "presentation_count": 1
+      },
+      {
+        "country": "India",
+        "iso3": "IND",
+        "presentation_count": 1
+      }
+    ],
+    "states": [
+      {
+        "state_code": "CA",
+        "state_name": "California",
+        "presentation_count": 18
+      },
+      {
+        "state_code": "WA",
+        "state_name": "Washington",
+        "presentation_count": 13
+      },
+      {
+        "state_code": "MA",
+        "state_name": "Massachusetts",
+        "presentation_count": 13
+      },
+      {
+        "state_code": "TX",
+        "state_name": "Texas",
+        "presentation_count": 12
+      },
+      {
+        "state_code": "NY",
+        "state_name": "New York",
+        "presentation_count": 10
+      },
+      {
+        "state_code": "GA",
+        "state_name": "Georgia",
+        "presentation_count": 10
+      },
+      {
+        "state_code": "OH",
+        "state_name": "Ohio",
+        "presentation_count": 10
+      },
+      {
+        "state_code": "PA",
+        "state_name": "Pennsylvania",
+        "presentation_count": 9
+      },
+      {
+        "state_code": "AZ",
+        "state_name": "Arizona",
+        "presentation_count": 8
+      },
+      {
+        "state_code": "MN",
+        "state_name": "Minnesota",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "MI",
+        "state_name": "Michigan",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "MD",
+        "state_name": "Maryland",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "FL",
+        "state_name": "Florida",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "DC",
+        "state_name": "District of Columbia",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "CT",
+        "state_name": "Connecticut",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "IL",
+        "state_name": "Illinois",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "TN",
+        "state_name": "Tennessee",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "NJ",
+        "state_name": "New Jersey",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "ND",
+        "state_name": "North Dakota",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "WI",
+        "state_name": "Wisconsin",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "MO",
+        "state_name": "Missouri",
+        "presentation_count": 1
+      }
+    ]
+  },
+  "GeoMx": {
+    "count": 35,
+    "countries": [
+      {
+        "country": "United States",
+        "iso3": "USA",
+        "presentation_count": 62
+      },
+      {
+        "country": "Canada",
+        "iso3": "CAN",
+        "presentation_count": 19
+      },
+      {
+        "country": "Italy",
+        "iso3": "ITA",
+        "presentation_count": 10
+      },
+      {
+        "country": "South Korea",
+        "iso3": "KOR",
+        "presentation_count": 9
+      },
+      {
+        "country": "Japan",
+        "iso3": "JPN",
+        "presentation_count": 6
+      },
+      {
+        "country": "France",
+        "iso3": "FRA",
+        "presentation_count": 6
+      },
+      {
+        "country": "Finland",
+        "iso3": "FIN",
+        "presentation_count": 4
+      },
+      {
+        "country": "India",
+        "iso3": "IND",
+        "presentation_count": 3
+      },
+      {
+        "country": "China",
+        "iso3": "CHN",
+        "presentation_count": 2
+      },
+      {
+        "country": "United Kingdom",
+        "iso3": "GBR",
+        "presentation_count": 2
+      },
+      {
+        "country": "Netherlands",
+        "iso3": "NLD",
+        "presentation_count": 1
+      },
+      {
+        "country": "Taiwan",
+        "iso3": "TWN",
+        "presentation_count": 1
+      }
+    ],
+    "states": [
+      {
+        "state_code": "TX",
+        "state_name": "Texas",
+        "presentation_count": 13
+      },
+      {
+        "state_code": "CA",
+        "state_name": "California",
+        "presentation_count": 12
+      },
+      {
+        "state_code": "PA",
+        "state_name": "Pennsylvania",
+        "presentation_count": 9
+      },
+      {
+        "state_code": "MA",
+        "state_name": "Massachusetts",
+        "presentation_count": 6
+      },
+      {
+        "state_code": "MD",
+        "state_name": "Maryland",
+        "presentation_count": 5
+      },
+      {
+        "state_code": "CT",
+        "state_name": "Connecticut",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "NH",
+        "state_name": "New Hampshire",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "NC",
+        "state_name": "North Carolina",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "WA",
+        "state_name": "Washington",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "TN",
+        "state_name": "Tennessee",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "SC",
+        "state_name": "South Carolina",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "VA",
+        "state_name": "Virginia",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "MI",
+        "state_name": "Michigan",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "FL",
+        "state_name": "Florida",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "OH",
+        "state_name": "Ohio",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "UT",
+        "state_name": "Utah",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "LA",
+        "state_name": "Louisiana",
+        "presentation_count": 1
+      }
+    ]
+  },
+  "nCounter": {
+    "count": 20,
+    "countries": [
+      {
+        "country": "United States",
+        "iso3": "USA",
+        "presentation_count": 36
+      },
+      {
+        "country": "Taiwan",
+        "iso3": "TWN",
+        "presentation_count": 9
+      },
+      {
+        "country": "Italy",
+        "iso3": "ITA",
+        "presentation_count": 7
+      },
+      {
+        "country": "Spain",
+        "iso3": "ESP",
+        "presentation_count": 5
+      },
+      {
+        "country": "Hong Kong",
+        "iso3": "HKG",
+        "presentation_count": 1
+      },
+      {
+        "country": "United Kingdom",
+        "iso3": "GBR",
+        "presentation_count": 1
+      },
+      {
+        "country": "India",
+        "iso3": "IND",
+        "presentation_count": 1
+      },
+      {
+        "country": "Mexico",
+        "iso3": "MEX",
+        "presentation_count": 1
+      }
+    ],
+    "states": [
+      {
+        "state_code": "WA",
+        "state_name": "Washington",
+        "presentation_count": 9
+      },
+      {
+        "state_code": "MD",
+        "state_name": "Maryland",
+        "presentation_count": 6
+      },
+      {
+        "state_code": "FL",
+        "state_name": "Florida",
+        "presentation_count": 5
+      },
+      {
+        "state_code": "AL",
+        "state_name": "Alabama",
+        "presentation_count": 5
+      },
+      {
+        "state_code": "CA",
+        "state_name": "California",
+        "presentation_count": 4
+      },
+      {
+        "state_code": "HI",
+        "state_name": "Hawaii",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "MS",
+        "state_name": "Mississippi",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "KS",
+        "state_name": "Kansas",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "VA",
+        "state_name": "Virginia",
+        "presentation_count": 1
+      }
+    ]
+  },
+  "CellScape": {
+    "count": 6,
+    "countries": [
+      {
+        "country": "United States",
+        "iso3": "USA",
+        "presentation_count": 8
+      },
+      {
+        "country": "Germany",
+        "iso3": "DEU",
+        "presentation_count": 4
+      },
+      {
+        "country": "South Korea",
+        "iso3": "KOR",
+        "presentation_count": 3
+      }
+    ],
+    "states": [
+      {
+        "state_code": "MO",
+        "state_name": "Missouri",
+        "presentation_count": 4
+      },
+      {
+        "state_code": "CA",
+        "state_name": "California",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "IL",
+        "state_name": "Illinois",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "WA",
+        "state_name": "Washington",
+        "presentation_count": 1
+      }
+    ]
+  },
+  "PaintScape": {
+    "count": 4,
+    "countries": [
+      {
+        "country": "United States",
+        "iso3": "USA",
+        "presentation_count": 7
+      }
+    ],
+    "states": [
+      {
+        "state_code": "CA",
+        "state_name": "California",
+        "presentation_count": 5
+      },
+      {
+        "state_code": "NY",
+        "state_name": "New York",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "WA",
+        "state_name": "Washington",
+        "presentation_count": 1
+      }
+    ]
+  },
+  "Beacon + Bruker": {
+    "count": 3,
+    "countries": [
+      {
+        "country": "United States",
+        "iso3": "USA",
+        "presentation_count": 4
+      },
+      {
+        "country": "France",
+        "iso3": "FRA",
+        "presentation_count": 2
+      }
+    ],
+    "states": [
+      {
+        "state_code": "CA",
+        "state_name": "California",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "WI",
+        "state_name": "Wisconsin",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "WA",
+        "state_name": "Washington",
+        "presentation_count": 1
+      }
+    ]
+  },
+  "Bruker": {
+    "count": 54,
+    "countries": [
+      {
+        "country": "United States",
+        "iso3": "USA",
+        "presentation_count": 96
+      },
+      {
+        "country": "United Kingdom",
+        "iso3": "GBR",
+        "presentation_count": 13
+      },
+      {
+        "country": "Germany",
+        "iso3": "DEU",
+        "presentation_count": 7
+      },
+      {
+        "country": "Netherlands",
+        "iso3": "NLD",
+        "presentation_count": 4
+      },
+      {
+        "country": "France",
+        "iso3": "FRA",
+        "presentation_count": 2
+      },
+      {
+        "country": "Canada",
+        "iso3": "CAN",
+        "presentation_count": 2
+      },
+      {
+        "country": "Switzerland",
+        "iso3": "CHE",
+        "presentation_count": 2
+      },
+      {
+        "country": "Sweden",
+        "iso3": "SWE",
+        "presentation_count": 1
+      },
+      {
+        "country": "India",
+        "iso3": "IND",
+        "presentation_count": 1
+      },
+      {
+        "country": "Mexico",
+        "iso3": "MEX",
+        "presentation_count": 1
+      }
+    ],
+    "states": [
+      {
+        "state_code": "WA",
+        "state_name": "Washington",
+        "presentation_count": 23
+      },
+      {
+        "state_code": "CA",
+        "state_name": "California",
+        "presentation_count": 13
+      },
+      {
+        "state_code": "TX",
+        "state_name": "Texas",
+        "presentation_count": 13
+      },
+      {
+        "state_code": "MO",
+        "state_name": "Missouri",
+        "presentation_count": 9
+      },
+      {
+        "state_code": "MA",
+        "state_name": "Massachusetts",
+        "presentation_count": 7
+      },
+      {
+        "state_code": "NJ",
+        "state_name": "New Jersey",
+        "presentation_count": 6
+      },
+      {
+        "state_code": "AL",
+        "state_name": "Alabama",
+        "presentation_count": 5
+      },
+      {
+        "state_code": "PA",
+        "state_name": "Pennsylvania",
+        "presentation_count": 4
+      },
+      {
+        "state_code": "FL",
+        "state_name": "Florida",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "MD",
+        "state_name": "Maryland",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "NM",
+        "state_name": "New Mexico",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "VA",
+        "state_name": "Virginia",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "MS",
+        "state_name": "Mississippi",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "KS",
+        "state_name": "Kansas",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "WI",
+        "state_name": "Wisconsin",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "NY",
+        "state_name": "New York",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "IL",
+        "state_name": "Illinois",
+        "presentation_count": 1
+      }
+    ]
+  }
+}
