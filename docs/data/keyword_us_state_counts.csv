@@ -59,8 +59,8 @@ Visium,IN,Indiana,3
 Visium,MO,Missouri,2
 Visium,TN,Tennessee,2
 Visium,NJ,New Jersey,2
-Visium,WI,Wisconsin,1
 Visium,CT,Connecticut,1
+Visium,WI,Wisconsin,1
 Visium,WA,Washington,1
 Visium,MI,Michigan,1
 Visium,AL,Alabama,1
@@ -137,6 +137,11 @@ GeoMx,FL,Florida,1
 GeoMx,OH,Ohio,1
 GeoMx,UT,Utah,1
 GeoMx,LA,Louisiana,1
+MerFISH,CA,California,4
+MerFISH,MA,Massachusetts,4
+MerFISH,FL,Florida,3
+MerFISH,TX,Texas,2
+MerFISH,CT,Connecticut,1
 nCounter,WA,Washington,9
 nCounter,MD,Maryland,6
 nCounter,FL,Florida,5
@@ -148,28 +153,21 @@ nCounter,KS,Kansas,2
 nCounter,VA,Virginia,1
 CellScape,MO,Missouri,4
 CellScape,CA,California,2
-CellScape,WA,Washington,1
 CellScape,IL,Illinois,1
+CellScape,WA,Washington,1
 PaintScape,CA,California,5
 PaintScape,NY,New York,1
 PaintScape,WA,Washington,1
-Vizgen,MA,Massachusetts,6
-Vizgen,CA,California,4
-Vizgen,TX,Texas,3
-Vizgen,FL,Florida,3
-Vizgen,CT,Connecticut,1
-Singular,CA,California,12
-Singular,TX,Texas,10
-Singular,TN,Tennessee,6
-Singular,MN,Minnesota,4
-Singular,MD,Maryland,2
-Singular,MA,Massachusetts,2
-Singular,NY,New York,1
-Singular,PA,Pennsylvania,1
-Singular,GA,Georgia,1
+G4X,CA,California,11
+G4X,TX,Texas,10
+G4X,TN,Tennessee,7
+G4X,MD,Maryland,2
+G4X,MN,Minnesota,2
+G4X,NY,New York,1
+G4X,PA,Pennsylvania,1
 Beacon + Bruker,CA,California,2
-Beacon + Bruker,WA,Washington,1
 Beacon + Bruker,WI,Wisconsin,1
+Beacon + Bruker,WA,Washington,1
 Bruker,WA,Washington,23
 Bruker,CA,California,13
 Bruker,TX,Texas,13

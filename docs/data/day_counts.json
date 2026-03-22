@@ -1,11 +1,7 @@
 [
   {
-    "day": "Apr 18",
-    "presentation_count": 1
-  },
-  {
     "day": "Apr 19",
-    "presentation_count": 66
+    "presentation_count": 67
   },
   {
     "day": "Apr 20",
@@ -13,10 +9,10 @@
   },
   {
     "day": "Apr 21",
-    "presentation_count": 140
+    "presentation_count": 138
   },
   {
     "day": "Apr 22",
-    "presentation_count": 46
+    "presentation_count": 45
   }
 ]

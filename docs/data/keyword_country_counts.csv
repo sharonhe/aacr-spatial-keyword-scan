@@ -59,9 +59,9 @@ Chromium,Mexico,MEX,1
 10X,Switzerland,CHE,5
 10X,Italy,ITA,3
 10X,Hong Kong,HKG,3
+10X,Belgium,BEL,2
 10X,France,FRA,2
 10X,Austria,AUT,2
-10X,Belgium,BEL,2
 10X,Norway,NOR,1
 10X,Taiwan,TWN,1
 10X,Israel,ISR,1
@@ -88,6 +88,8 @@ GeoMx,China,CHN,2
 GeoMx,United Kingdom,GBR,2
 GeoMx,Netherlands,NLD,1
 GeoMx,Taiwan,TWN,1
+MerFISH,United States,USA,14
+MerFISH,Canada,CAN,1
 nCounter,United States,USA,36
 nCounter,Taiwan,TWN,9
 nCounter,Italy,ITA,7
@@ -100,10 +102,8 @@ CellScape,United States,USA,8
 CellScape,Germany,DEU,4
 CellScape,South Korea,KOR,3
 PaintScape,United States,USA,7
-Vizgen,United States,USA,17
-Vizgen,Germany,DEU,2
-Singular,United States,USA,39
-Singular,South Korea,KOR,5
+G4X,United States,USA,34
+G4X,South Korea,KOR,6
 Beacon + Bruker,United States,USA,4
 Beacon + Bruker,France,FRA,2
 Bruker,United States,USA,96

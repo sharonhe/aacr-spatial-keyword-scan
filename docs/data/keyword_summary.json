@@ -49,6 +49,13 @@
     "status": "Complete"
   },
   {
+    "keyword": "MerFISH",
+    "query": "merfish",
+    "count": 7,
+    "search_id": "16028",
+    "status": "Complete"
+  },
+  {
     "keyword": "nCounter",
     "query": "ncounter",
     "count": 20,
@@ -70,17 +77,10 @@
     "status": "Complete"
   },
   {
-    "keyword": "Vizgen",
-    "query": "vizgen",
-    "count": 8,
-    "search_id": "39129",
-    "status": "Complete"
-  },
-  {
-    "keyword": "Singular",
-    "query": "singular",
-    "count": 15,
-    "search_id": "49257",
+    "keyword": "G4X",
+    "query": "g4x",
+    "count": 12,
+    "search_id": "49261",
     "status": "Complete"
   },
   {

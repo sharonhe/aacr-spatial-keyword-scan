@@ -19,28 +19,28 @@ PaintScape,Bruker,4,7.4
 Beacon + Bruker,Bruker,3,5.6
 Visium,GeoMx,3,2.4
 Xenium,GeoMx,3,2.3
-10X,Vizgen,2,1.6
 CosMx,CellScape,2,3.8
 CosMx,nCounter,2,3.0
-Visium,Vizgen,2,2.0
-Xenium,Vizgen,2,2.0
 Xenium + 5K,CosMx,2,2.7
 Xenium + 5K,GeoMx,2,3.4
 10X,CellScape,1,0.8
+10X,G4X,1,0.8
 10X,GeoMx,1,0.6
-10X,Singular,1,0.7
+10X,MerFISH,1,0.8
 Chromium,CosMx,1,1.7
-Chromium,Vizgen,1,5.6
+Chromium,MerFISH,1,5.9
 CosMx,Beacon + Bruker,1,2.0
+CosMx,G4X,1,1.7
+CosMx,MerFISH,1,1.8
 CosMx,PaintScape,1,1.9
-CosMx,Singular,1,1.6
-CosMx,Vizgen,1,1.8
-GeoMx,Singular,1,2.0
+GeoMx,G4X,1,2.2
 GeoMx,nCounter,1,1.9
 Visium,Bruker,1,0.7
 Visium,Chromium,1,1.0
-Visium,Singular,1,0.9
+Visium,G4X,1,1.0
+Visium,MerFISH,1,1.0
 Xenium,Bruker,1,0.7
 Xenium,Chromium,1,0.9
-Xenium,Singular,1,0.9
-Xenium + 5K,Singular,1,2.5
+Xenium,G4X,1,0.9
+Xenium,MerFISH,1,1.0
+Xenium + 5K,G4X,1,2.7

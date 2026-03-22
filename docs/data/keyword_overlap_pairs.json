@@ -120,12 +120,6 @@
     "jaccard_pct": 2.3
   },
   {
-    "left": "10X",
-    "right": "Vizgen",
-    "shared_presentations": 2,
-    "jaccard_pct": 1.6
-  },
-  {
     "left": "CosMx",
     "right": "CellScape",
     "shared_presentations": 2,
@@ -136,18 +130,6 @@
     "right": "nCounter",
     "shared_presentations": 2,
     "jaccard_pct": 3.0
-  },
-  {
-    "left": "Visium",
-    "right": "Vizgen",
-    "shared_presentations": 2,
-    "jaccard_pct": 2.0
-  },
-  {
-    "left": "Xenium",
-    "right": "Vizgen",
-    "shared_presentations": 2,
-    "jaccard_pct": 2.0
   },
   {
     "left": "Xenium + 5K",
@@ -169,15 +151,21 @@
   },
   {
     "left": "10X",
+    "right": "G4X",
+    "shared_presentations": 1,
+    "jaccard_pct": 0.8
+  },
+  {
+    "left": "10X",
     "right": "GeoMx",
     "shared_presentations": 1,
     "jaccard_pct": 0.6
   },
   {
     "left": "10X",
-    "right": "Singular",
+    "right": "MerFISH",
     "shared_presentations": 1,
-    "jaccard_pct": 0.7
+    "jaccard_pct": 0.8
   },
   {
     "left": "Chromium",
@@ -187,9 +175,9 @@
   },
   {
     "left": "Chromium",
-    "right": "Vizgen",
+    "right": "MerFISH",
     "shared_presentations": 1,
-    "jaccard_pct": 5.6
+    "jaccard_pct": 5.9
   },
   {
     "left": "CosMx",
@@ -199,27 +187,27 @@
   },
   {
     "left": "CosMx",
+    "right": "G4X",
+    "shared_presentations": 1,
+    "jaccard_pct": 1.7
+  },
+  {
+    "left": "CosMx",
+    "right": "MerFISH",
+    "shared_presentations": 1,
+    "jaccard_pct": 1.8
+  },
+  {
+    "left": "CosMx",
     "right": "PaintScape",
     "shared_presentations": 1,
     "jaccard_pct": 1.9
   },
   {
-    "left": "CosMx",
-    "right": "Singular",
-    "shared_presentations": 1,
-    "jaccard_pct": 1.6
-  },
-  {
-    "left": "CosMx",
-    "right": "Vizgen",
-    "shared_presentations": 1,
-    "jaccard_pct": 1.8
-  },
-  {
     "left": "GeoMx",
-    "right": "Singular",
+    "right": "G4X",
     "shared_presentations": 1,
-    "jaccard_pct": 2.0
+    "jaccard_pct": 2.2
   },
   {
     "left": "GeoMx",
@@ -241,9 +229,15 @@
   },
   {
     "left": "Visium",
-    "right": "Singular",
+    "right": "G4X",
     "shared_presentations": 1,
-    "jaccard_pct": 0.9
+    "jaccard_pct": 1.0
+  },
+  {
+    "left": "Visium",
+    "right": "MerFISH",
+    "shared_presentations": 1,
+    "jaccard_pct": 1.0
   },
   {
     "left": "Xenium",
@@ -259,14 +253,20 @@
   },
   {
     "left": "Xenium",
-    "right": "Singular",
+    "right": "G4X",
     "shared_presentations": 1,
     "jaccard_pct": 0.9
   },
   {
-    "left": "Xenium + 5K",
-    "right": "Singular",
+    "left": "Xenium",
+    "right": "MerFISH",
     "shared_presentations": 1,
-    "jaccard_pct": 2.5
+    "jaccard_pct": 1.0
+  },
+  {
+    "left": "Xenium + 5K",
+    "right": "G4X",
+    "shared_presentations": 1,
+    "jaccard_pct": 2.7
   }
 ]

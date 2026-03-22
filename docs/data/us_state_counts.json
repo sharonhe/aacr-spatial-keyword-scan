@@ -2,12 +2,12 @@
   {
     "state_code": "CA",
     "state_name": "California",
-    "presentation_count": 133
+    "presentation_count": 132
   },
   {
     "state_code": "TX",
     "state_name": "Texas",
-    "presentation_count": 82
+    "presentation_count": 84
   },
   {
     "state_code": "NY",
@@ -17,7 +17,7 @@
   {
     "state_code": "MA",
     "state_name": "Massachusetts",
-    "presentation_count": 54
+    "presentation_count": 50
   },
   {
     "state_code": "MD",
@@ -50,14 +50,14 @@
     "presentation_count": 17
   },
   {
-    "state_code": "GA",
-    "state_name": "Georgia",
-    "presentation_count": 15
-  },
-  {
     "state_code": "MO",
     "state_name": "Missouri",
     "presentation_count": 15
+  },
+  {
+    "state_code": "GA",
+    "state_name": "Georgia",
+    "presentation_count": 14
   },
   {
     "state_code": "NJ",
@@ -82,7 +82,7 @@
   {
     "state_code": "MN",
     "state_name": "Minnesota",
-    "presentation_count": 12
+    "presentation_count": 10
   },
   {
     "state_code": "MI",
@@ -90,14 +90,14 @@
     "presentation_count": 9
   },
   {
-    "state_code": "AZ",
-    "state_name": "Arizona",
+    "state_code": "TN",
+    "state_name": "Tennessee",
     "presentation_count": 9
   },
   {
-    "state_code": "TN",
-    "state_name": "Tennessee",
-    "presentation_count": 8
+    "state_code": "AZ",
+    "state_name": "Arizona",
+    "presentation_count": 9
   },
   {
     "state_code": "NM",

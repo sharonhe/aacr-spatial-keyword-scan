@@ -45,10 +45,10 @@
     "keywords_field": "Bioinformatics,AI Agent,Spatial Biology,Cancer,",
     "topics_field": "++BCS02-01 Agentic AI,,",
     "products": [
-      "Vizgen"
+      "MerFISH"
     ],
     "source_keywords": [
-      "Vizgen"
+      "MerFISH"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/2490"
   },
@@ -149,10 +149,10 @@
     "keywords_field": "14-3-3,Colorectal cancer,Multiomics,Metastasis,",
     "topics_field": "++BCS01-04 Digital pathology,,",
     "products": [
-      "Singular"
+      "G4X"
     ],
     "source_keywords": [
-      "Singular"
+      "G4X"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/3074"
   },
@@ -778,6 +778,32 @@
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/10894"
   },
   {
+    "presentation_id": "2236",
+    "presentation_number": "851",
+    "title": "BMP inhibition is an effective treatment for targeting stem-like glioblastoma cell states",
+    "session_title": "Stem Cell Plasticity and Lineage Reprogramming in Cancer",
+    "session_id": "508",
+    "start": "4/19/2026 2:00:00 PM",
+    "end": "4/19/2026 5:00:00 PM",
+    "posterboard_number": "30",
+    "authors": "Davey (Cheng Zhe) Li, Michael Luo, Phuong U. Le, Maryam Safisamghabadi, Tuong V. Kieu, Andy Nkili, Paul Wambo, Rozica Bolovan, Javad Nadaf, Kevin Petrecca",
+    "affiliation": "Department of Neurology and Neurosurgery, Montreal Neurological Insitute-Hospital, McGill University, Montréal, QC, Canada",
+    "abstract": "Glioblastomas are an aggressive and incurable type of brain cancer with an estimated 250,000 people around the world receiving this devastating diagnosis every year. With a median survival of 14.6 months, standard of care (surgery, radiation, and chemotherapy) is ineffective as it fails to eliminate residual glioblastoma stem cells (GSCs), which cause cancer recurrence. Previous work suggests that GSCs arise from aberrantly activated neural stem cells (NSCs) from the subventricular zone (SVZ). This unique brain region supports NSC growth and potentially subsequent glioblastomagenesis. Single-cell RNA sequencing (scRNA-seq) and MERFISH spatial transcriptomics of glioblastoma tumors and SVZ tissue from patients have allowed us to generate an atlas of 2 million cells to identify and spatially validate primordial developmental pathways that drive the malignant transformation of SVZ-NSCs and promote GSC survival. Cell-cell interaction, consensus non-negative matrix factorization (cNMF), spatial domain, and neighborhood enrichment analysis revealed bone morphogenetic protein (BMP) signaling as a key pathway maintaining stem-like glioblastoma cells. Thus, we tested LDN193189, a potent BMP signaling inhibitor that selectively blocks the BMP type I receptors ALK2/3. Using patient-derived GSCs treated with LDN193189, we observe a robust reduction of cell viability at 24 and 48 hour timepoints. Daily treatment for 7 days with LDN193189 on GSCs in vitro displayed reduction in cell cycling, decreased astrocytic stemness markers and BMP downstream signaling, while ablating the oligodendrocytic lineage. Assessment of LDN193189 in a patient-derived ex vivo explant organoid model demonstrated a reduction of cycling cells and reduced BMP signaling. Multiplexed spatial proteomics were performed to further interrogate the glioblastoma explant microenvironment and characterize the treatment response to LDN193189. These results suggest that disrupting key developmental pathways exploited by GSCs can halt highly proliferative GSC stem cell states, thus allowing us to target glioblastoma at its origin to prevent recurrence. Based on these promising pre-clinical results, we are currently exploring launching a Phase 1/2 open-label clinical trial for treating glioblastoma patients with BMP inhibitors.",
+    "disclosures": "D. Li, None.. | M. Luo, None.. | P. U. Le, None.. | M. Safisamghabadi, None.. | T. V. Kieu, None.. | A. Nkili, None.. | P. Wambo, None.. | R. Bolovan, None.. | J. Nadaf, None.. | K. Petrecca, None.",
+    "presenter": "Davey (Cheng Zhe) Li, BS",
+    "activity": "Abstract Submission",
+    "status": "Presenting",
+    "keywords_field": "Glioblastoma,Single cell,Stem cells,,",
+    "topics_field": "++TB07-03 Developmental pathways in cancer,,",
+    "products": [
+      "MerFISH"
+    ],
+    "source_keywords": [
+      "MerFISH"
+    ],
+    "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/2236"
+  },
+  {
     "presentation_id": "3702",
     "presentation_number": "898",
     "title": "HER2 as a therapeutic target in prostate cancer: Multi-omic and spatial insights across genetic ancestries",
@@ -1084,7 +1110,7 @@
       "Visium",
       "CosMx",
       "GeoMx",
-      "Singular"
+      "G4X"
     ],
     "source_keywords": [
       "Xenium",
@@ -1092,7 +1118,7 @@
       "Visium",
       "CosMx",
       "GeoMx",
-      "Singular"
+      "G4X"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/10001"
   },
@@ -2214,11 +2240,11 @@
     "keywords_field": "Sarcoma/soft-tissue malignancies,Tumor heterogeneity,Single cell,,",
     "topics_field": "++TB07-02 Cancer stem cells,,",
     "products": [
-      "Singular"
+      "G4X"
     ],
     "source_keywords": [
       "10X",
-      "Singular"
+      "G4X"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/699"
   },
@@ -2371,10 +2397,10 @@
     "keywords_field": "Lymph node metastasis,Pancreatic cancer,Immuno-oncology,Multiomics,",
     "topics_field": "++TB10-12 Spatial heterogeneity in the tumor microenvironment,,",
     "products": [
-      "Singular"
+      "G4X"
     ],
     "source_keywords": [
-      "Singular"
+      "G4X"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/8273"
   },
@@ -2406,6 +2432,32 @@
       "Visium"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/8420"
+  },
+  {
+    "presentation_id": "8419",
+    "presentation_number": "2254",
+    "title": "3D multimodal spatial profiling of pre-gastric cancer progression using same-slide RNA-protein and fluorescent H&E",
+    "session_title": "Tumorigenesis and Early Microenvironmental Trajectories",
+    "session_id": "516",
+    "start": "4/20/2026 9:00:00 AM",
+    "end": "4/20/2026 12:00:00 PM",
+    "posterboard_number": "3",
+    "authors": "Eric Sha, Seock-Jin Chung, Jean R. Clemenceau, Sunho Park, Minji Kim, Inyeop Jang, Youngwon Cho, Seunghyi Kook, Soonyoung Lee, Jongseong Jang, Eunyoung Choi, Tae Hyun Hwang",
+    "affiliation": "Vanderbilt University, Nashville, TN | Vanderbilt University Medical Center, Nashville, TN | LG AI Research, Seoul, Korea, Republic of",
+    "abstract": "Background: Gastric cancer arises through a cascade from intestinal metaplasia to dysplasia and invasive adenocarcinoma, but only a subset of precancerous glands progress. The spatial features that distinguish progressing from non-progressing niches are unknown. We applied a multimodal platform that combines same-slide, subcellular RNA and protein profiling on the G4X Spatial Sequencer with fluorescent H&E (fH&E) and 3D holotomography (HT) to characterize pre-gastric cancer (pre-GC) niches and their transition toward carcinoma. Methods: FFPE gastric tissues from 12 patients (38 regions of interest) were profiled on G4X flow cells using a custom 358-gene gastric cancer/pre-cancer panel, a 16-plex protein panel, and fH&E on the same slide. We used multimodal clustering and classification of spatial transcriptomic, morphology, and protein features to define cell states and associated niches. For matched regions, 3D HT from the same tissues was used to embed 2D molecularly defined states into their gland and mucosal context and to assess whether pre-GC states share or segregate across glandular units, extend through the mucosal depth, and how immune populations are positioned around them in 3D. By aligning subcellular G4X coordinates with HT volumes, this method enables us to visualize the x-y-z localization of transcripts within individual cells, providing a molecular level 3D model of the tumor-stroma-immune microenvironment. Results: Multimodal analysis of integrated RNA, protein, and morphology data resolved distinct epithelial, stromal, and immune compartments in precancerous tissue, whereas cancerous regions showed expansion of epithelial and immune states and altered compartment boundaries. Within the epithelial layer, regions of metaplasia and dysplasia localized to discrete gland-associated zones enriched for intestinal or gastric gene signatures. Same-slide RNA-protein measurements enabled mapping of CD4⁺ helper and CD8⁺ cytotoxic T-cell distributions relative to the gastric epithelium. Incorporating 3D HT enabled us to investigate whether 2D-defined pre-GC foci represented continuous lesions or separate glands and refined estimates of lesion extent and immune proximity along the gland axis in 3D. Conclusions: This 3D-enabled, same-slide G4X platform with fH&E, RNA transcript profiling, and a 16-plex protein panel generates multi-scale maps of pre-GC and gastric cancer niches. In particular, 3D spatial multimodal modeling improves interpretation of pre-cancer epithelial programs and immune positioning and supports discovery of 3D niche features linked to progression risk beyond conventional 2D histology. Generative AI assistance was limited to language editing of this abstract. The scientific content, interpretation, and conclusions are the sole responsibility of the authors, who have reviewed and approved the final version.",
+    "disclosures": "E. Sha, None.. | S. Chung, None.. | J. R. Clemenceau, None.. | S. Park, None.. | I. Jang, None.. | Y. Cho, None.. | S. Kook, None. | S. Lee, | LG AI Research Employment. | J. Jang, | LG AI Research Employment. | E. Choi, None. | T. Hwang, | Kure.ai Therapeutics Other, Co-founder. | Kure.s Other, Co-founder. | IQVIA Has received consulting fees from company.",
+    "presenter": "Eric Sha, BA",
+    "activity": "Abstract Submission",
+    "status": "Presenting",
+    "keywords_field": "3D models,Microenvironment,Gastrointestinal cancers: stomach,Multiomics,",
+    "topics_field": "++TB10-12 Spatial heterogeneity in the tumor microenvironment,,",
+    "products": [
+      "G4X"
+    ],
+    "source_keywords": [
+      "G4X"
+    ],
+    "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/8419"
   },
   {
     "presentation_id": "8215",
@@ -3067,32 +3119,6 @@
       "10X"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/4912"
-  },
-  {
-    "presentation_id": "4930",
-    "presentation_number": "3122",
-    "title": "Integrative multi-omic investigation of gene regulatory networks associated with chemotherapy response in acute lymphoblastic leukemia",
-    "session_title": "Overcoming Chemotherapy Resistance",
-    "session_id": "352",
-    "start": "4/20/2026 2:00:00 PM",
-    "end": "4/20/2026 5:00:00 PM",
-    "posterboard_number": "22",
-    "authors": "Kelly R. Barnett, Robert J. Mobley, Wenjian Yang, Landon Choi, Kami Chauncy, Kristine R. Crews, Samuel W. Brady, Jun J. Yang, Daniel Savic",
-    "affiliation": "St. Jude Children's Research Hospital, Memphis, TN",
-    "abstract": "Acute lymphoblastic leukemia (ALL) is the most common pediatric cancer. While treatment outcomes have improved, drug resistance remains a major clinical concern and the primary cause of relapse in patients, with relapsed patient survival rates at approximately 40%. Although changes in gene expression are known to impact drug resistance in ALL, the gene regulatory elements that control and modulate these genes are frequently undefined, and the role of these elements in anti-leukemic drug resistance remains largely unknown. As a result, a more comprehensive epigenetic effort is needed to profile and validate gene regulatory networks linked to anti-leukemic drug response in ALL. We therefore generated matched B-cell origin ALL patient chromatin accessibility and ex vivo drug sensitivity (pharmacotyping) datasets covering 16 anti-leukemia drugs in primary ALL cells from over 150 patients to generate a compendium of gene regulatory elements associated with ex vivo chemotherapy response. Importantly, ex vivo measurements of chemotherapy response are known to associate with clinical outcomes in ALL patients. We further integrated these data with transcriptomics, tumor-normal whole genome sequencing and three-dimensional chromatin conformation results obtained from a subset of these patient biospecimens. We identified 74,307 drug response elements (DREs) and 2,854 drug response genes (DRGs) using a combination of linear modeling and feature selection techniques (p-adj < 0.05, s-value < 0.005). For this analysis, LC50 drug sensitivity was modeled in both continuous and categorical modes against chromatin accessibility and transcriptomic sequence counts. Although many DREs were specific to a singular drug or common drug family, a subset was associated with response to multiple drugs. DREs harbored 868 somatic mutations, many of which overlapped transcription factor (TF) footprints, with PU.1 among the most common overlapping TF sites. TF footprinting identified 148,732 TF binding events associated with drug response. Common TF footprints that correlated with drug response included EBF family TFs for inotuzumab ozogamicin response and STAT family TFs for trametinib response. On average, 74% of these drug response TF footprints mapped to DREs. Subsequent multi-omic integration of gene expression, chromatin accessibility and TF footprinting with three-dimensional chromatin conformation maps identified over 9000 gene regulatory networks linked to altered drug response. Collectively, this work represents the largest study of chromatin accessibility and TF occupancy impacting ALL chemotherapy drug response and supports an important functional role for many DREs in anti-leukemic drug resistance.",
-    "disclosures": "K. R. Barnett, None.. | R. J. Mobley, None.. | W. Yang, None.. | L. Choi, None.. | K. Chauncy, None.. | K. R. Crews, None.. | S. W. Brady, None. | J. J. Yang, | Takeda Pharmaceuticals ). | AstraZeneca ). | D. Savic, None.",
-    "presenter": "Daniel Savic, PhD",
-    "activity": "Abstract Submission",
-    "status": "Presenting",
-    "keywords_field": "Leukemias: acute lymphoblastic,Drug resistance,Gene regulation,Epigenomics,",
-    "topics_field": "++ET03-04 Regulation of gene expression in drug resistance,,",
-    "products": [
-      "Singular"
-    ],
-    "source_keywords": [
-      "Singular"
-    ],
-    "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/4930"
   },
   {
     "presentation_id": "1857",
@@ -4036,10 +4062,10 @@
     "keywords_field": "Multiomics,Tumor microenvironment,,,",
     "topics_field": "++BCS01-06 Integrative computational approaches,,",
     "products": [
-      "Singular"
+      "G4X"
     ],
     "source_keywords": [
-      "Singular"
+      "G4X"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/3176"
   },
@@ -4088,12 +4114,38 @@
     "keywords_field": "3D models,Deep learning,Multiomics,3D molecular modeling,",
     "topics_field": "++BCS02-04 New dataset for training and evaluating AI/ML models,,",
     "products": [
-      "Singular"
+      "G4X"
     ],
     "source_keywords": [
-      "Singular"
+      "G4X"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/2640"
+  },
+  {
+    "presentation_id": "1312",
+    "presentation_number": "4235",
+    "title": "Cell-level spatial transcriptomics detection of microenvironmental STAT1-expressing plasma cells in colorectal cancer recurrence by G4X",
+    "session_title": "Adaptive Immunity in Cancer",
+    "session_id": "410",
+    "start": "4/21/2026 9:00:00 AM",
+    "end": "4/21/2026 12:00:00 PM",
+    "posterboard_number": "3",
+    "authors": "I-Chuang Liao, Minh-Khang Le, Vivek Pujara, Haley Jun, Devanshi Pratiher, Jane C. Figueiredo, Nathalie Nguyen, Chintda Santiskulvong, Angie Laguna, Yi Zhang, Keluo Yao, Joshua Jay Levy",
+    "affiliation": "Cedars-Sinai Medical Center, Los Angeles, CA | Samuel Oschin Comprehensive Cancer Institute, Los Angeles, CA",
+    "abstract": "Introduction: STAT1 mediates interferon signaling and immune responses with diverse roles in cancer. In colorectal cancer (CRC), plasma cells are critical immune mediators, and STAT1 expression in these cells may reflect their functional status. Lower STAT1-expressing plasma cells have been linked to a weakened anti-tumor immune response that facilitates tumor escape. Understanding this relationship could reveal novel prognostic biomarkers and therapeutic targets for CRC. Materials and Methods: Thirty CRC samples underwent G4X spatial profiling, each with a manually selected 4.5 × 4.5 mm² capture area targeting key histological features, resulting in spatial gene expression profiles for a 360-gene panel for 3,088,252 cells. Tissue sections were processed following the G4X spatial transcriptomics protocol enabling RNA detection at subcellular resolution. Manual pathology annotation was performed by a collaborating pathologist, identifying regions including cancer, dysplasia/cancer in situ, benign epithelium, interface, muscularis, and stroma. Cancer-associated cells were defined by two criteria: (1) spatial localization within annotated cancer regions, and (2) absence of canonical epithelial and malignant epithelial markers (CEACAM5, EPCAM, MUC12). Differential expression analyses identified associated cell markers, and the proportions of cell types expressing these markers were quantified. Cell-level regression models incorporated random patient intercepts and clinical covariates (age, gender, microsatellite status, T and N stage), followed by sample-level univariate analyses across all 30 samples to assess associations between STAT1-positive cell clusters and clinical recurrence. Results: Differential expression analysis identified STAT1 as the top upregulated gene in cancer-associated cells (log2 fold-change = 2.11; adjusted p < 0.001). Clustering of STAT1-positive cancer-associated cells revealed 10 distinct cell clusters, including 5 cancer-associated fibroblast subtypes, tumor-associated macrophages, mixed T cells, 2 epithelial-like cells, and plasma cells. Regression analyses consistently indicated a negative association between proportion of STAT1-positive plasma cells and colorectal cancer recurrence (OR = 0.19; 95% CI = 0.03-1.13; p = 0.068). Conclusion: STAT1-expressing plasma cells in the colorectal cancer microenvironment are significantly associated with recurrence risk. These findings support further validation efforts through immunohistochemistry in a larger study cohort, demonstrating the promise of leveraging spatial transcriptomic insights to inform routine pathology for patient stratification.",
+    "disclosures": "I. Liao, None.. | M. Le, None.. | V. Pujara, None.. | H. Jun, None.. | D. Pratiher, None.. | C. Santiskulvong, None.. | A. Laguna, None.. | Y. Zhang, None.",
+    "presenter": "Minh-Khang Le, PhD",
+    "activity": "Abstract Submission",
+    "status": "Presenting",
+    "keywords_field": "Immunomodulation,Cancer,STAT1,Microenvironment,",
+    "topics_field": "++IM02-01 Adaptive immunity in tumors,,",
+    "products": [
+      "G4X"
+    ],
+    "source_keywords": [
+      "G4X"
+    ],
+    "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/1312"
   },
   {
     "presentation_id": "1321",
@@ -5035,32 +5087,6 @@
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/5779"
   },
   {
-    "presentation_id": "896",
-    "presentation_number": "5088",
-    "title": "Feasibility and challenges of oral cancer screening in a large healthcare system",
-    "session_title": "Early Detection and Interception",
-    "session_id": "461",
-    "start": "4/21/2026 9:00:00 AM",
-    "end": "4/21/2026 12:00:00 PM",
-    "posterboard_number": "2",
-    "authors": "Emily Becker, David Hamlar, Frank G. Ondrey",
-    "affiliation": "Otolaryngology, Healthpartners, St Paul, MN | Otolaryngology, University of Minnesota Medical School, Minneapolis, MN",
-    "abstract": "Introduction: In the US oral and oral pharyngeal cancers are increasing in incidence over the past 25 years- primarily due to the increased numbers of HPV oropharyngeal associated malignancies. Although smoking has been decreasing over the past several decades the incidence of oral cavity malignancies is stable. Problematically, similar percentages of patients present with advanced (Stage III/IV) oral cancer over several decades. This is despite adopted efforts in professional organizations to promote screening (e.g. American Dental Association, American Academy Otolaryngology) as well as national awareness campaigns on mouth cancer. We decided to examine the feasibility of instituting an oral cancer screening system in a large health care system that includes dental physicians and significant numbers of head and neck cancer surgeons and staff. Methods: The HealthPartners/Park Nicollet health care system in Minnesota services approximately 1.36 million patients regionally and a large comprehensive dental practice has been part of this system for several decades. We examined numbers of patients at high risk for oral cancer based on publicly available statistics on smoking and potentially malignant disorders based on current ADA recommendations. The healthcare system is serviced by approximately 37 otolaryngologists and mid level providers with extensive training in the identification of oral cavity lesions and head and neck cancer treatment as well as dental clinics. This is an integrated system whereby rapid referrals occur based on our prior training and outreach efforts to practitioners. Results: For 2 High risk Oral potentially malignant disorders (OPMD), the reference published incidence of leukoplakia is between .44% -3.4%. For oral lichen planus published incidence is 0.48-1.0%. The percentage of adult smokers in MN is 12.2%. Using these assumptions, we would need to conduct between 12,512 and 59,840 visits a year for leukoplakia and oral lichen planus patients, as judged by OL and OLP incidence statistics. If we included regular smokers this would become over 200,000 patient visits a year. For these conditions alone, we would need to potentially add between 6 and 100 practitioners dedicated to oral cancer screening for yearly visits. Discussion/Conclusions: To service projected oral cancer screening visits to the number of overt cancer patients each of the current otolaryngologic practitioners would have to increase their visits by 50% a week to their current schedules or add minimally 6 practitioners for the singular purpose of oral cancer screening under our proposed hypothesis. We conclude that although the examination and referral of oral lesions patients is feasible the sheer numbers of OPMD patients in the system (excluding smokers) would overwhelm the system in a universal screening scenario.",
-    "disclosures": "E. Becker, None.. | D. Hamlar, None.. | F. G. Ondrey, None.",
-    "presenter": "Frank Ondrey, MD;PhD",
-    "activity": "Abstract Submission",
-    "status": "Presenting",
-    "keywords_field": "Oral cancers,Screening,Prevention,Premalignancy,",
-    "topics_field": "++PR01-04 Cancer surveillance and screening studies,,",
-    "products": [
-      "Singular"
-    ],
-    "source_keywords": [
-      "Singular"
-    ],
-    "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/896"
-  },
-  {
     "presentation_id": "9401",
     "presentation_number": "5197",
     "title": "Metabolically supercharged NK cells engineered with adenoviral E4ORF-1",
@@ -5373,7 +5399,7 @@
       "Visium",
       "Chromium",
       "CosMx",
-      "Vizgen"
+      "MerFISH"
     ],
     "source_keywords": [
       "Xenium",
@@ -5381,7 +5407,7 @@
       "Chromium",
       "10X",
       "CosMx",
-      "Vizgen"
+      "MerFISH"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/3258"
   },
@@ -5967,14 +5993,12 @@
     "topics_field": "++TB03-04 Expression profiling of tumor progression and metastasis,,",
     "products": [
       "Xenium",
-      "Visium",
-      "Vizgen"
+      "Visium"
     ],
     "source_keywords": [
       "Xenium",
       "Visium",
-      "10X",
-      "Vizgen"
+      "10X"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/6201"
   },
@@ -6213,10 +6237,10 @@
     "keywords_field": "Tumor initiating cells,Spatial multiomics,,,",
     "topics_field": "++TB10-12 Spatial heterogeneity in the tumor microenvironment,,",
     "products": [
-      "Singular"
+      "G4X"
     ],
     "source_keywords": [
-      "Singular"
+      "G4X"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/8081"
   },
@@ -6663,10 +6687,10 @@
     "keywords_field": "Melanoma/skin cancers,Tumor microenvironment,Immune checkpoint blockade,Immune response,",
     "topics_field": "++CL05-07 Immune response to therapies,,",
     "products": [
-      "Vizgen"
+      "MerFISH"
     ],
     "source_keywords": [
-      "Vizgen"
+      "MerFISH"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/9473"
   },
@@ -7016,10 +7040,10 @@
     "keywords_field": "Tumor heterogeneity,Gene expression profiling,Tumor microenvironment,Precision medicine,",
     "topics_field": "++CL01-08 Spatial proteomics and transcriptomics,,",
     "products": [
-      "Vizgen"
+      "MerFISH"
     ],
     "source_keywords": [
-      "Vizgen"
+      "MerFISH"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/10069"
   },
@@ -7095,10 +7119,10 @@
     "keywords_field": "Multiomics,Tumor microenvironment,Biomarkers,Heterogeneity,",
     "topics_field": "++CL01-08 Spatial proteomics and transcriptomics,,",
     "products": [
-      "Vizgen"
+      "MerFISH"
     ],
     "source_keywords": [
-      "Vizgen"
+      "MerFISH"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/10074"
   },
@@ -7125,32 +7149,6 @@
       "10X"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/10076"
-  },
-  {
-    "presentation_id": "10078",
-    "presentation_number": "6683",
-    "title": "Streamlined high-plex imaging with InSituPlex®and ZEISS Axioscan 7 for spatial phenotyping",
-    "session_title": "Spatial Proteomics and Transcriptomics 3",
-    "session_id": "274",
-    "start": "4/21/2026 2:00:00 PM",
-    "end": "4/21/2026 5:00:00 PM",
-    "posterboard_number": "25",
-    "authors": "Kevin Hwang, Mike Woerdemann, Lars Loetgering, Moritz Widmaier, Cassandra Kysilovsky, Sherry Derakhshani, Jiang He, Angela Vasaturo",
-    "affiliation": "Vizgen, Cambridge, MA | Zeiss, Jena, Germany",
-    "abstract": "Multiplex immunofluorescence (mIF) provides a powerful means to visualize complex biomarker signatures with spatial context. Yet, most high-plex mIF approaches depend on repeated cycles of staining and imaging, which introduce workflow complexity and necessitate either labor-intensive manual handling or sophisticated instrumentation capable of automating these multistep procedures. Vizgen’s InSituPlex assay supports rapid, multiplexed detection of up to 12 protein biomarkers in a single staining step, leveraging signal amplification to achieve robust detection of both abundant and lowly expressed targets using standard fluorescence filter configurations. When combined with the Axioscan 7 spatial biology platform, engineered for fully automated, high-throughput slide scanning with additional fluorescent channels, this workflow enables higher-plex, single-round imaging without the need for spectral unmixing. Here, we demonstrate the power of this integrated approach to streamline assay development, expand biomarker panel design flexibility, and deliver efficient, scalable multiplexed protein imaging. A next generation InSituPlex® assay was developed to increase the simultaneous detection of markers using the Axioscan 7 spatial biology system. A panel of fluorophores was carefully selected to minimize spectral overlap and maximize detection specificity, ensuring clear distinction of all fluorescent channels without requiring spectral unmixing to deconvolute signals. Signal quality was analyzed using the STARVUE image analysis pipeline which precisely determined positive cell signal intensity and density. The increased number of fluorophores showed excellent signal to noise ratio and no crosstalk between fluorescent channels. The expanded channel capacity of InSituPlex assay allows for a simplified workflow while increasing the number of biomarkers that can simultaneously be detected in tumor samples. This capability further enhances flexibility for InSituPlex panel design and streamlines the assay development process. The integration of the novel InSituPlex fluorescent dye panel and the Axioscan 7 spatial biology platform delivers a superior, high throughput mIF workflow. This combination enables higher-plex imaging while significantly reducing manual steps, leveraging the established reproducibility and throughput of both technologies. We anticipate this integrated platform will empower researchers to unlock deeper, high resolution spatial insights into cancers and their complex environments.",
-    "disclosures": "K. Hwang, None.. | M. Woerdemann, None.. | L. Loetgering, None.. | M. Widmaier, None.. | S. Derakhshani, None.. | J. He, None.. | A. Vasaturo, None.",
-    "presenter": "Kevin Hwang, BS;PhD",
-    "activity": "Abstract Submission",
-    "status": "Presenting",
-    "keywords_field": "Biomarkers,Imaging,Fluorescence imaging,Multiplex IF,",
-    "topics_field": "++CL01-08 Spatial proteomics and transcriptomics,,",
-    "products": [
-      "Vizgen"
-    ],
-    "source_keywords": [
-      "Vizgen"
-    ],
-    "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/10078"
   },
   {
     "presentation_id": "10079",
@@ -7197,10 +7195,10 @@
     "keywords_field": "Multiomics,In situ sequencing,Spatial transcriptomics,Spatial proteomics,",
     "topics_field": "++CL01-08 Spatial proteomics and transcriptomics,,",
     "products": [
-      "Singular"
+      "G4X"
     ],
     "source_keywords": [
-      "Singular"
+      "G4X"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/10060"
   },
@@ -7223,10 +7221,10 @@
     "keywords_field": "Multiomics,In situ sequencing,Spatial transcriptomics,Spatial proteomics,",
     "topics_field": "++CL01-08 Spatial proteomics and transcriptomics,,",
     "products": [
-      "Singular"
+      "G4X"
     ],
     "source_keywords": [
-      "Singular"
+      "G4X"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/10080"
   },
@@ -7643,10 +7641,10 @@
     "keywords_field": "3D models,Tumor microenvironment,Premalignancy,Multiomics,",
     "topics_field": "++BCS01-09 Molecular and whole cell modeling,,",
     "products": [
-      "Singular"
+      "G4X"
     ],
     "source_keywords": [
-      "Singular"
+      "G4X"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/3262"
   },
@@ -8075,6 +8073,32 @@
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/10705"
   },
   {
+    "presentation_id": "10710",
+    "presentation_number": "7440",
+    "title": "Characterization of the metastatic TIME via spatial transcriptomics reveals unique cellular phenotypes post anti-CSF-1R and immuno-chemotherapy",
+    "session_title": "Microenvironmental Determinants of Therapy Response and Resistance 2",
+    "session_id": "519",
+    "start": "4/22/2026 9:00:00 AM",
+    "end": "4/22/2026 12:00:00 PM",
+    "posterboard_number": "24",
+    "authors": "Diego Armando Pedroza, Sung Wook Kang, Xiang H.-F. Zhang, Bora Lim, Hyun-Sung Lee, Jeffrey M. Rosen",
+    "affiliation": "Baylor College of Medicine, Houston, TX | UT MD Anderson Cancer Center, Houston, TX",
+    "abstract": "Metastatic breast cancer is the main cause of breast cancer related deaths amongst diagnosed women. Current standard-of-care therapies with chemotherapy (CTX) and T cell activating immune checkpoint inhibitors (ICIs) are limited against metastatic disease. Clinical trials have revealed that the tumor immune microenvironments (TIME) with high levels of tumor associated macrophages (TAMs) are associated with ICI treatment failure. We have developed and extensively characterized several genetically engineered mouse models that lack the p53 gene that is most frequently altered in TNBC. These “claudin low” models closely phenocopy the high EMT/TAM subtype observed in patients. We previously showed that TAM ablation by anti-CSF1R mAb therapy coupled with CTX alters the TIME of multiple p53 null GEMMs. This new immunologically “hot” environment displayed elevated levels of IL-17, IL-5 and type II interferon response with residual inflamed- MHCII+ macrophages. A long-term anti-tumor adaptive immune response was accompanied by the infiltration of CD4+/CD8+ T and B cells. However, in lung metastases adjacent micro-metastases persisted and continued to display a “cold” TIME now with elevated PD-L1 indicative of intra-tumoral heterogeneity (ITH). The addition of ICB to SNDX-ms6352 and CTX resulted in sustained loss of TAMs, tumor cells, decreased PD-L1/PD-1 expression and was accompanied by B- and T cell infiltrations in both lung and liver tissues. To understand the differences within the metastatic TIME between single agent and combination treatments, we applied Vizgen’s MERSCOPE platform that encompasses Multiplex Error-Robust Fluorescence in situ Hybridization (MERFISH) technology. Using a unique 500 gene mouse specific immuno-oncology panel we conducted spatial transcriptomics (SP) on lung and liver tissues from mice treated with IgG, SNDX-ms6352, CTX, CTX+SNDX-ms6352+/-aPD1. To study the TIME in depth we have pre-selected up to 8 regions of interest (ROIs) from each tissue, spanning both tumor macro- and micro-metastases, stromal and normal tissue. Collectively across 5 tissues we have been able to capture approximately 2 million single cells that have been identified as cancer, immune and stromal. With uniform manifold approximation and projection (UMAP) uncovering up to 60 cellular phenotypes. Strikingly the combination groups illustrate loss of Trem2, Arg1, Mcr1- TAMs with dense accumulation of Cd19- B, and activated Gzma, Nkg7-NK and Gzmb, Cd3g-T cells compared to single agent treatment. Lymphoid, stromal and CAFs where spatially closer to tumor cells within combination treated neighborhoods. Thus, this novel combination treatment turns immunologically “cold” lung and liver metastases “hot”. We will compare our mouse SP to spatially resolved datasets from the NewSTART Clinical trial (NCT06959537).",
+    "disclosures": "D. A. Pedroza, None.. | S. Kang, None.. | X. Zhang, None.. | H. Lee, None.",
+    "presenter": "Diego Pedroza, BS;MS;PhD",
+    "activity": "Abstract Submission",
+    "status": "Presenting",
+    "keywords_field": "Tumor associated macrophages,Tumor microenvironment,Immunotherapy,Breast cancer,",
+    "topics_field": "++TB10-12 Spatial heterogeneity in the tumor microenvironment,,",
+    "products": [
+      "MerFISH"
+    ],
+    "source_keywords": [
+      "MerFISH"
+    ],
+    "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/10710"
+  },
+  {
     "presentation_id": "10821",
     "presentation_number": "7443",
     "title": "Low hypoxia microenvironment and impaired T cell maturation drive immunotherapy resistance in premenopausal triple negative breast cancer",
@@ -8278,32 +8302,6 @@
       "Bruker"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/6600"
-  },
-  {
-    "presentation_id": "6601",
-    "presentation_number": "7662",
-    "title": "A high-throughput, automated, and reproducible mIF workflow for spatial biology enabled by ZEISS slide stream and Vizgen’s InSituPlex® assays",
-    "session_title": "Multi-Omics, Systems Biology, and Biological Mass Spectrometry",
-    "session_id": "256",
-    "start": "4/22/2026 9:00:00 AM",
-    "end": "4/22/2026 12:00:00 PM",
-    "posterboard_number": "16",
-    "authors": "Cassandra Kysilovsky, Kevin Hwang, Susanne Pfeifenbring, Michael Downing, Sherry Derakhshani, Moritz Widmaier, Jiang He, Angela Vasaturo",
-    "affiliation": "Vizgen, Cambridge, MA | Zeiss, Jena, Germany",
-    "abstract": "Multiplex immunofluorescence (mIF) has become a cornerstone technique in spatial biology for investigating the tumor microenvironment. Despite its widespread use, existing mIF workflows are often hindered by variability in image acquisition and dependence on labor-intensive manual steps. To overcome these limitations, we developed a fully integrated, high-throughput spatial biology workflow combining the highly standardized and automated ZEISS spatial biology platform with Vizgen’s pre-optimized InSituPlex assay. Together, these deliver high-throughput, fully automated, and reproducible biomarker detection across a broad dynamic range, enhancing both efficiency and scalability. To validate these claims, we conducted a multisite verification study. A 4-plex OmniVUE panel including CD3, Ki67, Granzyme-B and CK/Sox10 was utilized to stain multiple tissue indications on formalin-fixed paraffin-embedded (FFPE) sections. On all sites, the slides underwent the same predefined and automated routine for staining using Leica Bond RX instruments and imaging using ZEISS Axioscan 7 spatial biology slide scanners. Acquired images were seamlessly uploaded to Mindpeak and analyzed with integrated STARVUE algorithms optimized for Vizgen InSituPlex assays imaged on Axioscan scanners, providing quantitative analysis for densities and fluorescence intensities of positive cells. Analysis of the results demonstrated excellent concordance between sites, confirming the precision and accuracy of the combined workflow across multiple operators and instruments. Qualitatively, staining was highly comparable across all sites, and the limited variations in fluorescence signal and background did not affect the accuracy of the STARVUE™ AI algorithms. Quantitatively, the presented workflow exhibits high reproducibility and repeatability of results across locations, providing a reliable solution for translational research with amplified speed and quality of data generation. As a result, it offers significant potential to advance spatial biology from translational research to clinical applications",
-    "disclosures": "C. Kysilovsky, None.. | K. Hwang, None.. | S. Pfeifenbring, None.. | M. Downing, None.. | S. Derakhshani, None.. | M. Widmaier, None.. | J. He, None.. | A. Vasaturo, None.",
-    "presenter": "Cassandra Kysilovsky, BS",
-    "activity": "Abstract Submission",
-    "status": "Presenting",
-    "keywords_field": "Image analysis,Fluorescence imaging,Multiplex automation,Spatial biology,",
-    "topics_field": "++CH02-02 Proteomics and biomarker discovery,,",
-    "products": [
-      "Vizgen"
-    ],
-    "source_keywords": [
-      "Vizgen"
-    ],
-    "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/6601"
   },
   {
     "presentation_id": "6602",
@@ -8535,32 +8533,6 @@
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/9588"
   },
   {
-    "presentation_id": "1810",
-    "presentation_number": "7881",
-    "title": "Hijacking the BRD4-NUT fusion oncoprotein to activate programmed cell death",
-    "session_title": "Targeted Therapies, Predispositions, and Survivorship in Pediatric Cancers",
-    "session_id": "304",
-    "start": "4/22/2026 9:00:00 AM",
-    "end": "4/22/2026 12:00:00 PM",
-    "posterboard_number": "12",
-    "authors": "Kelly Wang, Yanlan Wang, Tian Qiu, Brendan G. Dwyer, Daryl Griffin, Geoffrey I. Shapiro, Chris A. French, Nathanael S. Gray, Gerald R. Crabtree",
-    "affiliation": "Dept. of Pathology and Developmental Biology, Stanford University, Stanford, CA | Dept. of Chemical and Systems Biology, Stanford University, Stanford, CA | Dept. of Medical Oncology and Medicine, Dana-Farber Cancer Institute, Brigham and Women’s Hospital and Harvard Medical School, Boston, MA | Professor, Dept. of Pathology, Brigham and Women’s Hospital and Harvard Medical School, Boston, MA",
-    "abstract": "Fusion oncogenes account for about 10-20% of all cancer drivers and generally result from in-frame recombination with specific partners. Cancers driven by fusion oncogenes often occur in young people whose genomes are relatively free of other mutations, providing a singular reliance on the fusion and its underlying mechanisms. Despite this focus, fusion oncogenes — particularly those that arise from transcription factors — have been difficult to target therapeutically. We demonstrate in this study that the fusion oncoprotein BRD4-NUT can be used to specifically activate programmed cell death in an aggressive form of squamous cancer, NUT carcinoma (NC). NC is caused by a translocation of the NUTM1 gene downstream of the BRD4 gene. Transcription of the fusion gene is therefore controlled by the BRD4 regulatory region, leading to high-level expression of the fusion oncoprotein. The NUT protein is normally restricted to the testes, where it is essential for histone hyperacetylation, histone removal and replacement by protamines. NC currently has a mean‬‭ survival of 6-9 months and no approved treatments. We reasoned that the oncogenic program of BRD4-NUT could be reprogrammed to activate a synthetic death circuit. To selectively inhibit NC, we developed bifunctional molecules that target the BRD4-NUT fusion, BRD4 and PARP. We call the new class of molecules DD-CIPs for DNA Damage-Chemical Inducers of Proximity. The most potent member of this new class (TWQ-184) kills NC cell lines (10-15, SW and 14169) at concentrations between 0.74 nM and 6 nM. TWQ-184 forms a ternary complex with BRD4-NUT and PARP, resulting in cell death. P300 inhibitors partially rescue NC cells from TWQ-184-induced apoptosis, suggesting that transcription at PARP-bound DNA breaks driven by BRD4-NUT is required to initiate cell death. TWQ-184 induces γH2AX deposition and ATM activation within 24 hours, suggesting that PARP-bound single-strand breaks are converted to lethal double-strand breaks in the cancer cells. Exposure to TWQ-184 for one hour gives near-complete NC death at 72 hours, suggesting that intermittent dosing might be effective. TWQ-184 additionally exhibits high specificity for the malignant cells, evidenced by the substantial therapeutic windows between NC cell lines and healthy human lymphocytes and fibroblasts. Based on our current findings, the compound’s high efficacy in the cancer cells and low toxicity in healthy cells offer a promising approach to treat NC. This strategy for hijacking a fusion oncoprotein to activate transcriptionally coupled DNA damage-mediated cell death could be applicable to other transcriptional fusion oncogenes.‬‬‬",
-    "disclosures": "K. Wang, None.. | Y. Wang, None.. | T. Qiu, None.. | B. G. Dwyer, None.. | D. Griffin, None. | G. I. Shapiro, | Merck KGaA/EMD-Serono ). | Artios ). | Lilly ). | Pfizer ). | Dosage regimen for sapacitabine and seliciclib Patent. | Compositions and Methods for Predicting Response and Resistance to CDK4/6 inhibition Patent. | Merck KGaA/EMD-Serono Other, Scientific Advisory Board. | Circle Pharmaceuticals Other, Scientific Advisory Board. | Concarlo Therapeutics Other, Scientific Advisory Board. | Schrodinger Scientific Advisory Board. | FoRx Therapeutics Scientific Advisory Board. | MycRx Scientific Advisory Board. | C. A. French, None. | N. S. Gray, | Syros Other, Scientific Advisory Board. | Allorion Other, Scientific Advisory Board. | Lighthorse Other, Scientific Advisory Board. | Voronoi Other, Scientific Advisory Board. | Inception Other, Scientific Advisory Board. | Matchpoint Other, Scientific Advisory Board. | CobroVentures Other, Scientific Advisory Board. | GSK Other, Scientific Advisory Board. | Shenandoah Therapeutics g., Board of Directors, non-salaried role), Other, Scientific Advisory Board. | Larkspur g., Board of Directors, non-salaried role), Other, Scientific Advisory Board. | Soltego g., Board of Directors, non-salaried role), Other, Scientific Advisory Board. | Novartis ). | Takeda ). | Astellas ). | Taiho ). | Jansen ). | Kinogen ). | Arbella ). | Deerfield ). | Springworks ). | G. R. Crabtree, | Foghorn Therapeutics g., Board of Directors, non-salaried role). | Shenandoah Therapeutics g., Board of Directors, non-salaried role).",
-    "presenter": "Kelly Wang, No Degree",
-    "activity": "Abstract Submission",
-    "status": "Presenting",
-    "keywords_field": "PARP,NUT carcinoma,Chemically induced proximity,BRD4-NUTM1,",
-    "topics_field": "++CL06-01 Adolescent and young adult oncology,,",
-    "products": [
-      "Singular"
-    ],
-    "source_keywords": [
-      "Singular"
-    ],
-    "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/1810"
-  },
-  {
     "presentation_id": "8550",
     "presentation_number": "7907",
     "title": "Genomic, immune, and clinical characterization of estrogen receptor-positive, HER2-low breast cancer: The NextGIM trial latest updates",
@@ -8707,32 +8679,6 @@
       "Bruker"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/11823"
-  },
-  {
-    "presentation_id": "12009",
-    "presentation_number": "CT015",
-    "title": "Clinical outcomes by genomic markers and ctDNA dynamics with perioperative nivolumab (NIVO) for resectable NSCLC from CheckMate 77T",
-    "session_title": "Aiming for Cure: Perioperative Clinical Trials",
-    "session_id": "672",
-    "start": "4/18/2026 1:36:00 PM",
-    "end": "4/18/2026 1:46:00 PM",
-    "posterboard_number": "",
-    "authors": "T. Cascone, M. M. Awad, J. D. Spicer, J. He, S. Lu, F. Tanaka, R. Cornelissen, L. B. Petruzelka, Y. Gao, J.-L. Pujol, H. Ito, L. de Oliveira Muniz Koch, T.-E. Ciuleanu, L. Wu, S. Bohnet, Y. Watanabe, J. Neely, V. Ip, Y.-H. Hung, S. Bhatia, C. Coronado Erdmann, N. Eddy, A. Yadav, M. Provencio; The University of Texas MD Anderson Cancer Center, Houston, TX, Memorial Sloan Kettering Cancer Center, New York, NY, McGill University Health Centre, Montreal, QC, Canada, National Cancer Center/National Clinical Research Center for Cancer/Cancer Hospital, Chinese Academy of Medical Sciences and Peking Union Medical College, Beijing, China, Shanghai Lung Cancer Center, Shanghai Chest Hospital, Shanghai Jiao Tong University, Shanghai, China, University of Occupational and Environmental Health, Kitakyushu, Japan, Erasmus MC Cancer Institute, Rotterdam, Netherlands, Charles University, Prague, Czech Republic, Xiangya Hospital, Central South University, Changsha, China, Montpellier Regional University Hospital, Montpellier, France, Kanagawa Cancer Center, Yokohama, Japan, Hospital Israelita Albert Einstein, Sao Paulo, Brazil, Prof. Dr. Ion Chiricuta and Universitatea de Medicina si Farmacie Iuliu Hatieganu, Cluj-Napoca, Romania, Hunan Cancer Hospital, Changsha, China, University Medical Center Schleswig-Holstein, Lubeck, Germany, Saitama Cancer Center, Saitama, Japan, Bristol Myers Squibb, Princeton, NJ, Bristol Myers Squibb, Boudry, Switzerland, Hospital Universitario Puerta de Hierro, Madrid, Spain",
-    "affiliation": "",
-    "abstract": "Abstract is embargoed at this time.",
-    "disclosures": "T. Cascone, | ASCO Post Other, Speaker fees/honoraria. | AstraZeneca ), Other, Speaker fees/honoraria, advisory/consulting fees. | Bio Ascend Other, Speaker fees/honoraria. | BioNTech Other, Speaker fees/honoraria. | Bristol Myers Squibb ), Other, Speaker fees/honoraria, advisory/consulting fees. | Caris Life Sciences Other, Advisory/consulting fees. | Daiichi Sankyo Other, Advisory/consulting fees. | Genentech Other, Advisory/consulting fees. | IDEOlogy Health Other, Speaker fees/honoraria. | Johnson & Johnson Other, Advisory/consulting fees. | Medical Educator Consortium Other, Speaker fees/honoraria. | Medscape Other, Speaker fees/honoraria. | Merck ), Other, Advisory/consulting fees. | Moderna Other, Advisory/consulting fees. | Nuvalent Other, Advisory/consulting fees. | OncLive Other, Speaker fees/honoraria. | oNKo-Innate Other, Advisory/consulting fees. | PeerView Other, Speaker fees/honoraria. | Pfizer Other, Advisory/consulting fees. | Physicians’ Education Resources Other, Speaker fees/honoraria. | M. M. Awad, | Bristol Myers Squibb ). | Genentech ). | AstraZeneca ). | Blueprint Medicine ). | Synthekine ). | AbbVie ). | Gritstone ). | Mirati ). | Regeneron ). | AffiniT ). | EMD Serono ). | Novartis ). | Janssen ). | Coherus ). | D3Bio ). | Pfizer ). | Lilly ). | Seagen ). | Gilead ). | Summit Therapeutics ). | J. D. Spicer, | Bristol Myers Squibb ), Travel, Other, Consulting fees, honoraria, Participation on a Data Safety Monitoring Board or Advisory Board, Receipt of equipment, materials, drugs, medical writing, gifts or other services. | Merck ), Travel, Other, Consulting fees, honoraria, Participation on a Data Safety Monitoring Board or Advisory Board, Receipt of equipment, materials, drugs, medical writing, gifts or other services. | AstraZeneca ), Travel, Other, Consulting fees, honoraria, Participation on a Data Safety Monitoring Board or Advisory Board, Receipt of equipment, materials, drugs, medical writing, gifts or other services. | CLS Therapeutics ), Other, Receipt of equipment, materials, drugs, medical writing, gifts or other services. | Johnson and Johnson ). | AMGEN ). | Boehringer Ingleheim ). | Pfizer ). | Regeneron Other, Participation on a Data Safety Monitoring Board or Advisory Board. | J. He, None. | S. Lu, | AstraZeneca ), Other, Consulting fees, honoraria, Participation on a Data Safety Monitoring Board or Advisory Board. | Hutchison ), Other, Consulting fees. | Bristol Myers Squibb ). | Hengrui Therapeutics ), Other, Honoraria. | Beigene ). | Roche ), Other, Consulting fees, honoraria, Participation on a Data Safety Monitoring Board or Advisory Board. | Hansoh ), Other, Honoraria. | Pfizer Other, Consulting fees. | Boehringer Ingelheim Other, Consulting fees. | MediPharma Other, Consulting fees. | Simcere Other, Consulting fees. | ZaiLab Other, Consulting fees. | GenomiCare Other, Consulting fees. | Yuhan Corporation Other, Consulting fees. | PrIME Oncology Other, Consulting fees. | Menarini Other, Consulting fees. | InventisBio Co. Ltd. ). | Regenron Other, Participation on a Data Safety Monitoring Board or Advisory Board. | Xcovery Holding Other, Participation on a Data Safety Monitoring Board or Advisory Board. | Chinese Lung Cancer Associate, CSCO Leadership or fiduciary role in other board, society, committee or advocacy group. | F. Tanaka, | Ono Pharmaceutical ), Other, Consulting fees, honoraria. | Taiho Pharmaceutical ), Other, Honoraria. | Illy Lilly Japan ), Other, Honoraria. | Chugai Pharmaceutical ), Other, Consulting fees, honoraria. | Astra Zeneca Other, Consulting fees, honoraria. | Bristol Myers Squibb Other, Consulting fees, honoraria. | MSD Other, Honoraria. | Boehringer Ingelheim Japan Other, Honoraria. | Johnson & Johnson Other, Honoraria. | Covidien Japan Other, Honoraria. | Kyowa-Kirin Other, Honoraria. | Takeda Pharmaceutical Other, Honoraria. | Pfizer Other, Honoraria. | Olympus Other, Honoraria. | Stryker Other, Honoraria. | Intuitive Japan Other, Honoraria. | R. Cornelissen, | Daiichi-Sankyo Other, Honoraria. | AstraZeneca Other, Honoraria. | Pfizer Other, Honoraria. | Bristol Myers Squibb Other, Honoraria, Participation on a Data Safety Monitoring Board or Advisory Board. | MSD Other, Honoraria. | Pierre Fabre Other, Participation on a Data Safety Monitoring Board or Advisory Board. | L. B. Petruzelka, None.. | Y. Gao, None.. | J. Pujol, None.. | H. Ito, None.. | L. de Oliveira Muniz Koch, None. | T. Ciuleanu, | Amgen ), Travel, Other, Consulting fees, honoraria, Participation on a Data Safety Monitoring Board or Advisory Board. | Merck Sharp and Dome ), Travel, Other, Consulting fees, honoraria, Participation on a Data Safety Monitoring Board or Advisory Board. | Merck Serono ), Travel, Other, Consulting fees, honoraria, Participation on a Data Safety Monitoring Board or Advisory Board. | Takeda ), Travel, Other, Consulting fees, honoraria, Participation on a Data Safety Monitoring Board or Advisory Board. | Astra Zeneca ), Travel, Other, Consulting fees, honoraria, Participation on a Data Safety Monitoring Board or Advisory Board. | Roche ). | Pfizer ), Travel, Other, Consulting fees, honoraria, Participation on a Data Safety Monitoring Board or Advisory Board. | Servier Travel, Other, Consulting fees, honoraria, Participation on a Data Safety Monitoring Board or Advisory Board. | Bristol Myers Squibb Travel, Other, Consulting fees, honoraria. | L. Wu, None.. | S. Bohnet, None.. | Y. Watanabe, None. | J. Neely, | Bristol Myers Squibb Employment, Stock. | V. Ip, | Bristol Myers Squibb Employment, Stock. | Y. Hung, | Bristol Myers Squibb Employment, Stock. | S. Bhatia, | Bristol Myers Squibb Employment, Stock. | C. Coronado Erdmann, | Bristol Myers Squibb Employment, Stock. | N. Eddy, | Bristol Myers Squibb Employment, Stock. | A. Yadav, | Bristol Myers Squibb Employment, Stock. | M. Provencio, | Bristol Myers Squibb ), Travel, Other, Speaker fees/honoraria, advisory/consulting fees. | AstraZeneca ), Travel, Other, Speaker fees/honoraria, advisory/consulting fees. | Merck Sharp and Dohme ), Travel, Other, Speaker fees/honoraria, advisory/consulting fees. | Roche ), Travel, Other, Speaker fees/honoraria, advisory/consulting fees. | Takeda ), Travel, Other, Speaker fees/honoraria, advisory/consulting fees. | Eli Lilly ), Travel, Other, Speaker fees/honoraria, advisory/consulting fees. | F. Hoffmann-La Roche ), Travel, Other, Speaker fees/honoraria, advisory/consulting fees. | Janssen ), Travel, Other, Speaker fees/honoraria, advisory/consulting fees. | Pfizer ), Travel, Other, Speaker fees/honoraria, advisory/consulting fees. | Amgen ), Travel, Other, Speaker fees/honoraria, advisory/consulting fees. | Boehringer Ingelheim ), Travel. | Pierre Fabre ), Travel. | Daiichi Sankyo Other, Advisory/consulting fees. | Johnson & Johnson Other, Advisory/consulting fees. | Gilead Other, Advisory/consulting fees. | Guardant Health Other, Advisory/consulting fees. | Bayer Other, Advisory/consulting fees. | Ipsen Other, Advisory/consulting fees. | Incyte Biosciences Other, Advisory/consulting fees. | Astellas Pharma Other, Advisory/consulting fees.",
-    "presenter": "Kimberly Macasevich",
-    "activity": "Late Breaking and Clinical Trials",
-    "status": "Presenting",
-    "keywords_field": "Immunotherapy,Biomarkers,Nivolumab,,",
-    "topics_field": "++PL06-01 Phase III adult clinical trials,,",
-    "products": [
-      "Singular"
-    ],
-    "source_keywords": [
-      "Singular"
-    ],
-    "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/12009"
   },
   {
     "presentation_id": "12036",
@@ -9185,32 +9131,6 @@
       "10X"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/11671"
-  },
-  {
-    "presentation_id": "11625",
-    "presentation_number": "LB381",
-    "title": "Estimating trends in early-onset breast cancer incidence in the United States by race and molecular subtype, 2011-2019",
-    "session_title": "Late-Breaking Research: Population Sciences",
-    "session_id": "643",
-    "start": "4/21/2026 2:00:00 PM",
-    "end": "4/21/2026 5:00:00 PM",
-    "posterboard_number": "11",
-    "authors": "Lia C. Scott, Karen E. Nielsen",
-    "affiliation": "University of California, Berkeley, Berkeley, CA | Georgia State University, Atlanta, GA",
-    "abstract": "Abstract is embargoed at this time.",
-    "disclosures": "L. C. Scott, None.. | K. E. Nielsen, None.",
-    "presenter": "Lia Scott, BS;MPH;PhD",
-    "activity": "Late Breaking and Clinical Trials",
-    "status": "Presenting",
-    "keywords_field": "Incidence,Breast cancer,Molecular subtypes,Race,",
-    "topics_field": "++PS01-07 Epidemiology, covering cancer incidence, mortality, clusters, and trends,,",
-    "products": [
-      "Singular"
-    ],
-    "source_keywords": [
-      "Singular"
-    ],
-    "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/11625"
   },
   {
     "presentation_id": "11396",
