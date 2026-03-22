@@ -2,22 +2,22 @@
   {
     "state_code": "CA",
     "state_name": "California",
-    "presentation_count": 121
+    "presentation_count": 133
   },
   {
     "state_code": "TX",
     "state_name": "Texas",
-    "presentation_count": 77
+    "presentation_count": 82
   },
   {
     "state_code": "NY",
     "state_name": "New York",
-    "presentation_count": 60
+    "presentation_count": 61
   },
   {
     "state_code": "MA",
     "state_name": "Massachusetts",
-    "presentation_count": 46
+    "presentation_count": 54
   },
   {
     "state_code": "MD",
@@ -40,14 +40,19 @@
     "presentation_count": 24
   },
   {
+    "state_code": "FL",
+    "state_name": "Florida",
+    "presentation_count": 19
+  },
+  {
     "state_code": "OH",
     "state_name": "Ohio",
     "presentation_count": 17
   },
   {
-    "state_code": "FL",
-    "state_name": "Florida",
-    "presentation_count": 16
+    "state_code": "GA",
+    "state_name": "Georgia",
+    "presentation_count": 15
   },
   {
     "state_code": "MO",
@@ -55,18 +60,8 @@
     "presentation_count": 15
   },
   {
-    "state_code": "GA",
-    "state_name": "Georgia",
-    "presentation_count": 14
-  },
-  {
     "state_code": "NJ",
     "state_name": "New Jersey",
-    "presentation_count": 14
-  },
-  {
-    "state_code": "IL",
-    "state_name": "Illinois",
     "presentation_count": 14
   },
   {
@@ -75,14 +70,19 @@
     "presentation_count": 14
   },
   {
+    "state_code": "IL",
+    "state_name": "Illinois",
+    "presentation_count": 14
+  },
+  {
     "state_code": "CT",
     "state_name": "Connecticut",
-    "presentation_count": 12
+    "presentation_count": 13
   },
   {
     "state_code": "MN",
     "state_name": "Minnesota",
-    "presentation_count": 10
+    "presentation_count": 12
   },
   {
     "state_code": "MI",
@@ -93,6 +93,11 @@
     "state_code": "AZ",
     "state_name": "Arizona",
     "presentation_count": 9
+  },
+  {
+    "state_code": "TN",
+    "state_name": "Tennessee",
+    "presentation_count": 8
   },
   {
     "state_code": "NM",
@@ -132,11 +137,6 @@
   {
     "state_code": "KS",
     "state_name": "Kansas",
-    "presentation_count": 3
-  },
-  {
-    "state_code": "TN",
-    "state_name": "Tennessee",
     "presentation_count": 3
   },
   {

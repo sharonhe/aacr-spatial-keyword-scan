@@ -20,8 +20,16 @@
     "presentation_count": 20
   },
   {
+    "product": "Singular",
+    "presentation_count": 15
+  },
+  {
     "product": "Chromium",
     "presentation_count": 11
+  },
+  {
+    "product": "Vizgen",
+    "presentation_count": 8
   },
   {
     "product": "CellScape",

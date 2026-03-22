@@ -5,7 +5,7 @@
   },
   {
     "institution": "UT MD Anderson Cancer Center",
-    "presentation_count": 28
+    "presentation_count": 31
   },
   {
     "institution": "The University of Texas MD Anderson Cancer Center",
@@ -16,6 +16,10 @@
     "presentation_count": 16
   },
   {
+    "institution": "Stanford University",
+    "presentation_count": 14
+  },
+  {
     "institution": "Memorial Sloan Kettering Cancer Center",
     "presentation_count": 12
   },
@@ -24,7 +28,7 @@
     "presentation_count": 10
   },
   {
-    "institution": "Stanford University",
+    "institution": "Weill Cornell Medicine",
     "presentation_count": 9
   },
   {
@@ -48,15 +52,11 @@
     "presentation_count": 8
   },
   {
-    "institution": "Weill Cornell Medicine",
+    "institution": "University of California",
     "presentation_count": 8
   },
   {
     "institution": "National Cancer Institute",
-    "presentation_count": 7
-  },
-  {
-    "institution": "University Hospital Heidelberg",
     "presentation_count": 7
   }
 ]

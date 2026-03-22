@@ -70,6 +70,20 @@
     "status": "Complete"
   },
   {
+    "keyword": "Vizgen",
+    "query": "vizgen",
+    "count": 8,
+    "search_id": "39129",
+    "status": "Complete"
+  },
+  {
+    "keyword": "Singular",
+    "query": "singular",
+    "count": 15,
+    "search_id": "49257",
+    "status": "Complete"
+  },
+  {
     "keyword": "Beacon + Bruker",
     "query": "beacon +bruker",
     "count": 3,

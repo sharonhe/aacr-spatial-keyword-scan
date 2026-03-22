@@ -4,8 +4,8 @@ Xenium,Germany,DEU,59
 Xenium,Japan,JPN,35
 Xenium,South Korea,KOR,24
 Xenium,Switzerland,CHE,12
-Xenium,Spain,ESP,10
 Xenium,United Kingdom,GBR,10
+Xenium,Spain,ESP,10
 Xenium,Australia,AUS,6
 Xenium,China,CHN,6
 Xenium,Canada,CAN,4
@@ -59,9 +59,9 @@ Chromium,Mexico,MEX,1
 10X,Switzerland,CHE,5
 10X,Italy,ITA,3
 10X,Hong Kong,HKG,3
-10X,Belgium,BEL,2
-10X,Austria,AUT,2
 10X,France,FRA,2
+10X,Austria,AUT,2
+10X,Belgium,BEL,2
 10X,Norway,NOR,1
 10X,Taiwan,TWN,1
 10X,Israel,ISR,1
@@ -100,6 +100,10 @@ CellScape,United States,USA,8
 CellScape,Germany,DEU,4
 CellScape,South Korea,KOR,3
 PaintScape,United States,USA,7
+Vizgen,United States,USA,17
+Vizgen,Germany,DEU,2
+Singular,United States,USA,39
+Singular,South Korea,KOR,5
 Beacon + Bruker,United States,USA,4
 Beacon + Bruker,France,FRA,2
 Bruker,United States,USA,96

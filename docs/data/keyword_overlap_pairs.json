@@ -120,6 +120,12 @@
     "jaccard_pct": 2.3
   },
   {
+    "left": "10X",
+    "right": "Vizgen",
+    "shared_presentations": 2,
+    "jaccard_pct": 1.6
+  },
+  {
     "left": "CosMx",
     "right": "CellScape",
     "shared_presentations": 2,
@@ -130,6 +136,18 @@
     "right": "nCounter",
     "shared_presentations": 2,
     "jaccard_pct": 3.0
+  },
+  {
+    "left": "Visium",
+    "right": "Vizgen",
+    "shared_presentations": 2,
+    "jaccard_pct": 2.0
+  },
+  {
+    "left": "Xenium",
+    "right": "Vizgen",
+    "shared_presentations": 2,
+    "jaccard_pct": 2.0
   },
   {
     "left": "Xenium + 5K",
@@ -156,10 +174,22 @@
     "jaccard_pct": 0.6
   },
   {
+    "left": "10X",
+    "right": "Singular",
+    "shared_presentations": 1,
+    "jaccard_pct": 0.7
+  },
+  {
     "left": "Chromium",
     "right": "CosMx",
     "shared_presentations": 1,
     "jaccard_pct": 1.7
+  },
+  {
+    "left": "Chromium",
+    "right": "Vizgen",
+    "shared_presentations": 1,
+    "jaccard_pct": 5.6
   },
   {
     "left": "CosMx",
@@ -172,6 +202,24 @@
     "right": "PaintScape",
     "shared_presentations": 1,
     "jaccard_pct": 1.9
+  },
+  {
+    "left": "CosMx",
+    "right": "Singular",
+    "shared_presentations": 1,
+    "jaccard_pct": 1.6
+  },
+  {
+    "left": "CosMx",
+    "right": "Vizgen",
+    "shared_presentations": 1,
+    "jaccard_pct": 1.8
+  },
+  {
+    "left": "GeoMx",
+    "right": "Singular",
+    "shared_presentations": 1,
+    "jaccard_pct": 2.0
   },
   {
     "left": "GeoMx",
@@ -192,6 +240,12 @@
     "jaccard_pct": 1.0
   },
   {
+    "left": "Visium",
+    "right": "Singular",
+    "shared_presentations": 1,
+    "jaccard_pct": 0.9
+  },
+  {
     "left": "Xenium",
     "right": "Bruker",
     "shared_presentations": 1,
@@ -202,5 +256,17 @@
     "right": "Chromium",
     "shared_presentations": 1,
     "jaccard_pct": 0.9
+  },
+  {
+    "left": "Xenium",
+    "right": "Singular",
+    "shared_presentations": 1,
+    "jaccard_pct": 0.9
+  },
+  {
+    "left": "Xenium + 5K",
+    "right": "Singular",
+    "shared_presentations": 1,
+    "jaccard_pct": 2.5
   }
 ]
