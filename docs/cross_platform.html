@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cross Platform</title>
+  <style>
+    :root {
+      --blue: #1673c6;
+      --blue-dark: #0f4d8b;
+      --ink: #1f2d3d;
+      --muted: #5f7187;
+      --line: #c9d8e6;
+      --panel: #f8fbfe;
+      --accent: #4fae6a;
+      --paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(22, 115, 198, 0.12), transparent 28%),
+        linear-gradient(180deg, #f5fbff 0%, #ffffff 22%);
+    }
+
+    .page {
+      width: min(1600px, calc(100vw - 48px));
+      margin: 32px auto 48px;
+      background: var(--paper);
+      border: 1px solid #d8e4ef;
+      box-shadow: 0 20px 50px rgba(15, 77, 139, 0.08);
+    }
+
+    .hero {
+      padding: 28px 36px 22px;
+      background:
+        linear-gradient(135deg, #1d7bd0 0%, #0f5a9f 100%);
+      color: #fff;
+    }
+
+    .eyebrow {
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    h1 {
+      margin: 8px 0 0;
+      font-size: 40px;
+      line-height: 1.05;
+      font-weight: 700;
+    }
+
+    .content {
+      padding: 24px 36px 40px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 42px;
+      margin-bottom: 26px;
+    }
+
+    .summary-item {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .summary-item strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 28px 0 10px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 28px;
+      color: var(--blue-dark);
+    }
+
+    .section-title .count {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: var(--panel);
+    }
+
+    thead th {
+      text-align: left;
+      font-size: 13px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--blue-dark);
+      padding: 12px 10px;
+      border-top: 2px solid var(--line);
+      border-bottom: 2px solid var(--line);
+      background: #f4f9fd;
+    }
+
+    tbody td {
+      vertical-align: top;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+      line-height: 1.4;
+      background: #fff;
+    }
+
+    th:nth-child(1), td:nth-child(1) { width: 10%; }
+    th:nth-child(2), td:nth-child(2) { width: 23%; }
+    th:nth-child(3), td:nth-child(3) { width: 19%; }
+    th:nth-child(4), td:nth-child(4) { width: 33%; }
+    th:nth-child(5), td:nth-child(5) { width: 15%; }
+
+    .title {
+      font-weight: 700;
+      color: #203246;
+      margin-bottom: 4px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .mono {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      white-space: nowrap;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        width: auto;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    
+    <div class="hero">
+      <div class="eyebrow">AACR 2026</div>
+      <h1>Cross Platform</h1>
+    </div>
+    <div class="content">
+      <div class="footer-note">
+        40 presentations mention more than one tracked product keyword. 10X and Bruker are excluded from this derived list.
+      </div>
+      
+    <table>
+      <thead>
+        <tr>
+          <th>Abstract #</th>
+          <th>Authors</th>
+          <th>Affiliation</th>
+          <th>Title / Session</th>
+          <th>Products</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td class="mono">1201</td>
+  <td>Yunhe Liu, Idania Carolina Lubo Julio, Wei Lu, Alejandra G. Serrano, Jean R. Clemenceau, Amber Famiglietti, Karen Colbert, Yibo Dai, Yang Liu, Jun Wang, Jeremy L. Davis, Mingyao Li, Paul F. Mansfield, Tae Hyun Hwang, Luisa M. Solis-Soto, Linghua Wang</td>
+  <td>Department of Genomic Medicine, The University of Texas MD Anderson Cancer Center, Houston, TX | Department of Translational and Molecular Pathology, The University of Texas MD Anderson Cancer Center, Houston, TX | Department of Surgery, Vanderbilt University Medical Center, Nashville, TN | National Institute of Dental and Craniofacial Research, National Institutes of Health, Bethesda, MD | Department of Clinical Cancer Prevention, The University of Texas MD Anderson Cancer Center, Houston, TX | BioChemistry&amp;Molecular Biology, University of Maryland School of Medicine, Baltimore, MD | University of Pennsylvania, Philadelphia, PA | Vice President, Acute Care Services, UT MD Anderson Cancer Ctr., Houston, TX | Department of Translational Molecular Pathology, the university of MD Anderson cancer center, Houston, TX</td>
+  <td>
+    <div class="title">Spatial 3D and multi-omics mapping of diffuse gastric cancer evolution from preinvasive to invasive lesions in CDH1 mutation carriers</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10001">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium; CosMx; GeoMx; G4X</td>
+</tr>
+<tr>
+  <td class="mono">5524</td>
+  <td>Mary Goldman, Brian Craft, Cally Lin, Jingchun Zhu, David Haussler</td>
+  <td>UC Santa Cruz Genomics Institute, Santa Cruz, CA | Stanford University, San Francisco, CA | Investigator/Distinguished Professor, Ctr. For Bio. Sci. &amp; Eng., UC Santa Cruz, Santa Cruz, CA</td>
+  <td>
+    <div class="title">Visualization and analysis of cancer genomics data using UCSC Xena</div>
+    <div class="meta">4/21/2026 2:00:00 PM | New Software Tools for Data Analysis</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/3258">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium; Chromium; CosMx; MerFISH</td>
+</tr>
+<tr>
+  <td class="mono">1476</td>
+  <td>Steven Yan, Limin Jiang, Yan Guo</td>
+  <td>University of Miami Miller School of Medicine, Miami, FL | University of Miami, Miami, FL</td>
+  <td>
+    <div class="title">Improve spatial transcriptomic data with integrated hybrid transformer and graph convolutional networks</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Integrative Computational Approaches 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/3157">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium; CosMx</td>
+</tr>
+<tr>
+  <td class="mono">3444</td>
+  <td>Wesley V. Wilson, MacLean P. Nasrallah, Nakial Cross, Yael A. Day, Vanessa Gonzalez, Rachel M. Leskowitz, Amy Marshall, Julie K. Jadlowsky, Gabriela Plesa, Donald L. Siegel, Elizabeth O. Hexner, Joseph A. Fraietta, Carl H. June, Stephen J. Bagley, Donald O’Rourke, Zev Binder, Andrew J. Rech</td>
+  <td>Princess Margaret Cancer Centre, University Health Network, Toronto, ON, Canada | Penn Medicine, Philadelphia, PA | Perelman School of Medicine Univ. of Pennsylvania, Philadelphia, PA | CCI, Penn Medicine, Philadelphia, PA | University of Pennsylvania, Philadelphia, PA | Program Director of Translational Research, Abramson Family Cancer Research Inst, University of Pennsylvania, Philadelphia, PA</td>
+  <td>
+    <div class="title">Spatial profiling of recurrent glioblastoma in a Phase I clinical trial reveals favorable immune remodeling induced by intracerebroventricular CAR T therapy</div>
+    <div class="meta">4/20/2026 2:00:00 PM | Microenvironmental Determinants of Therapy Response and Resistance 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/8150">Open abstract</a></div>
+  </td>
+  <td>Visium; CosMx; GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">6576</td>
+  <td>Chih-Hung Chung, Han-Hsun Yu, Muh-Hwa Yang</td>
+  <td>National Yang Ming Chiao Tung University, Taipei, Taiwan</td>
+  <td>
+    <div class="title">Integrative spatial transcriptomics reveals EMT-driven immune regulatory programs underlying metastasis in HNSCC</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Inflammation, Immunity, and Cancer</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9565">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium; GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">6895</td>
+  <td>Yufeng He, Yanping Zhao, Rui Zhang, Heli Yang, Zhaode Bu, Yuan Luo, Deng Pan, Zexian Zeng</td>
+  <td>Peking-Tsinghua Center for Life Sciences, Academy for Advanced Interdisciplinary Studies, Peking University, Beijing, China | Tsinghua-Peking Center for Life Sciences, School of Life Sciences, Tsinghua University, Beijing, China | Center of Gastrointestinal Cancer, Peking University Cancer Hospital &amp; Institute, Peking University, Beijing, China | Department of Preventive Medicine, Feinberg School of Medicine, Northwestern University, Chicago, IL | Tsinghua-Peking Center for Life Sciences, Department of Basic Medical Sciences, Tsinghua University, Beijing, China</td>
+  <td>
+    <div class="title">DISSECT integrates cytological images and spatial transcriptomics for cell segmentation</div>
+    <div class="meta">4/22/2026 9:00:00 AM | New Algorithms and Computational Methods</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/3267">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium; CosMx</td>
+</tr>
+<tr>
+  <td class="mono">1205</td>
+  <td>Junyan Liu, Md Tauhidul Islam, Lei Xing</td>
+  <td>Stanford University, Palo Alto, CA</td>
+  <td>
+    <div class="title">Trajectory-aware spatial transcriptomics deconvolution via image representation of RNA-seq data</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10006">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium</td>
+</tr>
+<tr>
+  <td class="mono">1210</td>
+  <td>Kazutaka Otsuji, Tomo Osako, Yoko Takahashi, Chikako Shibata, Sumito Saeki, Asumi Iesato, Tetsuo Noda, Kengo Takeuchi, Takayuki Ueno, Reo Maruyama</td>
+  <td>NEXT-Ganken Program, Japanese Foundation for Cancer Research, Koto-ku, Tokyo, Japan | Division of Pathology, Cancer Institute, Japanese Foundation for Cancer Research, Koto-ku, Tokyo, Japan | Breast Oncology Center, Cancer Institute Hospital of JFCR, Japanese Foundation for Cancer Research, Koto-ku, Tokyo, Japan | Division of Cancer Epigenomics, Cancer Institute, Japanese Foundation for Cancer Research, Koto-ku, Tokyo, Japan | Director&#x27;s room, Japanese Foundation for Cancer Research, Koto-ku, Tokyo, Japan</td>
+  <td>
+    <div class="title">Integrated spatial and single-cell profiling uncovers a pre-existing, treatment-resistant subclone that drives early local relapse in luminal breast cancer</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10012">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium</td>
+</tr>
+<tr>
+  <td class="mono">1419</td>
+  <td>Bohyeon Yu, Emanuele Filiberto Rosatti, Jangham Jung, Abhinav Jain, Joanna Phillips, Aaron Antonio Diaz</td>
+  <td>Department of Neurological Surgery, University of California, San Francisco, San Francisco, CA | Department of Cellular, Computational and Integrative Biology, University of Trento, Trentino, Italy</td>
+  <td>
+    <div class="title">Integrated spatial and genetic lineage tracing uncovers cell state plasticity underlying recurrence in group3 and group4 medulloblastoma</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Application of Bioinformatics to Cancer Biology 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/2974">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium</td>
+</tr>
+<tr>
+  <td class="mono">1487</td>
+  <td>Raymond Yan, Brian Falkenstein, A. Burak Tosun, Filippo Pullara, S. Chakra Chennubhotla</td>
+  <td>PredxBio, Inc., Pittsburgh, PA | PredxBio, Inc. / University of Pittsburgh, Pittsburgh, PA</td>
+  <td>
+    <div class="title">Spatial microdomains from histology reveal multi-omic biomarkers for enhanced idiopathic pulmonary fibrosis diagnosis</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Integrative Computational Approaches 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/3168">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium</td>
+</tr>
+<tr>
+  <td class="mono">2253</td>
+  <td>Fushun Chen, Lorena Isabel Gomez, Tieling Zhou, Yuejiang Liu, Inti C. Tarifa Reischle, Sujuan Yang, Manvi Sharma, ,Jiping Feng, Jaafar Hadi, Fuduan Peng, Yibo Dai, Mhenaz Hossain, Ratna Veeramachaneni, Ansam Sinjab, Sean Anderson, Dhrishit Mangrolia, Deborah Rodriguez, Nadim Ajami, Jennifer Wargo, Adel El-Naggar, Roberto Rangel, Nadarajah Vigneswaran, Linghua Wang, Jeffrey N. Myers, Humam Kadara</td>
+  <td>UT MD Anderson Cancer Center, Houston, TX | UT Health School of Dentistry, Houston, TX</td>
+  <td>
+    <div class="title">Multimodal and multikingdom spatial transcriptomics identify bacterial niches implicated in oral cancer development</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Tumorigenesis and Early Microenvironmental Trajectories</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/8420">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium</td>
+</tr>
+<tr>
+  <td class="mono">2255</td>
+  <td>Yibo Dai, Fuduan Peng, Ansam Sinjab, Yunhe Liu, Sujuan Yang, Lorena I Gomez Bolanos, Tieling Zhou, Minyue Chen, Alejandra G Serrano, Jianlong Liao, Guangsheng Pei, Yang Liu, Jiahui Jiang, Kyung Serk Cho, Kai Yu, Jiping Feng, Zahraa Rahal, Naoe Jimbo, Takuo Hayashi, Satsuki Kishikawa, Kazuya Takamochi, Avrum Spira, Steven M. Dubinett, Tomoo Itoh, Takashi Yao, Kenji Suzuki, Stephen G. Swisher, Mingyao Li, Junya Fujimoto, Ignacio Wistuba, Jared K. Burks, Kadir Caner Akdemir, Hind Rafei, Katayoun Rezvani, Jeffrey N. Myers, Humam Kadara, Linghua Wang</td>
+  <td>UT MD Anderson Cancer Center, Houston, TX | Kobe University Hospital, Kobe, Japan | Juntendo University Graduate School of Medicine, Tokyo, Japan | Lung Cancer Initiative at Johnson and Johnson, Boston, MA | UCLA David Geffen School of Medicine, Los Angeles, CA | University of Pennsylvania, Philadelphia, PA | Hiroshima University Hospital, Hiroshima, Japan | Moffitt Cancer Center &amp; Research Institute, Tampa, FL</td>
+  <td>
+    <div class="title">Spatial transcriptomics reveals evolving tumor microenvironmental archetype along the lung premalignancy-adenocarcinoma continuum</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Tumorigenesis and Early Microenvironmental Trajectories</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/8215">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium</td>
+</tr>
+<tr>
+  <td class="mono">2259</td>
+  <td>Siyuan He, Aatish Thennavan, Runmin Wei, Shanshan Bai, Jianzhuo Li, Chante Bethell, Emi Sei, Mitchell Rao, Tapsi Kumar, Chenling Tang, Ivan Marin, Jessica Montalvan, Chandandeep Nagi, Bora Lim, Savitri Krishnamurthy, Alastair Thompson, Nicholas E. Navin</td>
+  <td>UT MD Anderson Cancer Center, Houston, TX | Baylor College of Medicine, Houston, TX | Baylor College of Medicine, Dan L. Duncan Cancer Center, Houston, TX</td>
+  <td>
+    <div class="title">Reprogramming of the stromal and immune microenvironment in preinvasive breast cancer</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Tumorigenesis and Early Microenvironmental Trajectories</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/8418">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium</td>
+</tr>
+<tr>
+  <td class="mono">2272</td>
+  <td>Akifumi Mochizuki, Ayako Suzuki, Kouya Shiraishi, Masahiro Torasawa, Takayuki Honda, Susumu Kirimura, Yasunari Miyazaki, Kenichi Okubo, Syuzo Kaneko, Yukihiro Yoshida, Shun-ichi Watanabe, Masahiro Tsuboi, Genichiro Ishii, Issei Imoto, Ryuji Hamamoto, Yasushi Yatabe, Yutaka Suzuki, Takashi Kohno</td>
+  <td>Department of Respiratory Medicine, Institute of Science Tokyo, Tokyo, Japan | Department of Computational Biology and Medical Sciences, Graduate School of Frontier Sciences, The University of Tokyo, Kashiwa, Japan | National Cancer Center Research Institute, Tokyo, Japan | Division of Genome Biology, National Cancer Center Research Institute, Tokyo, Japan | Division of Pathology, Institute of Science Tokyo, Tokyo, Japan | Department of Thoracic Surgery, Institute of Science Tokyo, Tokyo, Japan | Division of Medical AI Research and Development, National Cancer Center Research Institute, Tokyo, Japan | Department of Thoracic Surgery, National Cancer Center Hospital, Tokyo, Japan | Department of Thoracic Surgery, National Cancer Center Hospital East, Kashiwa, Japan | Department of Pathology and Clinical laboratories, National Cancer Center Hospital East, Kashiwa, Japan | Dept. of Human Genetics, Inst. of Health Biosciences, Aichi Cancer Center Research Institute, Nagoya, Japan | Associate Professor, National Cancer Center Japan, Tokyo, Japan | Chief, Dept. of Pathology &amp; Molec. Diagnostics, National Cancer Center, Nagoya, Japan</td>
+  <td>
+    <div class="title">Dichotomous immunogenetic landscape of lung adenocarcinoma associated with usual interstitial pneumonia</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Tumorigenesis and Early Microenvironmental Trajectories</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10783">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium</td>
+</tr>
+<tr>
+  <td class="mono">2298</td>
+  <td>Rhitajit Sarkar, Shilpa Thakur, Gus Fridell, Elijah Edmondson, Sonam Kumari, Joanna KLUBO-GWIEZDZINSKA</td>
+  <td>Metabolic Diseases Branch, NIH National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK), Bethesda, MD | National Institutes of Health, Bethesda, MD | Johns Hopkins University, Baltimore, MD | National Institutes of Health, Reston, VA</td>
+  <td>
+    <div class="title">Spatial immune profiling reveals varying tumor microenvironments in papillary thyroid microcarcinoma</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Hormone Receptor Signaling and Therapeutic Targeting</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10939">Open abstract</a></div>
+  </td>
+  <td>GeoMx; nCounter</td>
+</tr>
+<tr>
+  <td class="mono">2708</td>
+  <td>Robert F. Gruener, Weijie Zhang, Lilin Wang, Adam M. Lee, R. Stephanie Huang</td>
+  <td>University of Minnesota, College of Pharmacy, Minneapolis, MN | University of Minnesota, Minneapolis, MN | Asst. Professor, Dept. of Medicine, University of Minnesota, Minneapolis, MN</td>
+  <td>
+    <div class="title">Revealing fibroblast-mediated impacts to therapy response through spatially resolved drug response prediction in lung cancer</div>
+    <div class="meta">4/20/2026 2:00:00 PM | Integration of Clinical and Research Data</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/3338">Open abstract</a></div>
+  </td>
+  <td>Xenium; CosMx</td>
+</tr>
+<tr>
+  <td class="mono">2754</td>
+  <td>Haenara Shin, Dongjoo Lee, Jeongbin Park, Hongyoon Choi</td>
+  <td>Portrai, Inc., Seoul, Korea, Republic of</td>
+  <td>
+    <div class="title">VGL: Vision-Gene-Language multimodal LLM integrating histopathology and gene expression for cell type classification in lung cancer</div>
+    <div class="meta">4/20/2026 2:00:00 PM | Large Language Models in the Clinic</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/2649">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium</td>
+</tr>
+<tr>
+  <td class="mono">3951</td>
+  <td>Assya Legrini, Tengyu Zhang, Mari-Claire McGuigan, Colin Wood, Luke McNickle, Claire Kennedy-Dietrich, Ghazal Latifi, Yoana Doncheva, Josefina Vasquez, Hannah Morgan, Pamela McCall, Michail Doukas, Joanne Edwards, Nigel Jamieson</td>
+  <td>Univ. of Glasgow, Glasgow, United Kingdom | Glasgow Tissue Research Facility, Univ. of Glasgow, Glasgow, United Kingdom | Erasmus MC, Rotterdam, Netherlands</td>
+  <td>
+    <div class="title">Spatial mapping of B7-H3 mediated cellular plasticity in treatment naive pancreatic cancer</div>
+    <div class="meta">4/20/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10028">Open abstract</a></div>
+  </td>
+  <td>CosMx; GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">3973</td>
+  <td>Tim Schunk, Tim Mandelkow, Shida Xiong, Jonas Raedler, Rodler Severin, Philipp Nuhn, Anne Letsch, Marion van Macklenbergh, Jan Weitkamp, Jakob Kohler, Arne Christians, Oliver Braubach, Steve Lott, Micaela Mathiak, Gavin Gordon, Björn Konukiewitz, Christoph Rocken, Niclas Christian Blessin</td>
+  <td>Universitätsklinikum Schleswig-Holstein, Kiel, Germany | Bruker Spatial Biology | Canopy Biosciences, St. Louis, CA | Bruker Spatial Biology, St. Louis, CA | Professor, Dept. of Pathology, Christian-Albrechts-University, Kiel, Germany</td>
+  <td>
+    <div class="title">A framework for antibody validation via spatial proteo-transcriptomics using the CellScape platform</div>
+    <div class="meta">4/20/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10050">Open abstract</a></div>
+  </td>
+  <td>CosMx; CellScape</td>
+</tr>
+<tr>
+  <td class="mono">4021</td>
+  <td>Y.-C. Kao, S. X. Tan, X. Tan, H. Oey, K. J. Lee, T. Vallius, R. Pelletier, A. Causer, C. Zhou, D. Smit, J. O&#x27;Neill, A. Xiong, B. O&#x27;Brien, A. Collins, P. K. Sorger, H. Soyer, K. Khosrotehrani, Q. Nguyen, M. S. Stark; Frazer Institute, The University of Queensland, Dermatology Research Centre, Brisbane, Australia, QIMR Berghofer Medical Research Institute, Brisbane, Australia, Harvard Medical School, Brookline, MA, Laboratory of Systems Pharmacology, Harvard Program in Therapeutic Science, Harvard Medical School, Boston, MA, Institute for Molecular Bioscience, the University of Queensland, Brisbane, Australia, QIMR Medical Research Institute, Queensland, Australia, Brisbane, Australia, Sullivan Nicolaides Pathology, Brisbane, Australia, Harvard Medical School, Winchester, MA</td>
+  <td></td>
+  <td>
+    <div class="title">Precision diagnostics for early melanoma detection using spatial biology and AI guided image analysis</div>
+    <div class="meta">4/20/2026 4:05:00 PM | Biomarkers That Change Management: Predicting Therapy Benefit, Progression, and Metastatic Risk</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10956">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium</td>
+</tr>
+<tr>
+  <td class="mono">4795</td>
+  <td>Michael Emilio Patrick, Wei Yang, Liang Zhang, Isabel Lee, Stefan-Laural Rogers, Shanshan He, Christina Bailey, John Lyssand, Joseph M. Beechem</td>
+  <td>Bruker Spatial Biology, Seattle, WA</td>
+  <td>
+    <div class="title">Investigating HER2+ tumor cell motility and angiogenesis in FFPE breast cancer in space and at scale with CosMx and nCounter multiomics</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Angiogenesis</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/1531">Open abstract</a></div>
+  </td>
+  <td>CosMx; nCounter</td>
+</tr>
+<tr>
+  <td class="mono">4945</td>
+  <td>Ji Hye Choi, Yeong Hak Bang, Kyung Yeon Han, Woong-Yang Park</td>
+  <td>Sungkyunkwan University, Seoul, Korea, Republic of | University of Ulsan College of Medicine, Seoul | Translational Genomics Center, Seoul, Korea, Republic of | GENINUS, Seoul, Korea, Republic of</td>
+  <td>
+    <div class="title">Distinct colorectal cancer tumor cell subtypes revealed by single-cell and spatial transcriptomics</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Spatial Niches and Functional Boundaries within the Tumor Microenvironment 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10749">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium</td>
+</tr>
+<tr>
+  <td class="mono">4951</td>
+  <td>Sanha Hwang</td>
+  <td>Seoul National University, Seoul, Korea, Republic of</td>
+  <td>
+    <div class="title">Unraveling the role of APOE/APOC1/SPP1/TREM2‑positive lipid‑Associated macrophages in destructive venous invasion and metastasis of colorectal cancer</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Spatial Niches and Functional Boundaries within the Tumor Microenvironment 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10758">Open abstract</a></div>
+  </td>
+  <td>Xenium; GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">4960</td>
+  <td>Bryan Bell, Cedric Uytingco, Alec Barrett, Bryant Ngo, Jonathan Sakkos, Diksha Kool, Wanxin Wang, Melissa del Rosario, Christina Chang, Christina Fan, Andrew Farmer</td>
+  <td>Takara Bio USA, San Jose, CA</td>
+  <td>
+    <div class="title">Cross-platform comparison of spatial transcriptomics technologies in an FFPE lung squamous cell carcinoma sample</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Spatial Niches and Functional Boundaries within the Tumor Microenvironment 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10770">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium</td>
+</tr>
+<tr>
+  <td class="mono">4984</td>
+  <td>Joseph Zenga, Musaddiq Awan, Fumou Sun, Stuart J. Wong, Abdullah Memon, Tyce Kearl, Ean Norenberg, Margaret L. Hoang, Joseph M. Beechem, Eric Hobbs, Ashley Heck, Rachel Liu, Daniel McGuire, Erin Piazza, Peiman Hematti, Heather Himburg</td>
+  <td>Medical College of Wisconsin, Milwaukee, WI | Bruker Spatial Biology, Seattle, WA | Bruker Spatial Biology, Piedmont, CA | Bruker Cellular Analysis, Emeryville, CA</td>
+  <td>
+    <div class="title">Dissociative, spatial, and functional single-cell profiling reveals antigen-driven exhaustion and chemotactic failure of tumor-reactive T cells in HPV-negative HNSCC</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Tumor-Immune Crosstalk</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10547">Open abstract</a></div>
+  </td>
+  <td>CosMx; Beacon</td>
+</tr>
+<tr>
+  <td class="mono">5499</td>
+  <td>Xiyu Peng, James Smithy, Mohammad Yosofvand, Caroline Kostrzewa, Fiona Ehrich, MaryLena Bleile, Jasme Lee, Michael A. Postow, Margaret K. Callahan, Katherine Panageas, Ronglai Shen</td>
+  <td>Texas A&amp;M University, College Station, TX | Memorial Sloan Kettering Cancer Center, New York, NY | Univ. of Connecticut School of Medicine, Farmington, CT</td>
+  <td>
+    <div class="title">SpatialTopic exploring tumor ecosystem in 3D multiplexed imaging of melanoma</div>
+    <div class="meta">4/21/2026 2:00:00 PM | New Software Tools for Data Analysis</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/3233">Open abstract</a></div>
+  </td>
+  <td>Xenium; CosMx</td>
+</tr>
+<tr>
+  <td class="mono">5519</td>
+  <td>Junming Shi, Md Tauhidul Islam</td>
+  <td>Stanford University School of Medicine, Stanford, CA</td>
+  <td>
+    <div class="title">SOMaC: An interpretable and generalizable framework for integrating and clustering multimodal spatial omics to resolve cell states and immune niches in cancer</div>
+    <div class="meta">4/21/2026 2:00:00 PM | New Software Tools for Data Analysis</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/3253">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium</td>
+</tr>
+<tr>
+  <td class="mono">6113</td>
+  <td>Yufei Wang, Jae-Won Cho, Yasmin Nabil Laimon, Wenxin Xu, Kun Huang, Aseman Bagheri Sheshdeh, Nithyassree Murugan, Hsien-Chi Yuan, Jon Wee, David Alexander Braun, Toni K. Choueiri, Catherine J. Wu, Sabina Signoretti, Gordon J. Freeman, Martin Hemberg, Wayne A. Marasco</td>
+  <td>Dana-Farber Cancer Institute, Boston, MA | Brigham and Women&#x27;s Hospital, Boston, MA | Yale School of Medicine, New Haven, CT | Associate Professor, Dana-Farber Cancer Institute, Boston, MA</td>
+  <td>
+    <div class="title">ccRCC lung metastases harbor cancer associated fibroblast lymphocyte exclusion sites that form a confined TME as revealed by single cell and spatial multi-omics</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Metastasis and Organ-Specific Microenvironmental Evolution</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/8485">Open abstract</a></div>
+  </td>
+  <td>Xenium; CosMx</td>
+</tr>
+<tr>
+  <td class="mono">6159</td>
+  <td>Ping Xu, Yuehui Zhao, Yun Yan, Rui Ye, Chenling Tang, Emi Sei, Shanshan Bai, Tuan Tran, Cole Ruoff, Christine Ly, Keyi Zhu, Miao Zhang, Bila A. Siddiqui, Sumit K. Subudhi, Paul Corn, Christopher J. Logothetis, Patricia Troncoso, Amado J. Zurita-Saavedra, Nicholas Navin</td>
+  <td>Department of Systems Biology, UT MD Anderson Cancer Center, Houston, TX | Department of Pathology, UT MD Anderson Cancer Center, Houston, TX | Department of Genitourinary Medical Oncology, UT MD Anderson Cancer Center, Houston, TX</td>
+  <td>
+    <div class="title">Co-evolution of cancer cells and their microenvironment of primary and lymph node metastatic prostate cancer under androgen deprivation therapy</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Metastatic Niches and Microenvironment</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/6201">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium</td>
+</tr>
+<tr>
+  <td class="mono">6188</td>
+  <td>Yun Yan, Yiyun Lin, Tapsi Kumar, Shanshan Bai, Aatish Thennavan, Jianzhuo Li, Tuan Tran, Min Hu, Mitchell Rao, Anna Casasent, Elizabeth Ravenberg, Gaiane Margishvili Rauch, Alyson Clayborn, Debu Tripathy, Alastair Thompson, Bora Lim, Lei Huo, Lei Huo, Stacy Moulder, Clinton Yam, Nicholas E. Navin</td>
+  <td>UT MD Anderson Cancer Center, Houston, TX | Baylor College of Medicine, Dan L. Duncan Cancer Center, Houston, TX</td>
+  <td>
+    <div class="title">Decoding the archetypes and ecotypes of triple-negative breast cancer in responses to chemotherapy</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Spatial Niches and Functional Boundaries within the Tumor Microenvironment 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/8062">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium</td>
+</tr>
+<tr>
+  <td class="mono">6212</td>
+  <td>Julia Louw, Kenan Zhang, Anna Corcoran, Elizabeth Owens, Jodie Jepson, Jose R. Conejo-Garcia, David M. Ashley, Kanish Mirchia, David R. Raleigh, Mustafa Khasraw</td>
+  <td>Duke University, Durham, NC | Duke University School of Medicine, Durham, NC | Duke University Medical Center, Durham, NC | UCSF, San Francisco, CA | University of California San Francisco, San Francisco, CA | Duke Cancer Institute, Durham, NC</td>
+  <td>
+    <div class="title">Spatial immune and vascular remodeling defines recurrence in oligodendroglioma</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Spatial Niches and Functional Boundaries within the Tumor Microenvironment 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10835">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium</td>
+</tr>
+<tr>
+  <td class="mono">6470</td>
+  <td>Nakial C. W. Cross, Yael A. Day, Sonia Ndeupen, Vanessa E. Gonzalez, Zhen Miao, Sam I. Kim, Rachel M. Leskowitz, Amy Marshall, Julie K. Jadlowsky, Gabriela Plesa, Donald L. Siegel, Elizabeth O. Hexner, Jakub Svoboda, Stephen J. Schuster, Nancy R. Zhang, Joseph A. Fraietta, Andrew J. Rech, Carl H. June</td>
+  <td>Perelman School of Medicine Univ. of Pennsylvania, Philadelphia, PA | Statistics &amp; Data Analysis, Wharton School Univ. of Pennsylvania, Philadelphia, PA</td>
+  <td>
+    <div class="title">Spatial remodeling of the tumor microenvironment by IL-18-armored CD19 CAR T cells is associated with durable remission in relapsed or refractory lymphoma</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Clinical Correlates of Immunotherapy</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9514">Open abstract</a></div>
+  </td>
+  <td>CosMx; GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">6549</td>
+  <td>Yi Cui, Moumita Nath, Michael Emilio Patrick, Claire Williams, Daniel McGuire, Jobin K. Paul, Kowshik Jaganathan, Biswajit Das, Mohit Malhotra, Shanshan He, Joseph M. Beechem, Satish Sankaran</td>
+  <td>Bruker Spatial Biology, Seattle, WA | Farcast Biosciences India, Bengaluru, India</td>
+  <td>
+    <div class="title">Integrating functional biosignatures and same-cell spatial multiomics to predict synergistic benefit of combination checkpoint therapy in head and neck cancer</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Immune Checkpoint Blockade</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9458">Open abstract</a></div>
+  </td>
+  <td>CosMx; nCounter</td>
+</tr>
+<tr>
+  <td class="mono">6591</td>
+  <td>Daniel Jimenez-Sanchez, Matthew H. Ingalls, Sanghamithra korukonda, Brian J. Lane, Isabella Marie Peshek, Patrick Danaher, Prajan Divakar, Oliver Braubach</td>
+  <td>Bruker Spatial Biology, St. Louis, MO | Bruker Spatial Biology, Seattle, WA | Division of Gastroenterology, Northwestern University, Chicago, IL</td>
+  <td>
+    <div class="title">Cross platform same slide multi-omics reveals Treg heterogeneity and links to spatial niche variability in pre-cancerous colonic inflammation</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Inflammation, Immunity, and Cancer</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9579">Open abstract</a></div>
+  </td>
+  <td>CosMx; CellScape</td>
+</tr>
+<tr>
+  <td class="mono">6667</td>
+  <td>Cindy Pamela Ulloa Guerrero, Michele Bortolomeazzi, Pooja Sant, Laura Schütze, Laura Giese, Denise Keitel, Julia Boehl, Robin Reschke, Jan-Philipp Mallm</td>
+  <td>Single-cell Open Lab, DKFZ German Cancer Research Center, Heidelberg, Germany | Max-Eder Research Group Reschke, University Hospital Heidelberg, Heidelberg, Germany</td>
+  <td>
+    <div class="title">Integrated spatial transcriptomics and proteomics workflows for high-resolution multiomics analysis</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 3</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10063">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium</td>
+</tr>
+<tr>
+  <td class="mono">6788</td>
+  <td>B. Zhu, M. Aminu, Y. Tian, S.-W. Lu, O. Shi, W. Lu, H. Chen, H. Li, Z. Wei, M. B. Nilsson, L. Solis Soto, F. P. Andrew, D. L. Gibbons, J. V. Heymach, C. Cheng, J. Wu, J. Zhang; UT MD Anderson Cancer Center, Houston, TX, The University of Texas MD Anderson Cancer Center, Baylor College of Medicine, Houston, TX</td>
+  <td></td>
+  <td>
+    <div class="title">Spatial single-cell analysis reveals stage-dependent mechanisms of anti-IL-1β therapy in lung adenocarcinoma</div>
+    <div class="meta">4/21/2026 3:20:00 PM | Inflammation and Immunity in Cancer Progression</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/1127">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium</td>
+</tr>
+<tr>
+  <td class="mono">6853</td>
+  <td>Xiao Wang, Nan Zhang, Chi Zhang, Sha Cao</td>
+  <td>Indiana University, Bloomington, IN | Fudan University, Shanghai, China | Knight Cancer Institute, Oregon Health &amp; Science University, Portland, OR | Biomedical Engineering, Oregon Health and Science University, Portland, OR</td>
+  <td>
+    <div class="title">A segmentation-free method for modeling high-resolution spatial transcriptomics at the molecule level</div>
+    <div class="meta">4/22/2026 9:00:00 AM | Mathematical Modeling and Statistical Methods</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/3387">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium</td>
+</tr>
+<tr>
+  <td class="mono">6914</td>
+  <td>Xinyu Hu, Fengwei Zhan, Lixia C. Wu, Jose Gonzalez, Chuhanwen Sun, Rachel Ofer, Tyler Tran, Michael Verzi, Jiekun Yang</td>
+  <td>Department of Genetics, Rutgers University, New Brunswick, NJ | Quantitative Biomedicine Program, Rutgers University, New Brunswick, NJ</td>
+  <td>
+    <div class="title">STCS: Spatial transcriptomics cell segmentation outperforms existing methods on multiple slides</div>
+    <div class="meta">4/22/2026 9:00:00 AM | New Algorithms and Computational Methods</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/3286">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium</td>
+</tr>
+<tr>
+  <td class="mono">7235</td>
+  <td>Yi Cui, Huy Nguyen, Andrea Floris, David King, Serdar Tulu, David Castillo, Shanshan He, Shyamtanu Chattoraj, Jude Dunne, Mirko Corselli, John Lyssand, Joseph M. Beechem</td>
+  <td>Bruker Spatial Biology, Seattle, WA | Bruker Spatial Genomics, San Jose, CA</td>
+  <td>
+    <div class="title">Integrated spatial multiomic profiling of 3D genome architecture and transcriptome-wide gene expression in breast cancer models</div>
+    <div class="meta">4/22/2026 9:00:00 AM | Chromatin Architecture and Regulatory Landscapes</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/3791">Open abstract</a></div>
+  </td>
+  <td>CosMx; PaintScape</td>
+</tr>
+<tr>
+  <td class="mono">LB237</td>
+  <td>Wei Zhao, Aaron Rozeboom, Phuc H. Hoang, Tam-Anh Tran, Maria Teresa Landi</td>
+  <td>National Cancer Inst. Div. of Cancer Epidemiology &amp; Genetics, Bethesda, MD | Cancer Genomics Research Laboratory, Leidos Biomedical Research, Frederick National Laboratory for Cancer Research, Frederick, MD</td>
+  <td>
+    <div class="title">High-resolution spatial transcriptomics identifies unique spatial programs in lung adenocarcinoma from never smokers</div>
+    <div class="meta">4/20/2026 2:00:00 PM | Late-Breaking Research: Tumor Biology 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/11653">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium</td>
+</tr>
+      </tbody>
+    </table>
+    
+      <div class="footer-note">
+        Products are derived from tracked platform names only, so this page is a quick shortlist of abstracts that bridge multiple product families.
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>
