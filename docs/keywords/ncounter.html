@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>nCounter Presentations</title>
+  <style>
+    :root {
+      --blue: #1673c6;
+      --blue-dark: #0f4d8b;
+      --ink: #1f2d3d;
+      --muted: #5f7187;
+      --line: #c9d8e6;
+      --panel: #f8fbfe;
+      --accent: #4fae6a;
+      --paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(22, 115, 198, 0.12), transparent 28%),
+        linear-gradient(180deg, #f5fbff 0%, #ffffff 22%);
+    }
+
+    .page {
+      width: min(1600px, calc(100vw - 48px));
+      margin: 32px auto 48px;
+      background: var(--paper);
+      border: 1px solid #d8e4ef;
+      box-shadow: 0 20px 50px rgba(15, 77, 139, 0.08);
+    }
+
+    .hero {
+      padding: 28px 36px 22px;
+      background:
+        linear-gradient(135deg, #1d7bd0 0%, #0f5a9f 100%);
+      color: #fff;
+    }
+
+    .eyebrow {
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    h1 {
+      margin: 8px 0 0;
+      font-size: 40px;
+      line-height: 1.05;
+      font-weight: 700;
+    }
+
+    .content {
+      padding: 24px 36px 40px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 42px;
+      margin-bottom: 26px;
+    }
+
+    .summary-item {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .summary-item strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 28px 0 10px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 28px;
+      color: var(--blue-dark);
+    }
+
+    .section-title .count {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: var(--panel);
+    }
+
+    thead th {
+      text-align: left;
+      font-size: 13px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--blue-dark);
+      padding: 12px 10px;
+      border-top: 2px solid var(--line);
+      border-bottom: 2px solid var(--line);
+      background: #f4f9fd;
+    }
+
+    tbody td {
+      vertical-align: top;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+      line-height: 1.4;
+      background: #fff;
+    }
+
+    th:nth-child(1), td:nth-child(1) { width: 10%; }
+    th:nth-child(2), td:nth-child(2) { width: 23%; }
+    th:nth-child(3), td:nth-child(3) { width: 19%; }
+    th:nth-child(4), td:nth-child(4) { width: 33%; }
+    th:nth-child(5), td:nth-child(5) { width: 15%; }
+
+    .title {
+      font-weight: 700;
+      color: #203246;
+      margin-bottom: 4px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .mono {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      white-space: nowrap;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        width: auto;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    
+    <div class="hero">
+      <div class="eyebrow">AACR 2026</div>
+      <h1>nCounter Presentations</h1>
+    </div>
+    <div class="content">
+      
+    <table>
+      <thead>
+        <tr>
+          <th>Abstract #</th>
+          <th>Authors</th>
+          <th>Affiliation</th>
+          <th>Title / Session</th>
+          <th>Products</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td class="mono">192</td>
+  <td>Jhe-Cyuan Guo, Yen-Lin Huang, Chia-Lang Hsu, Tsung-Che (Nathan) Wu, Chien-Huai Chuang, Ta-Chen Huang, Wen-Lun Wang, Chih-Hung Hsu</td>
+  <td>National Taiwan University Cancer Center (NTUCC), Taipei City, Taiwan | National Chung Hsing University, Taichung, Taiwan | National Taiwan University Hospital, Taipei, Taiwan | Department of Internal Medicine,E-Da Hospital/I-Shou University, Kaohsiung, Taiwan, Institute of Clinical Medicine,National Cheng Kung University Hospital, College of Medicine, Nationa, Kaohsiung City, Taiwan</td>
+  <td>
+    <div class="title">Chronological evolution of immune tumor microenvironment (TME) from esophageal dysplasia (ED) to esophageal squamous cell carcinoma (ESCC)</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Inflammation and Cancer Progression</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/1260">Open abstract</a></div>
+  </td>
+  <td>nCounter</td>
+</tr>
+<tr>
+  <td class="mono">1106</td>
+  <td>Lakshmi Chandramohan, Kirsteen Maclean, Quratul Ain, Brigitte Lovell, Lisa Duncan, Sergio Hernandez, Christina Bailey, Michael Bailey, Patrick Danaher, Wei Yang, Shanshen He, Joseph M. Beechem</td>
+  <td>NeoGenomics, Fort Myers, FL | Bruker Spatial Biology, Bothell, WA</td>
+  <td>
+    <div class="title">Rapid identification of comprehensive multi-omic protein and RNA biomarkers on a single FFPE tissue section using a novel integrated nCounter® workflow</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Early Detection Biomarkers 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10161">Open abstract</a></div>
+  </td>
+  <td>nCounter</td>
+</tr>
+<tr>
+  <td class="mono">1132</td>
+  <td>Elba Marin, Silvia Garcia-Roman, Cristina Aguado, Marta Vives, Sonia Rodríguez, Susana Muñoz, Noelia Armiger, Alejandro Martínez-Bueno, Maria Gonzalez-Cao, Ana Velasco, Serafin Morales, Reyes Roxana, Ekaterina Meshoulam, Andrés Aguilar, Clara Mayo de las Casas, Miguel Ángel Molina-Vila</td>
+  <td>Pangaea Oncology, Hospital Universitari Dexeus, Barcelona, Spain | Instituto Oncológico Dr. Rosell, Hospital Universitari Dexeus, Barcelona, Spain | Institut de Recerca Biomèdica de Lleida (IRBLleida), Lleida, Spain | Hospital Universitari Arnau de Vilanova, Lleida, Spain | Instituto Oncológico Dr. Rosell, Hospital Teknon, Barcelona, Spain</td>
+  <td>
+    <div class="title">Malignant effusions for cfDNA/RNA genotyping and drug testing: Turning malignant fluids into personalized cancer models</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Liquid Biopsies: Circulating Nucleic Acids 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9886">Open abstract</a></div>
+  </td>
+  <td>nCounter</td>
+</tr>
+<tr>
+  <td class="mono">2048</td>
+  <td>Carmen M. Ortiz-Sanchez, Jarline Encarnacion, Stephanie Montalvo, Shakira Abad, Gabriela Castro, Lenin Godoy, Ralphdy Vergne, Jong Y. Park, Gilberto Ruiz-Deya</td>
+  <td>Ponce Health Sciences University, Ponce, Puerto Rico | University of Puerto Rico at Mayaguez, Mayaguez, Puerto Rico | Pontificia Universidad Católica de Puerto Rico, Ponce, Puerto Rico | Moffitt Cancer Center, Tampa, FL</td>
+  <td>
+    <div class="title">Exosomal micrornas as epigenetic biomarkers of disease progression in Hispanic men with metastatic castration-resistant prostate cancer</div>
+    <div class="meta">4/20/2026 9:00:00 AM | MicroRNAs as Cancer Biomarkers, Therapeutic Targets, and Modulators of Treatment Response</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/2336">Open abstract</a></div>
+  </td>
+  <td>nCounter</td>
+</tr>
+<tr>
+  <td class="mono">2298</td>
+  <td>Rhitajit Sarkar, Shilpa Thakur, Gus Fridell, Elijah Edmondson, Sonam Kumari, Joanna KLUBO-GWIEZDZINSKA</td>
+  <td>Metabolic Diseases Branch, NIH National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK), Bethesda, MD | National Institutes of Health, Bethesda, MD | Johns Hopkins University, Baltimore, MD | National Institutes of Health, Reston, VA</td>
+  <td>
+    <div class="title">Spatial immune profiling reveals varying tumor microenvironments in papillary thyroid microcarcinoma</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Hormone Receptor Signaling and Therapeutic Targeting</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10939">Open abstract</a></div>
+  </td>
+  <td>GeoMx; nCounter</td>
+</tr>
+<tr>
+  <td class="mono">2321</td>
+  <td>Lenora W. M. Loo, Yuqing Li, Kami K. White, Jose A. Aparicio, Veronica Wendy Setiawan, Brenda Y. Hernandez, Anna H. Wu, Christopher Haiman, Loic Le Marchand, Lynne R. Wilkens, Iona Cheng</td>
+  <td>Cancer Biology Program, University of Hawai&#x27;i Cancer Center, Honolulu, HI | Department of Epidemiology and Biostatistics, School of Medicine, University of California San Francisco, San Francisco, CA | Population Sciences of the Pacific, University of Hawai&#x27;i Cancer Center, Honolulu, HI | Department of Population and Public Health Sciences, University of Southern California, Keck School of Medicine, Los Angeles, CA | USC Norris Comprehensive Cancer Center, Los Angeles, CA</td>
+  <td>
+    <div class="title">Expression of 27-hydroxycholesterol metabolizing enzymes and breast cancer clinicopathological characteristics: The Multiethnic Cohort Study</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Biomarkers of Endogenous or Exogenous Exposures, Early Detection, Biological Effects, and Prognosis</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/2754">Open abstract</a></div>
+  </td>
+  <td>nCounter</td>
+</tr>
+<tr>
+  <td class="mono">2487</td>
+  <td>Luis del Pozo Yauner, Maha Babker, Rosetta Campbell, Veronica Ramirez-Alcantara, Huseyin Kilic, Elba Turbat-Herrera, Hector Chavarria Bernal, Bahaaeldin Youssef, Ateeqa Mujeeb Ullah, Wei Yang, Guillermo A. Herrera, Ajay Pratap Singh</td>
+  <td>Pathology, University of South Alabama College of Medicine, Mobile, AL | USA Health Biobank and Histology Service, University of South Alabama College of Medicine, Mobile, AL | Bruker Spatial Biology, Seattle, WA | SOM-Cell and Molecular Biology, School of Medicine at the University of Mississippi Medical Center, Jackson, MS</td>
+  <td>
+    <div class="title">Integrating clinical and multiomics data to characterize ethnic disparities in breast cancer on the gulf coast</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Community-Engaged Approaches to Equity Across the Cancer Journey: From Prevention to Trial Design</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/1100">Open abstract</a></div>
+  </td>
+  <td>nCounter</td>
+</tr>
+<tr>
+  <td class="mono">2490</td>
+  <td>Ritam Adhikari, Chiranjeev Dash, Rabindra Roy</td>
+  <td>The Quarry Lane School, Dublin, CA | Dept. of Oncology, Georgetown Lombardi Comp. Cancer Center, Washington | Georgetown Lombardi Comprehensive Cancer Ctr., Washington</td>
+  <td>
+    <div class="title">Systemic molecular disparities in Black vs. White breast cancer survivors: Beyond socioeconomic determinants</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Community-Engaged Approaches to Equity Across the Cancer Journey: From Prevention to Trial Design</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/1103">Open abstract</a></div>
+  </td>
+  <td>nCounter</td>
+</tr>
+<tr>
+  <td class="mono">2905</td>
+  <td>Maksymilian Jan Pilecki, Shannon M. Wallet, Robert Maile, Gerik Tushoski- Alemán, Song Han, Steven J. Hughes</td>
+  <td>Department of Surgery, University of Florida College of Medicine, Gainesville, FL</td>
+  <td>
+    <div class="title">Pancreatic adenocarcinoma immune tumor microenvironment is shaped by differential miRNA expression</div>
+    <div class="meta">4/20/2026 2:00:00 PM | Modifiers of Inflammation and the Tumor Microenvironment</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/5147">Open abstract</a></div>
+  </td>
+  <td>nCounter</td>
+</tr>
+<tr>
+  <td class="mono">3299</td>
+  <td>Tat San Lau, Yi Shun Wong, Maciej Jakub Trybull, Kit Ying Loucia Chan, Ho Sze Jacqueline Lee, Chi Chiu Wang, Joseph Kwong</td>
+  <td>Department of Obstetrics and Gynaecology, The Chinese University of Hong Kong, Hong Kong, Hong Kong | School of Medicine, Keele University, Keele, United Kingdom</td>
+  <td>
+    <div class="title">Autocrine lymphotoxin signalling promotes ovarian tumor growth through CD74</div>
+    <div class="meta">4/20/2026 2:00:00 PM | RTK-ERBB-PI3K and New Targets in Therapeutic Resistance</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/1857">Open abstract</a></div>
+  </td>
+  <td>nCounter</td>
+</tr>
+<tr>
+  <td class="mono">4323</td>
+  <td>Colette R. Worcester, Amrita Mitra, Harsh B. Pathak, Shane R. Stecklein</td>
+  <td>Cancer Biology, University of Kansas Medical Center, Kansas City, KS | Pathology and Laboratory Medicine, University of Kansas Medical Center, Kansas City, KS | Radiation Oncology, Orlando Health Cancer Institute, Orlando, FL</td>
+  <td>
+    <div class="title">The SPHK2 inhibitor opaganib potentiates tumor-intrinsic STING activation in triple-negative breast cancer in vitro</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Immunomodulatory Agents</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/5673">Open abstract</a></div>
+  </td>
+  <td>nCounter</td>
+</tr>
+<tr>
+  <td class="mono">4795</td>
+  <td>Michael Emilio Patrick, Wei Yang, Liang Zhang, Isabel Lee, Stefan-Laural Rogers, Shanshan He, Christina Bailey, John Lyssand, Joseph M. Beechem</td>
+  <td>Bruker Spatial Biology, Seattle, WA</td>
+  <td>
+    <div class="title">Investigating HER2+ tumor cell motility and angiogenesis in FFPE breast cancer in space and at scale with CosMx and nCounter multiomics</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Angiogenesis</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/1531">Open abstract</a></div>
+  </td>
+  <td>CosMx; nCounter</td>
+</tr>
+<tr>
+  <td class="mono">6549</td>
+  <td>Yi Cui, Moumita Nath, Michael Emilio Patrick, Claire Williams, Daniel McGuire, Jobin K. Paul, Kowshik Jaganathan, Biswajit Das, Mohit Malhotra, Shanshan He, Joseph M. Beechem, Satish Sankaran</td>
+  <td>Bruker Spatial Biology, Seattle, WA | Farcast Biosciences India, Bengaluru, India</td>
+  <td>
+    <div class="title">Integrating functional biosignatures and same-cell spatial multiomics to predict synergistic benefit of combination checkpoint therapy in head and neck cancer</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Immune Checkpoint Blockade</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9458">Open abstract</a></div>
+  </td>
+  <td>CosMx; nCounter</td>
+</tr>
+<tr>
+  <td class="mono">6674</td>
+  <td>Lakshmi Chandramohan, Kirsteen Maclean, Sergio Hernandez, Brigitte Lovell, Courtney Todorov, Harry Nunns, Jiong Fei, Judy Kuo, Erinn A. Parnell, Qingyan Au</td>
+  <td>NeoGenomics, Fort Myers, FL</td>
+  <td>
+    <div class="title">Metabolic reprogramming in advanced renal tumors contributes to a dysfunctional immune response and immune exhaustion within the tumor microenvironment</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 3</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10070">Open abstract</a></div>
+  </td>
+  <td>nCounter</td>
+</tr>
+<tr>
+  <td class="mono">7311</td>
+  <td>LUIS DEL POZO-YAUNER, Veronica Ramirez-Alcantara, Elba A. Turbat-Herrera, Hector Chavarria Bernal, Maha Babker, Huseyin Kilic, Rosetta Campbell, Bahaaeldin Youssef, Ajay Singh, Julio Isael Perez-Carreon, Wei Yang, Guillermo A. Herrera</td>
+  <td>Pathology, University of South Alabama College of Medicine, Mobile, AL | USA Health Mitchell Cancer Institute, Mobile, AL | University of South Alabama College of Medicine, Mobile, AL | SOM-Cell and Molecular Biology, University of Mississippi Medical Center and Cancer Center and Research Institute, Jackson, MS | National Institute of Genomic Medicine, Mexico City, Mexico | Bruker Spatial Biology, Seattle, WA</td>
+  <td>
+    <div class="title">Characterization of PERK-positive polyploid-like breast cancer cells and their association with unfolded protein response signatures</div>
+    <div class="meta">4/22/2026 9:00:00 AM | Hypoxic and Proteotoxic Stress Response</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/2421">Open abstract</a></div>
+  </td>
+  <td>nCounter</td>
+</tr>
+<tr>
+  <td class="mono">7422</td>
+  <td>Tsung-Hao Liu, Li-Chun Lu, Yu-Yun Shao, Shu-Han Yang, Chi-Yuan Yao, Chia-Lang Hsu, Ying-Chun Shen, Ann-Lii A. Cheng, Chih-Hung Hsu</td>
+  <td>National Taiwan University Hospital, Taipei, Taiwan | National Taiwan University, Taipei, Taiwan | Department of Medical Research, National Taiwan University Hospital, Taipei, Taiwan | National Taiwan University Cancer Center (NTUCC), Taipei, Taiwan | Professor, Dept. of Internal Medicine, National Taiwan University Hospital, Taipei, Taiwan</td>
+  <td>
+    <div class="title">Investigation of acquired resistance to atezolizumab-bevacizumab in hepatocellular carcinoma: Paired tumor microenvironment analysis in a mouse model and human subjects</div>
+    <div class="meta">4/22/2026 9:00:00 AM | Microenvironmental Determinants of Therapy Response and Resistance 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10690">Open abstract</a></div>
+  </td>
+  <td>nCounter</td>
+</tr>
+<tr>
+  <td class="mono">7606</td>
+  <td>Li Feng, Amber N. Hurson, Shahin Sayed, Hela Koka, Viviane Oluoch, Veronica Ngundo, Alfred Mburu Githuka, Zaitun Ajuoga, Shaoqi Fan, Kristine Jones, Belynda Hicks, Amy Hutchinson, Maria Brown, Petra Lenz, Aaron M. Rozeboom, Difei Wang, Francis Makokha, Stefan Ambs, Jonine D. Figueroa, Ruth M. Pfeiffer, Xiaohong Rose Yang</td>
+  <td>Division of Cancer Epidemiology and Genetics, National Cancer Institute, Bethesda, MD | Aga Khan University Hospital, Nairobi, Kenya | Cancer Genomics Research Laboratory, Frederick National Laboratory for Cancer Research, Frederick, MD | Mount Kenya University, Nairobi, Kenya | Center for Cancer Research, National Cancer Institute, Bethesda, MD</td>
+  <td>
+    <div class="title">Tumor and Host Determinants of the Breast Tumor Immune Microenvironment in Kenyan Breast Cancer Women</div>
+    <div class="meta">4/22/2026 9:00:00 AM | Risk Prediction Modeling, Screening, Early Detection, and Preneoplastic and Tumor Markers</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/2753">Open abstract</a></div>
+  </td>
+  <td>nCounter</td>
+</tr>
+<tr>
+  <td class="mono">7661</td>
+  <td>Brian Filanoski, Lori Hamanishi, Giang Ong, Terence C. Theisen, Erin Piazza, Christina Bailey, Prajan Divakar, Margaret L. Hoang, Joseph M. Beechem</td>
+  <td>Research and Development, Bruker Spatial Biology, Seattle, WA</td>
+  <td>
+    <div class="title">Integrated multiomics profiling of lysates using nCounter® protein and RNA panels for comprehensive oncology insights</div>
+    <div class="meta">4/22/2026 9:00:00 AM | Multi-Omics, Systems Biology, and Biological Mass Spectrometry</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/6600">Open abstract</a></div>
+  </td>
+  <td>nCounter</td>
+</tr>
+<tr>
+  <td class="mono">7665</td>
+  <td>Giang Ong, Terence C. Theisen, Brian Filanoski, Lori Hamanishi, Erin Piazza, Christina Bailey, Prajan Divakar, Margaret L. Hoang, Joseph M. Beechem</td>
+  <td>Research and Development, Bruker Spatial Biology, Seattle, WA</td>
+  <td>
+    <div class="title">Multi-step antibody validation for nCounter high-plex multiomics panels</div>
+    <div class="meta">4/22/2026 9:00:00 AM | Multi-Omics, Systems Biology, and Biological Mass Spectrometry</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/6604">Open abstract</a></div>
+  </td>
+  <td>nCounter</td>
+</tr>
+<tr>
+  <td class="mono">7907</td>
+  <td>Barbara Cardinali, Alice Stella, Chiara Molinelli, Marco Bruzzone, Yanina Lizet Castillo, Francesca Pitto, Barbara Massa, Simona Pigozzi, Andrea Sciutto, Giorgia Anselmi, Maria Dono, Virna Maltoni, Benedetta Conte, Giulia Buzzatti, Davide Soldato, Gaia Griguolo, Valentina Guarneri, Mario Giuliano, Caterina Marchiò, Fabio Puglisi, Lorenzo Gerratana, Francesca Poggio, Lucia Del Mastro</td>
+  <td>IRCCS Ospedale Policlinico San Martino, Genova, Italy | University of Genova, Genova, Italy | University of Piemonte Orientale, Novara, Italy | Institute of Oncology IOV-IRCCS, Padova, Italy | University of Naples &quot;Federico II&quot;, Naples, Italy | FPO Istituto Candiolo (IRCCS), Candiolo, Italy | Centro di Riferimento Oncologico IRCCS, Aviano, Italy</td>
+  <td>
+    <div class="title">Genomic, immune, and clinical characterization of estrogen receptor-positive, HER2-low breast cancer: The NextGIM trial latest updates</div>
+    <div class="meta">4/22/2026 9:00:00 AM | Translational Biomarkers and Emerging Molecular Approaches</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/8550">Open abstract</a></div>
+  </td>
+  <td>nCounter</td>
+</tr>
+      </tbody>
+    </table>
+    
+      <div class="footer-note">
+        20 presentations matched the keyword nCounter.
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chromium Presentations</title>
+  <style>
+    :root {
+      --blue: #1673c6;
+      --blue-dark: #0f4d8b;
+      --ink: #1f2d3d;
+      --muted: #5f7187;
+      --line: #c9d8e6;
+      --panel: #f8fbfe;
+      --accent: #4fae6a;
+      --paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(22, 115, 198, 0.12), transparent 28%),
+        linear-gradient(180deg, #f5fbff 0%, #ffffff 22%);
+    }
+
+    .page {
+      width: min(1600px, calc(100vw - 48px));
+      margin: 32px auto 48px;
+      background: var(--paper);
+      border: 1px solid #d8e4ef;
+      box-shadow: 0 20px 50px rgba(15, 77, 139, 0.08);
+    }
+
+    .hero {
+      padding: 28px 36px 22px;
+      background:
+        linear-gradient(135deg, #1d7bd0 0%, #0f5a9f 100%);
+      color: #fff;
+    }
+
+    .eyebrow {
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    h1 {
+      margin: 8px 0 0;
+      font-size: 40px;
+      line-height: 1.05;
+      font-weight: 700;
+    }
+
+    .content {
+      padding: 24px 36px 40px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 42px;
+      margin-bottom: 26px;
+    }
+
+    .summary-item {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .summary-item strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 28px 0 10px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 28px;
+      color: var(--blue-dark);
+    }
+
+    .section-title .count {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: var(--panel);
+    }
+
+    thead th {
+      text-align: left;
+      font-size: 13px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--blue-dark);
+      padding: 12px 10px;
+      border-top: 2px solid var(--line);
+      border-bottom: 2px solid var(--line);
+      background: #f4f9fd;
+    }
+
+    tbody td {
+      vertical-align: top;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+      line-height: 1.4;
+      background: #fff;
+    }
+
+    th:nth-child(1), td:nth-child(1) { width: 10%; }
+    th:nth-child(2), td:nth-child(2) { width: 23%; }
+    th:nth-child(3), td:nth-child(3) { width: 19%; }
+    th:nth-child(4), td:nth-child(4) { width: 33%; }
+    th:nth-child(5), td:nth-child(5) { width: 15%; }
+
+    .title {
+      font-weight: 700;
+      color: #203246;
+      margin-bottom: 4px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .mono {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      white-space: nowrap;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        width: auto;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    
+    <div class="hero">
+      <div class="eyebrow">AACR 2026</div>
+      <h1>Chromium Presentations</h1>
+    </div>
+    <div class="content">
+      
+    <table>
+      <thead>
+        <tr>
+          <th>Abstract #</th>
+          <th>Authors</th>
+          <th>Affiliation</th>
+          <th>Title / Session</th>
+          <th>Products</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td class="mono">1053</td>
+  <td>Inaki Comino-Mendez, Maria Rosario Chica-Parrado, María Elena Quirós-Ortega, Ana Godoy-Ortiz, Maria Emilia Dominguez-Recio, Esperanza López-López, María Victori Ortega-Jiménez, Martina Alvarez, Javier Pascual, Enrique de Alava, Emilio Alba</td>
+  <td>Institute of Biomedical Research of Malaga (IBIMA), Malaga, Spain | Hospital Universitario Virgen de la Victoria, Malaga, Spain | Department of Normal and Pathological Cytology and Histology, Institute of Biomedicine of Sevilla (IBiS), Sevilla, Spain</td>
+  <td>
+    <div class="title">Single-cell immune profiling reveals biomarkers of pembrolizumab response in early triple-negative breast cancer</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Biomarkers Predictive of Therapeutic Benefit 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9763">Open abstract</a></div>
+  </td>
+  <td>Chromium</td>
+</tr>
+<tr>
+  <td class="mono">1633</td>
+  <td>Simon E. Plyte, Marie Fraudeau, Dorothee Winterberg, Claire Germain, Camille Rousseau, Maxime Audin, Alexandre Ivagnes, Sothea Touch Dumoitier, Sarah Ducellier, Lise Fenou, Hans Heinrich Oberg, Pierre Emmanuel Gerard, Isabelle Teulon, Daniela Wesch, Matthias Peipp, Julie Prigent</td>
+  <td>Biomunex Pharmaceuticals, Paris, France | Universitats Klinikum Schleswig-Holstein,, Kiel, Germany | IRCM, Univ Montpellier, ICM, INSERM, Montpellie, France</td>
+  <td>
+    <div class="title">MAIT engagers: Avoiding Treg suppression to deliver stronger activity in solid tumors.</div>
+    <div class="meta">4/20/2026 9:00:00 AM | T Cell Engagers 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/5102">Open abstract</a></div>
+  </td>
+  <td>Chromium</td>
+</tr>
+<tr>
+  <td class="mono">2221</td>
+  <td>Youngtaek Kim, Gang-Taik Lee, Dong Kwon Kim, JuHyeon Lee, So Young Park, Jae Hwan Kim, Hyun Jung Yoo, Byoung Chul Cho</td>
+  <td>Yonsei University College of Medicine, Seoul, Korea, Republic of | Department of Research Support, Yonsei Biomedical Research Institute, Seoul, Korea, Republic of | Yonsei New Il Han Institute for Integrative Lung Cancer Research, Seoul, Korea, Republic of</td>
+  <td>
+    <div class="title">Tumor-associated CD207+ cDC2 drives TLS formation via TNF family cytokines in non-small cell lung cancer</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Tertiary Lymphoid Structures in Cancer</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10567">Open abstract</a></div>
+  </td>
+  <td>Chromium</td>
+</tr>
+<tr>
+  <td class="mono">2823</td>
+  <td>Junting Lu, Jinghui Xiu, Ce Zhong, Wentao Li, Wei Yun, Tan Pang, Jingqi Huang</td>
+  <td>Pharmacology, Pharmaron, Beijing, China</td>
+  <td>
+    <div class="title">Single-cell RNA-seq reveals insights into the effects of immune checkpoint inhibitors</div>
+    <div class="meta">4/20/2026 2:00:00 PM | Immune Checkpoints</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/5309">Open abstract</a></div>
+  </td>
+  <td>Chromium</td>
+</tr>
+<tr>
+  <td class="mono">4692</td>
+  <td>Rebekah Gridley, Palakshi Bandapalli, Sharmila Govindaraj, Siddhant Meshram, Suvo Chatterjee, Gurdeep Singh, Arunkumar Ganesan</td>
+  <td>Cell Biology &amp; Physiology, University of New Mexico Health Sciences Center, Albuquerque, NM | Department of Epidemiology and Biostatistics, Indiana University, Bloomington, IN</td>
+  <td>
+    <div class="title">Environmental toxin-induced m6A RNA modification promotes R-loop accumulation and chromosomal instability</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Insights into Genomic Instability</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/2030">Open abstract</a></div>
+  </td>
+  <td>Chromium</td>
+</tr>
+<tr>
+  <td class="mono">4736</td>
+  <td>Diddier Prada, Manish Arora, Julio landero, Jamshid Abdul Ghafar, Rachel Brody, Oscar Arrieta, Fred R. Hirsch</td>
+  <td>Icahn School of Medicine at Mount Sinai, New York, NY | Mt. Sinai Medical Center Tisch Cancer Institute, New York, NY | Instituto Nacional de Cancerología (INCan), Mexico City, Mexico</td>
+  <td>
+    <div class="title">Trace metal signatures in non-small cell lung cancer: A pilot study of patients attended at Mount Sinai Hospital in New York City</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Metabolic Features of Thoracic and Urologic Cancers</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9143">Open abstract</a></div>
+  </td>
+  <td>Chromium</td>
+</tr>
+<tr>
+  <td class="mono">5524</td>
+  <td>Mary Goldman, Brian Craft, Cally Lin, Jingchun Zhu, David Haussler</td>
+  <td>UC Santa Cruz Genomics Institute, Santa Cruz, CA | Stanford University, San Francisco, CA | Investigator/Distinguished Professor, Ctr. For Bio. Sci. &amp; Eng., UC Santa Cruz, Santa Cruz, CA</td>
+  <td>
+    <div class="title">Visualization and analysis of cancer genomics data using UCSC Xena</div>
+    <div class="meta">4/21/2026 2:00:00 PM | New Software Tools for Data Analysis</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/3258">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium; Chromium; CosMx</td>
+</tr>
+<tr>
+  <td class="mono">5922</td>
+  <td>Yujin Lee, Moray J. Campbell, James C. Fleet</td>
+  <td>Dept. of Nutritional Sciences, The University of Texas at Austin, Austin, TX | Karmanos Cancer Institute, Wayne State University, Detroit, MI</td>
+  <td>
+    <div class="title">Single-cell mapping of the colon epithelium reveals a pre-malignant stem cell that defines early transformation risk</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Genetic and Transcriptomic Dissection of Cancer Evolution</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/7843">Open abstract</a></div>
+  </td>
+  <td>Chromium</td>
+</tr>
+<tr>
+  <td class="mono">6569</td>
+  <td>Vince Kornel Grolmusz, Klaudia Horti-Oravecz, István Kelemen, István Likó, Anikó Bozsik, Tímea Pócza, Janos Papp, Szonja Polett Pósa, Lorinc S. Pongor, Henriett Butz, Attila Patócs</td>
+  <td>National Institute of Oncology Hungary, Budapest, Hungary | Hungarian Center of Excellence for Molecular Medicine, Szeged, Hungary</td>
+  <td>
+    <div class="title">Single-cell transcriptomics reveal functional interaction between CD4+ T cells and B cells driving the activated peripheral immune phenotype in healthy women living with germline pathogenic BRCA1 variants</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Inflammation, Immunity, and Cancer</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9557">Open abstract</a></div>
+  </td>
+  <td>Chromium</td>
+</tr>
+<tr>
+  <td class="mono">6718</td>
+  <td>Abraham A. Hakim, Lisa Kenney, Nivedita Mohan Ratnam, Jared J. Gartner, Ian S. Goldlust, Aarushi Bhasin, Brian Bui, Nicholas D. Klemen, Steven A. Rosenberg, Frank J. Lowery</td>
+  <td>NIH-NCI, Bethesda, MD | Laboratory of Integrative Cancer Immunology (LICI), Center for Cancer Research, Bethesda, MD | National Cancer Institute, Bethesda, MD | National Institutes for Health, Bethesda, MD | Surgery Branch, NIH-NCI, Bethesda, MD | Surgery Branch, National Cancer Institute, Bethesda, MD</td>
+  <td>
+    <div class="title">Identifying new cell surface markers of T-cell reactivity through single cell transcriptomic analysis</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Vaccines and Other Immunomodulatory Agents</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9707">Open abstract</a></div>
+  </td>
+  <td>Chromium</td>
+</tr>
+<tr>
+  <td class="mono">7012</td>
+  <td>Qianyun Luo, Rebecca LaRue, Enoc Granados Centeno, Kyra Bergerud, Michael Farrar, Sean Tracy</td>
+  <td>University of Minnesota, Minneapolis, MN</td>
+  <td>
+    <div class="title">Single-cell multi-omics identifies MRD-associated Tr1-like CD4 cells in B-ALL</div>
+    <div class="meta">4/22/2026 9:00:00 AM | Tumor-induced Immune Suppression</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/1353">Open abstract</a></div>
+  </td>
+  <td>Chromium</td>
+</tr>
+      </tbody>
+    </table>
+    
+      <div class="footer-note">
+        11 presentations matched the keyword Chromium.
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>

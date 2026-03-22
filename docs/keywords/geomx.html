@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GeoMx Presentations</title>
+  <style>
+    :root {
+      --blue: #1673c6;
+      --blue-dark: #0f4d8b;
+      --ink: #1f2d3d;
+      --muted: #5f7187;
+      --line: #c9d8e6;
+      --panel: #f8fbfe;
+      --accent: #4fae6a;
+      --paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(22, 115, 198, 0.12), transparent 28%),
+        linear-gradient(180deg, #f5fbff 0%, #ffffff 22%);
+    }
+
+    .page {
+      width: min(1600px, calc(100vw - 48px));
+      margin: 32px auto 48px;
+      background: var(--paper);
+      border: 1px solid #d8e4ef;
+      box-shadow: 0 20px 50px rgba(15, 77, 139, 0.08);
+    }
+
+    .hero {
+      padding: 28px 36px 22px;
+      background:
+        linear-gradient(135deg, #1d7bd0 0%, #0f5a9f 100%);
+      color: #fff;
+    }
+
+    .eyebrow {
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    h1 {
+      margin: 8px 0 0;
+      font-size: 40px;
+      line-height: 1.05;
+      font-weight: 700;
+    }
+
+    .content {
+      padding: 24px 36px 40px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 42px;
+      margin-bottom: 26px;
+    }
+
+    .summary-item {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .summary-item strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 28px 0 10px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 28px;
+      color: var(--blue-dark);
+    }
+
+    .section-title .count {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: var(--panel);
+    }
+
+    thead th {
+      text-align: left;
+      font-size: 13px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--blue-dark);
+      padding: 12px 10px;
+      border-top: 2px solid var(--line);
+      border-bottom: 2px solid var(--line);
+      background: #f4f9fd;
+    }
+
+    tbody td {
+      vertical-align: top;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+      line-height: 1.4;
+      background: #fff;
+    }
+
+    th:nth-child(1), td:nth-child(1) { width: 10%; }
+    th:nth-child(2), td:nth-child(2) { width: 23%; }
+    th:nth-child(3), td:nth-child(3) { width: 19%; }
+    th:nth-child(4), td:nth-child(4) { width: 33%; }
+    th:nth-child(5), td:nth-child(5) { width: 15%; }
+
+    .title {
+      font-weight: 700;
+      color: #203246;
+      margin-bottom: 4px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .mono {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      white-space: nowrap;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        width: auto;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    
+    <div class="hero">
+      <div class="eyebrow">AACR 2026</div>
+      <h1>GeoMx Presentations</h1>
+    </div>
+    <div class="content">
+      
+    <table>
+      <thead>
+        <tr>
+          <th>Abstract #</th>
+          <th>Authors</th>
+          <th>Affiliation</th>
+          <th>Title / Session</th>
+          <th>Products</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td class="mono">89</td>
+  <td>Vibha R. Rao, Marvin Escobar Barajas, Candice C. Black, Madhumala K. Sadanandappa, Scott M. Palisoul, Adrienne A. Workman, Todd A. MacKenzie, Louis J. Vaickus, Mary D. Chamberlin, George J. Zanazzi, Shrey S. Sukhadia</td>
+  <td>Pathology and Laboratory Medicine, Dartmouth Health, Lebanon, NH | Dartmouth College, Hanover, NH</td>
+  <td>
+    <div class="title">TissueTrek: An interactive multimodal web-based platform for exploring spatial morphology-molecular relationships in cancer</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Digital Pathology 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/3093">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">773</td>
+  <td>KENTA MANABE, Atsushi Matsuoka, Kazuhiko Shien, Shuta Tomida, Hidejiro Torigoe, Kazuya Hisamatsu, Ryota Fujiwara, Kosei Ishimura, Shunsuke Mori, Ryunosuke Fujii, Asuka Mimata, Kazuhiro Okada, Ryo Yoshichika, Mao Yoshikawa, Yuma Fukumoto, Haruchika Yamamoto, Kumi Nakajima, Shin Tanaka, Ken Suzawa, Kentaroh Miyoshi, Mikio Okazaki, Seiichiro Sugimoto, Shinichi Toyooka</td>
+  <td>Thoracic, Breast and Endocrinological Surgery, Okayama Univ. Graduate School of Med., Dentistry &amp; Pharm. Sci., Okayama, Japan | Center for Comprehensive Genomic Medicine, Okayama University Hospital, Okayama, Japan</td>
+  <td>
+    <div class="title">Single-cell and spatial transcriptomic profiling reveal fibrosis-related tumor states in lung squamous cell carcinoma associated with idiopathic pulmonary fibrosis</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Physicochemical Modulation of Cancer Ecosystems: Mechanical Forces, Hypoxia, and Acidosis</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10737">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">796</td>
+  <td>Min Qing, Qibiao Wu, Xuesong Lyu, Tao Chen, Mingxuan Xia, Joshua J. Rusbuldt, Denis Smirnov, Flora Berisha, Longen Zhou, Chia-Jui Yen</td>
+  <td>Johnson &amp; Johnson, Shanghai, China | Johnson &amp; Johnson, Spring House, PA | National Cheng Kung University Hospital, Taiwan, China</td>
+  <td>
+    <div class="title">Digital spatial profiling reveals immune heterogeneity across tumor and stromal compartments in hepatocellular carcinoma</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Spatial Protein Profiling and Multi-Modal Mapping of Tumor and Circulating Ecosystems</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10871">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">803</td>
+  <td>Prerana Sensharma, Huidan Zuo, Melanie Dawe, Megan Hopkins, Zeynep Baskurt, Osvaldo Espin-Garcia, Philippe L. Bedard, Melanie Spears, Susan J. Done</td>
+  <td>Medical Biophysics, University of Toronto, Toronto, ON, Canada | Laboratory Medicine and Pathobiology, University of Toronto, Toronto, ON, Canada | Princess Margaret Cancer Center, Toronto, ON, Canada | Ontario Institute for Cancer Research, Toronto, ON, Canada | Department of Biostatistics, Princess Margaret Cancer Center, Toronto, ON, Canada | UHN-Toronto General Hospital, Toronto, ON, Canada</td>
+  <td>
+    <div class="title">A spatial profiling approach to evaluating the prognostic impact of heterogeneity in the triple-negative breast cancer immune microenvironment</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Spatial Protein Profiling and Multi-Modal Mapping of Tumor and Circulating Ecosystems</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10885">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">1201</td>
+  <td>Yunhe Liu, Idania Carolina Lubo Julio, Wei Lu, Alejandra G. Serrano, Jean R. Clemenceau, Amber Famiglietti, Karen Colbert, Yibo Dai, Yang Liu, Jun Wang, Jeremy L. Davis, Mingyao Li, Paul F. Mansfield, Tae Hyun Hwang, Luisa M. Solis-Soto, Linghua Wang</td>
+  <td>Department of Genomic Medicine, The University of Texas MD Anderson Cancer Center, Houston, TX | Department of Translational and Molecular Pathology, The University of Texas MD Anderson Cancer Center, Houston, TX | Department of Surgery, Vanderbilt University Medical Center, Nashville, TN | National Institute of Dental and Craniofacial Research, National Institutes of Health, Bethesda, MD | Department of Clinical Cancer Prevention, The University of Texas MD Anderson Cancer Center, Houston, TX | BioChemistry&amp;Molecular Biology, University of Maryland School of Medicine, Baltimore, MD | University of Pennsylvania, Philadelphia, PA | Vice President, Acute Care Services, UT MD Anderson Cancer Ctr., Houston, TX | Department of Translational Molecular Pathology, the university of MD Anderson cancer center, Houston, TX</td>
+  <td>
+    <div class="title">Spatial 3D and multi-omics mapping of diffuse gastric cancer evolution from preinvasive to invasive lesions in CDH1 mutation carriers</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10001">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium; CosMx; GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">1202</td>
+  <td>Minjun Kim, Mustafa Soytas, Burge Ulukan, Tamiko Nishimura, Senthilkumar Kailasam, Ariel Madrigal, Zohreh Mehrjoo, Kate Glennon, Eleonora Scarlata, Madeleine Arseneault, Morag Park, Hamed Najafabadi, Fadi Brimo, Ozgur Sahin, Simon Tanguay, Yasser Riazalhosseini</td>
+  <td>Victor Phillip Dahdaleh Institute of Genomic Medicine, McGill University, Montréal, QC, Canada | Department of Biochemistry and Molecular Biology, Hollings Cancer Center, Medical University of of South Carolina, Charleston, SC | Division of Urology, Department of Surgery, McGill University, Montréal, QC, Canada | Goodman Cancer Institute, McGill University, Montréal, QC, Canada | Department of Pathology, McGill University, Montréal, QC, Canada</td>
+  <td>
+    <div class="title">Spatially-resolved transcriptome analysis of renal tumors with sarcomatoid/rhabdoid dedifferentiation uncovers underlying biology and new biomarkers relevant to these tumors</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10003">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">1220</td>
+  <td>Mengni He, Charles J. Robbins, Julia Benanto, Thazin Nwe Aung, Yalai Bai, Ian E. Krop, David L. Rimm</td>
+  <td>Yale University, New Haven, CT | Yale School of Medicine, New Haven, CT</td>
+  <td>
+    <div class="title">Spatial transcriptomics revealed potential resistance and response factors of sacituzumab govitecan in metastatic breast cancer</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10022">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">1222</td>
+  <td>Charles J. Robbins, Mengni He, Julia Benanto, Thazin Nwe Aung, Yalai Bai, Ian E. Krop, David L. Rimm</td>
+  <td>Yale School of Medicine, New Haven, CT</td>
+  <td>
+    <div class="title">Spatial transcriptomics of trastuzumab deruxtecan-treated metastatic breast cancer identifies candidate response and resistance factors</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10025">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">1412</td>
+  <td>Rongting Huang, Diane Libert, Arslan Kasimov, Leandra Kingsley, Sahar Nasr, Reem Al-Humadi, Lindsey A. Finch, Elisabeth Diver, Ravali A. Reddy, Babak Litkouhi, Kristin Bixel, Sizun Jiang, Brooke Howitt</td>
+  <td>Stanford University, Stanford, CA | The University of Texas MD Anderson Cancer Center, Houston, TX | Harvard Medical School, Boston, MA</td>
+  <td>
+    <div class="title">Informatics-driven spatial-omics for cancer immunotherapy discovery in gynecologic cancers</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Application of Bioinformatics to Cancer Biology 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/2967">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">1589</td>
+  <td>Marika Viatore, Rebecca Polidori, Anna Rita Putignano, Arturo Bonometti, Silvia Uccella, Silvia Bozzarelli, Gianluca Basso, Marco Erreni, Capretti Giovanni, Vincenzo Corbo, Alberto Mantovani, Massimo Locati, Federica Marchesi</td>
+  <td>University of Milan, Milan, Italy | IRCCS Humanitas Research Hospital, Rozzano, Italy | Dept of Immunology and Inflammation, Humanitas Clinical and Research Center, Milano, Italy | University of Verona, Verona, Italy | IRCCS Istituto Clinico Humanitas, Pieve Emanuele, Italy</td>
+  <td>
+    <div class="title">Spatial and molecular profiling of multinucleated giant macrophages in pancreatic ductal adenocarcinoma</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Innate Immunity in Cancer</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/1275">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">2089</td>
+  <td>Yasmine Ilkhani, Sirine Bouabda-Barc, Rachel Chevalier, Orlando Yuan, Jose Joao Mansure, Madhuri Koti, Wassim Kassouf, Éva Michaud</td>
+  <td>Urologic Oncology Research Division, Cancer Research Program, Research Institute of the McGill University Health Center, Montréal, QC, Canada | Department of Biomedical and Molecular Sciences, Queen&#x27;s University, Kingston, ON, Canada | Department of Surgery, Division of Surgery, Cancer Research Program, McGill University, Montréal, QC, Canada</td>
+  <td>
+    <div class="title">Sex-specific IgA secretion in muscle-invasive bladder cancer: A preliminary study</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Aging and Host Determinants of Tumor Progression: The Macroenvironmental Axis</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10674">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">2217</td>
+  <td>Shoko Kure, Giorgia Brambilla Pisoni, Saba Tabasum, Xiaoyu Li, Jingjing Li, Yao Yu Yeo, Sizun Jiang, Harrison Olszewski, Nicholas C. Weaver, Kathleen L. Pfaff, Jason L. Weirather, Ian D. Dryg, Scott J. Rodig, Frank S. Hodi</td>
+  <td>Medical Oncology, Dana-Farber Cancer Institute, Boston, MA | Center for Virology and Vaccine Research, Beth Israel Deaconess Medical Center, Boston, MA | Tissue Biomarker Lab, Dana-Farber Cancer Institute, Boston, MA | Department of Data Sciences, Dana-Farber Cancer Institute, Boston, MA | Department of Pathology, Brigham &amp; Women&#x27;s Hospital, Boston, MA</td>
+  <td>
+    <div class="title">Immune-active and mesenchymal endothelial programs define TLS presence in the tumor microenvironment</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Tertiary Lymphoid Structures in Cancer</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/8266">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">2220</td>
+  <td>Zhihan Liang, Ada Junquera, Hanna Elomaa, Joona Sarkkinen, Iga Niemiec, Ziqi Kang, Oskari Lehtonen, Lina Maltrovsky, Saundarya Shah, Aleksandra Shabanova, Matilda Salko, Ulla-Maija Haltia, Eliisa Kekäläinen, Anni Virtanen, Anniina Farkkila</td>
+  <td>Research Program in Systems Oncology, University of Helsinki, Helsinki, Finland | Translational Immunology Research Program, University of Helsinki and Helsinki University Hospital, Helsinki, Finland | Department of Obstetrics and Gynecology, and Clinical Trials Unit, Comprehensive Cancer Centre, Helsinki University Hospital, Helsinki, Finland | Department of Pathology, University of Helsinki and HUS Diagnostic Center, Helsinki University Hospital, Helsinki, Finland</td>
+  <td>
+    <div class="title">A spatially resolved multi-omics atlas of tertiary lymphoid structures in ovarian cancer</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Tertiary Lymphoid Structures in Cancer</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/8272">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">2298</td>
+  <td>Rhitajit Sarkar, Shilpa Thakur, Gus Fridell, Elijah Edmondson, Sonam Kumari, Joanna KLUBO-GWIEZDZINSKA</td>
+  <td>Metabolic Diseases Branch, NIH National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK), Bethesda, MD | National Institutes of Health, Bethesda, MD | Johns Hopkins University, Baltimore, MD | National Institutes of Health, Reston, VA</td>
+  <td>
+    <div class="title">Spatial immune profiling reveals varying tumor microenvironments in papillary thyroid microcarcinoma</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Hormone Receptor Signaling and Therapeutic Targeting</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10939">Open abstract</a></div>
+  </td>
+  <td>GeoMx; nCounter</td>
+</tr>
+<tr>
+  <td class="mono">2564</td>
+  <td>Fatima Inigo, Jose Mansure, Eva Michaud, Brian Meehan, Tanner Connell, Ciriaco Piccirillo, Wassim Kassouf</td>
+  <td>Cancer Research Program, McGill University Health Centre, Montréal, QC, Canada | Cancer and Angiogenesis, McGill University Health Centre, Montréal, QC, Canada | Medical Physics Unit, McGill University Health Centre, Montréal, QC, Canada | Microbiology and Immunology, McGill University Health Centre, Montréal, QC, Canada | Surgery, Division of Adult Urology, McGill University Health Centre, Montréal, QC, Canada</td>
+  <td>
+    <div class="title">Investigating the combination of natural killer immunotherapy with radiation therapy for muscle invasive bladder cancer</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Immunomodulatory Effects of Targeted Therapies</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9481">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">3444</td>
+  <td>Wesley V. Wilson, MacLean P. Nasrallah, Nakial Cross, Yael A. Day, Vanessa Gonzalez, Rachel M. Leskowitz, Amy Marshall, Julie K. Jadlowsky, Gabriela Plesa, Donald L. Siegel, Elizabeth O. Hexner, Joseph A. Fraietta, Carl H. June, Stephen J. Bagley, Donald O’Rourke, Zev Binder, Andrew J. Rech</td>
+  <td>Princess Margaret Cancer Centre, University Health Network, Toronto, ON, Canada | Penn Medicine, Philadelphia, PA | Perelman School of Medicine Univ. of Pennsylvania, Philadelphia, PA | CCI, Penn Medicine, Philadelphia, PA | University of Pennsylvania, Philadelphia, PA | Program Director of Translational Research, Abramson Family Cancer Research Inst, University of Pennsylvania, Philadelphia, PA</td>
+  <td>
+    <div class="title">Spatial profiling of recurrent glioblastoma in a Phase I clinical trial reveals favorable immune remodeling induced by intracerebroventricular CAR T therapy</div>
+    <div class="meta">4/20/2026 2:00:00 PM | Microenvironmental Determinants of Therapy Response and Resistance 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/8150">Open abstract</a></div>
+  </td>
+  <td>Visium; CosMx; GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">3886</td>
+  <td>Yu Jin Kim, Jeongman Park, Woo Young Kwon, Jaejoon Lim, Sung Hwan Lee</td>
+  <td>Department of Biomedical Science, College of Life Science, CHA University, Seongnam-si, Korea, Republic of | Department of Medicine, Hallym University, Chuncheon-si, Korea, Republic of | CHA University, Seoul, Korea, Republic of | 2Department of Neurosurgery, Bundang CHA Medical Center, Seongnam-si, Korea, Republic of | CHA University, Seongnam-si, Korea, Republic of</td>
+  <td>
+    <div class="title">A novel glioblastoma subtype classification using hallmark gene set signatures: Association between poor prognosis and TP53 downstream pathway</div>
+    <div class="meta">4/20/2026 2:00:00 PM | Molecular Classification and Tumor Biology in Cancer</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/8532">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">3951</td>
+  <td>Assya Legrini, Tengyu Zhang, Mari-Claire McGuigan, Colin Wood, Luke McNickle, Claire Kennedy-Dietrich, Ghazal Latifi, Yoana Doncheva, Josefina Vasquez, Hannah Morgan, Pamela McCall, Michail Doukas, Joanne Edwards, Nigel Jamieson</td>
+  <td>Univ. of Glasgow, Glasgow, United Kingdom | Glasgow Tissue Research Facility, Univ. of Glasgow, Glasgow, United Kingdom | Erasmus MC, Rotterdam, Netherlands</td>
+  <td>
+    <div class="title">Spatial mapping of B7-H3 mediated cellular plasticity in treatment naive pancreatic cancer</div>
+    <div class="meta">4/20/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10028">Open abstract</a></div>
+  </td>
+  <td>CosMx; GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">3960</td>
+  <td>Yeseul Kim, Yoseob Lee, Harim Oh, You-Na Sung, Yoo Jin Lee, Yona Kim, Inho Park, Jinhyuk Bhin, Su-Jin Shin</td>
+  <td>Department of pathology, Korea University Anam Hospital, Seoul, Korea, Republic of | Department of Biomedical Sciences, Yonsei University College of Medicine, Seoul, Korea, Republic of | Department of pathology, Gangnam Severance Hospital, Seoul, Korea, Republic of</td>
+  <td>
+    <div class="title">Spatially resolved transcriptomic signatures of gallbladder carcinogenesis from precursor to undifferentiated stages</div>
+    <div class="meta">4/20/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10037">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">4018</td>
+  <td>M. Dehankar, L. A. Boardman, D. O&#x27;Brien, E. A. Thompson, J. M. Kachergus, J. Shi, A. Abyzov, M. Suvakov, R. P. Graham, C. Wang; Mayo Clinic, Rochester, MN, Ambry Genetics, Aliso Viejo, CA, Mayo Clinic, Jacksonville, FL</td>
+  <td></td>
+  <td>
+    <div class="title">Stromal immune composition significantly contributes to adenomatous polyp recurrence or progression to cancer</div>
+    <div class="meta">4/20/2026 3:20:00 PM | Biomarkers That Change Management: Predicting Therapy Benefit, Progression, and Metastatic Risk</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10953">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">4146</td>
+  <td>Ziyin Huang, Kristen E. Rhodin, Rami Al-Rohil, Viviana Geron, Arul M. Chinnaiyan, Margaret H. O&#x27;Connor, Christina Vadala Angeles, Smita K. Nair, Georgia M. Beasley, Matthew K. Iyer</td>
+  <td>University of Michigan, Ann Arbor, MI | Duke University, Durham, NC | University North Carolina, Chapel Hill, NC</td>
+  <td>
+    <div class="title">Melanocytic transcriptional state is an independent marker of survival in metastatic melanoma</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Application of Bioinformatics to Cancer Biology 4</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/3044">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">4166</td>
+  <td>Ryunosuke Fujii, Kousei Ishimura, Kazuhiko Shien, Shuta Tomida, Kenta Manabe, Shunsuke Mori, Kazuya Hisamatsu, Ryota Fujiwara, Atsushi Matsuoka, Ryo Yoshichika, Kazuhiro Okada, Yuma Fukumoto, Haruchika Yamamoto, Kumi Nakajima, Shin Tanaka, Hidejiro Torigoe, Ken Suzawa, Kentaroh Miyoshi, Mikio Okazaki, Seiichiro Sugimoto, Hirofumi Inoue, Kosei Takagi, Hidetaka Yamamoto, Shinichi Toyooka</td>
+  <td>Thoracic, Breast and Endocrinological Surgery, Okayama University Graduate School of Medicine, Dentistry and Pharmaceutical Sciences, Okayama, Japan | Center for Comprehensive Genomic Medicine, Okayama University Hospital, Okayama, Japan | Gastroenterological Surgery, Okayama University Graduate School of Medicine, Dentistry and Pharmaceutical Sciences, Okayama, Japan | Pathology and Oncology, Okayama University Graduate School of Medicine, Dentistry and Pharmaceutical Sciences, Okayama, Japan</td>
+  <td>
+    <div class="title">Molecular diagnosis of lung tumors with a history of pancreatic cancer: Spatial profiling-based differential markers and functional insights into invasive mucinous adenocarcinoma</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Digital Pathology 3</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/3138">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">4951</td>
+  <td>Sanha Hwang</td>
+  <td>Seoul National University, Seoul, Korea, Republic of</td>
+  <td>
+    <div class="title">Unraveling the role of APOE/APOC1/SPP1/TREM2‑positive lipid‑Associated macrophages in destructive venous invasion and metastasis of colorectal cancer</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Spatial Niches and Functional Boundaries within the Tumor Microenvironment 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10758">Open abstract</a></div>
+  </td>
+  <td>Xenium; GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">4970</td>
+  <td>Mohamed M. Haq, Curtis Benson, Meik Kunz, Elim Cheung</td>
+  <td>HCA Houston Healthcare Southeast, Pasadena, TX | The Bioinformatics CRO, Sanford, FL | BioChain Institute Inc., Newark, CA</td>
+  <td>
+    <div class="title">Transcriptomic analysis reveals myoepithelial cell reprogramming in invasive breast cancer</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Spatial Niches and Functional Boundaries within the Tumor Microenvironment 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10913">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">4971</td>
+  <td>Chia-Ying Lee, Arya Bahrami, Yi Cui, Megan Vandenberg, Michael McKenna, Shanshan He, Mirko Corselli, Joseph M. Beechem</td>
+  <td>Bruker Spatial Biology, Seattle, WA</td>
+  <td>
+    <div class="title">Integrated spatial multiomic mapping of glioblastoma microenvironments via proteomic and transcriptomic profiling</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Spatial Niches and Functional Boundaries within the Tumor Microenvironment 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10917">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">4972</td>
+  <td>Jean-Philippe Guegan, Jean-Michel Coindre, Carine Ngo, Antoine Bougoüin, Christophe Rey, Catherine SAUTÈS-FRIDMAN, Wolf Herve Fridman, Armelle Dufresne, Alban Bessede, Antoine Italiano</td>
+  <td>Immunospot, Cleveland, OH | Institute Bergonié, Bordeaux, France | Carine Ngo (Individual) | Sorbonne University, Paris, France | ImmuSmol, Pessac, France | INSERM U1138 (Centre de Recherche des Cordeliers), Paris, France | Léon Bérard Center, Lyon, France | Institute Bergonié, Bordeaux cedex, France</td>
+  <td>
+    <div class="title">KIT exon 9 versus exon 11 mutations imprint distinct spatial and phenotypic immune microenvironments in gastrointestinal stromal tumors</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Spatial Niches and Functional Boundaries within the Tumor Microenvironment 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10925">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">5082</td>
+  <td>Benecia Jackson, Zahra Mesrizadeh, Robert Lou, Yate-Ching Yuan, Daniel Schmolze, Rania Bakkar, Jerneja Tomsic, Cristal Resto, Nancy Sanchez, Padmashree Rida, Shankar Subramaniam, Lucio Miele, Victoria Seewaldt, Nikita Jinna</td>
+  <td>Department of Population Sciences, Beckman Research Institute of The City of Hope, Duarte, CA | UC San Diego, La Jolla, CA | Carrigent, Covina, CA | Division of Translational Bioinformatics, City of Hope Comprehensive Cancer Center, Duarte, CA | Department of Pathology, City of Hope Comprehensive Cancer Center, Duarte, CA | Department of Science, Rowland Hall, Salt Lake City, UT | Departments of Cellular &amp; Molecular Medicine, Computer Science &amp; Engineering, and Data Science, University of California San Diego, La Jolla, CA | LSU Health New Orleans, New Orleans, LA</td>
+  <td>
+    <div class="title">Loss of androgen receptor expression in triple negative breast cancer upregulates kinesin family member C1 (KIFC1) via increased β-catenin/TCF4 signaling</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Etiology and Molecular Epidemiology Approaches to Decipher Cancer Disparities</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/5779">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">6046</td>
+  <td>Giulia Petroni, Simone Romagnoli, Daniele Lavacchi, Giulia Massaro, Francesca Rizzo, Elena Alexandrova, Costanza Winchler, Alfonso Carleo, Gian Luca Grazi, Daniele Rossini, Luca Messerini, Matteo Benelli, Serena Pillozzi, Lorenzo Antonuzzo</td>
+  <td>Department of Experimental and Clinical Medicine, Università degli Studi di Firenze - UniFI (University of Florence), Firenze, Italy | Department of Experimental and Clinical Biomedical Sciences &#x27;Mario Serio&#x27;, Università degli Studi di Firenze - UniFI (University of Florence), Firenze, Italy | Clinical Oncology Unit, Careggi University Hospital, Firenze, Italy | Department of Medicine, Surgery and Dentistry &quot;Scuola Medica, Salernitana&quot;, University of Salerno, Salerno, Italy | Department of Experimental and Clinical Medicine, Pathology Unit, Università degli Studi di Firenze - UniFI (University of Florence), Firenze, Italy</td>
+  <td>
+    <div class="title">Spatial transcriptomic profiling of cancer-associated fibroblast niches in extrahepatic cholangiocarcinoma</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Fibroblasts as Architects of the Tumor Microenvironment</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/7454">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">6122</td>
+  <td>Jian Ye, Colt A. Egelston, Chongkai Wang, Marwan Fakih</td>
+  <td>Department of Medical Oncology and Therapeutics Research, City of Hope National Medical Center, Duarte, CA | Department of Immuno-Oncology, Beckman Research Institute of the City of Hope, Duarte, CA | City of Hope National Medical Center, Department of Medical Oncology and Therapeutics Re, CA | City of Hope National Medical Center, Duarte, CA</td>
+  <td>
+    <div class="title">Organ-specific immune and metabolic programs shape spatial microenvironments in MSS colorectal cancer metastases</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Metastasis and Organ-Specific Microenvironmental Evolution</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/8437">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">6470</td>
+  <td>Nakial C. W. Cross, Yael A. Day, Sonia Ndeupen, Vanessa E. Gonzalez, Zhen Miao, Sam I. Kim, Rachel M. Leskowitz, Amy Marshall, Julie K. Jadlowsky, Gabriela Plesa, Donald L. Siegel, Elizabeth O. Hexner, Jakub Svoboda, Stephen J. Schuster, Nancy R. Zhang, Joseph A. Fraietta, Andrew J. Rech, Carl H. June</td>
+  <td>Perelman School of Medicine Univ. of Pennsylvania, Philadelphia, PA | Statistics &amp; Data Analysis, Wharton School Univ. of Pennsylvania, Philadelphia, PA</td>
+  <td>
+    <div class="title">Spatial remodeling of the tumor microenvironment by IL-18-armored CD19 CAR T cells is associated with durable remission in relapsed or refractory lymphoma</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Clinical Correlates of Immunotherapy</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9514">Open abstract</a></div>
+  </td>
+  <td>CosMx; GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">6576</td>
+  <td>Chih-Hung Chung, Han-Hsun Yu, Muh-Hwa Yang</td>
+  <td>National Yang Ming Chiao Tung University, Taipei, Taiwan</td>
+  <td>
+    <div class="title">Integrative spatial transcriptomics reveals EMT-driven immune regulatory programs underlying metastasis in HNSCC</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Inflammation, Immunity, and Cancer</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9565">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium; GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">6664</td>
+  <td>Terence C. Theisen, Alexa E. Lasley, Giang Ong, Megan Vandenberg, Brian Filanoski, Lori Hamanishi, Erin Piazza, Sayani Bhattacharjee, Courtney Anderson, Mirko Corselli, Prajan Divakar, Margaret L. Hoang, Joseph M. Beechem</td>
+  <td>Research and Development, Bruker Spatial Biology, Seattle, WA</td>
+  <td>
+    <div class="title">Single-cell spatial proteomics of 1200+ protein targets in tumor microenvironments from diverse cancers using GeoMx Discovery Proteome Atlas</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 3</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10058">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">6684</td>
+  <td>Navneet Kaur, Wadih Issa, Ze Yu, Hua Zhong, Aleksandra Weronika Nielsen, Jay Jasti, Shahed Abdullah, Libin Yan, Damla Gunenc, Qinhan Zhou, Andrew DeVilbiss, Satwik Rajaram, Payal Kapur, Chao Xing, Liwei Jia, Andrew Z. Wang, Tian Zhang</td>
+  <td>Department of Internal Medicine (Division of Hematology-Oncology), Harold C. Simmons Comprehensive Cancer Center, UT Southwestern Medical Center, Dallas, TX | Eugene McDermott Center for Human Growth and Development, UT Southwestern Medical Center, Dallas, TX | Department of Pathology, UT Southwestern Medical Center, Dallas, TX | Lyda Hill Department of Bioinformatics, UT Southwestern Medical Center, Dallas, TX | Lyda Hill Department of Bioinformatics; O&#x27;Donnell School of Public Health, Eugene McDermott Center for Human Growth and Development, UT Southwestern Medical Center, Dallas, TX | Department of Radiation Oncology, Harold C. Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas, TX</td>
+  <td>
+    <div class="title">Spatial multi-omics profiling of clear cell renal cell carcinoma (ccRCC) pre-and post-immunotherapy identifies new druggable targets</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 3</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10079">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">6749</td>
+  <td>G. Chang, D. Redwood, A. L. Koehne, M. Fitzgibbon, C. Qu, H. Yin, E. Donato, M. Lin, C. Yeung, J. J. Tiesinga, S. Thomas, L. Hsu, C. I. Li, T. K. Thomas, R. Peters, J. Huyghe; Public Health Sciences Division, Fred Hutchinson Cancer Center, Seattle, WA, Alaska Native Tribal Health Consortium, Anchorage, AK, Genomics and Bioinformatics, Fred Hutchinson Cancer Center, Seattle, WA, Department of Medicine, Massachusetts General Hospital, Boston, MA</td>
+  <td></td>
+  <td>
+    <div class="title">Spatial transcriptomics profiling of colorectal cancer tumors in Alaska Native peoples: Discovery of prognostic biomarkers</div>
+    <div class="meta">4/21/2026 2:35:00 PM | Spatial Biomarkers at Single-Cell Resolution: Mapping Tumor Ecosystems with Proteomics, Transcriptomics, and AI</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/8641">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+<tr>
+  <td class="mono">7443</td>
+  <td>Vidya Prasad Nimbalkar, Snijesh V P, Anupama CE, Mahalakshmi S, Annie Alexander, Rakesh Ramesh, Srinath BS, Jyothi S. Prabhu</td>
+  <td>Division of Molecular Medicine, St. John&#x27;s Research Institute, Bangalore, India | Department of Surgical Oncology, St. John&#x27;s Medical College and Hospital, Bangalore, India | Department of Surgical Oncology, Sri Shankara Cancer Hospital and Research Centre, Bangalore, India</td>
+  <td>
+    <div class="title">Low hypoxia microenvironment and impaired T cell maturation drive immunotherapy resistance in premenopausal triple negative breast cancer</div>
+    <div class="meta">4/22/2026 9:00:00 AM | Microenvironmental Determinants of Therapy Response and Resistance 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10821">Open abstract</a></div>
+  </td>
+  <td>GeoMx</td>
+</tr>
+      </tbody>
+    </table>
+    
+      <div class="footer-note">
+        35 presentations matched the keyword GeoMx.
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CellScape Presentations</title>
+  <style>
+    :root {
+      --blue: #1673c6;
+      --blue-dark: #0f4d8b;
+      --ink: #1f2d3d;
+      --muted: #5f7187;
+      --line: #c9d8e6;
+      --panel: #f8fbfe;
+      --accent: #4fae6a;
+      --paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(22, 115, 198, 0.12), transparent 28%),
+        linear-gradient(180deg, #f5fbff 0%, #ffffff 22%);
+    }
+
+    .page {
+      width: min(1600px, calc(100vw - 48px));
+      margin: 32px auto 48px;
+      background: var(--paper);
+      border: 1px solid #d8e4ef;
+      box-shadow: 0 20px 50px rgba(15, 77, 139, 0.08);
+    }
+
+    .hero {
+      padding: 28px 36px 22px;
+      background:
+        linear-gradient(135deg, #1d7bd0 0%, #0f5a9f 100%);
+      color: #fff;
+    }
+
+    .eyebrow {
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    h1 {
+      margin: 8px 0 0;
+      font-size: 40px;
+      line-height: 1.05;
+      font-weight: 700;
+    }
+
+    .content {
+      padding: 24px 36px 40px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 42px;
+      margin-bottom: 26px;
+    }
+
+    .summary-item {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .summary-item strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 28px 0 10px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 28px;
+      color: var(--blue-dark);
+    }
+
+    .section-title .count {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: var(--panel);
+    }
+
+    thead th {
+      text-align: left;
+      font-size: 13px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--blue-dark);
+      padding: 12px 10px;
+      border-top: 2px solid var(--line);
+      border-bottom: 2px solid var(--line);
+      background: #f4f9fd;
+    }
+
+    tbody td {
+      vertical-align: top;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+      line-height: 1.4;
+      background: #fff;
+    }
+
+    th:nth-child(1), td:nth-child(1) { width: 10%; }
+    th:nth-child(2), td:nth-child(2) { width: 23%; }
+    th:nth-child(3), td:nth-child(3) { width: 19%; }
+    th:nth-child(4), td:nth-child(4) { width: 33%; }
+    th:nth-child(5), td:nth-child(5) { width: 15%; }
+
+    .title {
+      font-weight: 700;
+      color: #203246;
+      margin-bottom: 4px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .mono {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      white-space: nowrap;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        width: auto;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    
+    <div class="hero">
+      <div class="eyebrow">AACR 2026</div>
+      <h1>CellScape Presentations</h1>
+    </div>
+    <div class="content">
+      
+    <table>
+      <thead>
+        <tr>
+          <th>Abstract #</th>
+          <th>Authors</th>
+          <th>Affiliation</th>
+          <th>Title / Session</th>
+          <th>Products</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td class="mono">806</td>
+  <td>Yesul Jeong, Se Jun Park, Sung Hak Lee*, Younghoon Kim*</td>
+  <td>Department of Hospital Pathology, St. Vincent’s Hospital, College of Medicine, The Catholic University of Korea, Seoul, Korea, Republic of | Division of Medical Oncology, Department of Internal Medicine, Seoul St. Mary’s Hospital, Seoul, Korea, Republic of | Department of Hospital Pathology, Seoul St. Mary’s Hospital, Seoul, Korea, Republic of</td>
+  <td>
+    <div class="title">Tumor microenvironment of ampulla of Vater cancer reveals distinct spatial niche of CAF, TIL, and TAM and their correlation with clinicopathologic features</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Spatial Protein Profiling and Multi-Modal Mapping of Tumor and Circulating Ecosystems</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10890">Open abstract</a></div>
+  </td>
+  <td>CellScape</td>
+</tr>
+<tr>
+  <td class="mono">3973</td>
+  <td>Tim Schunk, Tim Mandelkow, Shida Xiong, Jonas Raedler, Rodler Severin, Philipp Nuhn, Anne Letsch, Marion van Macklenbergh, Jan Weitkamp, Jakob Kohler, Arne Christians, Oliver Braubach, Steve Lott, Micaela Mathiak, Gavin Gordon, Björn Konukiewitz, Christoph Rocken, Niclas Christian Blessin</td>
+  <td>Universitätsklinikum Schleswig-Holstein, Kiel, Germany | Bruker Spatial Biology | Canopy Biosciences, St. Louis, CA | Bruker Spatial Biology, St. Louis, CA | Professor, Dept. of Pathology, Christian-Albrechts-University, Kiel, Germany</td>
+  <td>
+    <div class="title">A framework for antibody validation via spatial proteo-transcriptomics using the CellScape platform</div>
+    <div class="meta">4/20/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10050">Open abstract</a></div>
+  </td>
+  <td>CosMx; CellScape</td>
+</tr>
+<tr>
+  <td class="mono">6591</td>
+  <td>Daniel Jimenez-Sanchez, Matthew H. Ingalls, Sanghamithra korukonda, Brian J. Lane, Isabella Marie Peshek, Patrick Danaher, Prajan Divakar, Oliver Braubach</td>
+  <td>Bruker Spatial Biology, St. Louis, MO | Bruker Spatial Biology, Seattle, WA | Division of Gastroenterology, Northwestern University, Chicago, IL</td>
+  <td>
+    <div class="title">Cross platform same slide multi-omics reveals Treg heterogeneity and links to spatial niche variability in pre-cancerous colonic inflammation</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Inflammation, Immunity, and Cancer</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9579">Open abstract</a></div>
+  </td>
+  <td>CosMx; CellScape</td>
+</tr>
+<tr>
+  <td class="mono">6660</td>
+  <td>Daniel Jimenez-Sanchez, Brian J. Lane, Matthew H. Ingalls, Charles Eldon Jackson, Steven T. Lott, Adam Northcutt, Arne Christians, Anke Brix, Jennifer Brooks, Oliver Braubach</td>
+  <td>Bruker Spatial Biology, St. Louis, MO | Bruker Spatial Biology, Hanover, Germany</td>
+  <td>
+    <div class="title">CellScape Quality Control (CSQC): A tissue- and protein-agnostic platform for spatial proteomics quality assessment</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 3</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10054">Open abstract</a></div>
+  </td>
+  <td>CellScape</td>
+</tr>
+<tr>
+  <td class="mono">6672</td>
+  <td>Thore Boettke, Jannik Boog, Charles Eldon Jackson, Matthew H. Ingalls, Arne Christians, Oliver Braubach</td>
+  <td>Bruker Spatial Biology, St. Louis, MO</td>
+  <td>
+    <div class="title">Expanding the boundaries of spatial proteomics with a universal antibody labeling strategy and EpicIF™ multiplexing chemistry</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 3</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10068">Open abstract</a></div>
+  </td>
+  <td>CellScape</td>
+</tr>
+<tr>
+  <td class="mono">6678</td>
+  <td>Arne Christians, Thore Boettke, Jannik Boog, Charles Eldon Jackson, Matt Ingalls, Brian J. Lane, Daniel Jimenez Sanchez, Christoph Rocken, Niclas Christian Blessin, Oliver Braubach</td>
+  <td>Bruker Spatial Biology, St. Louis, MO | Dept. of Pathology, University Medical Center Schleswig-Holstein, Kiel, Germany</td>
+  <td>
+    <div class="title">Ultra-high-plex immunofluorescence analysis of the tumor-immune microenvironment with EpicIF technology on the CellScape platform</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 3</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10073">Open abstract</a></div>
+  </td>
+  <td>CellScape</td>
+</tr>
+      </tbody>
+    </table>
+    
+      <div class="footer-note">
+        6 presentations matched the keyword CellScape.
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>

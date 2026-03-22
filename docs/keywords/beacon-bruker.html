@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beacon + Bruker Presentations</title>
+  <style>
+    :root {
+      --blue: #1673c6;
+      --blue-dark: #0f4d8b;
+      --ink: #1f2d3d;
+      --muted: #5f7187;
+      --line: #c9d8e6;
+      --panel: #f8fbfe;
+      --accent: #4fae6a;
+      --paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(22, 115, 198, 0.12), transparent 28%),
+        linear-gradient(180deg, #f5fbff 0%, #ffffff 22%);
+    }
+
+    .page {
+      width: min(1600px, calc(100vw - 48px));
+      margin: 32px auto 48px;
+      background: var(--paper);
+      border: 1px solid #d8e4ef;
+      box-shadow: 0 20px 50px rgba(15, 77, 139, 0.08);
+    }
+
+    .hero {
+      padding: 28px 36px 22px;
+      background:
+        linear-gradient(135deg, #1d7bd0 0%, #0f5a9f 100%);
+      color: #fff;
+    }
+
+    .eyebrow {
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    h1 {
+      margin: 8px 0 0;
+      font-size: 40px;
+      line-height: 1.05;
+      font-weight: 700;
+    }
+
+    .content {
+      padding: 24px 36px 40px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 42px;
+      margin-bottom: 26px;
+    }
+
+    .summary-item {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .summary-item strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 28px 0 10px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 28px;
+      color: var(--blue-dark);
+    }
+
+    .section-title .count {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: var(--panel);
+    }
+
+    thead th {
+      text-align: left;
+      font-size: 13px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--blue-dark);
+      padding: 12px 10px;
+      border-top: 2px solid var(--line);
+      border-bottom: 2px solid var(--line);
+      background: #f4f9fd;
+    }
+
+    tbody td {
+      vertical-align: top;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+      line-height: 1.4;
+      background: #fff;
+    }
+
+    th:nth-child(1), td:nth-child(1) { width: 10%; }
+    th:nth-child(2), td:nth-child(2) { width: 23%; }
+    th:nth-child(3), td:nth-child(3) { width: 19%; }
+    th:nth-child(4), td:nth-child(4) { width: 33%; }
+    th:nth-child(5), td:nth-child(5) { width: 15%; }
+
+    .title {
+      font-weight: 700;
+      color: #203246;
+      margin-bottom: 4px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .mono {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      white-space: nowrap;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        width: auto;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    
+    <div class="hero">
+      <div class="eyebrow">AACR 2026</div>
+      <h1>Beacon + Bruker Presentations</h1>
+    </div>
+    <div class="content">
+      
+    <table>
+      <thead>
+        <tr>
+          <th>Abstract #</th>
+          <th>Authors</th>
+          <th>Affiliation</th>
+          <th>Title / Session</th>
+          <th>Products</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td class="mono">478</td>
+  <td>Marie-Claire Phélipot, Eric Chabrol, Julie Lichière, Alice Aymard, alexandre Baagnolini, Nadjiba Marès, Cécile Lemoigne, Matthieu Tassa, Sophie Mesnard, Caroline Huber, Ester Morgado, Marion Seillier, Jacques Fieschi</td>
+  <td>Mimabs, Marseille, France</td>
+  <td>
+    <div class="title">Implementation of single B-cell screening to select antibodies in one day based on affinity and multiple binding properties</div>
+    <div class="meta">4/19/2026 2:00:00 PM | RNA, Gene and Cell Therapies, and Enabling Assay Technologies</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/5612">Open abstract</a></div>
+  </td>
+  <td>Beacon</td>
+</tr>
+<tr>
+  <td class="mono">4403</td>
+  <td>Eric Chabrol, Marie-Claire Phélipot, Cécile Lemoigne, Julie Lichière, Nadjiba Marès, Alice Aymard, Alexandre Bagnolini, Sophie Mesnard, Caroline Huber, Matthieu Tassa, Ester Morgado, Jacques Fieschi</td>
+  <td>Mimabs, Marseille, France</td>
+  <td>
+    <div class="title">A fast and robust development process providing new highly internalized anti-hHER2 antibody-drug conjugates</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Antibody Technologies and Platforms 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/5504">Open abstract</a></div>
+  </td>
+  <td>Beacon</td>
+</tr>
+<tr>
+  <td class="mono">4984</td>
+  <td>Joseph Zenga, Musaddiq Awan, Fumou Sun, Stuart J. Wong, Abdullah Memon, Tyce Kearl, Ean Norenberg, Margaret L. Hoang, Joseph M. Beechem, Eric Hobbs, Ashley Heck, Rachel Liu, Daniel McGuire, Erin Piazza, Peiman Hematti, Heather Himburg</td>
+  <td>Medical College of Wisconsin, Milwaukee, WI | Bruker Spatial Biology, Seattle, WA | Bruker Spatial Biology, Piedmont, CA | Bruker Cellular Analysis, Emeryville, CA</td>
+  <td>
+    <div class="title">Dissociative, spatial, and functional single-cell profiling reveals antigen-driven exhaustion and chemotactic failure of tumor-reactive T cells in HPV-negative HNSCC</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Tumor-Immune Crosstalk</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10547">Open abstract</a></div>
+  </td>
+  <td>CosMx; Beacon</td>
+</tr>
+      </tbody>
+    </table>
+    
+      <div class="footer-note">
+        3 presentations matched the keyword Beacon + Bruker.
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>
