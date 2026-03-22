@@ -1,0 +1,5 @@
+.DS_Store
+.tmp_pdf/
+__pycache__/
+*.pyc
+output/
