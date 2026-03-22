@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>G4X Presentations</title>
+  <style>
+    :root {
+      --blue: #1673c6;
+      --blue-dark: #0f4d8b;
+      --ink: #1f2d3d;
+      --muted: #5f7187;
+      --line: #c9d8e6;
+      --panel: #f8fbfe;
+      --accent: #4fae6a;
+      --paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(22, 115, 198, 0.12), transparent 28%),
+        linear-gradient(180deg, #f5fbff 0%, #ffffff 22%);
+    }
+
+    .page {
+      width: min(1600px, calc(100vw - 48px));
+      margin: 32px auto 48px;
+      background: var(--paper);
+      border: 1px solid #d8e4ef;
+      box-shadow: 0 20px 50px rgba(15, 77, 139, 0.08);
+    }
+
+    .hero {
+      padding: 28px 36px 22px;
+      background:
+        linear-gradient(135deg, #1d7bd0 0%, #0f5a9f 100%);
+      color: #fff;
+    }
+
+    .eyebrow {
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    h1 {
+      margin: 8px 0 0;
+      font-size: 40px;
+      line-height: 1.05;
+      font-weight: 700;
+    }
+
+    .content {
+      padding: 24px 36px 40px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 42px;
+      margin-bottom: 26px;
+    }
+
+    .summary-item {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .summary-item strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 28px 0 10px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 28px;
+      color: var(--blue-dark);
+    }
+
+    .section-title .count {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: var(--panel);
+    }
+
+    thead th {
+      text-align: left;
+      font-size: 13px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--blue-dark);
+      padding: 12px 10px;
+      border-top: 2px solid var(--line);
+      border-bottom: 2px solid var(--line);
+      background: #f4f9fd;
+    }
+
+    tbody td {
+      vertical-align: top;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+      line-height: 1.4;
+      background: #fff;
+    }
+
+    th:nth-child(1), td:nth-child(1) { width: 10%; }
+    th:nth-child(2), td:nth-child(2) { width: 23%; }
+    th:nth-child(3), td:nth-child(3) { width: 19%; }
+    th:nth-child(4), td:nth-child(4) { width: 33%; }
+    th:nth-child(5), td:nth-child(5) { width: 15%; }
+
+    .title {
+      font-weight: 700;
+      color: #203246;
+      margin-bottom: 4px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .mono {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      white-space: nowrap;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        width: auto;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    
+    <div class="hero">
+      <div class="eyebrow">AACR 2026</div>
+      <h1>G4X Presentations</h1>
+    </div>
+    <div class="content">
+      
+    <table>
+      <thead>
+        <tr>
+          <th>Abstract #</th>
+          <th>Authors</th>
+          <th>Affiliation</th>
+          <th>Title / Session</th>
+          <th>Products</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td class="mono">70</td>
+  <td>Jiwoon Park, Ryan Shultzaberger, Braulio Banuelos, McKenzie Pavlich, Sabrina Shore, Daan Witters, Kyung-A Kim, Taeyul K. Kim, Minsun Jung, Han Sang Kim, Christopher E. Mason</td>
+  <td>Weill Cornell Medicine, New York, NY | Singular Genomics, San Diego, CA | Yonsei University, Seoul, Korea, Republic of</td>
+  <td>
+    <div class="title">SPOT-Met: Spatially decoding organotropism and immunotherapy response in colorectal cancer from 1,000 multi-omic tumors</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Digital Pathology 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/3074">Open abstract</a></div>
+  </td>
+  <td>G4X</td>
+</tr>
+<tr>
+  <td class="mono">1201</td>
+  <td>Yunhe Liu, Idania Carolina Lubo Julio, Wei Lu, Alejandra G. Serrano, Jean R. Clemenceau, Amber Famiglietti, Karen Colbert, Yibo Dai, Yang Liu, Jun Wang, Jeremy L. Davis, Mingyao Li, Paul F. Mansfield, Tae Hyun Hwang, Luisa M. Solis-Soto, Linghua Wang</td>
+  <td>Department of Genomic Medicine, The University of Texas MD Anderson Cancer Center, Houston, TX | Department of Translational and Molecular Pathology, The University of Texas MD Anderson Cancer Center, Houston, TX | Department of Surgery, Vanderbilt University Medical Center, Nashville, TN | National Institute of Dental and Craniofacial Research, National Institutes of Health, Bethesda, MD | Department of Clinical Cancer Prevention, The University of Texas MD Anderson Cancer Center, Houston, TX | BioChemistry&amp;Molecular Biology, University of Maryland School of Medicine, Baltimore, MD | University of Pennsylvania, Philadelphia, PA | Vice President, Acute Care Services, UT MD Anderson Cancer Ctr., Houston, TX | Department of Translational Molecular Pathology, the university of MD Anderson cancer center, Houston, TX</td>
+  <td>
+    <div class="title">Spatial 3D and multi-omics mapping of diffuse gastric cancer evolution from preinvasive to invasive lesions in CDH1 mutation carriers</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10001">Open abstract</a></div>
+  </td>
+  <td>Xenium; Visium; CosMx; GeoMx; G4X</td>
+</tr>
+<tr>
+  <td class="mono">2201</td>
+  <td>Maria Moozhiyil Korah, James P. Agolia, Biren Reddy, Renceh A. B. Flojo, Amanda Gonçalves, Lilin Wang, Rosyli F. Reveron-Thornton, Chuner Guo, Beatrice Sun, Amanda R. Kirane, George Poultsides, Deshka Foster, R. Stephanie Huang, Gregory W. Charville, Michael T. Longaker, Daniel Delitto</td>
+  <td>Stanford University, Stanford, CA | University of Minnesota, Minneapolis, MN | Asst. Professor, Dept. of Medicine, University of Minnesota, Minneapolis, MN</td>
+  <td>
+    <div class="title">Multidimensional transcriptomic alas of recurrent uterine leiomyosarcomas uncovers stem-like hormonal cells with high drug sensitivity and improved patient outcomes</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Metabolic and Transcriptional Control of Cancer Stem Cell Plasticity</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/699">Open abstract</a></div>
+  </td>
+  <td>G4X</td>
+</tr>
+<tr>
+  <td class="mono">2222</td>
+  <td>James P. Agolia, Chuner Guo, Rosyli F. Reveron-Thornton, Xiaomo Li, Maria Moozhiyil Korah, Angela Tabora, Byrne Lee, Amanda R. Kirane, George Poultsides, Brendan Visser, Gregory W. Charville, Michael T. Longaker, Deshka S. Foster, Daniel Delitto</td>
+  <td>Surgery, Stanford University, Stanford, CA | Pathology, Stanford University, Stanford, CA</td>
+  <td>
+    <div class="title">Mapping lymphoid responses to tumor growth and lymph node metastasis: multiomic spatial analysis of pancreatic ductal adenocarcinoma reveals tertiary lymph node structures</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Tertiary Lymphoid Structures in Cancer</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/8273">Open abstract</a></div>
+  </td>
+  <td>G4X</td>
+</tr>
+<tr>
+  <td class="mono">2254</td>
+  <td>Eric Sha, Seock-Jin Chung, Jean R. Clemenceau, Sunho Park, Minji Kim, Inyeop Jang, Youngwon Cho, Seunghyi Kook, Soonyoung Lee, Jongseong Jang, Eunyoung Choi, Tae Hyun Hwang</td>
+  <td>Vanderbilt University, Nashville, TN | Vanderbilt University Medical Center, Nashville, TN | LG AI Research, Seoul, Korea, Republic of</td>
+  <td>
+    <div class="title">3D multimodal spatial profiling of pre-gastric cancer progression using same-slide RNA-protein and fluorescent H&amp;E</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Tumorigenesis and Early Microenvironmental Trajectories</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/8419">Open abstract</a></div>
+  </td>
+  <td>G4X</td>
+</tr>
+<tr>
+  <td class="mono">4179</td>
+  <td>Inyeop Jang, Soyoung Im, Minji Kim, Seok-Jin Chung, Minsoo Lee, Soonyoung Lee, Jongseong Jang, Tae Hyun Hwang</td>
+  <td>Vanderbilt University Medical Center, Nashville, TN | LG AI Research, Seoul, Korea, Republic of</td>
+  <td>
+    <div class="title">Three-dimensional spatial multi-omics of gastric tumor sections reveal hidden features beyond 2D analyses</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Integrative Computational Approaches 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/3176">Open abstract</a></div>
+  </td>
+  <td>G4X</td>
+</tr>
+<tr>
+  <td class="mono">4218</td>
+  <td>Minji Kim, Sunho Park, Seock-Jin Chung, Inyeop Jang, Jean R. Clemenceau, Soyoung Im, Eric Sha, Hwanil Choi, Soonyoung Lee, Jongseong Jang, Sam C. Wang, Tae Hyun Hwang</td>
+  <td>Section Surgical Research, Vanderbilt University Medical Center, Nashville, TN | Surgical Section Research, Vanderbilt University Medical Center, Nashville, TN | College of medicine, The Catholic University, Suwon, Korea, Republic of | LG AI Research, Seoul, Korea, Republic of | University of Texas Southwestern Medical Center, Dallas, TX</td>
+  <td>
+    <div class="title">ProteoBridge: Bridging skipped sections via histology-based protein prediction</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Machine Learning Approaches for Cancer Prediction</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/2640">Open abstract</a></div>
+  </td>
+  <td>G4X</td>
+</tr>
+<tr>
+  <td class="mono">4235</td>
+  <td>I-Chuang Liao, Minh-Khang Le, Vivek Pujara, Haley Jun, Devanshi Pratiher, Jane C. Figueiredo, Nathalie Nguyen, Chintda Santiskulvong, Angie Laguna, Yi Zhang, Keluo Yao, Joshua Jay Levy</td>
+  <td>Cedars-Sinai Medical Center, Los Angeles, CA | Samuel Oschin Comprehensive Cancer Institute, Los Angeles, CA</td>
+  <td>
+    <div class="title">Cell-level spatial transcriptomics detection of microenvironmental STAT1-expressing plasma cells in colorectal cancer recurrence by G4X</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Adaptive Immunity in Cancer</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/1312">Open abstract</a></div>
+  </td>
+  <td>G4X</td>
+</tr>
+<tr>
+  <td class="mono">6202</td>
+  <td>Biren Reddy, Maria Korah, James P. Agolia, Rosyli Reveron-Thornton, Maggie Lam, Deshka Foster, Michael T. Longaker, Daniel Delitto</td>
+  <td>Stanford University, Stanford, CA</td>
+  <td>
+    <div class="title">Integrated multiomic atlas of pancreatic solid pseudopapillary neoplasms suggests acinar cells as a potential cell-of-origin</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Spatial Niches and Functional Boundaries within the Tumor Microenvironment 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/8081">Open abstract</a></div>
+  </td>
+  <td>G4X</td>
+</tr>
+<tr>
+  <td class="mono">6685</td>
+  <td>Michael Lawson, Kenneth Gouin, Sabrina Shore, Yuji Ishitsuka, Richard Que, Eli Glezer, Daan Witters</td>
+  <td>Singular Genomics, San Diego, CA | Singular Genomics, LA JOLLA, CA</td>
+  <td>
+    <div class="title">Integrated high-throughput multimodal spatial profiling of RNA, protein, and morphology in FFPE sections with the G4X™ Spatial Sequencer</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 3</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10060">Open abstract</a></div>
+  </td>
+  <td>G4X</td>
+</tr>
+<tr>
+  <td class="mono">6686</td>
+  <td>Michael Lawson, Tung T. Le, Ryan Shultzaberger, Ashley Tsue, Zane Hiatt, Nathan Ing, Kenneth Gouin, Eli Glezer, Daan Witters</td>
+  <td>Singular Genomics, San Diego, CA | Singular Genomics, LA JOLLA, CA</td>
+  <td>
+    <div class="title">Direct-Seq™ enables spatially resolved in situ sequencing of IgH and TCRβ transcripts in FFPE tissue at subcellular resolution</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 3</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10080">Open abstract</a></div>
+  </td>
+  <td>G4X</td>
+</tr>
+<tr>
+  <td class="mono">6890</td>
+  <td>Jean R. Clemenceau, Yunhe Liu, Idania Carolina Lubo Julio, Soyoung Im, Seock-Jin Chung, Sam C. Wang, Paul F. Mansfield, Luisa Maren Solis Soto, Linghua Wang, Tae Hyun Hwang</td>
+  <td>Section of Surgical Research, Vanderbilt University Medical Center, Nashville, TN | UT MD Anderson Cancer Center, Houston, TX | Department of Translational Molecular Pathology, UT MD Anderson Cancer Center, Houston, TX | Department of Pathology, The Catholic University of Korea St. Vincent&#x27;s Hospital, Suwon, Korea, Republic of | Department of Surgery, UT Southwestern Medical Center, Dallas, TX | Department of Surgical Oncology, UT MD Anderson Cancer Center, Houston, TX</td>
+  <td>
+    <div class="title">Subcellular 3D multi-omic models of CDH1-mutant diffuse gastric cancer improve recapitulation of tumor microenvironment structure and reveal precancer signature niches</div>
+    <div class="meta">4/22/2026 9:00:00 AM | New Algorithms and Computational Methods</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/3262">Open abstract</a></div>
+  </td>
+  <td>G4X</td>
+</tr>
+      </tbody>
+    </table>
+    
+      <div class="footer-note">
+        12 presentations matched the keyword G4X.
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>
