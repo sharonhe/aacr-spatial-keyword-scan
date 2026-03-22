@@ -40,6 +40,8 @@ DEFAULT_KEYWORDS = [
     ("nCounter", "ncounter"),
     ("CellScape", "cellscape"),
     ("PaintScape", "paintscape"),
+    ("Vizgen", "vizgen"),
+    ("Singular", "singular"),
     ("Beacon + Bruker", "beacon +bruker"),
     ("Bruker", "bruker"),
 ]
@@ -57,6 +59,8 @@ TERM_PATTERNS = OrderedDict(
         ("Beacon", [r"\bbeacon\b"]),
         ("CellScape", [r"\bcellscape\b"]),
         ("PaintScape", [r"\bpaintscape\b"]),
+        ("Vizgen", [r"\bvizgen\b"]),
+        ("Singular", [r"\bsingular\b"]),
     ]
 )
 

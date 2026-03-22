@@ -4,7 +4,7 @@ Static site and scraper for the AACR Annual Meeting 2026 keyword scan.
 
 Published site:
 
-- https://adytannu.github.io/aacr-spatial-keyword-scan/
+- https://aacr.shanshanhe.com/
 
 Main artifacts:
 
