@@ -4,16 +4,56 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GeoMx Presentations</title>
+  <script>
+    (() => {
+      const savedTheme = localStorage.getItem("aacr-theme");
+      document.documentElement.dataset.theme = savedTheme === "dark" ? "dark" : "light";
+    })();
+  </script>
   <style>
     :root {
       --blue: #1673c6;
       --blue-dark: #0f4d8b;
       --ink: #1f2d3d;
+      --ink-strong: #203246;
       --muted: #5f7187;
       --line: #c9d8e6;
       --panel: #f8fbfe;
       --accent: #4fae6a;
       --paper: #ffffff;
+      --page-border: #d8e4ef;
+      --thead-bg: #f4f9fd;
+      --row-bg: #ffffff;
+      --empty-bg: #f7fafc;
+      --control-bg: #ffffff;
+      --hero-bg: linear-gradient(135deg, #1d7bd0 0%, #0f5a9f 100%);
+      --page-shadow: 0 20px 50px rgba(15, 77, 139, 0.08);
+      --body-bg:
+        radial-gradient(circle at top left, rgba(22, 115, 198, 0.12), transparent 28%),
+        linear-gradient(180deg, #f5fbff 0%, #ffffff 22%);
+    }
+
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --blue: #7fc3ff;
+      --blue-dark: #d8ebff;
+      --ink: #e5eef8;
+      --ink-strong: #f6fbff;
+      --muted: #9eb2c6;
+      --line: #2a3d51;
+      --panel: #122031;
+      --accent: #7ad09a;
+      --paper: #0d1723;
+      --page-border: #223447;
+      --thead-bg: #152537;
+      --row-bg: #0f1c2b;
+      --empty-bg: #101a26;
+      --control-bg: #132131;
+      --hero-bg: linear-gradient(135deg, #174f83 0%, #0d2f4f 100%);
+      --page-shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+      --body-bg:
+        radial-gradient(circle at top left, rgba(22, 115, 198, 0.18), transparent 30%),
+        linear-gradient(180deg, #08111a 0%, #0d1723 24%);
     }
 
     * {
@@ -24,23 +64,20 @@
       margin: 0;
       font-family: "Aptos", "Segoe UI", Arial, sans-serif;
       color: var(--ink);
-      background:
-        radial-gradient(circle at top left, rgba(22, 115, 198, 0.12), transparent 28%),
-        linear-gradient(180deg, #f5fbff 0%, #ffffff 22%);
+      background: var(--body-bg);
     }
 
     .page {
       width: min(1600px, calc(100vw - 48px));
       margin: 32px auto 48px;
       background: var(--paper);
-      border: 1px solid #d8e4ef;
-      box-shadow: 0 20px 50px rgba(15, 77, 139, 0.08);
+      border: 1px solid var(--page-border);
+      box-shadow: var(--page-shadow);
     }
 
     .hero {
       padding: 28px 36px 22px;
-      background:
-        linear-gradient(135deg, #1d7bd0 0%, #0f5a9f 100%);
+      background: var(--hero-bg);
       color: #fff;
     }
 
@@ -116,7 +153,7 @@
       padding: 12px 10px;
       border-top: 2px solid var(--line);
       border-bottom: 2px solid var(--line);
-      background: #f4f9fd;
+      background: var(--thead-bg);
     }
 
     tbody td {
@@ -125,7 +162,7 @@
       border-bottom: 1px solid var(--line);
       font-size: 14px;
       line-height: 1.4;
-      background: #fff;
+      background: var(--row-bg);
     }
 
     th:nth-child(1), td:nth-child(1) { width: 10%; }
@@ -136,7 +173,7 @@
 
     .title {
       font-weight: 700;
-      color: #203246;
+      color: var(--ink-strong);
       margin-bottom: 4px;
     }
 
@@ -166,6 +203,206 @@
       font-size: 12px;
     }
 
+    .mini-note {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .day-group + .day-group {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+    }
+
+    .slot-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      align-items: start;
+    }
+
+    .schedule-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 18px 0 24px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .schedule-controls label {
+      font-size: 13px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .schedule-controls select {
+      min-width: 220px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: var(--control-bg);
+      color: var(--ink);
+      font: inherit;
+    }
+
+    .control-buttons {
+      display: flex;
+      gap: 8px;
+      margin-left: auto;
+    }
+
+    .ghost-button {
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--control-bg);
+      color: var(--blue-dark);
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .slot-card {
+      min-width: 0;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      overflow: hidden;
+    }
+
+    .slot-card.empty {
+      background: var(--empty-bg);
+    }
+
+    .slot-summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 16px;
+    }
+
+    .slot-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .slot-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .slot-header h3 {
+      margin: 0;
+      color: var(--blue-dark);
+      font-size: 22px;
+    }
+
+    .slot-meta {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+      text-align: right;
+    }
+
+    .slot-caret {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 84px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--control-bg);
+      color: var(--blue-dark);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: 1px solid var(--line);
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 1000;
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--control-bg);
+      color: var(--blue-dark);
+      box-shadow: var(--page-shadow);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .theme-toggle:hover {
+      transform: translateY(-1px);
+    }
+
+    .theme-toggle svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    details[open] .slot-caret::before {
+      content: "Hide";
+    }
+
+    details:not([open]) .slot-caret::before {
+      content: "Show";
+    }
+
+    .slot-summary-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .slot-body {
+      padding: 0 16px 16px;
+    }
+
+    .schedule-table {
+      margin-top: 8px;
+    }
+
+    .schedule-table th:nth-child(1), .schedule-table td:nth-child(1) { width: 12%; }
+    .schedule-table th:nth-child(2), .schedule-table td:nth-child(2) { width: 34%; }
+    .schedule-table th:nth-child(3), .schedule-table td:nth-child(3) { width: 19%; }
+    .schedule-table th:nth-child(4), .schedule-table td:nth-child(4) { width: 13%; }
+    .schedule-table th:nth-child(5), .schedule-table td:nth-child(5) { width: 22%; }
+
+    @media (max-width: 1100px) {
+      .summary-grid,
+      .slot-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .control-buttons {
+        margin-left: 0;
+      }
+
+      .slot-header,
+      .slot-summary-right {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .slot-meta {
+        text-align: left;
+      }
+    }
+
     @media print {
       body {
         background: #fff;
@@ -181,6 +418,7 @@
   </style>
 </head>
 <body>
+  <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" title="Switch color theme"></button>
   <div class="page">
     
     <div class="hero">
@@ -201,7 +439,7 @@
       </thead>
       <tbody>
         <tr>
-  <td class="mono">89</td>
+  <td class="mono">0089</td>
   <td>Vibha R. Rao, Marvin Escobar Barajas, Candice C. Black, Madhumala K. Sadanandappa, Scott M. Palisoul, Adrienne A. Workman, Todd A. MacKenzie, Louis J. Vaickus, Mary D. Chamberlin, George J. Zanazzi, Shrey S. Sukhadia</td>
   <td>Pathology and Laboratory Medicine, Dartmouth Health, Lebanon, NH | Dartmouth College, Hanover, NH</td>
   <td>
@@ -212,7 +450,7 @@
   <td>GeoMx</td>
 </tr>
 <tr>
-  <td class="mono">773</td>
+  <td class="mono">0773</td>
   <td>KENTA MANABE, Atsushi Matsuoka, Kazuhiko Shien, Shuta Tomida, Hidejiro Torigoe, Kazuya Hisamatsu, Ryota Fujiwara, Kosei Ishimura, Shunsuke Mori, Ryunosuke Fujii, Asuka Mimata, Kazuhiro Okada, Ryo Yoshichika, Mao Yoshikawa, Yuma Fukumoto, Haruchika Yamamoto, Kumi Nakajima, Shin Tanaka, Ken Suzawa, Kentaroh Miyoshi, Mikio Okazaki, Seiichiro Sugimoto, Shinichi Toyooka</td>
   <td>Thoracic, Breast and Endocrinological Surgery, Okayama Univ. Graduate School of Med., Dentistry &amp; Pharm. Sci., Okayama, Japan | Center for Comprehensive Genomic Medicine, Okayama University Hospital, Okayama, Japan</td>
   <td>
@@ -223,7 +461,7 @@
   <td>GeoMx</td>
 </tr>
 <tr>
-  <td class="mono">796</td>
+  <td class="mono">0796</td>
   <td>Min Qing, Qibiao Wu, Xuesong Lyu, Tao Chen, Mingxuan Xia, Joshua J. Rusbuldt, Denis Smirnov, Flora Berisha, Longen Zhou, Chia-Jui Yen</td>
   <td>Johnson &amp; Johnson, Shanghai, China | Johnson &amp; Johnson, Spring House, PA | National Cheng Kung University Hospital, Taiwan, China</td>
   <td>
@@ -234,7 +472,7 @@
   <td>GeoMx</td>
 </tr>
 <tr>
-  <td class="mono">803</td>
+  <td class="mono">0803</td>
   <td>Prerana Sensharma, Huidan Zuo, Melanie Dawe, Megan Hopkins, Zeynep Baskurt, Osvaldo Espin-Garcia, Philippe L. Bedard, Melanie Spears, Susan J. Done</td>
   <td>Medical Biophysics, University of Toronto, Toronto, ON, Canada | Laboratory Medicine and Pathobiology, University of Toronto, Toronto, ON, Canada | Princess Margaret Cancer Center, Toronto, ON, Canada | Ontario Institute for Cancer Research, Toronto, ON, Canada | Department of Biostatistics, Princess Margaret Cancer Center, Toronto, ON, Canada | UHN-Toronto General Hospital, Toronto, ON, Canada</td>
   <td>
@@ -465,17 +703,6 @@
   <td>GeoMx</td>
 </tr>
 <tr>
-  <td class="mono">4971</td>
-  <td>Chia-Ying Lee, Arya Bahrami, Yi Cui, Megan Vandenberg, Michael McKenna, Shanshan He, Mirko Corselli, Joseph M. Beechem</td>
-  <td>Bruker Spatial Biology, Seattle, WA</td>
-  <td>
-    <div class="title">Integrated spatial multiomic mapping of glioblastoma microenvironments via proteomic and transcriptomic profiling</div>
-    <div class="meta">4/21/2026 9:00:00 AM | Spatial Niches and Functional Boundaries within the Tumor Microenvironment 1</div>
-    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10917">Open abstract</a></div>
-  </td>
-  <td>GeoMx</td>
-</tr>
-<tr>
   <td class="mono">4972</td>
   <td>Jean-Philippe Guegan, Jean-Michel Coindre, Carine Ngo, Antoine Bougoüin, Christophe Rey, Catherine SAUTÈS-FRIDMAN, Wolf Herve Fridman, Armelle Dufresne, Alban Bessede, Antoine Italiano</td>
   <td>Immunospot, Cleveland, OH | Institute Bergonié, Bordeaux, France | Carine Ngo (Individual) | Sorbonne University, Paris, France | ImmuSmol, Pessac, France | INSERM U1138 (Centre de Recherche des Cordeliers), Paris, France | Léon Bérard Center, Lyon, France | Institute Bergonié, Bordeaux cedex, France</td>
@@ -589,10 +816,32 @@
     </table>
     
       <div class="footer-note">
-        35 presentations matched the keyword GeoMx.
+        34 presentations matched the keyword GeoMx.
       </div>
     </div>
     
   </div>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const toggle = document.getElementById("theme-toggle");
+      const sunIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"></path></svg>';
+      const moonIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.2A8.5 8.5 0 1 1 8.8 4 7 7 0 0 0 20 15.2z"></path></svg>';
+
+      function applyTheme(theme) {
+        root.dataset.theme = theme;
+        localStorage.setItem("aacr-theme", theme);
+        toggle.innerHTML = theme === "dark" ? sunIcon : moonIcon;
+        toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+        window.dispatchEvent(new CustomEvent("aacr-theme-change", { detail: { theme } }));
+      }
+
+      toggle.addEventListener("click", () => {
+        applyTheme(root.dataset.theme === "dark" ? "light" : "dark");
+      });
+
+      applyTheme(root.dataset.theme === "dark" ? "dark" : "light");
+    })();
+  </script>
 </body>
 </html>

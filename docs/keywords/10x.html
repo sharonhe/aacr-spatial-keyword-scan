@@ -4,16 +4,56 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>10X Presentations</title>
+  <script>
+    (() => {
+      const savedTheme = localStorage.getItem("aacr-theme");
+      document.documentElement.dataset.theme = savedTheme === "dark" ? "dark" : "light";
+    })();
+  </script>
   <style>
     :root {
       --blue: #1673c6;
       --blue-dark: #0f4d8b;
       --ink: #1f2d3d;
+      --ink-strong: #203246;
       --muted: #5f7187;
       --line: #c9d8e6;
       --panel: #f8fbfe;
       --accent: #4fae6a;
       --paper: #ffffff;
+      --page-border: #d8e4ef;
+      --thead-bg: #f4f9fd;
+      --row-bg: #ffffff;
+      --empty-bg: #f7fafc;
+      --control-bg: #ffffff;
+      --hero-bg: linear-gradient(135deg, #1d7bd0 0%, #0f5a9f 100%);
+      --page-shadow: 0 20px 50px rgba(15, 77, 139, 0.08);
+      --body-bg:
+        radial-gradient(circle at top left, rgba(22, 115, 198, 0.12), transparent 28%),
+        linear-gradient(180deg, #f5fbff 0%, #ffffff 22%);
+    }
+
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --blue: #7fc3ff;
+      --blue-dark: #d8ebff;
+      --ink: #e5eef8;
+      --ink-strong: #f6fbff;
+      --muted: #9eb2c6;
+      --line: #2a3d51;
+      --panel: #122031;
+      --accent: #7ad09a;
+      --paper: #0d1723;
+      --page-border: #223447;
+      --thead-bg: #152537;
+      --row-bg: #0f1c2b;
+      --empty-bg: #101a26;
+      --control-bg: #132131;
+      --hero-bg: linear-gradient(135deg, #174f83 0%, #0d2f4f 100%);
+      --page-shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+      --body-bg:
+        radial-gradient(circle at top left, rgba(22, 115, 198, 0.18), transparent 30%),
+        linear-gradient(180deg, #08111a 0%, #0d1723 24%);
     }
 
     * {
@@ -24,23 +64,20 @@
       margin: 0;
       font-family: "Aptos", "Segoe UI", Arial, sans-serif;
       color: var(--ink);
-      background:
-        radial-gradient(circle at top left, rgba(22, 115, 198, 0.12), transparent 28%),
-        linear-gradient(180deg, #f5fbff 0%, #ffffff 22%);
+      background: var(--body-bg);
     }
 
     .page {
       width: min(1600px, calc(100vw - 48px));
       margin: 32px auto 48px;
       background: var(--paper);
-      border: 1px solid #d8e4ef;
-      box-shadow: 0 20px 50px rgba(15, 77, 139, 0.08);
+      border: 1px solid var(--page-border);
+      box-shadow: var(--page-shadow);
     }
 
     .hero {
       padding: 28px 36px 22px;
-      background:
-        linear-gradient(135deg, #1d7bd0 0%, #0f5a9f 100%);
+      background: var(--hero-bg);
       color: #fff;
     }
 
@@ -116,7 +153,7 @@
       padding: 12px 10px;
       border-top: 2px solid var(--line);
       border-bottom: 2px solid var(--line);
-      background: #f4f9fd;
+      background: var(--thead-bg);
     }
 
     tbody td {
@@ -125,7 +162,7 @@
       border-bottom: 1px solid var(--line);
       font-size: 14px;
       line-height: 1.4;
-      background: #fff;
+      background: var(--row-bg);
     }
 
     th:nth-child(1), td:nth-child(1) { width: 10%; }
@@ -136,7 +173,7 @@
 
     .title {
       font-weight: 700;
-      color: #203246;
+      color: var(--ink-strong);
       margin-bottom: 4px;
     }
 
@@ -166,6 +203,206 @@
       font-size: 12px;
     }
 
+    .mini-note {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .day-group + .day-group {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+    }
+
+    .slot-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      align-items: start;
+    }
+
+    .schedule-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 18px 0 24px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .schedule-controls label {
+      font-size: 13px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .schedule-controls select {
+      min-width: 220px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: var(--control-bg);
+      color: var(--ink);
+      font: inherit;
+    }
+
+    .control-buttons {
+      display: flex;
+      gap: 8px;
+      margin-left: auto;
+    }
+
+    .ghost-button {
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--control-bg);
+      color: var(--blue-dark);
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .slot-card {
+      min-width: 0;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      overflow: hidden;
+    }
+
+    .slot-card.empty {
+      background: var(--empty-bg);
+    }
+
+    .slot-summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 16px;
+    }
+
+    .slot-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .slot-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .slot-header h3 {
+      margin: 0;
+      color: var(--blue-dark);
+      font-size: 22px;
+    }
+
+    .slot-meta {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+      text-align: right;
+    }
+
+    .slot-caret {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 84px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--control-bg);
+      color: var(--blue-dark);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: 1px solid var(--line);
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 1000;
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--control-bg);
+      color: var(--blue-dark);
+      box-shadow: var(--page-shadow);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .theme-toggle:hover {
+      transform: translateY(-1px);
+    }
+
+    .theme-toggle svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    details[open] .slot-caret::before {
+      content: "Hide";
+    }
+
+    details:not([open]) .slot-caret::before {
+      content: "Show";
+    }
+
+    .slot-summary-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .slot-body {
+      padding: 0 16px 16px;
+    }
+
+    .schedule-table {
+      margin-top: 8px;
+    }
+
+    .schedule-table th:nth-child(1), .schedule-table td:nth-child(1) { width: 12%; }
+    .schedule-table th:nth-child(2), .schedule-table td:nth-child(2) { width: 34%; }
+    .schedule-table th:nth-child(3), .schedule-table td:nth-child(3) { width: 19%; }
+    .schedule-table th:nth-child(4), .schedule-table td:nth-child(4) { width: 13%; }
+    .schedule-table th:nth-child(5), .schedule-table td:nth-child(5) { width: 22%; }
+
+    @media (max-width: 1100px) {
+      .summary-grid,
+      .slot-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .control-buttons {
+        margin-left: 0;
+      }
+
+      .slot-header,
+      .slot-summary-right {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .slot-meta {
+        text-align: left;
+      }
+    }
+
     @media print {
       body {
         background: #fff;
@@ -181,6 +418,7 @@
   </style>
 </head>
 <body>
+  <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" title="Switch color theme"></button>
   <div class="page">
     
     <div class="hero">
@@ -201,7 +439,7 @@
       </thead>
       <tbody>
         <tr>
-  <td class="mono">12</td>
+  <td class="mono">0012</td>
   <td>Francisco G. Carranza, Brigette Waldrup, Yuxin Jin, Yonatan Amzaleg, David Craig, John Carpten, PE-CGS Network, Enrique I. Velazquez Villarreal</td>
   <td>Department of Integrative Translational Sciences, City of Hope National Medical Center, Duarte, CA</td>
   <td>
@@ -212,7 +450,7 @@
   <td>Visium</td>
 </tr>
 <tr>
-  <td class="mono">44</td>
+  <td class="mono">0044</td>
   <td>Alexander V. Lobanov, Hani Jieun Kim, Sehrish Kanwal, Kate Harvey, John Reeves, Marcel Batten, Beata Kiedik, Daniel L. Roden, Mun N. Hui, Kym Pham Stewart, Oliver Hofmann, Sandra O’Toole, Elgene Lim, Sean M. Grimmond, Alexander Swarbrick, Charles M. Perou</td>
   <td>UNC Lineberger Comprehensive Cancer Center, Chapel Hill, NC | Garvan Institute of Medical Research, Darlinghurst, Australia | Collaborative Centre for Genomic Cancer Medicine, Parkville, Australia | Chris O&#x27;Brien Lifehouse, Camperdown, Australia</td>
   <td>
@@ -223,7 +461,7 @@
   <td>-</td>
 </tr>
 <tr>
-  <td class="mono">50</td>
+  <td class="mono">0050</td>
   <td>Emmanuel S. Spanos, Meng Wang, Amin Sabet, Esther Redin, Charles M. Rudin, Joseph Chan</td>
   <td>Physiology, Biophysics, and Systems Biology, Weill Cornell Grad. School of Medical Sci., New York, NY | Memorial Sloan Kettering Cancer Center, New York, NY</td>
   <td>
@@ -234,7 +472,7 @@
   <td>Xenium</td>
 </tr>
 <tr>
-  <td class="mono">94</td>
+  <td class="mono">0094</td>
   <td>Erin L. Brown, Wubing Zhang, Abul Usmani, Noah Earland, Ayesha Hashmi, Chibuzor Olelewe, Anushka Viswanathan, Pradeep S. Chauhan, Minji Kang, Chloé B. Steen, Hyun Soo Jeon, Susanna Avagyan, Irfan Alahi, Nicholas P. Semenkovich, Matteo Bergsagel, Janella C. Schwab, Chloe M. Sachs, Kaushal Parikh, Faridi Qaium, Peter K. Harris, Antonella Bacchiocchi, Qingyuan Cai, Andrew J. Gentles, Rondell P. Graham, Peter C. Lucas, Ryan C. Fields, Jacob J. Orme, Aaron S. Mansfield, Mario Sznol, Ruth Halaban, David Y. Chen, Aaron M. Newman, Aadel A. Chaudhuri</td>
   <td>Stanford University School of Medicine, Stanford, CA | Washington University in St. Louis, St. Louis, MO | Mayo Clinic, Rochester, MN | Oslo University Hospital and University of Oslo, Oslo, Norway | Medical College of Wisconsin, Milwaukee, WI | Yale University School of Medicine, New Haven, CT | Columbia University, New York, NY | University of Rochester School of Medicine, Rochester, NY</td>
   <td>
@@ -245,7 +483,7 @@
   <td>Visium</td>
 </tr>
 <tr>
-  <td class="mono">495</td>
+  <td class="mono">0495</td>
   <td>Houlin Yu, Guoping Wang, Stephanie Yaung, Heejo Choi, Megan Rogers-Peckham, Michael Kartje, Matthew Rees, Paul Lund, Brian Haas, Charlotte Yang, Laura Doherty, Lacey McGee, Kendall Berg, Cynthia Cech, Salka Barrett, Anasha Arryman, Joanne Leadbetter, Taylor Lehmann, John Mannion, Chen Zhao, Marc Prindle, Melud Nabavi, Carolyn Morrison, Peter Smibert, Kit Nazor, Todd Golub, Catarina D. Campbell, Jennifer Roth, Niall Lennon, Victoria Popic, Dean Procter, Kokoris Mark, Aziz M. Al&#x27;Khafaji</td>
   <td>Broad Institute of MIT and Harvard, Cambridge, MA | Roche Sequencing Solutions, Inc, Santa Clara, CA | Roche Sequencing Solutions, Inc, Seattle, WA | 10x Genomics, Pleasanton, CA | Proteintech Genomics, San Diego, CA</td>
   <td>
@@ -256,7 +494,7 @@
   <td>-</td>
 </tr>
 <tr>
-  <td class="mono">643</td>
+  <td class="mono">0643</td>
   <td>Abbe Pannucci, Elina Mukherjee, Jessica D. Daley, Shireen Sita Ganapathi, Elissa Boguslawski, Lea Surrey, Lauren Gutstein, Patrick Azar, Emily Stockfisch, Azfar Neyaz, Ivy John, Jennifer Picarsic, Yutaro Tanaka, Byron Butaney, Riaz Gillani, Brian D. Crompton, Katherine A. Janeway, Jaclyln Taroni, Jessica Davis, Damon Reed, Adam Shlien, Theodore W. Laetsch, Rajen Mody, Clémence Henon, Thomas G. Grünewald, Elizabeth R. Lawlor, Filemon Dela Cruz, Patrick J. Grohar, Jovana Pavisic, Ally Hawkins, Anthony R. Cillo, Kelly M. Bailey</td>
   <td>University of Pittsburgh, Pittsburgh, PA | UPMC, Pittsburgh, PA | Seattle Children&#x27;s Research Institute, Seattle, WA | University of Michigan, Ann Arbor, MI | Children&#x27;s Hospital of Philadelphia, Philadelphia, PA | Indiana University, Indianapolis, IN | Memorial Sloan Kettering Cancer Center, New York, NY | The University of Pittsburgh School of Medicine, Pittsburgh, PA | Dana-Farber Cancer Institute, Boston, MA | The Childhood Cancer Data Lab, Wynnewood, PA | Graduate Student, Dept. of Genetics &amp; Genome Bio., The Hospital for Sick Children, Toronto, ON, Canada | Hopp Children&#x27;s Cancer Center Heidelberg (KiTZ), Heidelberg, Germany | University of Michigan Medicine, Ann Arbor, MI | Memorial Sloan Kettering, New York, NY | Mayo Clinic, Rochester, MN</td>
   <td>
@@ -267,7 +505,7 @@
   <td>-</td>
 </tr>
 <tr>
-  <td class="mono">667</td>
+  <td class="mono">0667</td>
   <td>Maxim Norkin, Jonathan Bac, Louis McConnel, Sylvie Andre, Marina Alexandra Gaveta, Joerg Huelsken, Marianna Rapsomaniki, Raphael Gottardo, Krisztian Homicsko</td>
   <td>Oncology, CHUV, Centre hospitalier universitaire vaudois, Lausanne, Switzerland | EPFL, Lausanne, Switzerland</td>
   <td>
@@ -278,7 +516,7 @@
   <td>Xenium</td>
 </tr>
 <tr>
-  <td class="mono">898</td>
+  <td class="mono">0898</td>
   <td>Nicole Mavingire, Abdulrahman M. Dwead, Joy Solomon, Janelle Moore, Moyinoluwa Adeniyi, Odunayo Oluokun, Jabril R. Johnson, Estefania Labanca, Peter Shepherd, Mya Walker, Isaiah Sailors, Serene Dowiri, Greisha L. Ortiz Hernandez, Jillian C. McDonough, Diana LeVasseur, Jazlyn Farlough, Justin Tran, Frank Myers, Fornati Bedell, Zhirong Yin, Rachel Martini, Melissa B. Davis, Clayton C. Yates, K. Sean Kimbro, Rick A. Kittles, Tanya Dorff, Cristina Magi-Galluzzi, Soroush Rais-Bahrami, Firas Kobeissy, Yehia Mechref, Leanne Woods-Burnham</td>
   <td>Morehouse School of Medicine, Atlanta, GA | Texas Tech University, Lubbock, TX | UT MD Anderson Cancer Center, Houston, TX | City of Hope National Medical Center, Duarte, CA | Sidney Kimmel Comprehensive Cancer Center, Baltimore, MD | The University of Alabama at Birmingham, Birmingham, AL | Wake Forest University School of Medicine, Winston-Salem, NC</td>
   <td>
@@ -289,7 +527,7 @@
   <td>Xenium</td>
 </tr>
 <tr>
-  <td class="mono">931</td>
+  <td class="mono">0931</td>
   <td>Michelle M. Leung, Maria Zagorulya, Tej Pandya, Marcellus Augustine, Anthony J. Griffen, Alix Le Marois, Sophia Ward, Hubert Slawinski, Alejandro Suárez-Bonnet, Simon L. Priestnall, Alexandros Hardas, Erik Sahai, Lindsay M. LaFave, Eva Gronroos, Nicholas McGranahan, William Hill, Clare Weeden, Charles Swanton</td>
   <td>University College London (UCL) Cancer Institute, London, United Kingdom | The Francis Crick Institute, London, United Kingdom | Albert Einstein College of Medicine, New York, NY | Royal Veterinary College, London, United Kingdom</td>
   <td>
@@ -300,7 +538,7 @@
   <td>-</td>
 </tr>
 <tr>
-  <td class="mono">935</td>
+  <td class="mono">0935</td>
   <td>Christopher Mellor, Saeideh Azad, Nicholas Cheng, Brandon James, Vicky A. Simon, Olga V. Malysheva, Guillermo Burgos Barragan, John Blenis, Martha S. Field, Meng Wang</td>
   <td>Division of Nutritional Sciences, Cornell University, Ithaca, NY | Weill Cornell Medical College, New York, NY | Professor of Pharmacology, Weill Cornell Medical College, New York, NY</td>
   <td>
@@ -687,7 +925,7 @@
 <tr>
   <td class="mono">3955</td>
   <td>Hassan Brim, Khushi Desai, Shweta Dixi, Justin Hong, Colles Price, Jonathan H. Chen, Nicolas Fernandez, Sara Sim, Sami Farhi, Rabia Zafar, Elham Azizi, Hassan Ashktorab</td>
-  <td>Howard University, Dist. of Columbia, DC | Columbia, New York, NY | Takeda Pharmaceutical Company Ltd., Deerfield, IN |  | Broad, New York, NY</td>
+  <td>Howard University, Dist. of Columbia, DC | Columbia, New York, NY | Takeda Pharmaceutical Company Ltd., Deerfield, IN | Northwestern University, Chicago, IL | Broad, New York, NY</td>
   <td>
     <div class="title">Spatial characterization of tumor-immune interactions in MMR-p and MMR-d among African American colorectal cancer patients using attention-based modeling</div>
     <div class="meta">4/20/2026 2:00:00 PM | Spatial Proteomics and Transcriptomics 2</div>
@@ -708,8 +946,8 @@
 </tr>
 <tr>
   <td class="mono">4036</td>
-  <td>J. Luo, S. P. Gao, J. E. Tallman, F. Kuo, M. Basar, C. Yol, S. M. Alam, H. Jiang, X. Tang, D. X. T. Zheng, J. E. Eichholz, A. Lopez Rojas, E. Turkay, J. E. Rosenberg, G. Iyer, E. J. Pietzak, D. B. Solit, H. Al-Ahmadie; Memorial Sloan Kettering Cancer Center, New York, NY</td>
-  <td></td>
+  <td>Jiaqian Luo, Sizhi P. Gao, Jacob E. Tallman, Fengshen Kuo, Merve Basar, Cansu Yol, Syed M. Alam, Hui Jiang, Xinran Tang, Doris X. T. Zheng, Jordan E. Eichholz, Alejandra Lopez Rojas, Ecenur Turkay, Jonathan E. Rosenberg, Gopakumar Iyer, Eugene J. Pietzak, David B. Solit, Hikmat Al-Ahmadie</td>
+  <td>Memorial Sloan Kettering Cancer Center, New York, NY</td>
   <td>
     <div class="title">Deciphering regulatory drivers of lineage plasticity and resistance to antibody-drug conjugates in urothelial bladder cancer</div>
     <div class="meta">4/20/2026 3:20:00 PM | Cracking Adaptive Resistance: AI-Enabled, Screen-Guided Targets in Tumor Plasticity, DNA Damage, Metabolism, and CTC-Associated Immunity</div>
@@ -918,7 +1156,7 @@
 <tr>
   <td class="mono">5554</td>
   <td>Soojin Ryu, Hee Geon Park, Sang Beom Bang, Ji Hye Nam, Ho Jin Lee, Ju Yeon Seo, Gun Yi Ahn, Myeung Ryun Seo, Sang Moo Lee, Yoon La Choi, Sung Youl Hong, Young Kee Shin</td>
-  <td>Department of Molecular Medicine and Biopharmaceutical Sciences, Seoul National University, Seoul, Korea, Republic of | Logone Bio-Convergence Research Foundation, Seoul, Korea, Republic of | SNU Future Innovation Institute, Seoul National University, Seoul, Korea, Republic of | Department of Pathology and Translational Genomics, Samsung Medical Center, Sungkyunkwan University School of Medicine, Seoul, Korea, Republic of | BitD Inc., Siheung, Korea, Republic of</td>
+  <td>Department of Molecular Medicine and Biopharmaceutical Sciences, Seoul National University, Seoul, Korea, Republic of | ABION INC., Seoul, Korea, Republic of | Logone Bio-Convergence Research Foundation, Seoul, Korea, Republic of | SNU Future Innovation Institute, Seoul National University, Seoul, Korea, Republic of | Department of Pathology and Translational Genomics, Samsung Medical Center, Sungkyunkwan University School of Medicine, Seoul, Korea, Republic of | BitD Inc., Siheung, Korea, Republic of</td>
   <td>
     <div class="title">Anti-human CTLA-4×TIGIT bispecific antibody: A novel immunotherapy specifically targeting tumor-infiltrating FOXP3+ regulatory T cells</div>
     <div class="meta">4/21/2026 2:00:00 PM | Bi- and Tri-Specific Antibody Therapies</div>
@@ -1236,8 +1474,8 @@
 </tr>
 <tr>
   <td class="mono">6759</td>
-  <td>P. Kerwin, L. Zanella, A. Califano; Columbia University, New York, NY</td>
-  <td></td>
+  <td>Patrick Kerwin, Luca Zanella, Andrea Califano</td>
+  <td>Columbia University, New York, NY</td>
   <td>
     <div class="title">High-throughput drug screening and single-cell network analysis identify rational combination therapies in IDH-mutant glioma</div>
     <div class="meta">4/21/2026 2:50:00 PM | Targeted Therapy: Data Driven Approaches and Novel Drugs</div>
@@ -1531,14 +1769,47 @@
   </td>
   <td>-</td>
 </tr>
+<tr>
+  <td class="mono">NG08</td>
+  <td>William Freed-Pastor. Dana-Farber Cancer Institute, Boston, MA</td>
+  <td></td>
+  <td>
+    <div class="title">Cancer-restricted cryptic antigens: Novel targets for next-generation T cell-based therapies</div>
+    <div class="meta">4/21/2026 12:52:00 PM | Turning the Tide in the Fight Against Pancreatic Cancer</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/1727">Open abstract</a></div>
+  </td>
+  <td>-</td>
+</tr>
       </tbody>
     </table>
     
       <div class="footer-note">
-        121 presentations matched the keyword 10X.
+        122 presentations matched the keyword 10X.
       </div>
     </div>
     
   </div>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const toggle = document.getElementById("theme-toggle");
+      const sunIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"></path></svg>';
+      const moonIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.2A8.5 8.5 0 1 1 8.8 4 7 7 0 0 0 20 15.2z"></path></svg>';
+
+      function applyTheme(theme) {
+        root.dataset.theme = theme;
+        localStorage.setItem("aacr-theme", theme);
+        toggle.innerHTML = theme === "dark" ? sunIcon : moonIcon;
+        toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+        window.dispatchEvent(new CustomEvent("aacr-theme-change", { detail: { theme } }));
+      }
+
+      toggle.addEventListener("click", () => {
+        applyTheme(root.dataset.theme === "dark" ? "light" : "dark");
+      });
+
+      applyTheme(root.dataset.theme === "dark" ? "dark" : "light");
+    })();
+  </script>
 </body>
 </html>
