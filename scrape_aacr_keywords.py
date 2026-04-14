@@ -42,8 +42,25 @@ DEFAULT_KEYWORDS = [
     ("CellScape", "cellscape"),
     ("PaintScape", "paintscape"),
     ("G4X", "g4x"),
+    ("TCR Discovery", "\"tcr discovery\""),
+    ("CAR Library", "\"car library\""),
+    ("BiTE Discovery", "\"bite discovery\""),
+    ("Single-Cell Cytotoxicity", "\"single-cell cytotoxicity\""),
+    ("Antibody Discovery", "\"antibody discovery\""),
+    ("Cell Line Development", "\"cell line development\""),
+    ("Cellanome", "cellanome"),
+    ("Lightcast", "lightcast"),
+    ("CellCelector", "cellcelector"),
+    ("Incucyte", "incucyte"),
+    ("IsoSpark", "isospark"),
+    ("IsoLight", "isolight"),
     ("Beacon + Bruker", "beacon +bruker"),
     ("Bruker", "bruker"),
+]
+
+POSTER_SLOT_ORDER = [
+    ("9:00 AM", "Morning"),
+    ("2:00 PM", "Afternoon"),
 ]
 
 TERM_PATTERNS = OrderedDict(
@@ -61,6 +78,18 @@ TERM_PATTERNS = OrderedDict(
         ("CellScape", [r"\bcellscape\b"]),
         ("PaintScape", [r"\bpaintscape\b"]),
         ("G4X", [r"\bg4x\b"]),
+        ("TCR Discovery", [r"\btcr\s+discovery\b"]),
+        ("CAR Library", [r"\bcar\s+library\b"]),
+        ("BiTE Discovery", [r"\bbite\s+discovery\b"]),
+        ("Single-Cell Cytotoxicity", [r"\bsingle[\s-]*cell\s+cytotoxicity\b"]),
+        ("Antibody Discovery", [r"\bantibody\s+discovery\b"]),
+        ("Cell Line Development", [r"\bcell\s+line\s+development\b"]),
+        ("Cellanome", [r"\bcellanome\b"]),
+        ("Lightcast", [r"\blightcast\b"]),
+        ("CellCelector", [r"\bcellcelector\b"]),
+        ("Incucyte", [r"\bincucyte\b"]),
+        ("IsoSpark", [r"\bisospark\b"]),
+        ("IsoLight", [r"\bisolight\b"]),
     ]
 )
 
@@ -261,6 +290,23 @@ def natural_abstract_sort_key(value: str) -> Tuple[str, int]:
     return (prefix.lower(), int(number))
 
 
+def parse_start_datetime(value: str) -> Optional[datetime]:
+    if not value:
+        return None
+    try:
+        return datetime.strptime(value, "%m/%d/%Y %I:%M:%S %p")
+    except ValueError:
+        return None
+
+
+def format_day_label(dt: datetime) -> str:
+    return dt.strftime("%b %d").replace(" 0", " ")
+
+
+def format_time_label(dt: datetime) -> str:
+    return dt.strftime("%I:%M %p").lstrip("0")
+
+
 def detect_matches(patterns: Dict[str, Sequence[str]], *fragments: str) -> List[str]:
     combined = clean_text(" ".join(fragment for fragment in fragments if fragment)).lower()
     matches: List[str] = []
@@ -427,14 +473,39 @@ class OasisClient:
 
         raise RuntimeError(f"Search for {keyword.label} did not complete: {response}")
 
-    def fetch_search_results(self, search_id: str, query: str, page_size: int = 200) -> List[dict]:
+    def fetch_search_results(
+        self,
+        search_id: str,
+        query: str,
+        *,
+        expected_count: Optional[int] = None,
+        page_size: int = 200,
+    ) -> List[dict]:
         referer = f"{BASE_URL}/pp8/#!/{self.meeting_id}/presentations/{urllib.parse.quote(query)}/1"
-        url = (
-            f"{API_BASE}/Program/{self.meeting_id}/Search/{search_id}/Results"
-            f"?page=1&pagesize={page_size}&sort=1&order=asc"
-        )
-        payload = self._request_json(url, referer=referer)
-        return payload.get("Results", [])
+        results: List[dict] = []
+        page = 1
+
+        while True:
+            url = (
+                f"{API_BASE}/Program/{self.meeting_id}/Search/{search_id}/Results"
+                f"?page={page}&pagesize={page_size}&sort=1&order=asc"
+            )
+            payload = self._request_json(url, referer=referer)
+            batch = payload.get("Results", [])
+            if not batch:
+                break
+
+            results.extend(batch)
+            if expected_count is not None and len(results) >= expected_count:
+                break
+            if len(batch) < page_size:
+                break
+
+            page += 1
+
+        if expected_count is not None:
+            return results[:expected_count]
+        return results
 
     def fetch_presentation(self, presentation_id: str, query: str) -> dict:
         referer = f"{BASE_URL}/pp8/#!/{self.meeting_id}/presentations/{urllib.parse.quote(query)}/1"
@@ -539,16 +610,56 @@ def render_page(title: str, body: str) -> str:
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{html.escape(title)}</title>
+  <script>
+    (() => {{
+      const savedTheme = localStorage.getItem("aacr-theme");
+      document.documentElement.dataset.theme = savedTheme === "dark" ? "dark" : "light";
+    }})();
+  </script>
   <style>
     :root {{
       --blue: #1673c6;
       --blue-dark: #0f4d8b;
       --ink: #1f2d3d;
+      --ink-strong: #203246;
       --muted: #5f7187;
       --line: #c9d8e6;
       --panel: #f8fbfe;
       --accent: #4fae6a;
       --paper: #ffffff;
+      --page-border: #d8e4ef;
+      --thead-bg: #f4f9fd;
+      --row-bg: #ffffff;
+      --empty-bg: #f7fafc;
+      --control-bg: #ffffff;
+      --hero-bg: linear-gradient(135deg, #1d7bd0 0%, #0f5a9f 100%);
+      --page-shadow: 0 20px 50px rgba(15, 77, 139, 0.08);
+      --body-bg:
+        radial-gradient(circle at top left, rgba(22, 115, 198, 0.12), transparent 28%),
+        linear-gradient(180deg, #f5fbff 0%, #ffffff 22%);
+    }}
+
+    html[data-theme="dark"] {{
+      color-scheme: dark;
+      --blue: #7fc3ff;
+      --blue-dark: #d8ebff;
+      --ink: #e5eef8;
+      --ink-strong: #f6fbff;
+      --muted: #9eb2c6;
+      --line: #2a3d51;
+      --panel: #122031;
+      --accent: #7ad09a;
+      --paper: #0d1723;
+      --page-border: #223447;
+      --thead-bg: #152537;
+      --row-bg: #0f1c2b;
+      --empty-bg: #101a26;
+      --control-bg: #132131;
+      --hero-bg: linear-gradient(135deg, #174f83 0%, #0d2f4f 100%);
+      --page-shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+      --body-bg:
+        radial-gradient(circle at top left, rgba(22, 115, 198, 0.18), transparent 30%),
+        linear-gradient(180deg, #08111a 0%, #0d1723 24%);
     }}
 
     * {{
@@ -559,23 +670,20 @@ def render_page(title: str, body: str) -> str:
       margin: 0;
       font-family: "Aptos", "Segoe UI", Arial, sans-serif;
       color: var(--ink);
-      background:
-        radial-gradient(circle at top left, rgba(22, 115, 198, 0.12), transparent 28%),
-        linear-gradient(180deg, #f5fbff 0%, #ffffff 22%);
+      background: var(--body-bg);
     }}
 
     .page {{
       width: min(1600px, calc(100vw - 48px));
       margin: 32px auto 48px;
       background: var(--paper);
-      border: 1px solid #d8e4ef;
-      box-shadow: 0 20px 50px rgba(15, 77, 139, 0.08);
+      border: 1px solid var(--page-border);
+      box-shadow: var(--page-shadow);
     }}
 
     .hero {{
       padding: 28px 36px 22px;
-      background:
-        linear-gradient(135deg, #1d7bd0 0%, #0f5a9f 100%);
+      background: var(--hero-bg);
       color: #fff;
     }}
 
@@ -651,7 +759,7 @@ def render_page(title: str, body: str) -> str:
       padding: 12px 10px;
       border-top: 2px solid var(--line);
       border-bottom: 2px solid var(--line);
-      background: #f4f9fd;
+      background: var(--thead-bg);
     }}
 
     tbody td {{
@@ -660,7 +768,7 @@ def render_page(title: str, body: str) -> str:
       border-bottom: 1px solid var(--line);
       font-size: 14px;
       line-height: 1.4;
-      background: #fff;
+      background: var(--row-bg);
     }}
 
     th:nth-child(1), td:nth-child(1) {{ width: 10%; }}
@@ -671,7 +779,7 @@ def render_page(title: str, body: str) -> str:
 
     .title {{
       font-weight: 700;
-      color: #203246;
+      color: var(--ink-strong);
       margin-bottom: 4px;
     }}
 
@@ -701,6 +809,206 @@ def render_page(title: str, body: str) -> str:
       font-size: 12px;
     }}
 
+    .mini-note {{
+      font-size: 13px;
+      color: var(--muted);
+    }}
+
+    .day-group + .day-group {{
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+    }}
+
+    .slot-grid {{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      align-items: start;
+    }}
+
+    .schedule-controls {{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 18px 0 24px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }}
+
+    .schedule-controls label {{
+      font-size: 13px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }}
+
+    .schedule-controls select {{
+      min-width: 220px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: var(--control-bg);
+      color: var(--ink);
+      font: inherit;
+    }}
+
+    .control-buttons {{
+      display: flex;
+      gap: 8px;
+      margin-left: auto;
+    }}
+
+    .ghost-button {{
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--control-bg);
+      color: var(--blue-dark);
+      font: inherit;
+      cursor: pointer;
+    }}
+
+    .slot-card {{
+      min-width: 0;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      overflow: hidden;
+    }}
+
+    .slot-card.empty {{
+      background: var(--empty-bg);
+    }}
+
+    .slot-summary {{
+      list-style: none;
+      cursor: pointer;
+      padding: 16px;
+    }}
+
+    .slot-summary::-webkit-details-marker {{
+      display: none;
+    }}
+
+    .slot-header {{
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }}
+
+    .slot-header h3 {{
+      margin: 0;
+      color: var(--blue-dark);
+      font-size: 22px;
+    }}
+
+    .slot-meta {{
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+      text-align: right;
+    }}
+
+    .slot-caret {{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 84px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--control-bg);
+      color: var(--blue-dark);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: 1px solid var(--line);
+    }}
+
+    .theme-toggle {{
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 1000;
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--control-bg);
+      color: var(--blue-dark);
+      box-shadow: var(--page-shadow);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }}
+
+    .theme-toggle:hover {{
+      transform: translateY(-1px);
+    }}
+
+    .theme-toggle svg {{
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }}
+
+    details[open] .slot-caret::before {{
+      content: "Hide";
+    }}
+
+    details:not([open]) .slot-caret::before {{
+      content: "Show";
+    }}
+
+    .slot-summary-right {{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }}
+
+    .slot-body {{
+      padding: 0 16px 16px;
+    }}
+
+    .schedule-table {{
+      margin-top: 8px;
+    }}
+
+    .schedule-table th:nth-child(1), .schedule-table td:nth-child(1) {{ width: 12%; }}
+    .schedule-table th:nth-child(2), .schedule-table td:nth-child(2) {{ width: 34%; }}
+    .schedule-table th:nth-child(3), .schedule-table td:nth-child(3) {{ width: 19%; }}
+    .schedule-table th:nth-child(4), .schedule-table td:nth-child(4) {{ width: 13%; }}
+    .schedule-table th:nth-child(5), .schedule-table td:nth-child(5) {{ width: 22%; }}
+
+    @media (max-width: 1100px) {{
+      .summary-grid,
+      .slot-grid {{
+        grid-template-columns: 1fr;
+      }}
+
+      .control-buttons {{
+        margin-left: 0;
+      }}
+
+      .slot-header,
+      .slot-summary-right {{
+        align-items: flex-start;
+        flex-direction: column;
+      }}
+
+      .slot-meta {{
+        text-align: left;
+      }}
+    }}
+
     @media print {{
       body {{
         background: #fff;
@@ -716,9 +1024,32 @@ def render_page(title: str, body: str) -> str:
   </style>
 </head>
 <body>
+  <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" title="Switch color theme"></button>
   <div class="page">
     {body}
   </div>
+  <script>
+    (() => {{
+      const root = document.documentElement;
+      const toggle = document.getElementById("theme-toggle");
+      const sunIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"></path></svg>';
+      const moonIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.2A8.5 8.5 0 1 1 8.8 4 7 7 0 0 0 20 15.2z"></path></svg>';
+
+      function applyTheme(theme) {{
+        root.dataset.theme = theme;
+        localStorage.setItem("aacr-theme", theme);
+        toggle.innerHTML = theme === "dark" ? sunIcon : moonIcon;
+        toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+        window.dispatchEvent(new CustomEvent("aacr-theme-change", {{ detail: {{ theme }} }}));
+      }}
+
+      toggle.addEventListener("click", () => {{
+        applyTheme(root.dataset.theme === "dark" ? "light" : "dark");
+      }});
+
+      applyTheme(root.dataset.theme === "dark" ? "dark" : "light");
+    }})();
+  </script>
 </body>
 </html>
 """
@@ -753,6 +1084,28 @@ def render_keyword_section(keyword: str, rows: Sequence[dict], include_title: bo
     return heading + table_html
 
 
+def render_schedule_slot(day_index: int, slot_index: int, slot: dict) -> str:
+    slot_id = f"slot-{day_index}-{slot_index}"
+    slot_meta = f"{slot['presentation_count']} tracked posters"
+    if slot["cross_platform_count"]:
+        slot_meta += f" | {slot['cross_platform_count']} cross-platform"
+    card_class = "slot-card" if slot["rows"] else "slot-card empty"
+    return f"""
+    <details class="{card_class}" id="{slot_id}" data-day-index="{day_index}" data-slot-index="{slot_index}">
+      <summary class="slot-summary">
+        <div class="slot-header">
+          <h3>{html.escape(slot['slot_name'])} · {html.escape(slot['slot_time'])}</h3>
+          <div class="slot-summary-right">
+            <div class="slot-meta" id="slot-meta-{day_index}-{slot_index}">{html.escape(slot_meta)}</div>
+            <div class="slot-caret" aria-hidden="true"></div>
+          </div>
+        </div>
+      </summary>
+      <div class="slot-body" id="slot-body-{day_index}-{slot_index}"></div>
+    </details>
+    """
+
+
 def render_summary_page(summary_rows: Sequence[dict]) -> str:
     summary_items = []
     for item in summary_rows:
@@ -778,6 +1131,9 @@ def render_summary_page(summary_rows: Sequence[dict]) -> str:
         <h2>Derived Views</h2>
       </div>
       <div class="summary-grid">
+        <div class="summary-item">
+          <a href="schedule.html">Poster Schedule</a> groups the tracked abstracts into the 9:00 AM and 2:00 PM poster blocks for each day.
+        </div>
         <div class="summary-item">
           <a href="cross_platform.html">Cross Platform</a> flags presentations that mention more than one tracked product keyword,
           excluding 10X and Bruker.
@@ -822,6 +1178,7 @@ def render_combined_page(summary_rows: Sequence[dict], keyword_rows: Dict[str, L
       {''.join(sections)}
       <div class="footer-note">
         Derived views:
+        <a href="schedule.html">Poster Schedule</a> |
         <a href="cross_platform.html">Cross Platform</a> |
         <a href="insights.html">Insights Dashboard</a><br>
         Table columns follow the same structure as the reference flyer: abstract number, authors, affiliation, title, and detected products.
@@ -872,6 +1229,207 @@ def render_cross_platform_page(rows: Sequence[dict]) -> str:
     </div>
     """
     return render_page("Cross Platform", body)
+
+
+def render_schedule_page(schedule_days: Sequence[dict], filter_labels: Sequence[str]) -> str:
+    summary_items: List[str] = []
+    total_presentations = 0
+    total_cross_platform = 0
+    for day_index, day in enumerate(schedule_days):
+        for slot_index, slot in enumerate(day["slots"]):
+            cross_platform_note = (
+                f" | {slot['cross_platform_count']} cross-platform"
+                if slot["cross_platform_count"]
+                else ""
+            )
+            summary_items.append(
+                (
+                    f"<div class=\"summary-item\">"
+                    f"<strong id=\"summary-count-{day_index}-{slot_index}\">{slot['presentation_count']}</strong> "
+                    f"posters on {html.escape(day['day'])} at {html.escape(slot['slot_time'])}"
+                    f"<span id=\"summary-cross-{day_index}-{slot_index}\">{cross_platform_note}</span>"
+                    f"</div>"
+                )
+            )
+            total_presentations += slot["presentation_count"]
+            total_cross_platform += slot["cross_platform_count"]
+
+    day_sections = []
+    for day_index, day in enumerate(schedule_days):
+        slot_cards = "".join(
+            render_schedule_slot(day_index, slot_index, slot)
+            for slot_index, slot in enumerate(day["slots"])
+        )
+        day_sections.append(
+            f"""
+            <div class="day-group">
+              <div class="section-title">
+                <h2>{html.escape(day['day'])}</h2>
+                <div class="count" id="day-meta-{day_index}">{day['presentation_count']} tracked posters | {day['cross_platform_count']} cross-platform</div>
+              </div>
+              <div class="slot-grid">
+                {slot_cards}
+              </div>
+            </div>
+            """
+        )
+
+    options_html = "".join(
+        f'<option value="{html.escape(label)}">{html.escape(label)}</option>'
+        for label in filter_labels
+    )
+    schedule_json = json.dumps(schedule_days)
+
+    body = f"""
+    <div class="hero">
+      <div class="eyebrow">AACR 2026</div>
+      <h1>Poster Schedule</h1>
+    </div>
+    <div class="content">
+      <div class="footer-note">
+        This planning view focuses on the main poster blocks only: 9:00 AM and 2:00 PM. Tracked Keywords show which saved searches matched each poster, while Products keep the product-name tagging that excludes 10X and Bruker.
+      </div>
+      <div class="schedule-controls">
+        <label for="keyword-filter">Filter by keyword</label>
+        <select id="keyword-filter">
+          <option value="__all__">All tracked keywords</option>
+          {options_html}
+        </select>
+        <div id="schedule-filter-meta" class="mini-note"></div>
+        <div class="control-buttons">
+          <button type="button" class="ghost-button" id="expand-all">Expand all</button>
+          <button type="button" class="ghost-button" id="collapse-all">Collapse all</button>
+        </div>
+      </div>
+      <div class="summary-grid">
+        {''.join(summary_items)}
+      </div>
+      {''.join(day_sections)}
+      <div class="footer-note">
+        <span id="schedule-total-count">{total_presentations}</span> tracked poster placements are shown across the main poster blocks, including <span id="schedule-total-cross">{total_cross_platform}</span> cross-platform placements.
+      </div>
+    </div>
+    <script>
+      const scheduleDays = {schedule_json};
+      const FILTER_ALL = "__all__";
+
+      function escapeHtml(value) {{
+        return String(value ?? "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#39;");
+      }}
+
+      function renderScheduleTable(rows, keywordLabel) {{
+        if (!rows.length) {{
+          const note = keywordLabel === FILTER_ALL
+            ? "No tracked posters in this block."
+            : `No tracked posters in this block for ${{keywordLabel}}.`;
+          return `<div class="footer-note">${{escapeHtml(note)}}</div>`;
+        }}
+
+        const body = rows.map((row) => {{
+          const posterboard = row.posterboard_number || "n/a";
+          const trackedKeywords = (row.source_keywords || []).join("; ") || "-";
+          const products = (row.products || []).join("; ") || "-";
+          return `
+            <tr>
+              <td>
+                <div class="mono">${{escapeHtml(row.presentation_number)}}</div>
+                <div class="meta">Board ${{escapeHtml(posterboard)}}</div>
+              </td>
+              <td>
+                <div class="title">${{escapeHtml(row.title)}}</div>
+                <div class="meta">${{escapeHtml(row.session_title)}}</div>
+                <div class="meta"><a href="${{escapeHtml(row.presentation_url)}}">Open abstract</a></div>
+              </td>
+              <td>${{escapeHtml(trackedKeywords)}}</td>
+              <td>${{escapeHtml(products)}}</td>
+              <td>${{escapeHtml(row.affiliation)}}</td>
+            </tr>
+          `;
+        }}).join("");
+
+        return `
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Abstract / Board</th>
+                <th>Title / Session</th>
+                <th>Tracked Keywords</th>
+                <th>Products</th>
+                <th>Affiliation</th>
+              </tr>
+            </thead>
+            <tbody>${{body}}</tbody>
+          </table>
+        `;
+      }}
+
+      function slotMetaText(count, crossCount) {{
+        return crossCount ? `${{count}} tracked posters | ${{crossCount}} cross-platform` : `${{count}} tracked posters`;
+      }}
+
+      function matchesKeyword(row, keyword) {{
+        return keyword === FILTER_ALL || (row.source_keywords || []).includes(keyword);
+      }}
+
+      function isCrossPlatform(row) {{
+        return new Set(row.products || []).size > 1;
+      }}
+
+      function updateScheduleView() {{
+        const selectedKeyword = document.getElementById("keyword-filter").value;
+        let totalCount = 0;
+        let totalCross = 0;
+
+        scheduleDays.forEach((day, dayIndex) => {{
+          let dayCount = 0;
+          let dayCross = 0;
+
+          day.slots.forEach((slot, slotIndex) => {{
+            const filteredRows = (slot.rows || []).filter((row) => matchesKeyword(row, selectedKeyword));
+            const crossCount = filteredRows.filter(isCrossPlatform).length;
+            dayCount += filteredRows.length;
+            dayCross += crossCount;
+            totalCount += filteredRows.length;
+            totalCross += crossCount;
+
+            document.getElementById(`summary-count-${{dayIndex}}-${{slotIndex}}`).textContent = filteredRows.length;
+            document.getElementById(`summary-cross-${{dayIndex}}-${{slotIndex}}`).textContent =
+              crossCount ? ` | ${{crossCount}} cross-platform` : "";
+            document.getElementById(`slot-meta-${{dayIndex}}-${{slotIndex}}`).textContent = slotMetaText(filteredRows.length, crossCount);
+            document.getElementById(`slot-body-${{dayIndex}}-${{slotIndex}}`).innerHTML = renderScheduleTable(filteredRows, selectedKeyword);
+            document.getElementById(`slot-${{dayIndex}}-${{slotIndex}}`).classList.toggle("empty", filteredRows.length === 0);
+          }});
+
+          document.getElementById(`day-meta-${{dayIndex}}`).textContent = slotMetaText(dayCount, dayCross);
+        }});
+
+        document.getElementById("schedule-total-count").textContent = totalCount;
+        document.getElementById("schedule-total-cross").textContent = totalCross;
+        document.getElementById("schedule-filter-meta").textContent =
+          selectedKeyword === FILTER_ALL ? "Showing all tracked keywords." : `Showing ${{selectedKeyword}} only.`;
+      }}
+
+      document.getElementById("keyword-filter").addEventListener("change", updateScheduleView);
+      document.getElementById("expand-all").addEventListener("click", () => {{
+        document.querySelectorAll(".slot-card").forEach((slot) => {{
+          slot.open = true;
+        }});
+      }});
+      document.getElementById("collapse-all").addEventListener("click", () => {{
+        document.querySelectorAll(".slot-card").forEach((slot) => {{
+          slot.open = false;
+        }});
+      }});
+
+      updateScheduleView();
+    </script>
+    """
+    return render_page("Poster Schedule", body)
 
 
 def build_keyword_specs(values: Optional[Sequence[str]]) -> List[KeywordSpec]:
@@ -987,18 +1545,82 @@ def compute_product_rows(unique_rows: Sequence[dict]) -> List[dict]:
 def compute_day_rows(unique_rows: Sequence[dict]) -> List[dict]:
     counter: Counter = Counter()
     for row in unique_rows:
-        if not row["start"]:
+        dt = parse_start_datetime(row["start"])
+        if not dt:
             continue
-        try:
-            dt = datetime.strptime(row["start"], "%m/%d/%Y %I:%M:%S %p")
-        except ValueError:
-            continue
-        label = dt.strftime("%b %d").replace(" 0", " ")
+        label = format_day_label(dt)
         counter[label] += 1
     ordered = []
     for key in sorted(counter.keys(), key=lambda value: datetime.strptime(value + " 2026", "%b %d %Y")):
         ordered.append({"day": key, "presentation_count": counter[key]})
     return ordered
+
+
+def compute_schedule_days(unique_rows: Sequence[dict]) -> List[dict]:
+    slots_by_day: Dict[str, dict] = OrderedDict()
+    slot_names = dict(POSTER_SLOT_ORDER)
+    for row in unique_rows:
+        dt = parse_start_datetime(row["start"])
+        if not dt:
+            continue
+        slot_time = format_time_label(dt)
+        if slot_time not in slot_names:
+            continue
+        day_key = dt.strftime("%Y-%m-%d")
+        day_label = format_day_label(dt)
+        if day_key not in slots_by_day:
+            slots_by_day[day_key] = {
+                "day": day_label,
+                "slots": OrderedDict(
+                    (
+                        slot_time_label,
+                        {
+                            "slot_time": slot_time_label,
+                            "slot_name": slot_label,
+                            "rows": [],
+                        },
+                    )
+                    for slot_time_label, slot_label in POSTER_SLOT_ORDER
+                ),
+            }
+        slots_by_day[day_key]["slots"][slot_time]["rows"].append(row)
+
+    schedule_days: List[dict] = []
+    for day_key in sorted(slots_by_day.keys()):
+        day_payload = slots_by_day[day_key]
+        slot_payloads = []
+        day_count = 0
+        day_cross_platform = 0
+        for slot_time, slot_label in POSTER_SLOT_ORDER:
+            rows = sorted(
+                day_payload["slots"][slot_time]["rows"],
+                key=lambda row: (
+                    -len(set(row["source_keywords"])),
+                    -len(set(row["products"])),
+                    natural_abstract_sort_key(row["presentation_number"]),
+                ),
+            )
+            cross_platform_count = sum(1 for row in rows if len(set(row["products"])) > 1)
+            slot_payloads.append(
+                {
+                    "slot_time": slot_time,
+                    "slot_name": slot_label,
+                    "presentation_count": len(rows),
+                    "cross_platform_count": cross_platform_count,
+                    "rows": rows,
+                }
+            )
+            day_count += len(rows)
+            day_cross_platform += cross_platform_count
+        schedule_days.append(
+            {
+                "day": day_payload["day"],
+                "presentation_count": day_count,
+                "cross_platform_count": day_cross_platform,
+                "slots": slot_payloads,
+            }
+        )
+    return schedule_days
 
 
 def color_for_ratio(ratio: float) -> str:
@@ -1092,6 +1714,12 @@ def render_insights_page(
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AACR 2026 Keyword Insights</title>
   <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <script>
+    (() => {{
+      const savedTheme = localStorage.getItem("aacr-theme");
+      document.documentElement.dataset.theme = savedTheme === "dark" ? "dark" : "light";
+    }})();
+  </script>
   <style>
     :root {{
       --blue: #1673c6;
@@ -1102,26 +1730,53 @@ def render_insights_page(
       --line: #d5e1eb;
       --soft: #f5fbff;
       --accent: #4fae6a;
+      --paper: #ffffff;
+      --bar-track: #eaf2f8;
+      --control-bg: #ffffff;
+      --hero-bg: linear-gradient(135deg, #1d7bd0 0%, #0f5a9f 100%);
+      --page-shadow: 0 16px 32px rgba(15, 77, 139, 0.06);
+      --hero-shadow: 0 20px 50px rgba(15, 77, 139, 0.12);
+      --body-bg:
+        radial-gradient(circle at top left, rgba(22,115,198,0.12), transparent 28%),
+        linear-gradient(180deg, #f5fbff 0%, #ffffff 22%);
+    }}
+    html[data-theme="dark"] {{
+      color-scheme: dark;
+      --blue: #7fc3ff;
+      --blue-dark: #d8ebff;
+      --ink: #e5eef8;
+      --muted: #9eb2c6;
+      --panel: #122031;
+      --line: #2a3d51;
+      --soft: #0f1c2b;
+      --accent: #7ad09a;
+      --paper: #0d1723;
+      --bar-track: #203246;
+      --control-bg: #132131;
+      --hero-bg: linear-gradient(135deg, #174f83 0%, #0d2f4f 100%);
+      --page-shadow: 0 16px 32px rgba(0, 0, 0, 0.24);
+      --hero-shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+      --body-bg:
+        radial-gradient(circle at top left, rgba(22,115,198,0.18), transparent 30%),
+        linear-gradient(180deg, #08111a 0%, #0d1723 24%);
     }}
     * {{ box-sizing: border-box; }}
     body {{
       margin: 0;
       font-family: "Aptos", "Segoe UI", Arial, sans-serif;
       color: var(--ink);
-      background:
-        radial-gradient(circle at top left, rgba(22,115,198,0.12), transparent 28%),
-        linear-gradient(180deg, #f5fbff 0%, #ffffff 22%);
+      background: var(--body-bg);
     }}
     .page {{
       width: min(1700px, calc(100vw - 40px));
       margin: 24px auto 40px;
     }}
     .hero {{
-      background: linear-gradient(135deg, #1d7bd0 0%, #0f5a9f 100%);
+      background: var(--hero-bg);
       color: #fff;
       padding: 28px 34px;
       border-radius: 18px;
-      box-shadow: 0 20px 50px rgba(15, 77, 139, 0.12);
+      box-shadow: var(--hero-shadow);
     }}
     .hero h1 {{
       margin: 8px 0 0;
@@ -1145,7 +1800,7 @@ def render_insights_page(
       border: 1px solid var(--line);
       border-radius: 16px;
       padding: 18px 20px;
-      box-shadow: 0 16px 32px rgba(15, 77, 139, 0.06);
+      box-shadow: var(--page-shadow);
     }}
     .metric-value {{
       font-size: 34px;
@@ -1169,7 +1824,7 @@ def render_insights_page(
       border: 1px solid var(--line);
       border-radius: 16px;
       padding: 20px 22px;
-      box-shadow: 0 16px 32px rgba(15, 77, 139, 0.06);
+      box-shadow: var(--page-shadow);
     }}
     .panel-wide {{
       grid-column: 1 / -1;
@@ -1199,7 +1854,7 @@ def render_insights_page(
     .bar-track {{
       height: 12px;
       border-radius: 999px;
-      background: #eaf2f8;
+      background: var(--bar-track);
       overflow: hidden;
     }}
     .bar-fill {{
@@ -1260,9 +1915,38 @@ def render_insights_page(
       padding: 8px 10px;
       border-radius: 10px;
       border: 1px solid var(--line);
-      background: #fff;
+      background: var(--control-bg);
       color: var(--ink);
       font: inherit;
+    }}
+    .theme-toggle {{
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 1000;
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--control-bg);
+      color: var(--blue-dark);
+      box-shadow: var(--page-shadow);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }}
+    .theme-toggle:hover {{
+      transform: translateY(-1px);
+    }}
+    .theme-toggle svg {{
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }}
     .mini-note {{
       font-size: 13px;
@@ -1281,6 +1965,7 @@ def render_insights_page(
   </style>
 </head>
 <body>
+  <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" title="Switch color theme"></button>
   <div class="page">
     <div class="hero">
       <div class="eyebrow">AACR 2026</div>
@@ -1367,6 +2052,20 @@ def render_insights_page(
     const stateRows = {json.dumps(state_map_rows)};
     const keywordGeo = {json.dumps(keyword_geo_rows)};
 
+    function currentTheme() {{
+      return document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+    }}
+
+    function mapLayout(overrides) {{
+      const dark = currentTheme() === 'dark';
+      return Object.assign({{
+        margin: {{t: 0, r: 0, b: 0, l: 0}},
+        paper_bgcolor: dark ? '#122031' : '#ffffff',
+        plot_bgcolor: dark ? '#122031' : '#ffffff',
+        font: {{color: dark ? '#e5eef8' : '#1f2d3d'}},
+      }}, overrides);
+    }}
+
     function renderCountryMap(targetId, rows) {{
       Plotly.newPlot(targetId, [{{
         type: 'choropleth',
@@ -1377,10 +2076,14 @@ def render_insights_page(
         colorscale: 'Blues',
         marker: {{line: {{color: '#ffffff', width: 0.4}}}},
         colorbar: {{title: 'Affiliations'}}
-      }}], {{
-        margin: {{t: 0, r: 0, b: 0, l: 0}},
-        geo: {{projection: {{type: 'natural earth'}}, showframe: false, showcoastlines: false}}
-      }}, {{displayModeBar: false, responsive: true}});
+      }}], mapLayout({{
+        geo: {{
+          projection: {{type: 'natural earth'}},
+          showframe: false,
+          showcoastlines: false,
+          bgcolor: currentTheme() === 'dark' ? '#122031' : '#ffffff'
+        }}
+      }}), {{displayModeBar: false, responsive: true}});
     }}
 
     function renderStateMap(targetId, rows) {{
@@ -1393,10 +2096,14 @@ def render_insights_page(
         colorscale: 'Blues',
         marker: {{line: {{color: '#ffffff', width: 0.4}}}},
         colorbar: {{title: 'Affiliations'}}
-      }}], {{
-        margin: {{t: 0, r: 0, b: 0, l: 0}},
-        geo: {{scope: 'usa', showlakes: false, showframe: false}}
-      }}, {{displayModeBar: false, responsive: true}});
+      }}], mapLayout({{
+        geo: {{
+          scope: 'usa',
+          showlakes: false,
+          showframe: false,
+          bgcolor: currentTheme() === 'dark' ? '#122031' : '#ffffff'
+        }}
+      }}), {{displayModeBar: false, responsive: true}});
     }}
 
     function updateKeywordMaps(keyword) {{
@@ -1407,11 +2114,28 @@ def render_insights_page(
       renderStateMap('keyword-state-map', payload.states);
     }}
 
-    renderCountryMap('country-map', countryRows);
-    renderStateMap('state-map', stateRows);
     const keywordSelect = document.getElementById('keyword-select');
     keywordSelect.addEventListener('change', event => updateKeywordMaps(event.target.value));
-    updateKeywordMaps(keywordSelect.value);
+    const root = document.documentElement;
+    const toggle = document.getElementById("theme-toggle");
+    const sunIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"></path></svg>';
+    const moonIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.2A8.5 8.5 0 1 1 8.8 4 7 7 0 0 0 20 15.2z"></path></svg>';
+
+    function applyTheme(theme) {{
+      root.dataset.theme = theme;
+      localStorage.setItem("aacr-theme", theme);
+      toggle.innerHTML = theme === "dark" ? sunIcon : moonIcon;
+      toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+      renderCountryMap('country-map', countryRows);
+      renderStateMap('state-map', stateRows);
+      updateKeywordMaps(keywordSelect.value);
+    }}
+
+    toggle.addEventListener("click", () => {{
+      applyTheme(root.dataset.theme === "dark" ? "light" : "dark");
+    }});
+
+    applyTheme(root.dataset.theme === "dark" ? "dark" : "light");
   </script>
 </body>
 </html>"""
@@ -1445,8 +2169,12 @@ def main() -> int:
 
     for keyword in keywords:
         search = client.search_presentations(keyword)
-        results = client.fetch_search_results(search["SearchId"], keyword.query)
         expected_count = int(search.get("Count") or 0)
+        results = client.fetch_search_results(
+            search["SearchId"],
+            keyword.query,
+            expected_count=expected_count,
+        )
         if expected_count != len(results):
             raise RuntimeError(
                 f"{keyword.label}: expected {expected_count} results, fetched {len(results)}"
@@ -1519,6 +2247,7 @@ def main() -> int:
     product_rows = compute_product_rows(unique_rows)
     day_rows = compute_day_rows(unique_rows)
     cross_platform_rows = compute_cross_platform_rows(unique_rows)
+    schedule_days = compute_schedule_days(unique_rows)
 
     write_json(data_dir / "keyword_summary.json", search_summary_rows)
     write_json(data_dir / "presentations_unique.json", unique_rows)
@@ -1531,6 +2260,7 @@ def main() -> int:
     write_json(data_dir / "product_counts.json", product_rows)
     write_json(data_dir / "day_counts.json", day_rows)
     write_json(data_dir / "cross_platform.json", cross_platform_rows)
+    write_json(data_dir / "poster_schedule.json", schedule_days)
 
     write_csv(
         data_dir / "keyword_summary.csv",
@@ -1668,6 +2398,48 @@ def main() -> int:
             "presentation_url",
         ],
     )
+    write_csv(
+        data_dir / "poster_schedule.csv",
+        [
+            {
+                "day": day["day"],
+                "slot_time": slot["slot_time"],
+                "slot_name": slot["slot_name"],
+                "slot_presentation_count": slot["presentation_count"],
+                "slot_cross_platform_count": slot["cross_platform_count"],
+                "presentation_id": row["presentation_id"],
+                "presentation_number": row["presentation_number"],
+                "posterboard_number": row["posterboard_number"],
+                "title": row["title"],
+                "session_title": row["session_title"],
+                "start": row["start"],
+                "affiliation": row["affiliation"],
+                "products": csv_join(row["products"]),
+                "source_keywords": csv_join(row["source_keywords"]),
+                "presentation_url": row["presentation_url"],
+            }
+            for day in schedule_days
+            for slot in day["slots"]
+            for row in slot["rows"]
+        ],
+        [
+            "day",
+            "slot_time",
+            "slot_name",
+            "slot_presentation_count",
+            "slot_cross_platform_count",
+            "presentation_id",
+            "presentation_number",
+            "posterboard_number",
+            "title",
+            "session_title",
+            "start",
+            "affiliation",
+            "products",
+            "source_keywords",
+            "presentation_url",
+        ],
+    )
 
     summary_html = render_summary_page(search_summary_rows)
     (html_dir / "index.html").parent.mkdir(parents=True, exist_ok=True)
@@ -1694,6 +2466,10 @@ def main() -> int:
     )
     (html_dir / "cross_platform.html").write_text(
         render_cross_platform_page(cross_platform_rows),
+        encoding="utf-8",
+    )
+    (html_dir / "schedule.html").write_text(
+        render_schedule_page(schedule_days, [item["keyword"] for item in search_summary_rows]),
         encoding="utf-8",
     )
 
