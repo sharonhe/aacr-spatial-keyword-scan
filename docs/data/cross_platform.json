@@ -82,7 +82,7 @@
     "affiliation": "University of Miami Miller School of Medicine, Miami, FL | University of Miami, Miami, FL",
     "abstract": "Spatial transcriptomics technologies have revolutionized genomics by enabling the measurement of gene expression while preserving the spatial context of cells within tissues. However, their utility is limited by restricted gene coverage and high operational costs. To overcome these challenges, we previously developed generative AI approaches for imputing gene expression [1] and DNA methylation [2]. Building on this foundation, we now present TransGCN, a hybrid neural network model that integrates transformer architectures with graph convolutional networks to enhance spatial transcriptomic datasets through high-fidelity gene expression imputation. For example, TransGCN can expand a 500-gene Xenium panel to more than 1,500 to 2,000 genes. We systematically evaluated TransGCN across three leading spatial transcriptomic platforms: 10x Genomics Visium HD, Xenium, and Bruker CosMx, and six tissue types, including lung, brain, breast, skin, colon, and ovarian. Beyond previously leveraged features (e.g., 3D chromatin interactions from Hi-C, biological pathways, transcription factor networks, and protein-protein interactions), we incorporated spatial and housekeeping features derived from scRNA-seq (19,363 cells) and bulk RNA-seq (418,074 samples). Compared with existing imputation tools, TransGCN consistently achieved higher accuracy while enabling the recovery of a broader gene set, thereby substantially extending the analytical power of spatial transcriptomics. References 1. Yan, F.Y., et al., Reinventing gene expression connectivity through regulatory and spatial structural empowerment via principal node aggregation graph neural network. Nucleic Acids Research, 2024. 52(13). 2. Yan, F., et al., Genome-wide methylome modeling via generative AI incorporating long- and short-range interactions. Sci Adv, 2025. 11(15): p. eadt4152.",
     "disclosures": "S. Yan, None.. | L. Jiang, None.. | Y. Guo, None.",
-    "presenter": "Yan Guo, PhD",
+    "presenter": "Yan Guo",
     "activity": "Abstract Submission",
     "status": "Presenting",
     "keywords_field": "Transcription,Deep learning,Single cell,,",
@@ -193,6 +193,35 @@
       "CosMx"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/3267"
+  },
+  {
+    "presentation_id": "5612",
+    "presentation_number": "478",
+    "title": "Implementation of single B-cell screening to select antibodies in one day based on affinity and multiple binding properties",
+    "session_title": "RNA, Gene and Cell Therapies, and Enabling Assay Technologies",
+    "session_id": "342",
+    "start": "4/19/2026 2:00:00 PM",
+    "end": "4/19/2026 5:00:00 PM",
+    "posterboard_number": "21",
+    "authors": "Marie-Claire Phélipot, Eric Chabrol, Julie Lichière, Alice Aymard, alexandre Baagnolini, Nadjiba Marès, Cécile Lemoigne, Matthieu Tassa, Sophie Mesnard, Caroline Huber, Ester Morgado, Marion Seillier, Jacques Fieschi",
+    "affiliation": "Mimabs, Marseille, France",
+    "abstract": "Purpose: The aim of this study was to establish a rapid and de-risked workflow enabling the selection and functional characterization of antibody-secreting plasma cells based on function, within a single day to streamline therapeutic antibody discovery. Methods: BALB/c and transgenic mice carrying human VH/Vκ repertoires were immunized with the recombinant extracellular domain of a tumor-associated immunomodulatory protein. High-titer animals were screened on the Bruker Beacon microfluidic platform, which isolates single plasma cells in nanowells and enables multiplexed assessment of their secreted antibodies. First, beads coated with the ligand and a soluble target conjugated to a fluorochrome allowed simultaneous evaluation of binding affinity and neutralizing capacity. In a second step, beads coated with a structural analog of the target were used to assess the cross-reactivity. Plasma cells producing antibodies of interest were exported for VH/VL amplification, sequencing, and cloning into a mammalian expression vector. Recombinant antibodies were produced and purified for in-depth characterization. Binding affinity and functional blocking were confirmed by biolayer interferometry, while internalization kinetics were quantified using a lanthanide-based pH-sensitive probe. In-silico sequence analysis and structural modeling were applied to identify potential liabilities and exclude clones at risk of poor developability. Results: The single-day screening workflow enabled high resolution discrimination of plasma cells based on fine differences in affinity and functional binding properties. 215 clones displayed high specificity for the target with no detectable cross-reactivity to analogs and effectively blocked target-ligand interactions. BLI confirmed the accuracy of the phenotypes identified on the microfluidic platform. Internalization assays identified a subset of antibodies with rapid uptake properties compatible with ADC development and computational filtering further refined the panel of antibodies of therapeutic interest by discarding clones with predicted structural liabilities or developability risks. Conclusions: This integrated and accelerated workflow provides high-resolution functional screening of antibody-secreting plasma cells in a single experiment. By combining affinity ranking, specificity and cross-reactivity assessment, neutralization, internalization profiling, and developability evaluation, our antibody discovery process efficiently yields diverse and high-value therapeutic antibody leads with strong potential for development as immunomodulators or ADC candidates.",
+    "disclosures": "M. Phélipot, | Mimabs Employment. | E. Chabrol, | Mimabs Employment. | J. Lichière, | Mimabs Employment. | A. Aymard, | Mimabs Employment. | A. Baagnolini, | Mimabs Employment. | N. Marès, | Mimabs Employment. | C. Lemoigne, | Mimabs Employment. | M. Tassa, | Mimabs Employment. | S. Mesnard, | Mimabs Employment. | C. Huber, | Mimabs Employment. | E. Morgado, | Mimabs Employment. | M. Seillier, | Mimabs Employment. | J. Fieschi, | Mimabs Employment.",
+    "presenter": "Jacques Fieschi, PhD",
+    "activity": "Abstract Submission",
+    "status": "Presenting",
+    "keywords_field": "Immunomodulation,Antibody engineering,Preclinical,Drug discovery,",
+    "topics_field": "++ET02-01 Antibody technologies,,",
+    "products": [
+      "Beacon",
+      "Antibody Discovery"
+    ],
+    "source_keywords": [
+      "Antibody Discovery",
+      "Beacon + Bruker",
+      "Bruker"
+    ],
+    "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/5612"
   },
   {
     "presentation_id": "10006",
@@ -406,7 +435,7 @@
     "affiliation": "Department of Respiratory Medicine, Institute of Science Tokyo, Tokyo, Japan | Department of Computational Biology and Medical Sciences, Graduate School of Frontier Sciences, The University of Tokyo, Kashiwa, Japan | National Cancer Center Research Institute, Tokyo, Japan | Division of Genome Biology, National Cancer Center Research Institute, Tokyo, Japan | Division of Pathology, Institute of Science Tokyo, Tokyo, Japan | Department of Thoracic Surgery, Institute of Science Tokyo, Tokyo, Japan | Division of Medical AI Research and Development, National Cancer Center Research Institute, Tokyo, Japan | Department of Thoracic Surgery, National Cancer Center Hospital, Tokyo, Japan | Department of Thoracic Surgery, National Cancer Center Hospital East, Kashiwa, Japan | Department of Pathology and Clinical laboratories, National Cancer Center Hospital East, Kashiwa, Japan | Dept. of Human Genetics, Inst. of Health Biosciences, Aichi Cancer Center Research Institute, Nagoya, Japan | Associate Professor, National Cancer Center Japan, Tokyo, Japan | Chief, Dept. of Pathology & Molec. Diagnostics, National Cancer Center, Nagoya, Japan",
     "abstract": "Background: Interstitial pneumonia increases the risk of lung cancer; however, the underlying carcinogenic pathways remain poorly understood. Usual interstitial pneumonia (UIP) frequently co-localizes with lung adenocarcinoma (LADC), providing a model to understand chronic inflammation-driven carcinogenesis. Method: We conducted whole-genome and RNA sequence of 44 UIP (+) LADCs and compared them with 216 UIP (-) LADCs. To address intra-tumoral heterogeneity and characterize the tumor microenvironment, we performed spatial transcriptomics using a whole-transcriptome platform (Visium, 55 µm resolution) and single-cell-resolution platforms (Xenium lung panel, 302 genes; Xenium 5K, 5,018 genes). Results: UIP (+) LADCs exhibited unique molecular features: low tumor mutation burden, absence of EGFR mutations, and a pervasive presence of myofibroblastic cancer-associated fibroblasts (myCAFs), likely derived from fibrotic myofibroblasts in UIP. The most common genetic alteration was in NKX2-1 (41%), encoding the lung-lineage transcription factor TTF-1. A dichotomous immunogenetic landscape was observed: NKX2-1-deficient tumors showed gastrointestinal differentiation, frequent ERBB2 amplification with super-enhancer formation, and immune \"cold\" characteristics; NKX2-1-proficient tumors exhibited immune \"hot\" characteristics with abundant intra-tumoral CD8+ T cells and elevated PD-L1 expression. Spatial transcriptomics analysis revealed intratumor heterogeneity associated with NKX2-1 expression status, suggesting illegitimate gastrointestinal differentiation. In addition, the presence of WNT5A- and CTHRC1-expressing myCAFs were identified, which may originate from UIP-associated myofibroblasts. Paired tumor and UIP regions demonstrated that CTHRC1+WNT5A+ myCAF population was markedly enriched in tumor tissues relative to matched UIP regions, suggesting their expansion during carcinogenesis. Conclusion: We propose a dual model of UIP-associated lung carcinogenesis determined by NKX2-1 status, wherein myCAFs derived from UIP-associated myofibroblasts drive both carcinogenic pathways. These findings offer targeted therapeutic strategies based on the dichotomous immunogenetic landscape and highlight targeting the myofibroblast-to-myCAF transition as a potential approach for cancer prevention in chronic pulmonary fibrosis.",
     "disclosures": "A. Mochizuki, None.. | A. Suzuki, None.. | K. Shiraishi, None.. | M. Torasawa, None.. | T. Honda, None.. | S. Kirimura, None.. | Y. Miyazaki, None.. | K. Okubo, None.. | S. Kaneko, None.. | Y. Yoshida, None.. | S. Watanabe, None.. | M. Tsuboi, None.. | G. Ishii, None.. | Y. Suzuki, None. | T. Kohno, | Thermo Fisher Scientific Patent. | RIKEN Genesis Patent. | Amoy Patent. | Foundation Medicine Patent. | Eli Lilly Japan Independent Contractor, ). | Sysmex ). | Chugai Pharmaceutical ). | Konica Minolta ). | Guardant Health ). | Eurofins Clinical Genetics ).",
-    "presenter": "Akifumi Mochizuki",
+    "presenter": "Akifumi Mochizuki, MD;PhD",
     "activity": "Abstract Submission",
     "status": "Presenting",
     "keywords_field": "Lung adenocarcinoma,Interstitial pneumonia,Spatial transcriptomics,,",
@@ -450,6 +479,34 @@
       "Bruker"
     ],
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/10939"
+  },
+  {
+    "presentation_id": "6478",
+    "presentation_number": "2401",
+    "title": "Developing a single B cell platform to accelerate antibody discovery and screening",
+    "session_title": "Antibodies, Antibody-Drug Conjugates, and Nucleic Acids",
+    "session_id": "253",
+    "start": "4/20/2026 9:00:00 AM",
+    "end": "4/20/2026 12:00:00 PM",
+    "posterboard_number": "9",
+    "authors": "Spencer Chiang, Wenlin Ren, An Ouyang, Yu Sun, Xiaoli Li",
+    "affiliation": "ACROBiosystems Co., Ltd., Beijing, China | ACROBiosystems Inc., Newark, DE",
+    "abstract": "Rapid and efficient isolation of antigen-specific B cells is a critical bottleneck during antibody discovery, especially for antigens that are complex, maintain small and specific epitopes, or have a low immunogenicity. To solve this challenge, we developed a next-generation single B cell discovery platform focusing around utilizing both fluorescence-activated cell sorting(FACS) and CellCelector(CC) to maximize the recovery of low-population, high-value B cells. By performing an initial screen concurrently, this platform is able to maximize its complementary strengths: FACS with the deep sampling of large lymphocyte populations with precise multi-parametric gating, while CC can ensure a flexible, image-guided recovery of more fragile B cell subsets. This dual-mode workflow increases single-cell retrieval efficiency, reduces sampling bias, and improves downstream recombinant antibody expression success rates. To demonstrate platform performance, we employed a case study targeting DM1, a maytansinoid payload widely used in ADC development. Antigen-specific memory B cells were enriched and screened using fluorescent DM1 conjugates. FACS revealed a success rate of 73%, and after setting the gating parameters, 96 Abs with rIgGwith rIgG+/hIgG-DM1+/rIgM- binding was selected. Out of the 49 unique CDR3 Abs, 45 were specific to DM1 and first screened by ELISA. Antibodies with an affinity above nanomolar levels were further confirmed by biolayer interferometry (BLI) and ELISA, highlighting 19 potential candidates against DM1. Binding characterization revealed that 19 antibodies exhibited affinities above the nanomolar range, confirming robust recognition of the DM1 moiety. These results highlight the power of combining parallel FACS and CellCelector workflows to capture diverse, high-affinity antibody repertoires, even against complex small-molecule payloads. Overall, the platform provides a scalable, high-confidence route for antibody discovery supporting ADC payload targeting, mechanistic studies, and the development of next-generation biotherapeutics.",
+    "disclosures": "S. Chiang, None.. | W. Ren, None.. | A. Ouyang, None.. | Y. Sun, None.. | X. Li, None.",
+    "presenter": "Wenlin Ren, PhD",
+    "activity": "Abstract Submission",
+    "status": "Presenting",
+    "keywords_field": "Monoclonal antibodies,,,,",
+    "topics_field": "++CH01-06 Lead identification and optimization,,",
+    "products": [
+      "Antibody Discovery",
+      "CellCelector"
+    ],
+    "source_keywords": [
+      "Antibody Discovery",
+      "CellCelector"
+    ],
+    "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/6478"
   },
   {
     "presentation_id": "3338",
@@ -595,35 +652,6 @@
     "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/10956"
   },
   {
-    "presentation_id": "1531",
-    "presentation_number": "4795",
-    "title": "Investigating HER2+ tumor cell motility and angiogenesis in FFPE breast cancer in space and at scale with CosMx and nCounter multiomics",
-    "session_title": "Angiogenesis",
-    "session_id": "485",
-    "start": "4/21/2026 9:00:00 AM",
-    "end": "4/21/2026 12:00:00 PM",
-    "posterboard_number": "13",
-    "authors": "Michael Emilio Patrick, Wei Yang, Liang Zhang, Isabel Lee, Stefan-Laural Rogers, Shanshan He, Christina Bailey, John Lyssand, Joseph M. Beechem",
-    "affiliation": "Bruker Spatial Biology, Seattle, WA",
-    "abstract": "HER2+ breast cancer’s aggressive phenotype continues to pose a major challenge despite many innovations in understanding its function and implementing treatment. Developing a deep understanding of the mechanisms of these types of invasive cancers, driven in part by disordered angiogenesis and re-modeling of the extracellular matrix, continues to be a priority in cutting edge cancer research. To better understand challenging diseases such as HER2+ breast cancer, Bruker Spatial Biology has developed workflows to measure RNA and protein on the same slide across multiple platforms, maximizing biological insight from each tissue section. The nCounter® platform is widely used today in large oncology and immunology studies, and with the addition of modular protein panels, its high-throughput multiomic workflow now enables simultaneous quantification of up to 550 proteins and 770 RNA targets spanning five orders of magnitude in dynamic range. Additionally, nCounter has an FDA approved RNA assay that enables quick and highly reproducible diagnostics. Complementing this, the CosMx® Spatial Molecular Imager (SMI) provides subcelluar, spatially resolved measurement of 19,000 mRNA targets per cell alongside a 64-plex immune-oncology protein panel. The CosMx 2.0 combined assay and software upgrade released in 2025 further improves performance, enhancing signal detection, reducing background, and increasing sensitivity by 150%. In this study, 12 FFPE breast cancer slides were pathologist-annotated for HER2 expression and serially sectioned for analysis. nCounter assay profiling identified differential expression between HER2-0 and HER2-3+ tumors, with enrichment of pathways related to cell motility and angiogenesis. To further dissect these pathways, one HER2-0 and one HER2-3+ sample were analyzed with CosMx SMI, enabling spatial pathway analysis, pseudo-time trajectory mapping, and unbiased RNA-protein correlation. These analyses revealed mechanisms that drive tumor microenvironment remodeling and angiogenic progression. Strong concordance at the bulk and pseudo-bulk scale confirmed the robustness of measurements across CosMx and nCounter platforms. At subcellular resolution, however, select targets displayed divergent correlations, emphasizing the importance of spatial context for fully resolving biological complexity. Together, these results highlight the complementary strengths of nCounter and CosMx multiomic assays, especially as they contribute to cancer research. nCounter assay enables scalable, high-throughput analysis across cohorts, allowing researchers to understand broad genetic and protein changes during the progression of HER2+ neoplasms. CosMx SMI then provides spatial and single-cell resolution to mechanistically interpret these biological processes, a crucial component in understanding tumor behavior.",
-    "disclosures": "M. E. Patrick, None.. | W. Yang, None.. | L. Zhang, None.. | I. Lee, None.. | S. Rogers, None.. | S. He, None.. | C. Bailey, None.. | J. Lyssand, None.. | J. M. Beechem, None.",
-    "presenter": "Michael Patrick, BS",
-    "activity": "Abstract Submission",
-    "status": "Presenting",
-    "keywords_field": "Breast cancer,Whole Transcriptome,Multiomics,Angiogenesis,",
-    "topics_field": "++TB01-03 Molecular mechanisms of angiogenesis,,",
-    "products": [
-      "CosMx",
-      "nCounter"
-    ],
-    "source_keywords": [
-      "CosMx",
-      "nCounter",
-      "Bruker"
-    ],
-    "presentation_url": "https://www.abstractsonline.com/pp8/#!/21436/presentation/1531"
-  },
-  {
     "presentation_id": "10749",
     "presentation_number": "4945",
     "title": "Distinct colorectal cancer tumor cell subtypes revealed by single-cell and spatial transcriptomics",
@@ -664,7 +692,7 @@
     "affiliation": "Seoul National University, Seoul, Korea, Republic of",
     "abstract": "Background/Objective Venous invasion (VI) is strongly linked to recurrence and poor outcomes in colorectal cancer, especially when the vessel wall is breached (destructive VI). The cellular programs that distinguish destructive VI from intraluminal VI remain unclear. We hypothesized that lipid‑associated macrophages (LAMs) co‑expressing APOE, APOC1, SPP1 and TREM2 remodel the VI niche via lipid metabolic reprogramming, immune suppression and matrix/vascular remodelling, thereby driving metastatic spread. Methods We analysed 103 metastatic colorectal cancer patients across three platforms. Using GeoMx Digital Spatial Profiler on 67 samples we compared regions of destructive VI tumours, VI‑negative tumours and control vessels. We re‑analysed published single‑cell RNA‑seq data from 60 matched primary-liver‑metastasis pairs for myeloid re‑clustering, differential expression and pathway analysis. We applied Xenium in situ sequencing (5k panel) on 36 tissues to spatially map macrophage states around VI boundaries. Standard normalization, batch correction, multiple‑testing control and ring‑based spatial enrichment around destructive VI edges were applied, with primary contrasts of destructive VI versus VI‑negative/control regions. Results Across platforms we found a convergent myeloid program. In GeoMx data, tumour microenvironments adjacent to destructive VI exhibited consistent up‑regulation of APOE, APOC1 and SPP1, along with cathepsins (eg CTSB/CTSL), and enrichment of protein secretion, glycolysis and complement/coagulation pathways compared to VI‑negative tumours and control vessels. The single‑cell dataset revealed a distinct TREM2⁺ TAM cluster co‑expressing APOE/APOC1/SPP1 with lipid‑oxidative signatures, matching LAM‑like macrophages. In Xenium spatial data these macrophages preferentially accumulated at destructive VI boundaries, aligning exactly with suppressed T‑cell activity at sites of vascular breach and tumour escape. Our data confirm a functional interaction between APOE and LRP1, supporting a Jun-APOE-LRP1 axis in colorectal cancer invasion and metastasis. Conclusions Our multi‑platform study nominates APOE/APOC1/SPP1/TREM2⁺ LAMs as central players in the destructive VI niche in colorectal cancer, integrating lipid‑metabolic rewiring with matrix/vascular remodelling and immune suppression at vascular breach sites. The confirmed involvement of the Jun-APOE-LRP1 axis points to this pathway as a therapeutic target. These findings support translational efforts to target TREM2 and the APOE-LRP1 axis to intercept metastatic seeding via venous invasion. Functional validation is underway.",
     "disclosures": "S. Hwang, None.",
-    "presenter": "sanha Hwang, PhD",
+    "presenter": "San-Ha Hwang, BS",
     "activity": "Abstract Submission",
     "status": "Presenting",
     "keywords_field": "Tumor associated macrophages,Tumor metastases,Tumor invasion,Tumor microenvironment,",
@@ -949,7 +977,7 @@
     "affiliation": "Bruker Spatial Biology, Seattle, WA | Farcast Biosciences India, Bengaluru, India",
     "abstract": "Effective immune checkpoint blockade (ICB) requires coordinated activation, spatial organization, and functional cross-talk among immune populations within the tumor microenvironment (TME). Farcast TruTumor™ platform preserves viable tumor, stromal, and immune compartments in their near-native architecture, aligning with the FDA’s New Approach Methodologies (NAM) framework for human-relevant cancer models. The model has shown that in head and neck squamous cell carcinoma (HNSCC) anti-PD-1 response is associated with cytotoxic T-cell (CTL) infiltration into tumor nests, and that moderate responders may be rescued by adding anti-CTLA-4, accompanied by increased spatial separation between CTLs and T regulatory (Treg) cells. Here, we integrate TruTumor’s functional characterization with the CosMx® Spatial Molecular Imager (SMI) using same-cell spatial multiomics (64-plex IO protein panel plus whole-transcriptome RNA) to elucidate the dynamics of improved efficacy with nivolumab (N) plus ipilimumab (I) leading to predictors of ICB responses with greater accuracy. Patient-derived HNSCC explants were cultured on the TruTumor histoculture platform and treated for 72 hours with N or N+I. Treatment effects were assessed using histopathology, cleaved caspase-3 IHC, multiparameter flow cytometry, and NanoString nCounter bulk transcriptomics. Spatial profiling was performed using the CosMx SMI same-cell multiomic assay, enabling subcellular quantification of immune checkpoints, activation and exhaustion markers, costimulatory molecules, and whole-transcriptome signatures within intact tissue architecture. Analyses included spatial clustering, cell-cell neighborhood modeling, immune-tumor interface mapping, and ligand-receptor interaction inference. CosMx multiomics revealed treatment-dependent remodeling of immune states and spatial niches not captured by bulk assays. N+I responders exhibited: (i) expansion potential of cytotoxic and proliferative CTLs; (ii) depletion or spatial exclusion of suppressive Tregs from tumor nests; (iii) enhanced antigen-presentation and IFN-γ-response programs in tumor and myeloid cells; and (iv) rewired immune checkpoint and costimulatory ligand-receptor networks at tumor-immune borders. Same-cell integration of protein and RNA markers defined discrete CTL activation and exhaustion trajectories and uncovered microenvironments uniquely sensitized to combination therapy. Combining functional response metrics with spatial features yielded a mechanism-driven biosignature predictive of treatment outcome. Integrating the TruTumor histoculture models with CosMx SMI same-cell spatial multiomics establishes a scalable, NAM-aligned translational platform that enables discovery of predictive biomarkers for next-generation immuno-oncology therapies.",
     "disclosures": "Y. Cui, None.. | M. Nath, None.. | M. E. Patrick, None.. | C. Williams, None.. | D. McGuire, None.. | J. K. Paul, None.. | K. Jaganathan, None.. | B. Das, None.. | M. Malhotra, None.. | S. He, None.. | J. M. Beechem, None.. | S. Sankaran, None.",
-    "presenter": "Yi Cui, PhD",
+    "presenter": "Yi Cui",
     "activity": "Abstract Submission",
     "status": "Presenting",
     "keywords_field": "Multiomics,Ex vivo,Checkpoint Inhibitors,T lymphocytes,",
@@ -1092,7 +1120,7 @@
     "affiliation": "Department of Genetics, Rutgers University, New Brunswick, NJ | Quantitative Biomedicine Program, Rutgers University, New Brunswick, NJ",
     "abstract": "Spatial transcriptomics (ST) has long been recognized as an advanced technique that provides insights on spatial information beyond what can be obtained from single-cell RNA sequencing. However, widely used sequencing-based ST approaches cannot provide cell level data because their results are aggregated into discrete bins rather than assigned to individual cells. With the advent of Visium HD and other subcellular-resolution platforms, accurate cell segmentation has become essential for extracting biologically meaningful, cell-level information.Here, we present STCS (Spatial Transcriptomics Cell Segmentation), a segmentation framework tailored for high-resolution ST data. We benchmarked STCS against several existing methods—including STHD, bin2cell, and Space Ranger—using a slide with both Visium HD and Xenium results. Evaluation using ground-truth Xenium cell boundary annotations demonstrated that STCS delivers the best performance, achieving 40% accuracy in cell-type prediction and showing the lowest spatial chaos score, a metric that quantifies how spatially continuous clusters are. We also applied STCS to another Visium HD slide from mouse intestinal regeneration model which contains tissue from different time points after radiation. Compared to default Visium HD binning, STCSsegmented cells show clear transcriptional differences by timepoints and identify several rare immune cell types. As a result, downstream analyses such as spatial cell-cell interaction inference and regional pattern characterization can be done in cell level which include more cell types and more immune related pathways like JAK-STAT pathway with STCS. In addition, STCS is versatile and can be applied to other sequencing-based ST methods like Stereo-seq, which offers nanometer-scale resolution. And it’s also an open-source tool with adjustable parameters for different tissue types.In summary, STCS is a robust and flexible cell segmentation tool that provides a one-stop solution for deriving biologically meaningful, cell-level information from high-resolution sequencing-based ST datasets.",
     "disclosures": "X. Hu, None.. | F. Zhan, None.. | L. C. Wu, None.. | J. Gonzalez, None.. | C. Sun, None.. | R. Ofer, None.. | T. Tran, None.. | M. Verzi, None.. | J. Yang, None.",
-    "presenter": "Xinyu Hu",
+    "presenter": "Xinyu Hu, MS",
     "activity": "Abstract Submission",
     "status": "Presenting",
     "keywords_field": "Cancer,Spatial transcriptomics,Visium HD,Cell segmentation,",

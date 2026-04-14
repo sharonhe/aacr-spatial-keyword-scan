@@ -3,13 +3,13 @@
     "left": "Visium",
     "right": "10X",
     "shared_presentations": 41,
-    "jaccard_pct": 23.7
+    "jaccard_pct": 23.6
   },
   {
     "left": "Xenium",
     "right": "10X",
     "shared_presentations": 34,
-    "jaccard_pct": 18.6
+    "jaccard_pct": 18.5
   },
   {
     "left": "Xenium",
@@ -26,14 +26,8 @@
   {
     "left": "CosMx",
     "right": "Bruker",
-    "shared_presentations": 20,
-    "jaccard_pct": 24.1
-  },
-  {
-    "left": "nCounter",
-    "right": "Bruker",
-    "shared_presentations": 8,
-    "jaccard_pct": 12.1
+    "shared_presentations": 19,
+    "jaccard_pct": 23.5
   },
   {
     "left": "Chromium",
@@ -60,16 +54,22 @@
     "jaccard_pct": 6.2
   },
   {
+    "left": "nCounter",
+    "right": "Bruker",
+    "shared_presentations": 7,
+    "jaccard_pct": 10.9
+  },
+  {
     "left": "CellScape",
     "right": "Bruker",
     "shared_presentations": 5,
-    "jaccard_pct": 9.1
+    "jaccard_pct": 9.4
   },
   {
     "left": "Visium",
     "right": "CosMx",
     "shared_presentations": 5,
-    "jaccard_pct": 3.6
+    "jaccard_pct": 3.7
   },
   {
     "left": "10X",
@@ -81,31 +81,31 @@
     "left": "CosMx",
     "right": "GeoMx",
     "shared_presentations": 4,
-    "jaccard_pct": 5.0
-  },
-  {
-    "left": "GeoMx",
-    "right": "Bruker",
-    "shared_presentations": 4,
-    "jaccard_pct": 4.7
+    "jaccard_pct": 5.1
   },
   {
     "left": "PaintScape",
     "right": "Bruker",
     "shared_presentations": 4,
-    "jaccard_pct": 7.4
+    "jaccard_pct": 7.7
   },
   {
     "left": "10X",
     "right": "Bruker",
     "shared_presentations": 3,
-    "jaccard_pct": 1.7
+    "jaccard_pct": 1.8
   },
   {
     "left": "Beacon + Bruker",
     "right": "Bruker",
     "shared_presentations": 3,
-    "jaccard_pct": 5.6
+    "jaccard_pct": 5.8
+  },
+  {
+    "left": "GeoMx",
+    "right": "Bruker",
+    "shared_presentations": 3,
+    "jaccard_pct": 3.6
   },
   {
     "left": "Visium",
@@ -117,7 +117,7 @@
     "left": "Xenium",
     "right": "GeoMx",
     "shared_presentations": 3,
-    "jaccard_pct": 2.3
+    "jaccard_pct": 2.4
   },
   {
     "left": "CosMx",
@@ -126,16 +126,10 @@
     "jaccard_pct": 3.8
   },
   {
-    "left": "CosMx",
-    "right": "nCounter",
-    "shared_presentations": 2,
-    "jaccard_pct": 3.0
-  },
-  {
     "left": "Xenium + 5K",
     "right": "CosMx",
     "shared_presentations": 2,
-    "jaccard_pct": 2.7
+    "jaccard_pct": 2.8
   },
   {
     "left": "Xenium + 5K",
@@ -168,6 +162,24 @@
     "jaccard_pct": 0.8
   },
   {
+    "left": "Antibody Discovery",
+    "right": "Beacon + Bruker",
+    "shared_presentations": 1,
+    "jaccard_pct": 4.0
+  },
+  {
+    "left": "Antibody Discovery",
+    "right": "Bruker",
+    "shared_presentations": 1,
+    "jaccard_pct": 1.4
+  },
+  {
+    "left": "Antibody Discovery",
+    "right": "CellCelector",
+    "shared_presentations": 1,
+    "jaccard_pct": 4.3
+  },
+  {
     "left": "Chromium",
     "right": "CosMx",
     "shared_presentations": 1,
@@ -195,13 +207,19 @@
     "left": "CosMx",
     "right": "MerFISH",
     "shared_presentations": 1,
-    "jaccard_pct": 1.8
+    "jaccard_pct": 1.9
   },
   {
     "left": "CosMx",
     "right": "PaintScape",
     "shared_presentations": 1,
-    "jaccard_pct": 1.9
+    "jaccard_pct": 2.0
+  },
+  {
+    "left": "CosMx",
+    "right": "nCounter",
+    "shared_presentations": 1,
+    "jaccard_pct": 1.5
   },
   {
     "left": "GeoMx",
@@ -214,6 +232,12 @@
     "right": "nCounter",
     "shared_presentations": 1,
     "jaccard_pct": 1.9
+  },
+  {
+    "left": "Incucyte",
+    "right": "Bruker",
+    "shared_presentations": 1,
+    "jaccard_pct": 1.1
   },
   {
     "left": "Visium",

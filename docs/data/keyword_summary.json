@@ -30,21 +30,21 @@
   {
     "keyword": "10X",
     "query": "10x",
-    "count": 121,
+    "count": 122,
     "search_id": "2898",
     "status": "Complete"
   },
   {
     "keyword": "CosMx",
     "query": "cosmx",
-    "count": 49,
+    "count": 48,
     "search_id": "16032",
     "status": "Complete"
   },
   {
     "keyword": "GeoMx",
     "query": "geomx",
-    "count": 35,
+    "count": 34,
     "search_id": "48606",
     "status": "Complete"
   },
@@ -58,7 +58,7 @@
   {
     "keyword": "nCounter",
     "query": "ncounter",
-    "count": 20,
+    "count": 19,
     "search_id": "48607",
     "status": "Complete"
   },
@@ -84,6 +84,90 @@
     "status": "Complete"
   },
   {
+    "keyword": "TCR Discovery",
+    "query": "\"tcr discovery\"",
+    "count": 6,
+    "search_id": "116122",
+    "status": "Complete"
+  },
+  {
+    "keyword": "CAR Library",
+    "query": "\"car library\"",
+    "count": 1,
+    "search_id": "116123",
+    "status": "Complete"
+  },
+  {
+    "keyword": "BiTE Discovery",
+    "query": "\"bite discovery\"",
+    "count": 0,
+    "search_id": "116124",
+    "status": "Complete"
+  },
+  {
+    "keyword": "Single-Cell Cytotoxicity",
+    "query": "\"single-cell cytotoxicity\"",
+    "count": 0,
+    "search_id": "116125",
+    "status": "Complete"
+  },
+  {
+    "keyword": "Antibody Discovery",
+    "query": "\"antibody discovery\"",
+    "count": 23,
+    "search_id": "116126",
+    "status": "Complete"
+  },
+  {
+    "keyword": "Cell Line Development",
+    "query": "\"cell line development\"",
+    "count": 1,
+    "search_id": "116127",
+    "status": "Complete"
+  },
+  {
+    "keyword": "Cellanome",
+    "query": "cellanome",
+    "count": 2,
+    "search_id": "18932",
+    "status": "Complete"
+  },
+  {
+    "keyword": "Lightcast",
+    "query": "lightcast",
+    "count": 0,
+    "search_id": "116110",
+    "status": "Complete"
+  },
+  {
+    "keyword": "CellCelector",
+    "query": "cellcelector",
+    "count": 1,
+    "search_id": "116111",
+    "status": "Complete"
+  },
+  {
+    "keyword": "Incucyte",
+    "query": "incucyte",
+    "count": 44,
+    "search_id": "116112",
+    "status": "Complete"
+  },
+  {
+    "keyword": "IsoSpark",
+    "query": "isospark",
+    "count": 0,
+    "search_id": "116113",
+    "status": "Complete"
+  },
+  {
+    "keyword": "IsoLight",
+    "query": "isolight",
+    "count": 0,
+    "search_id": "116114",
+    "status": "Complete"
+  },
+  {
     "keyword": "Beacon + Bruker",
     "query": "beacon +bruker",
     "count": 3,
@@ -93,7 +177,7 @@
   {
     "keyword": "Bruker",
     "query": "bruker",
-    "count": 54,
+    "count": 52,
     "search_id": "8092",
     "status": "Complete"
   }

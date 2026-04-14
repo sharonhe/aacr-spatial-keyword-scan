@@ -9,15 +9,23 @@
   },
   {
     "product": "CosMx",
-    "presentation_count": 49
+    "presentation_count": 48
+  },
+  {
+    "product": "Incucyte",
+    "presentation_count": 44
   },
   {
     "product": "GeoMx",
-    "presentation_count": 35
+    "presentation_count": 34
+  },
+  {
+    "product": "Antibody Discovery",
+    "presentation_count": 23
   },
   {
     "product": "nCounter",
-    "presentation_count": 20
+    "presentation_count": 19
   },
   {
     "product": "G4X",
@@ -36,11 +44,31 @@
     "presentation_count": 6
   },
   {
+    "product": "TCR Discovery",
+    "presentation_count": 6
+  },
+  {
     "product": "PaintScape",
     "presentation_count": 4
   },
   {
     "product": "Beacon",
     "presentation_count": 3
+  },
+  {
+    "product": "Cellanome",
+    "presentation_count": 2
+  },
+  {
+    "product": "Cell Line Development",
+    "presentation_count": 1
+  },
+  {
+    "product": "CellCelector",
+    "presentation_count": 1
+  },
+  {
+    "product": "CAR Library",
+    "presentation_count": 1
   }
 ]

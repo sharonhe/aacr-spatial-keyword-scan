@@ -3,13 +3,25 @@ Xenium,xenium,96,16031,Complete
 Xenium + 5K,xenium +5k,26,48825,Complete
 Visium,visium,93,16030,Complete
 Chromium,chromium,11,48605,Complete
-10X,10x,121,2898,Complete
-CosMx,cosmx,49,16032,Complete
-GeoMx,geomx,35,48606,Complete
+10X,10x,122,2898,Complete
+CosMx,cosmx,48,16032,Complete
+GeoMx,geomx,34,48606,Complete
 MerFISH,merfish,7,16028,Complete
-nCounter,ncounter,20,48607,Complete
+nCounter,ncounter,19,48607,Complete
 CellScape,cellscape,6,48823,Complete
 PaintScape,paintscape,4,48824,Complete
 G4X,g4x,12,49261,Complete
+TCR Discovery,"""tcr discovery""",6,116122,Complete
+CAR Library,"""car library""",1,116123,Complete
+BiTE Discovery,"""bite discovery""",0,116124,Complete
+Single-Cell Cytotoxicity,"""single-cell cytotoxicity""",0,116125,Complete
+Antibody Discovery,"""antibody discovery""",23,116126,Complete
+Cell Line Development,"""cell line development""",1,116127,Complete
+Cellanome,cellanome,2,18932,Complete
+Lightcast,lightcast,0,116110,Complete
+CellCelector,cellcelector,1,116111,Complete
+Incucyte,incucyte,44,116112,Complete
+IsoSpark,isospark,0,116113,Complete
+IsoLight,isolight,0,116114,Complete
 Beacon + Bruker,beacon +bruker,3,48897,Complete
-Bruker,bruker,54,8092,Complete
+Bruker,bruker,52,8092,Complete

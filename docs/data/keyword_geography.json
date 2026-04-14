@@ -5,7 +5,7 @@
       {
         "country": "United States",
         "iso3": "USA",
-        "presentation_count": 169
+        "presentation_count": 172
       },
       {
         "country": "Germany",
@@ -107,7 +107,7 @@
       {
         "state_code": "NY",
         "state_name": "New York",
-        "presentation_count": 24
+        "presentation_count": 25
       },
       {
         "state_code": "NC",
@@ -127,7 +127,7 @@
       {
         "state_code": "CT",
         "state_name": "Connecticut",
-        "presentation_count": 7
+        "presentation_count": 8
       },
       {
         "state_code": "VA",
@@ -165,13 +165,13 @@
         "presentation_count": 3
       },
       {
-        "state_code": "DC",
-        "state_name": "District of Columbia",
-        "presentation_count": 2
-      },
-      {
         "state_code": "IL",
         "state_name": "Illinois",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "DC",
+        "state_name": "District of Columbia",
         "presentation_count": 2
       },
       {
@@ -227,7 +227,7 @@
       {
         "country": "United States",
         "iso3": "USA",
-        "presentation_count": 48
+        "presentation_count": 49
       },
       {
         "country": "Japan",
@@ -297,6 +297,11 @@
         "presentation_count": 3
       },
       {
+        "state_code": "IL",
+        "state_name": "Illinois",
+        "presentation_count": 3
+      },
+      {
         "state_code": "PA",
         "state_name": "Pennsylvania",
         "presentation_count": 2
@@ -304,11 +309,6 @@
       {
         "state_code": "IN",
         "state_name": "Indiana",
-        "presentation_count": 2
-      },
-      {
-        "state_code": "IL",
-        "state_name": "Illinois",
         "presentation_count": 2
       },
       {
@@ -344,7 +344,7 @@
       {
         "country": "United States",
         "iso3": "USA",
-        "presentation_count": 178
+        "presentation_count": 180
       },
       {
         "country": "Japan",
@@ -421,7 +421,7 @@
       {
         "state_code": "CA",
         "state_name": "California",
-        "presentation_count": 38
+        "presentation_count": 39
       },
       {
         "state_code": "TX",
@@ -451,7 +451,7 @@
       {
         "state_code": "NY",
         "state_name": "New York",
-        "presentation_count": 8
+        "presentation_count": 9
       },
       {
         "state_code": "VA",
@@ -606,13 +606,13 @@
         "presentation_count": 2
       },
       {
-        "state_code": "IN",
-        "state_name": "Indiana",
+        "state_code": "NM",
+        "state_name": "New Mexico",
         "presentation_count": 1
       },
       {
-        "state_code": "NM",
-        "state_name": "New Mexico",
+        "state_code": "IN",
+        "state_name": "Indiana",
         "presentation_count": 1
       },
       {
@@ -633,12 +633,12 @@
     ]
   },
   "10X": {
-    "count": 121,
+    "count": 122,
     "countries": [
       {
         "country": "United States",
         "iso3": "USA",
-        "presentation_count": 244
+        "presentation_count": 247
       },
       {
         "country": "Japan",
@@ -653,7 +653,7 @@
       {
         "country": "South Korea",
         "iso3": "KOR",
-        "presentation_count": 20
+        "presentation_count": 21
       },
       {
         "country": "Australia",
@@ -696,11 +696,6 @@
         "presentation_count": 3
       },
       {
-        "country": "Belgium",
-        "iso3": "BEL",
-        "presentation_count": 2
-      },
-      {
         "country": "France",
         "iso3": "FRA",
         "presentation_count": 2
@@ -708,6 +703,11 @@
       {
         "country": "Austria",
         "iso3": "AUT",
+        "presentation_count": 2
+      },
+      {
+        "country": "Belgium",
+        "iso3": "BEL",
         "presentation_count": 2
       },
       {
@@ -735,7 +735,7 @@
       {
         "state_code": "NY",
         "state_name": "New York",
-        "presentation_count": 30
+        "presentation_count": 32
       },
       {
         "state_code": "MD",
@@ -803,6 +803,11 @@
         "presentation_count": 4
       },
       {
+        "state_code": "IL",
+        "state_name": "Illinois",
+        "presentation_count": 4
+      },
+      {
         "state_code": "MO",
         "state_name": "Missouri",
         "presentation_count": 3
@@ -825,11 +830,6 @@
       {
         "state_code": "NM",
         "state_name": "New Mexico",
-        "presentation_count": 3
-      },
-      {
-        "state_code": "IL",
-        "state_name": "Illinois",
         "presentation_count": 3
       },
       {
@@ -865,12 +865,12 @@
     ]
   },
   "CosMx": {
-    "count": 49,
+    "count": 48,
     "countries": [
       {
         "country": "United States",
         "iso3": "USA",
-        "presentation_count": 124
+        "presentation_count": 123
       },
       {
         "country": "United Kingdom",
@@ -930,14 +930,14 @@
         "presentation_count": 18
       },
       {
-        "state_code": "WA",
-        "state_name": "Washington",
-        "presentation_count": 13
-      },
-      {
         "state_code": "MA",
         "state_name": "Massachusetts",
         "presentation_count": 13
+      },
+      {
+        "state_code": "WA",
+        "state_name": "Washington",
+        "presentation_count": 12
       },
       {
         "state_code": "TX",
@@ -1032,12 +1032,12 @@
     ]
   },
   "GeoMx": {
-    "count": 35,
+    "count": 34,
     "countries": [
       {
         "country": "United States",
         "iso3": "USA",
-        "presentation_count": 62
+        "presentation_count": 61
       },
       {
         "country": "Canada",
@@ -1137,11 +1137,6 @@
         "presentation_count": 2
       },
       {
-        "state_code": "WA",
-        "state_name": "Washington",
-        "presentation_count": 2
-      },
-      {
         "state_code": "TN",
         "state_name": "Tennessee",
         "presentation_count": 1
@@ -1172,13 +1167,18 @@
         "presentation_count": 1
       },
       {
+        "state_code": "LA",
+        "state_name": "Louisiana",
+        "presentation_count": 1
+      },
+      {
         "state_code": "UT",
         "state_name": "Utah",
         "presentation_count": 1
       },
       {
-        "state_code": "LA",
-        "state_name": "Louisiana",
+        "state_code": "WA",
+        "state_name": "Washington",
         "presentation_count": 1
       }
     ]
@@ -1199,13 +1199,13 @@
     ],
     "states": [
       {
-        "state_code": "CA",
-        "state_name": "California",
+        "state_code": "MA",
+        "state_name": "Massachusetts",
         "presentation_count": 4
       },
       {
-        "state_code": "MA",
-        "state_name": "Massachusetts",
+        "state_code": "CA",
+        "state_name": "California",
         "presentation_count": 4
       },
       {
@@ -1226,12 +1226,12 @@
     ]
   },
   "nCounter": {
-    "count": 20,
+    "count": 19,
     "countries": [
       {
         "country": "United States",
         "iso3": "USA",
-        "presentation_count": 36
+        "presentation_count": 35
       },
       {
         "country": "Taiwan",
@@ -1273,7 +1273,7 @@
       {
         "state_code": "WA",
         "state_name": "Washington",
-        "presentation_count": 9
+        "presentation_count": 8
       },
       {
         "state_code": "MD",
@@ -1348,13 +1348,13 @@
         "presentation_count": 2
       },
       {
-        "state_code": "IL",
-        "state_name": "Illinois",
+        "state_code": "WA",
+        "state_name": "Washington",
         "presentation_count": 1
       },
       {
-        "state_code": "WA",
-        "state_name": "Washington",
+        "state_code": "IL",
+        "state_name": "Illinois",
         "presentation_count": 1
       }
     ]
@@ -1438,6 +1438,385 @@
       }
     ]
   },
+  "TCR Discovery": {
+    "count": 6,
+    "countries": [
+      {
+        "country": "United States",
+        "iso3": "USA",
+        "presentation_count": 7
+      },
+      {
+        "country": "China",
+        "iso3": "CHN",
+        "presentation_count": 2
+      },
+      {
+        "country": "United Kingdom",
+        "iso3": "GBR",
+        "presentation_count": 1
+      },
+      {
+        "country": "Italy",
+        "iso3": "ITA",
+        "presentation_count": 1
+      }
+    ],
+    "states": [
+      {
+        "state_code": "MA",
+        "state_name": "Massachusetts",
+        "presentation_count": 5
+      },
+      {
+        "state_code": "TX",
+        "state_name": "Texas",
+        "presentation_count": 2
+      }
+    ]
+  },
+  "CAR Library": {
+    "count": 1,
+    "countries": [
+      {
+        "country": "United States",
+        "iso3": "USA",
+        "presentation_count": 4
+      }
+    ],
+    "states": [
+      {
+        "state_code": "NC",
+        "state_name": "North Carolina",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "CO",
+        "state_name": "Colorado",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "PA",
+        "state_name": "Pennsylvania",
+        "presentation_count": 1
+      }
+    ]
+  },
+  "BiTE Discovery": {
+    "count": 0,
+    "countries": [],
+    "states": []
+  },
+  "Single-Cell Cytotoxicity": {
+    "count": 0,
+    "countries": [],
+    "states": []
+  },
+  "Antibody Discovery": {
+    "count": 23,
+    "countries": [
+      {
+        "country": "United States",
+        "iso3": "USA",
+        "presentation_count": 14
+      },
+      {
+        "country": "China",
+        "iso3": "CHN",
+        "presentation_count": 4
+      },
+      {
+        "country": "South Korea",
+        "iso3": "KOR",
+        "presentation_count": 2
+      },
+      {
+        "country": "France",
+        "iso3": "FRA",
+        "presentation_count": 1
+      },
+      {
+        "country": "Germany",
+        "iso3": "DEU",
+        "presentation_count": 1
+      }
+    ],
+    "states": [
+      {
+        "state_code": "DE",
+        "state_name": "Delaware",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "MA",
+        "state_name": "Massachusetts",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "FL",
+        "state_name": "Florida",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "CA",
+        "state_name": "California",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "MN",
+        "state_name": "Minnesota",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "TX",
+        "state_name": "Texas",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "PA",
+        "state_name": "Pennsylvania",
+        "presentation_count": 1
+      }
+    ]
+  },
+  "Cell Line Development": {
+    "count": 1,
+    "countries": [
+      {
+        "country": "United States",
+        "iso3": "USA",
+        "presentation_count": 1
+      }
+    ],
+    "states": [
+      {
+        "state_code": "CA",
+        "state_name": "California",
+        "presentation_count": 1
+      }
+    ]
+  },
+  "Cellanome": {
+    "count": 2,
+    "countries": [
+      {
+        "country": "United States",
+        "iso3": "USA",
+        "presentation_count": 6
+      }
+    ],
+    "states": [
+      {
+        "state_code": "NY",
+        "state_name": "New York",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "CA",
+        "state_name": "California",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "TX",
+        "state_name": "Texas",
+        "presentation_count": 1
+      }
+    ]
+  },
+  "Lightcast": {
+    "count": 0,
+    "countries": [],
+    "states": []
+  },
+  "CellCelector": {
+    "count": 1,
+    "countries": [
+      {
+        "country": "United States",
+        "iso3": "USA",
+        "presentation_count": 1
+      },
+      {
+        "country": "China",
+        "iso3": "CHN",
+        "presentation_count": 1
+      }
+    ],
+    "states": [
+      {
+        "state_code": "DE",
+        "state_name": "Delaware",
+        "presentation_count": 1
+      }
+    ]
+  },
+  "Incucyte": {
+    "count": 44,
+    "countries": [
+      {
+        "country": "United States",
+        "iso3": "USA",
+        "presentation_count": 96
+      },
+      {
+        "country": "South Korea",
+        "iso3": "KOR",
+        "presentation_count": 9
+      },
+      {
+        "country": "France",
+        "iso3": "FRA",
+        "presentation_count": 4
+      },
+      {
+        "country": "China",
+        "iso3": "CHN",
+        "presentation_count": 3
+      },
+      {
+        "country": "Finland",
+        "iso3": "FIN",
+        "presentation_count": 2
+      },
+      {
+        "country": "United Kingdom",
+        "iso3": "GBR",
+        "presentation_count": 2
+      },
+      {
+        "country": "Switzerland",
+        "iso3": "CHE",
+        "presentation_count": 1
+      },
+      {
+        "country": "Australia",
+        "iso3": "AUS",
+        "presentation_count": 1
+      },
+      {
+        "country": "Brazil",
+        "iso3": "BRA",
+        "presentation_count": 1
+      },
+      {
+        "country": "Germany",
+        "iso3": "DEU",
+        "presentation_count": 1
+      }
+    ],
+    "states": [
+      {
+        "state_code": "TX",
+        "state_name": "Texas",
+        "presentation_count": 20
+      },
+      {
+        "state_code": "CA",
+        "state_name": "California",
+        "presentation_count": 11
+      },
+      {
+        "state_code": "MO",
+        "state_name": "Missouri",
+        "presentation_count": 8
+      },
+      {
+        "state_code": "MN",
+        "state_name": "Minnesota",
+        "presentation_count": 7
+      },
+      {
+        "state_code": "IL",
+        "state_name": "Illinois",
+        "presentation_count": 7
+      },
+      {
+        "state_code": "MD",
+        "state_name": "Maryland",
+        "presentation_count": 7
+      },
+      {
+        "state_code": "OH",
+        "state_name": "Ohio",
+        "presentation_count": 6
+      },
+      {
+        "state_code": "PA",
+        "state_name": "Pennsylvania",
+        "presentation_count": 5
+      },
+      {
+        "state_code": "AZ",
+        "state_name": "Arizona",
+        "presentation_count": 5
+      },
+      {
+        "state_code": "NY",
+        "state_name": "New York",
+        "presentation_count": 4
+      },
+      {
+        "state_code": "MA",
+        "state_name": "Massachusetts",
+        "presentation_count": 3
+      },
+      {
+        "state_code": "NC",
+        "state_name": "North Carolina",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "DE",
+        "state_name": "Delaware",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "CO",
+        "state_name": "Colorado",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "VA",
+        "state_name": "Virginia",
+        "presentation_count": 2
+      },
+      {
+        "state_code": "LA",
+        "state_name": "Louisiana",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "NJ",
+        "state_name": "New Jersey",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "WA",
+        "state_name": "Washington",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "NE",
+        "state_name": "Nebraska",
+        "presentation_count": 1
+      },
+      {
+        "state_code": "MI",
+        "state_name": "Michigan",
+        "presentation_count": 1
+      }
+    ]
+  },
+  "IsoSpark": {
+    "count": 0,
+    "countries": [],
+    "states": []
+  },
+  "IsoLight": {
+    "count": 0,
+    "countries": [],
+    "states": []
+  },
   "Beacon + Bruker": {
     "count": 3,
     "countries": [
@@ -1471,12 +1850,12 @@
     ]
   },
   "Bruker": {
-    "count": 54,
+    "count": 52,
     "countries": [
       {
         "country": "United States",
         "iso3": "USA",
-        "presentation_count": 96
+        "presentation_count": 94
       },
       {
         "country": "United Kingdom",
@@ -1528,7 +1907,7 @@
       {
         "state_code": "WA",
         "state_name": "Washington",
-        "presentation_count": 23
+        "presentation_count": 21
       },
       {
         "state_code": "CA",

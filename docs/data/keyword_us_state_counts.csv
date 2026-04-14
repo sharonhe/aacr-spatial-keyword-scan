@@ -1,11 +1,11 @@
 keyword,state_code,state_name,presentation_count
 Xenium,TX,Texas,35
 Xenium,CA,California,31
-Xenium,NY,New York,24
+Xenium,NY,New York,25
 Xenium,NC,North Carolina,11
 Xenium,MD,Maryland,11
 Xenium,MA,Massachusetts,9
-Xenium,CT,Connecticut,7
+Xenium,CT,Connecticut,8
 Xenium,VA,Virginia,6
 Xenium,PA,Pennsylvania,4
 Xenium,MO,Missouri,4
@@ -13,8 +13,8 @@ Xenium,WA,Washington,3
 Xenium,FL,Florida,3
 Xenium,MN,Minnesota,3
 Xenium,IN,Indiana,3
+Xenium,IL,Illinois,3
 Xenium,DC,District of Columbia,2
-Xenium,IL,Illinois,2
 Xenium,OR,Oregon,2
 Xenium,NJ,New Jersey,2
 Xenium,GA,Georgia,1
@@ -30,21 +30,21 @@ Xenium + 5K,VA,Virginia,6
 Xenium + 5K,MD,Maryland,4
 Xenium + 5K,WA,Washington,3
 Xenium + 5K,MA,Massachusetts,3
+Xenium + 5K,IL,Illinois,3
 Xenium + 5K,PA,Pennsylvania,2
 Xenium + 5K,IN,Indiana,2
-Xenium + 5K,IL,Illinois,2
 Xenium + 5K,NC,North Carolina,2
 Xenium + 5K,TN,Tennessee,1
 Xenium + 5K,CA,California,1
 Xenium + 5K,FL,Florida,1
 Xenium + 5K,DC,District of Columbia,1
-Visium,CA,California,38
+Visium,CA,California,39
 Visium,TX,Texas,26
 Visium,MD,Maryland,13
 Visium,IL,Illinois,12
 Visium,PA,Pennsylvania,11
 Visium,FL,Florida,10
-Visium,NY,New York,8
+Visium,NY,New York,9
 Visium,VA,Virginia,6
 Visium,OH,Ohio,6
 Visium,MA,Massachusetts,5
@@ -67,13 +67,13 @@ Visium,AL,Alabama,1
 Chromium,MD,Maryland,6
 Chromium,CA,California,3
 Chromium,NY,New York,2
-Chromium,IN,Indiana,1
 Chromium,NM,New Mexico,1
+Chromium,IN,Indiana,1
 Chromium,TX,Texas,1
 Chromium,MI,Michigan,1
 Chromium,MN,Minnesota,1
 10X,CA,California,50
-10X,NY,New York,30
+10X,NY,New York,32
 10X,MD,Maryland,25
 10X,TX,Texas,22
 10X,MA,Massachusetts,13
@@ -87,12 +87,12 @@ Chromium,MN,Minnesota,1
 10X,NJ,New Jersey,5
 10X,OH,Ohio,5
 10X,CT,Connecticut,4
+10X,IL,Illinois,4
 10X,MO,Missouri,3
 10X,MI,Michigan,3
 10X,GA,Georgia,3
 10X,DC,District of Columbia,3
 10X,NM,New Mexico,3
-10X,IL,Illinois,3
 10X,VA,Virginia,3
 10X,AL,Alabama,2
 10X,TN,Tennessee,2
@@ -100,8 +100,8 @@ Chromium,MN,Minnesota,1
 10X,LA,Louisiana,1
 10X,VT,Vermont,1
 CosMx,CA,California,18
-CosMx,WA,Washington,13
 CosMx,MA,Massachusetts,13
+CosMx,WA,Washington,12
 CosMx,TX,Texas,12
 CosMx,NY,New York,10
 CosMx,GA,Georgia,10
@@ -128,21 +128,21 @@ GeoMx,MD,Maryland,5
 GeoMx,CT,Connecticut,3
 GeoMx,NH,New Hampshire,2
 GeoMx,NC,North Carolina,2
-GeoMx,WA,Washington,2
 GeoMx,TN,Tennessee,1
 GeoMx,SC,South Carolina,1
 GeoMx,VA,Virginia,1
 GeoMx,MI,Michigan,1
 GeoMx,FL,Florida,1
 GeoMx,OH,Ohio,1
-GeoMx,UT,Utah,1
 GeoMx,LA,Louisiana,1
-MerFISH,CA,California,4
+GeoMx,UT,Utah,1
+GeoMx,WA,Washington,1
 MerFISH,MA,Massachusetts,4
+MerFISH,CA,California,4
 MerFISH,FL,Florida,3
 MerFISH,TX,Texas,2
 MerFISH,CT,Connecticut,1
-nCounter,WA,Washington,9
+nCounter,WA,Washington,8
 nCounter,MD,Maryland,6
 nCounter,FL,Florida,5
 nCounter,AL,Alabama,5
@@ -153,8 +153,8 @@ nCounter,KS,Kansas,2
 nCounter,VA,Virginia,1
 CellScape,MO,Missouri,4
 CellScape,CA,California,2
-CellScape,IL,Illinois,1
 CellScape,WA,Washington,1
+CellScape,IL,Illinois,1
 PaintScape,CA,California,5
 PaintScape,NY,New York,1
 PaintScape,WA,Washington,1
@@ -165,10 +165,47 @@ G4X,MD,Maryland,2
 G4X,MN,Minnesota,2
 G4X,NY,New York,1
 G4X,PA,Pennsylvania,1
+TCR Discovery,MA,Massachusetts,5
+TCR Discovery,TX,Texas,2
+CAR Library,NC,North Carolina,2
+CAR Library,CO,Colorado,1
+CAR Library,PA,Pennsylvania,1
+Antibody Discovery,DE,Delaware,3
+Antibody Discovery,MA,Massachusetts,3
+Antibody Discovery,FL,Florida,3
+Antibody Discovery,CA,California,2
+Antibody Discovery,MN,Minnesota,1
+Antibody Discovery,TX,Texas,1
+Antibody Discovery,PA,Pennsylvania,1
+Cell Line Development,CA,California,1
+Cellanome,NY,New York,3
+Cellanome,CA,California,2
+Cellanome,TX,Texas,1
+CellCelector,DE,Delaware,1
+Incucyte,TX,Texas,20
+Incucyte,CA,California,11
+Incucyte,MO,Missouri,8
+Incucyte,MN,Minnesota,7
+Incucyte,IL,Illinois,7
+Incucyte,MD,Maryland,7
+Incucyte,OH,Ohio,6
+Incucyte,PA,Pennsylvania,5
+Incucyte,AZ,Arizona,5
+Incucyte,NY,New York,4
+Incucyte,MA,Massachusetts,3
+Incucyte,NC,North Carolina,2
+Incucyte,DE,Delaware,2
+Incucyte,CO,Colorado,2
+Incucyte,VA,Virginia,2
+Incucyte,LA,Louisiana,1
+Incucyte,NJ,New Jersey,1
+Incucyte,WA,Washington,1
+Incucyte,NE,Nebraska,1
+Incucyte,MI,Michigan,1
 Beacon + Bruker,CA,California,2
 Beacon + Bruker,WI,Wisconsin,1
 Beacon + Bruker,WA,Washington,1
-Bruker,WA,Washington,23
+Bruker,WA,Washington,21
 Bruker,CA,California,13
 Bruker,TX,Texas,13
 Bruker,MO,Missouri,9

@@ -2,22 +2,22 @@
   {
     "country": "United States",
     "iso3": "USA",
-    "presentation_count": 675
+    "presentation_count": 803
+  },
+  {
+    "country": "South Korea",
+    "iso3": "KOR",
+    "presentation_count": 81
   },
   {
     "country": "Germany",
     "iso3": "DEU",
-    "presentation_count": 76
+    "presentation_count": 78
   },
   {
     "country": "Japan",
     "iso3": "JPN",
     "presentation_count": 70
-  },
-  {
-    "country": "South Korea",
-    "iso3": "KOR",
-    "presentation_count": 69
   },
   {
     "country": "Canada",
@@ -27,22 +27,27 @@
   {
     "country": "United Kingdom",
     "iso3": "GBR",
-    "presentation_count": 36
-  },
-  {
-    "country": "Italy",
-    "iso3": "ITA",
-    "presentation_count": 25
+    "presentation_count": 39
   },
   {
     "country": "France",
     "iso3": "FRA",
-    "presentation_count": 22
+    "presentation_count": 26
+  },
+  {
+    "country": "Italy",
+    "iso3": "ITA",
+    "presentation_count": 26
+  },
+  {
+    "country": "China",
+    "iso3": "CHN",
+    "presentation_count": 25
   },
   {
     "country": "Australia",
     "iso3": "AUS",
-    "presentation_count": 21
+    "presentation_count": 22
   },
   {
     "country": "Spain",
@@ -52,12 +57,7 @@
   {
     "country": "Switzerland",
     "iso3": "CHE",
-    "presentation_count": 17
-  },
-  {
-    "country": "China",
-    "iso3": "CHN",
-    "presentation_count": 16
+    "presentation_count": 18
   },
   {
     "country": "Taiwan",
@@ -70,14 +70,14 @@
     "presentation_count": 9
   },
   {
+    "country": "Finland",
+    "iso3": "FIN",
+    "presentation_count": 6
+  },
+  {
     "country": "Netherlands",
     "iso3": "NLD",
     "presentation_count": 5
-  },
-  {
-    "country": "Finland",
-    "iso3": "FIN",
-    "presentation_count": 4
   },
   {
     "country": "India",
@@ -100,6 +100,11 @@
     "presentation_count": 2
   },
   {
+    "country": "Brazil",
+    "iso3": "BRA",
+    "presentation_count": 2
+  },
+  {
     "country": "Mexico",
     "iso3": "MEX",
     "presentation_count": 2
@@ -117,11 +122,6 @@
   {
     "country": "Ireland",
     "iso3": "IRL",
-    "presentation_count": 1
-  },
-  {
-    "country": "Brazil",
-    "iso3": "BRA",
     "presentation_count": 1
   }
 ]

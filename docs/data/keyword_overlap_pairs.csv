@@ -1,40 +1,44 @@
 left,right,shared_presentations,jaccard_pct
-Visium,10X,41,23.7
-Xenium,10X,34,18.6
+Visium,10X,41,23.6
+Xenium,10X,34,18.5
 Xenium,Visium,26,16.0
 Xenium,Xenium + 5K,26,27.1
-CosMx,Bruker,20,24.1
-nCounter,Bruker,8,12.1
+CosMx,Bruker,19,23.5
 Chromium,10X,7,5.6
 Xenium,CosMx,7,5.1
 Xenium + 5K,10X,7,5.0
 Xenium + 5K,Visium,7,6.2
-CellScape,Bruker,5,9.1
-Visium,CosMx,5,3.6
+nCounter,Bruker,7,10.9
+CellScape,Bruker,5,9.4
+Visium,CosMx,5,3.7
 10X,CosMx,4,2.4
-CosMx,GeoMx,4,5.0
-GeoMx,Bruker,4,4.7
-PaintScape,Bruker,4,7.4
-10X,Bruker,3,1.7
-Beacon + Bruker,Bruker,3,5.6
+CosMx,GeoMx,4,5.1
+PaintScape,Bruker,4,7.7
+10X,Bruker,3,1.8
+Beacon + Bruker,Bruker,3,5.8
+GeoMx,Bruker,3,3.6
 Visium,GeoMx,3,2.4
-Xenium,GeoMx,3,2.3
+Xenium,GeoMx,3,2.4
 CosMx,CellScape,2,3.8
-CosMx,nCounter,2,3.0
-Xenium + 5K,CosMx,2,2.7
+Xenium + 5K,CosMx,2,2.8
 Xenium + 5K,GeoMx,2,3.4
 10X,CellScape,1,0.8
 10X,G4X,1,0.8
 10X,GeoMx,1,0.6
 10X,MerFISH,1,0.8
+Antibody Discovery,Beacon + Bruker,1,4.0
+Antibody Discovery,Bruker,1,1.4
+Antibody Discovery,CellCelector,1,4.3
 Chromium,CosMx,1,1.7
 Chromium,MerFISH,1,5.9
 CosMx,Beacon + Bruker,1,2.0
 CosMx,G4X,1,1.7
-CosMx,MerFISH,1,1.8
-CosMx,PaintScape,1,1.9
+CosMx,MerFISH,1,1.9
+CosMx,PaintScape,1,2.0
+CosMx,nCounter,1,1.5
 GeoMx,G4X,1,2.2
 GeoMx,nCounter,1,1.9
+Incucyte,Bruker,1,1.1
 Visium,Bruker,1,0.7
 Visium,Chromium,1,1.0
 Visium,G4X,1,1.0

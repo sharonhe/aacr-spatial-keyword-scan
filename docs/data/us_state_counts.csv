@@ -1,39 +1,40 @@
 state_code,state_name,presentation_count
-CA,California,132
-TX,Texas,84
-NY,New York,61
-MA,Massachusetts,50
-MD,Maryland,39
-WA,Washington,35
-PA,Pennsylvania,31
-NC,North Carolina,24
-FL,Florida,19
-OH,Ohio,17
-MO,Missouri,15
+CA,California,149
+TX,Texas,105
+NY,New York,70
+MA,Massachusetts,61
+MD,Maryland,46
+PA,Pennsylvania,38
+WA,Washington,34
+NC,North Carolina,28
+MO,Missouri,23
+OH,Ohio,23
+IL,Illinois,22
+FL,Florida,22
+MN,Minnesota,18
+VA,Virginia,16
+NJ,New Jersey,15
 GA,Georgia,14
-NJ,New Jersey,14
-VA,Virginia,14
-IL,Illinois,14
-CT,Connecticut,13
-MN,Minnesota,10
-MI,Michigan,9
+CT,Connecticut,14
+AZ,Arizona,14
+MI,Michigan,10
 TN,Tennessee,9
-AZ,Arizona,9
 NM,New Mexico,8
 OR,Oregon,8
 IN,Indiana,7
 AL,Alabama,7
+CO,Colorado,7
 NH,New Hampshire,6
+DE,Delaware,6
 DC,District of Columbia,5
-CO,Colorado,4
+LA,Louisiana,3
 KS,Kansas,3
 WI,Wisconsin,2
 HI,Hawaii,2
 MS,Mississippi,2
-LA,Louisiana,2
 SC,South Carolina,1
 ME,Maine,1
 ND,North Dakota,1
 UT,Utah,1
+NE,Nebraska,1
 VT,Vermont,1
-DE,Delaware,1
