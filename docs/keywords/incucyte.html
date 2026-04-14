@@ -1,0 +1,957 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Incucyte Presentations</title>
+  <script>
+    (() => {
+      const savedTheme = localStorage.getItem("aacr-theme");
+      document.documentElement.dataset.theme = savedTheme === "dark" ? "dark" : "light";
+    })();
+  </script>
+  <style>
+    :root {
+      --blue: #1673c6;
+      --blue-dark: #0f4d8b;
+      --ink: #1f2d3d;
+      --ink-strong: #203246;
+      --muted: #5f7187;
+      --line: #c9d8e6;
+      --panel: #f8fbfe;
+      --accent: #4fae6a;
+      --paper: #ffffff;
+      --page-border: #d8e4ef;
+      --thead-bg: #f4f9fd;
+      --row-bg: #ffffff;
+      --empty-bg: #f7fafc;
+      --control-bg: #ffffff;
+      --hero-bg: linear-gradient(135deg, #1d7bd0 0%, #0f5a9f 100%);
+      --page-shadow: 0 20px 50px rgba(15, 77, 139, 0.08);
+      --body-bg:
+        radial-gradient(circle at top left, rgba(22, 115, 198, 0.12), transparent 28%),
+        linear-gradient(180deg, #f5fbff 0%, #ffffff 22%);
+    }
+
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --blue: #7fc3ff;
+      --blue-dark: #d8ebff;
+      --ink: #e5eef8;
+      --ink-strong: #f6fbff;
+      --muted: #9eb2c6;
+      --line: #2a3d51;
+      --panel: #122031;
+      --accent: #7ad09a;
+      --paper: #0d1723;
+      --page-border: #223447;
+      --thead-bg: #152537;
+      --row-bg: #0f1c2b;
+      --empty-bg: #101a26;
+      --control-bg: #132131;
+      --hero-bg: linear-gradient(135deg, #174f83 0%, #0d2f4f 100%);
+      --page-shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+      --body-bg:
+        radial-gradient(circle at top left, rgba(22, 115, 198, 0.18), transparent 30%),
+        linear-gradient(180deg, #08111a 0%, #0d1723 24%);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--body-bg);
+    }
+
+    .page {
+      width: min(1600px, calc(100vw - 48px));
+      margin: 32px auto 48px;
+      background: var(--paper);
+      border: 1px solid var(--page-border);
+      box-shadow: var(--page-shadow);
+    }
+
+    .hero {
+      padding: 28px 36px 22px;
+      background: var(--hero-bg);
+      color: #fff;
+    }
+
+    .eyebrow {
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    h1 {
+      margin: 8px 0 0;
+      font-size: 40px;
+      line-height: 1.05;
+      font-weight: 700;
+    }
+
+    .content {
+      padding: 24px 36px 40px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 42px;
+      margin-bottom: 26px;
+    }
+
+    .summary-item {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .summary-item strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 28px 0 10px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 28px;
+      color: var(--blue-dark);
+    }
+
+    .section-title .count {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: var(--panel);
+    }
+
+    thead th {
+      text-align: left;
+      font-size: 13px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--blue-dark);
+      padding: 12px 10px;
+      border-top: 2px solid var(--line);
+      border-bottom: 2px solid var(--line);
+      background: var(--thead-bg);
+    }
+
+    tbody td {
+      vertical-align: top;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+      line-height: 1.4;
+      background: var(--row-bg);
+    }
+
+    th:nth-child(1), td:nth-child(1) { width: 10%; }
+    th:nth-child(2), td:nth-child(2) { width: 23%; }
+    th:nth-child(3), td:nth-child(3) { width: 19%; }
+    th:nth-child(4), td:nth-child(4) { width: 33%; }
+    th:nth-child(5), td:nth-child(5) { width: 15%; }
+
+    .title {
+      font-weight: 700;
+      color: var(--ink-strong);
+      margin-bottom: 4px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .mono {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      white-space: nowrap;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .mini-note {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .day-group + .day-group {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+    }
+
+    .slot-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      align-items: start;
+    }
+
+    .schedule-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 18px 0 24px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .schedule-controls label {
+      font-size: 13px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .schedule-controls select {
+      min-width: 220px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: var(--control-bg);
+      color: var(--ink);
+      font: inherit;
+    }
+
+    .control-buttons {
+      display: flex;
+      gap: 8px;
+      margin-left: auto;
+    }
+
+    .ghost-button {
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--control-bg);
+      color: var(--blue-dark);
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .slot-card {
+      min-width: 0;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      overflow: hidden;
+    }
+
+    .slot-card.empty {
+      background: var(--empty-bg);
+    }
+
+    .slot-summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 16px;
+    }
+
+    .slot-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .slot-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .slot-header h3 {
+      margin: 0;
+      color: var(--blue-dark);
+      font-size: 22px;
+    }
+
+    .slot-meta {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+      text-align: right;
+    }
+
+    .slot-caret {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 84px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--control-bg);
+      color: var(--blue-dark);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: 1px solid var(--line);
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 1000;
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--control-bg);
+      color: var(--blue-dark);
+      box-shadow: var(--page-shadow);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .theme-toggle:hover {
+      transform: translateY(-1px);
+    }
+
+    .theme-toggle svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    details[open] .slot-caret::before {
+      content: "Hide";
+    }
+
+    details:not([open]) .slot-caret::before {
+      content: "Show";
+    }
+
+    .slot-summary-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .slot-body {
+      padding: 0 16px 16px;
+    }
+
+    .schedule-table {
+      margin-top: 8px;
+    }
+
+    .schedule-table th:nth-child(1), .schedule-table td:nth-child(1) { width: 12%; }
+    .schedule-table th:nth-child(2), .schedule-table td:nth-child(2) { width: 34%; }
+    .schedule-table th:nth-child(3), .schedule-table td:nth-child(3) { width: 19%; }
+    .schedule-table th:nth-child(4), .schedule-table td:nth-child(4) { width: 13%; }
+    .schedule-table th:nth-child(5), .schedule-table td:nth-child(5) { width: 22%; }
+
+    @media (max-width: 1100px) {
+      .summary-grid,
+      .slot-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .control-buttons {
+        margin-left: 0;
+      }
+
+      .slot-header,
+      .slot-summary-right {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .slot-meta {
+        text-align: left;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        width: auto;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" title="Switch color theme"></button>
+  <div class="page">
+    
+    <div class="hero">
+      <div class="eyebrow">AACR 2026</div>
+      <h1>Incucyte Presentations</h1>
+    </div>
+    <div class="content">
+      
+    <table>
+      <thead>
+        <tr>
+          <th>Abstract #</th>
+          <th>Authors</th>
+          <th>Affiliation</th>
+          <th>Title / Session</th>
+          <th>Products</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td class="mono">135</td>
+  <td>Emily Phillips, Lyra Morina, Lynne Marsala, Wilbur Song, Michelle Becker-Hapak, Yoojin Ahn, Sushanth Pureti, Elizabeth Juarez Diaz, Sadia Afrin, Pamela Wong, Jennifer Tran, Joseph Rueve, Allison Burdi, Nancy Marin, Melissa Marie Berrien-Elliott, Martin Felices, Jeffrey S. Miller, Todd A. Fehniger</td>
+  <td>Washington University School of Medicine in St. Louis, St. Louis, MO | Masonic Cancer Center, Minneapolis, MN | University of Minnesota, Minneapolis, MN</td>
+  <td>
+    <div class="title">Memory-like NK cell targeting to CD123 and CD33 improves killing of acute myeloid leukemia</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Alternative Cell Type and in Situ Cell Therapies</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/3684">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">269</td>
+  <td>Frances Rocamora, Matthew S. Kim, Barbara S. Perez, Vivian Le, Trinidad Kellemen, Enaaya Mahmood, Dan Kaufman</td>
+  <td>UC San Diego School of Medicine, La Jolla, CA | UC San Francisco, San Francisco, CA</td>
+  <td>
+    <div class="title">Functionalization of virus-like particles for improved in vivo immune cell engineering</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Gene and Vector-Based Therapy</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10426">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">360</td>
+  <td>Sewon Park, Youwon Lee, Jae-Sang Hwang, Ju-hyeon Lee, Mi Ran Yun, Byoung Chul Cho</td>
+  <td>Yonsei New Il Han Institute for Integrative Cancer Research, Seoul, Korea, Republic of | Yonsei University College of Medicine SBSI, Seoul, Korea, Republic of | Yonsei University College of Medicine, Seoul, Korea, Republic of</td>
+  <td>
+    <div class="title">TM4SF1 as a promising ADC target for KRAS-mutated cancers</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Mechanism-Guided Development of Targeted Cancer Therapies</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/4356">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">449</td>
+  <td>Mohamed Shanshal, Lin Yang, Liyi Geng, Wendy Nevala, Aaron S. Mansfield, Bharath Wootla, Konstantinos Leventakos, Kyle Korshavn, Svetomir N. Markovic</td>
+  <td>Mayo Clinic Cancer Center Minnesota, Rochester, MN | Research Associate, Dept. of Lab. Med. and Pathology, Mayo Clinic College of Medicine, Rochester, MN | Mayo Clinic, Rochester, MN | Mayo Clinic College of Medicine and Science, Rochester, MN | Mayo Clinic Business Development, Mayo Clinic Cancer Center Minnesota, Rochester, MN</td>
+  <td>
+    <div class="title">Albumin-based DLL3-targeted nano-immunoconjugates of SN38 preserve potency and demonstrate high-affinity DLL3 binding in small cell lung cancer</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Novel Therapeutics and Drug Targets 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/5667">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">574</td>
+  <td>Vandana Mohan, Sweaty Koul, Mousa Vatanmakanian, Santosh Lamichhane, Praveen K. Jaiswal, Hari K. Koul</td>
+  <td>LSU-LCMC Cancer Center, LSUHSC, School of Medicine, New Orleans, LA</td>
+  <td>
+    <div class="title">Exploring the therapeutic vulnerability of castration-resistant prostate cancer via Hippo-YAP/TAZ-TEAD signaling</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Tumor Cell Plasticity, Microenvironment, and Stress-Response Pathways</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/1875">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">828</td>
+  <td>Indhujah Thevarajan, Maria Osuna, Bareun Kim, Jihan K. Osborne</td>
+  <td>Pharmacology, University of Texas Southwestern Medical Center, Dallas, TX</td>
+  <td>
+    <div class="title">Investigation of developmental LIN28/let-7/SOX2/SOX9 feedback loop during cell migration and metastasis</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Stem Cell Plasticity and Lineage Reprogramming in Cancer</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/716">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">967</td>
+  <td>Atieh Hajirahimkhan, Alexander D. Eremin, Elizabeth Bartom, Saktimayee M. Roy, Daniel M. Watterson, Susan E. Clare, Seema A. Khan</td>
+  <td>Northwestern University - Chicago, Chicago, IL | Northwestern University, Evansville, IL | Associate Professor, Surgery, Northwestern University Feinberg School of Medicine, Chicago, IL | Professor of Surgery &amp; Bluhm Family Professor of Cancer Research, Robert H. Lurie Comp. Cancer Center of Northwestern University, Chicago, IL</td>
+  <td>
+    <div class="title">Prevention and interception of triple-negative breast cancer and its metastasis to the brain with brain-permeant L024</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Experimental Chemoprevention and Interception: Data and Tools</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/6779">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">1288</td>
+  <td>Daniela A. Garcia, Chandler Heupel, Hannah Palacios, Eloise Dray</td>
+  <td>Greehey Children’s Cancer Research Institute, The University of Texas Health Science Center at San Antonio, San Antonio, TX | Neuroscience, Developmental, and Regenerative Sciences, The University of Texas at San Antonio, San Antonio, TX | Department of Biochemistry and Structural Biology, The University of Texas Health Science Center at San Antonio, San Antonio, TX</td>
+  <td>
+    <div class="title">The protein phosphatase EYA4 is a druggable target for the treatment of breast cancer</div>
+    <div class="meta">4/19/2026 4:20:00 PM | Advances in Cancer Research</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/10477">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">1527</td>
+  <td>Megan C. Purl, Alexandria Shick, Annaiz Grimm, Hind Abdallat, Cyrus J. Sholevar, Makan Karimzadeh, Natalie M. Liu, Jinhwan Kim, Cameron E. Gaskill, Edward J. Kim, Arta M. Monjazeb, William J. Murphy, Robert J. Canter, Sean J. Judge</td>
+  <td>Department of Surgery, UC Davis Medical Center, Sacramento, CA | Department of Surgery and Biomedical Engineering, UC Davis Medical Center, Sacramento, CA | Department of Internal Medicine, UC Davis Medical Center, Sacramento, CA | Department of Radiation Oncology, UC Davis Medical Center, Sacramento, CA | Department of Dermatology, UC Davis Medical Center, Sacramento, CA</td>
+  <td>
+    <div class="title">Conformal external beam radiation increases B7-H3 expression in a murine model of pancreatic cancer liver metastases and promotes CAR T cell function</div>
+    <div class="meta">4/20/2026 9:00:00 AM | CAR T Cell Targets and TME Reprogramming</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/5198">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">1538</td>
+  <td>Kayla Klatt, Daniel Feinberg, Reshmi Parameswaran</td>
+  <td>Case Western Reserve University School of Medicine, Cleveland, OH</td>
+  <td>
+    <div class="title">Oncostatin-M ligand-based CAR T-cell therapy targets and eliminates lung adenocarcinoma</div>
+    <div class="meta">4/20/2026 9:00:00 AM | CAR T Cell Targets and TME Reprogramming</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/5205">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">1726</td>
+  <td>Bora Lee, Hyeon Ji Park, Byeong Min Yoo, Hangil Kim, Junyoung Kim, Arim Seo, Youngeun Hong, Donghoon Yeom, Yong-Gyu Son, Jaehyun Eom, Byungje Sung, Jinhyung Ahn, Jinwon Jung, Weon-Kyoo You, Sang Hoon Lee</td>
+  <td>ABL Bio Inc., Seoul, Korea, Republic of</td>
+  <td>
+    <div class="title">NEOK002 (ABL209): Redesigning an EGFRxMUC1 bispecific TOP1i ADC with promising anti-tumor activity and enhanced therapeutic window</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Antibody-Drug Conjugates and Linker Engineering 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/5398">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">1798</td>
+  <td>Ariana Elizabeth Nelson, Abantika Chakraborty, David Bell, Victor J. Collins, Ali Mokhtar Mahmoud, Ying Wu, SOPHIA VARRIANO, Arnulfo Mendoza, Sameer Issaq, Parthav Jailwala, Jack F. Shern, Ernesto Suárez, Joseph Ivanic, Christine M. Heske</td>
+  <td>National Cancer Institute Center for Cancer Research | Pediatric Oncology Branch, National Cancer Institute, National Institutes of Health, Bethesda, MD | Advanced Biomedical Computational Science, Frederick National Laboratory for Cancer Research, Frederick, MD | Advanced Biomedical Computational Science, Frederick National Laboratory for Cancer Research,, Frederick, MD | , National Cancer Institute, National Institutes of Health, Bethesda, MD | National Cancer Institute, Bethesda, MD | Pediatric Oncology,NIH, NCI-CCR, Bethesda, MD | Pediatric Oncology Branch, National Cancer Institute, National Institutes of Health,, Bethesda, MD</td>
+  <td>
+    <div class="title">Nicotinamide phosphoribosyltransferase (NAMPT) inhibitor-resistant rhabdomyosarcoma (RMS) models exhibit alterations in metabolic and genomic profiles</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Mechanisms of Drug Resistance 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/4868">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">2291</td>
+  <td>Wylie K. Watlington, Sophia Colmenares, James Carter, Sophie Vincoff, Andrew A. Armstrong, Daniel Reker, Jason A. Somarelli</td>
+  <td>Duke University, Durham, NC | University of Pennsylvania, Philadelphia, PA</td>
+  <td>
+    <div class="title">Exposure to plastic additives suggests potential androgen receptor agonism in prostate cancer</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Hormone Receptor Signaling and Therapeutic Targeting</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/1913">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">2294</td>
+  <td>Kia Vaalavirta, Hanna Rauhala, Tapio Visakorpi</td>
+  <td>Faculty of Medicine and Health Technology, Tampere University, Tampere, Finland</td>
+  <td>
+    <div class="title">Examining the effect of second-generation antiandrogens in androgen receptor-overexpressing prostate cancer cells</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Hormone Receptor Signaling and Therapeutic Targeting</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/1916">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">2512</td>
+  <td>Thomas Quinn, Anand Panigrahy, Dina ElHarouni, Mariam A. Oumelloul, Smitha Yerrum, Kin-Hoe Chow, Sonam Bhatia, Keith L. Ligon</td>
+  <td>DFCI/Harvard Medical School, Boston, MA | École Polytechnique Fédérale de Lausanne, Lausanne, Switzerland | Assistant Professor of Path., Dept. of Med. Onc., Dana-Farber Cancer Institute, Boston, MA</td>
+  <td>
+    <div class="title">A real time imaging based functional precision medicine (FPM) assay for glioblastoma</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Data-Driven Approaches to Precision Oncology</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/3740">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">2654</td>
+  <td>Chenggang Li, Jun Yao, Yongsheng Nie, YANG QIU, Haiqing Hua</td>
+  <td>Duality Biologics Ltd, Shanghai, China | Dualitybio Inc., Wilmington, DE</td>
+  <td>
+    <div class="title">DB-1421, an optimized EGFR/MUC1 bispecific ADC, exhibits improved tumor selectivity, promising efficacy and safety in preclinical studies</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Targeted Antigen Therapies and Immunity</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/4036">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">2657</td>
+  <td>Chenggang Li, Lei Yi, Jun Yao, Yang Qiu, Haiqing Hua</td>
+  <td>Duality Biologics Ltd, Shanghai, China | Dualitybio Inc., Wilmington, DE | Duality Biologics, Basking Ridge, NJ</td>
+  <td>
+    <div class="title">DB-1326, a novel dual-payload TA-MUC1-directed antibody-drug conjugate, shows potent antitumor efficacy in pre-clinical tumor model</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Targeted Antigen Therapies and Immunity</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/4047">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">2961</td>
+  <td>Jian Feng, Fuyin Zhao, Xinlong Dong, Aaron Li Hua, Chenpan Nie, Dorrith Verstegen, Caitlyn Hulsebosch, Wubin Qian, Sheng Guo, Jessie (Jingjing) Wang, Lenno Krenning, Marrit Putker, Ludovic Bourre, Peng Wang, Jun Zhou</td>
+  <td>Crown Bioscience, Inc., San Diego, CA, United States, San Diego, CA</td>
+  <td>
+    <div class="title">Developing ADC-resistant tumor models for efficacy evaluation of next-generation anticancer therapies</div>
+    <div class="meta">4/20/2026 2:00:00 PM | Drug Resistance 1: Antibodies and ADCs</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/5019">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">3423</td>
+  <td>Erin E. Trachet, Liqiang Zhang, Kari Kotlarczyk, Gregg Hirschfeld, Damaris Diaz, Paul Gonzales</td>
+  <td>Scientific Engagement, TD2 Oncology, Scottsdale, AZ | Preclinical Bioanalysis, TD2 Oncology, Scottsdale, AZ | Preclinical In Vitro, TD2 Oncology, Scottsdale, AZ | Preclinical In Vivo, TD2 Oncology, Scottsdale, AZ | Preclinical, TD2 Oncology, Scottsdale, AZ</td>
+  <td>
+    <div class="title">Integrating PDX and PDX-derived organoid platforms to enhance translational drug discovery in breast cancer</div>
+    <div class="meta">4/20/2026 2:00:00 PM | In Vitro Models 1: 2D and 3D</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/7242">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">3619</td>
+  <td>Bineet Narayan, Yariswamy Manjunath, Nagabhhishek Sirpu Natesh, Chayanee Chanpanich, Parsa Ghadermazi, BLAKE ARCIGA, Samarth Kansara, Ajay Tosh, John Ulbrich, Mary Kate Grossmann, Hwang Jiwon, Van Nguyen, Vikas Satyananda, Jussuf T. Kaifi, Joshua Chan, Satyanarayana Rachagani</td>
+  <td>University of Missouri, Columbia, MO | University of Missouri - Columbia, Columbia, MO | Biomedical engineering, Colorado State University, Fort collins, CO | Biomedical Engineering, Colorado State University, Fort Collins, CO | Nextgen PHI, University of Missouri, Columbia, Columbia, MO | Dept. Veterinary Medicine and Surgery, University of Missouri - Columbia, Columbia, MO | Nextgen PHI, University of Missouri, Columbia, MO | Pathology, University of Missouri, Columbia, MO | Surgery, University of Missouri, Columbia, MO</td>
+  <td>
+    <div class="title">Red cabbage juice reprograms the gut microbiome and enhances butyrate production to prevent colorectal cancer</div>
+    <div class="meta">4/20/2026 2:00:00 PM | Metabolism and Microbiome in Cancer Initiation and Prevention</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/949">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">3707</td>
+  <td>Muzamil Y. Want, Richa Kapoor, David Groff, Keelan O’Reilly, Liron Grossmann, Alvin Farrel, Rebeca A. Ventura, Peiyao Li, Quinlen Marshall, Jenny pogoriler, Daniel Martinez, Matt Beasley, Ben Kiefel, Mark Yarmarkovich, John Maris</td>
+  <td>Division of Oncology and Center for Childhood Cancer Research, Children&#x27;s Hospital of Philadelphia, Philadelphia, PA | University of Pennsylvania, Philadelphia, PA | Children&#x27;s Hospital of Philadelphia, Philadelphia, PA | Myrio Tx, Melbourne, Australia | NYU Langone Health, New York, NY</td>
+  <td>
+    <div class="title">Durable remission of high-risk and refractory neuroblastoma by PHOX2B derived peptide-HLA directed CAR T cells: An IND enabling study</div>
+    <div class="meta">4/20/2026 2:00:00 PM | Adoptive Cell Therapy 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9364">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">4389</td>
+  <td>Giovanna Manga Guimaraes, Nadia Bayou, Mara Serena Serafini, Eleonora Nicolò, Letizia Pontolillo, Brenno Pastò, Nassima Messali, Kiran Sahu, Paraskevi Giannakakou, Gabriela Coeli Menezes Evangelista, Olivier Elemento, Carolina Reduzzi, José Alexandre Barbuto, Massimo Cristofanilli</td>
+  <td>Department of Medicine, Weill Cornell Medicine, New York, NY | Biomedical Sciences Institute, University of São Paulo, Sao Paulo, Brazil | Systems and Computational Biomedicine, Weill Cornell Medicine, New York, NY</td>
+  <td>
+    <div class="title">Establishing a CTC-driven workflow for mRNA-transfected moDC production in personalized cancer immunotherapy</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Vaccine Platforms and Target Identification</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/5324">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">4676</td>
+  <td>Ahmed M. Elshazly, Nayyerehalsadat Hosseini, Senthil K. Radhakrishnan</td>
+  <td>Virginia Commonwealth University, Richmond, VA</td>
+  <td>
+    <div class="title">Therapeutic exploitation of AUTAC in hematologic malignancies with cardiac protection</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Cell Death Regulation and Therapeutic Resistance in Cancer</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/6111">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">4742</td>
+  <td>Madison Aust, Abbas Jawadwala, Ephraim Jeremiah Gardner, Surendra Gulla, Tej K. Sharma, Remi M. Adelaiye-Ogala</td>
+  <td>University at Buffalo, State University of New York, Buffalo, NY</td>
+  <td>
+    <div class="title">Investigating the crosstalk between metabolic reprogramming and epigenetic modifications in bone metastatic prostate cancer</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Metabolic Features of Thoracic and Urologic Cancers</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9174">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">5194</td>
+  <td>Hila Shaim, Cheryl Jiang, Mayra Shanley, Hind Rafei, Jiajinlong Kang, Yu-Sung Hsu, Huihui Fan, Patrick Zhang, Rafet Basar, May Daher, Qingnan Liang, Donghai Xiong, Joy Gumin, Viswakalyan Kotapali, Corry Jones, April Gilbert, Luis Muniz-Feliciano, Gary M. Deyter, Pinaki Banerjee, Madison Moore, Ye Ethan Li, Dexing Fang, Sunil Acharya, Inci Biederstädt, Hong Jiang, Nadima Uprety, Rejeena Shrestha, Byron Jia, Alexander Biederstadt, Paul Daniel, Maliha Munir, Mecit Kaplan, Mayela Mendt, Oluwatosin Banjo, Vakul Mohanty, Jinzhuang Dou, Xianli Jiang, Elizabeth Shpall, Ken Chen, Abhinav Jain, Frederick F. Lang, Candelaria Gomez-Manzano, Juan Fueyo, Katayoun Rezvani</td>
+  <td>UT MD Anderson Cancer Center, Houston, TX | Asst. Professor, Dept. of Bioinformatics &amp; Computational Bio., UT MD Anderson Cancer Center, Houston, TX | Dept. of Biochem. &amp; Molec. Biology, UT MD Anderson Cancer Center, Houston, TX</td>
+  <td>
+    <div class="title">Oncolytic virus infected tumors drive AP-1 and IRF signaling in NK cells to sustain anti tumor activity</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Adoptive Cell Therapy 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9397">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">5197</td>
+  <td>Maliha Munir, Madison Moore, Silvia Tiberti, Rafet Basar, Byron Jia, Leen Kheirbek, Nadima Uprety, Francia Reyes Silva, Rejeena Shrestha, Ana K. Nunez Cortes, Mayra Shanley, Sunil Acharya, Jeong-Min Park, Bin Liu, Pinaki Banerjee, Paul Lin, Donghai Xiong, Enli Liu, Alia Ghrayeb, Eyal Gottlieb, Elizabeth Joan Shpall, Katayoun Rezvani, May Daher</td>
+  <td>UT MD Anderson Cancer Center, Houston, TX | Molecular and Cellular Oncology, UT MD Anderson Cancer Center, Houston, TX | Professor of Medicine, Dept. of Stem Cell Transplant &amp; Cell Therapy, UT MD Anderson Cancer Center, Houston, TX</td>
+  <td>
+    <div class="title">Metabolically supercharged NK cells engineered with adenoviral E4ORF-1</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Adoptive Cell Therapy 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9401">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">5199</td>
+  <td>Xingliang Guo, Nadima Uprety, Rejeena Shrestha, Francia Reyes Silva, Sunil Acharya, Bijender Kumar, Bin Liu, Dexing Fang, Bingqian Hu, Sha Wang, May Daher, Ana K. Nunez Cortes, Corry Jones, LaTretta Harris, Vernikka Woods, Jerrell E. Scott, April Gilbert, Cornelio Santibanez, Katayoun Rezvani, Rafet Basar</td>
+  <td>Department of Stem Cell Transplantation and Cellular Therapy, The University of Texas MD Anderson Cancer Center, Houston, TX | Institute for Cell Therapy Discovery and Innovation, The University of Texas MD Anderson Cancer Center, Houston, TX | Division of Hematology Oncology, VCU Massey Comprehensive Cancer Center, Richmond, VA</td>
+  <td>
+    <div class="title">uPAR-targeting CAR-NK cells enhance cytotoxicity against acute myeloid leukemia</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Adoptive Cell Therapy 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9404">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">5203</td>
+  <td>Inci Cevher Zeytin, Che-Hsing Li, David de la Cerda, Leidy Diana Caraballo Galva, Andras Attila Heczey</td>
+  <td>Ben Towne Center for Childhood Cancer and Blood Disorders Research, Seattle Children&#x27;s Research Institute, Seattle, WA | Pediatrics - Oncology, Baylor College of Medicine, Houston, TX</td>
+  <td>
+    <div class="title">Phosphorylated IRF7 enhances antitumor activity of GPC3-targeted CAR T cells in solid tumors</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Adoptive Cell Therapy 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9408">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">5206</td>
+  <td>Silvia Tiberti, Madison Moore, Maliha Munir, Merve Dede, Byron Jia, Leen Kheirbek, Rejeena Shrestha, Nadima Uprety, Jeong-Min Park, Vernikka Woods, Corry Jones, Patrick Zhang, Dexing Fang, Huihui Fan, Maria Laura Centomo, Francia Reyes Silva, Mayra Shanley, Sunil Acharya, Ye Ethan Li, Bin Liu, Pinaki Banerjee, Rafet Basar, Katayoun Rezvani, May Daher</td>
+  <td>UT MD Anderson Cancer Center, Houston, TX | UT MD Anderson Cancer Center, Houston, TX, Houston, TX | UT MD Anderson Cancer Center, houston, TX</td>
+  <td>
+    <div class="title">Mitochondrial remodeling sustains CAR-NK stemness for superior tumor control</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Adoptive Cell Therapy 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9413">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">5393</td>
+  <td>Silvia Ferrati, Emilien Loeuillard, Susannah L. Hewitt, Matthew Peter Rausch, Bijan Etemad-Gilbertson, Jamie Strand, Riale Gilligan, Katalin Kis-Toth, Yasmin Hashambhoy-Ramsay, Emma Wang, Leena Gandhi, Tatiana Novobrantseva</td>
+  <td>NextPoint Therapeutics, Cambridge, MA</td>
+  <td>
+    <div class="title">Preclinical efficacy and safety profile of NPX125, a novel ADC targeting B7-H7</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Redefining Targeted Therapy: Bispecific T-Cell Engagers and Antibody-Drug Conjugates 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9664">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">5573</td>
+  <td>Parthasarathy Seshacharyulu, Shobhit Lall, Sushanta Halder, Sakthivel Muniyan, Zahraa Wajih Alsafwani, Ramakanth Chirravuri-Venkata, Moorthy P. Ponnusamy, Surinder K. Batra</td>
+  <td>Biochemistry and Molecular Biology, University of Nebraska Medical Center, Omaha, NE</td>
+  <td>
+    <div class="title">Novel ASPORIN/CRABP2 axis drives cell-state plasticity from adenocarcinoma to neuroendocrine-like prostate cancer</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Oncogenic Pathways and Cancer Immunity</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/1378">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">5691</td>
+  <td>Rakesh Kumar Arya, Mia Sand, Sahab Ram Dewala, Can Aydogdu, Gabriela M. Diaz, Christopher Weight, Riccardo Autorino, Abhishek Chakraborty, Jacob M. Knorr, Joseph M. K. Irudayaraj, Laura Bukavina</td>
+  <td>Center for Immunotherapy and Precision Immuno-oncology, Cleveland Clinic Lerner Research Institute, Cleveland, OH | Department of Bioengineering,, University of Illinois Urbana-Champaign, Champaign, IL | Glickman Urological and Kidney Institute, Cleveland Clinic, Cleveland, OH | Department of Cancer Biology, Cleveland Clinic Research, Cleveland, OH</td>
+  <td>
+    <div class="title">Per and polyfluoroalkyl substances (PFAS) promote proliferation and migration in genetically distinct kidney cancer cell lines</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Mechanisms of Anticancer Drug Action</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/3474">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">5697</td>
+  <td>Kenzie Wells, Kimberly Q. McKinney, Kaitlyn H. Smith, Poornima Gourabathini, Jeffrey Huo, Erin M. Trovillion, Javier Oesterheld</td>
+  <td>Atrium Health Wake Forest Baptist Comprehensive Cancer Center, Charlotte, NC</td>
+  <td>
+    <div class="title">EZH2 inhibition upregulates GD2 to enhance anti-GD2 immunotherapy in Ewing sarcoma</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Mechanisms of Anticancer Drug Action</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/3514">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">5731</td>
+  <td>Lautaro Rivera, Carla Toro, Juan Manuel Fernandez, Jochen Maurer, Maria Teresita Branham</td>
+  <td>IHEM-CONICET, Mendoza, Argentina | FCM-UNCuyo, Mendoza, Argentina | RWTH Aachen University Hospital, Aachen, Germany</td>
+  <td>
+    <div class="title">ID4 maintains undifferentiated and immune-evasive states in aggressive triple-negative breast cancer and represents a novel druggable vulnerability</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Molecular Targets 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/4706">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">6412</td>
+  <td>Ziwei Zhang, Yu Zhou, Peichuan Zhang, Zhonghua Yan</td>
+  <td>WuXi AppTec, Shanghai, China</td>
+  <td>
+    <div class="title">Development of a high-throughput assay platform for the screening of selective integrin inhibitors in cancer</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Screening and Technology Advances for Probe and Drug Discovery</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/6497">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">6984</td>
+  <td>Lakshmi Kadkol, Eric Gauchat, Maria Jose Godoy Calderon, Manali Patwardhan, VK Gadi</td>
+  <td>Medicine, University of Illinois at Chicago, Chicago, IL | Cancer Center, University of Illinois at Chicago, Chicago, IL</td>
+  <td>
+    <div class="title">Modeling late-stage ovarian cancer and validating oncolytic adenoviral tools for transgene expression and tumor monitoring</div>
+    <div class="meta">4/22/2026 9:00:00 AM | Novel Models of Immunotherapy Response</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/1422">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">7046</td>
+  <td>Sara Peltola, Kari J. Kurppa, Klaus Elenius</td>
+  <td>MediCity Research Laboratories and Institute of Biomedicine, University of Turku, Turku, Finland</td>
+  <td>
+    <div class="title">BRAF/EGFR inhibition induces ERBB2 as a targetable tolerance mechanism in BRAF-mutant colorectal cancer</div>
+    <div class="meta">4/22/2026 9:00:00 AM | Drug Resistance 2: Tyrosine Kinase Inhibitors</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/4978">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">7047</td>
+  <td>Floriane Braye, Inmaculada Alonso Garcia, Vincent Boursier, Ludovic Bigot, Kristi Beshiri, FRANCESCO FACCHINETTI, Jean-Paul Thiery, Benjamin Besse, Ken A. Olaussen, Luc Friboulet</td>
+  <td>INSERM U981 (Gustave Roussy), Villejuif, France | Gustave Roussy, Villejuif, France | Inserm U981, Institute Gustave Roussy, Villejuif, France | INSERM U981 (Gustave Roussy), villejuif, France</td>
+  <td>
+    <div class="title">Characterization of TKI-induced drug-tolerant persister cells from patient-derived cell lines</div>
+    <div class="meta">4/22/2026 9:00:00 AM | Drug Resistance 2: Tyrosine Kinase Inhibitors</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/4979">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">7063</td>
+  <td>Jessica Catarine Frutuoso do Nascimento, Wendi Quinn O&#x27;Neill, Quintin Pan</td>
+  <td>Case Western Reserve University School of Medicine, Cleveland, OH | University Hospitals Cleveland Medical Center, Cleveland, OH</td>
+  <td>
+    <div class="title">p300 bromodomain inhibitors impair cell proliferation by inducing senescence in HPV positive head and neck squamous cell carcinoma</div>
+    <div class="meta">4/22/2026 9:00:00 AM | Epigenetic Modulators 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/8682">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">7528</td>
+  <td>John Rauch, Jasmine Trigg, Kirsty McBain, Jonathan Bezenah, Libuse Oupicka, Richard Lister, Laura Skerlos</td>
+  <td>Sartorius, Ann Arbor, MI | Sartorius, Royston, United Kingdom</td>
+  <td>
+    <div class="title">Utilizing confocal live-cell imaging for evaluating therapeutic efficacy and toxicity in complex oncology models</div>
+    <div class="meta">4/22/2026 9:00:00 AM | Tumor Models and Assays: In Vitro, In Vivo</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/7193">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">7745</td>
+  <td>Myungja Ro, Seung Min Yang, Youngtaek Kim, Min-Hak Lee, Eun Ji Lee, JuHyeon Lee, Mi Ran Yun, Ji-Eun Park, Jiyea Choi, Hyesun Lee, Sung Ho Kim, Heung Tae Kim, Byoung Chul Cho</td>
+  <td>Yonsei New Il Han Institute for Integrative Lung Cancer Research, Seoul, Korea, Republic of | Department of Research, Yonsei Biomedical Research Institute, Seoul, Korea, Republic of | Yonsei University College of Medicine, Seoul, Korea, Republic of | JEUK Institute for Cancer Research, JEUK Co., Gumi, Korea, Republic of | ImmuneOncia Therapeutics, Inc., Gyeonggi-do, Korea, Republic of</td>
+  <td>
+    <div class="title">EGFR-TKI enhances anti-CD47 antibody-mediated macrophage phagocytosis in EGFR-mutant non-small cell lung cancer</div>
+    <div class="meta">4/22/2026 9:00:00 AM | Immune Response to Therapies</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9528">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">7813</td>
+  <td>Wendong Zhang, Adil Bahadir, Zhongting Zhang, Yianhua Yi, Zhaohui Xu, Simon Olivares, Harjeet Singh, AMER NAJJAR, Caterina Longo, Xin Zhou, Jasbir Kaur, Hiroki Torikai, Chunhua Shi, Jonathan Gill, Michael Roth, Tim Heffernan, Richard Gorlick</td>
+  <td>UT MD Anderson Cancer Center, Houston, TX | Oncology Research for Biologics and Immunotherapy Translation (ORBIT), MD Anderson Cancer Center, Houston, TX</td>
+  <td>
+    <div class="title">Antitumor activity of a B7-H3 antibody-drug conjugate in osteosarcoma patient-derived and metastatic models</div>
+    <div class="meta">4/22/2026 9:00:00 AM | Immunotherapies in Pediatric Cancers</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/1782">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">7883</td>
+  <td>Caterina Longo, Zhongting Zhang, Wendong Zhang, Yifei Wang, Adil Bahadir, Yi Yanhua, Zhaohui Xu, Xin Zhou, Michael Roth, Jonathan Gill, Richard Gorlick</td>
+  <td>The University of Texas MD Anderson Cancer Center, Houston, TX | UT MD Anderson Cancer Center, Houston, TX | The University of Texas MD Anderson Cancer Center</td>
+  <td>
+    <div class="title">Surface CADM1 (Cell Adhesion Molecule 1) abundance predicts payload delivery and in-vitro efficacy of CADM1-GGFG-Exatecan ADC in osteosarcoma, aiding optimal candidate selection</div>
+    <div class="meta">4/22/2026 9:00:00 AM | Targeted Therapies, Predispositions, and Survivorship in Pediatric Cancers</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/1808">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+<tr>
+  <td class="mono">LB492</td>
+  <td>Wanqi Fang, Bo Cheng, Steven J. Pastor, Michael J. Zobel, Tania Porras, Hong-Wei Wu, Taneesh Kondapally, Chintan Parekh, Anestis Tsakaridis, Ivana Barbaric, Shahab Asgharzadeh, John M. Maris, Miller Huang</td>
+  <td>Keck School of Medicine of USC, Los Angeles, CA | Children&#x27;s Hospital of Philadelphia, Philadelphia, PA | Children&#x27;s Hospital Los Angeles, Los Angeles, CA | City of Hope Cancer Center, Duarte, CA | The University of Sheffield, Sheffield, United Kingdom</td>
+  <td>
+    <div class="title">Chromosome 17q genes BIRC5, CDC6, IGF2BP1, and TK1 are oncogenic dependencies in MYCN-amplified neuroblastoma</div>
+    <div class="meta">4/22/2026 9:00:00 AM | Late-Breaking Research: Tumor Biology 3</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/11692">Open abstract</a></div>
+  </td>
+  <td>Incucyte</td>
+</tr>
+      </tbody>
+    </table>
+    
+      <div class="footer-note">
+        44 presentations matched the keyword Incucyte.
+      </div>
+    </div>
+    
+  </div>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const toggle = document.getElementById("theme-toggle");
+      const sunIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"></path></svg>';
+      const moonIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.2A8.5 8.5 0 1 1 8.8 4 7 7 0 0 0 20 15.2z"></path></svg>';
+
+      function applyTheme(theme) {
+        root.dataset.theme = theme;
+        localStorage.setItem("aacr-theme", theme);
+        toggle.innerHTML = theme === "dark" ? sunIcon : moonIcon;
+        toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+        window.dispatchEvent(new CustomEvent("aacr-theme-change", { detail: { theme } }));
+      }
+
+      toggle.addEventListener("click", () => {
+        applyTheme(root.dataset.theme === "dark" ? "light" : "dark");
+      });
+
+      applyTheme(root.dataset.theme === "dark" ? "dark" : "light");
+    })();
+  </script>
+</body>
+</html>

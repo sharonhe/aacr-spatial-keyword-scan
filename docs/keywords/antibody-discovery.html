@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Antibody Discovery Presentations</title>
+  <script>
+    (() => {
+      const savedTheme = localStorage.getItem("aacr-theme");
+      document.documentElement.dataset.theme = savedTheme === "dark" ? "dark" : "light";
+    })();
+  </script>
+  <style>
+    :root {
+      --blue: #1673c6;
+      --blue-dark: #0f4d8b;
+      --ink: #1f2d3d;
+      --ink-strong: #203246;
+      --muted: #5f7187;
+      --line: #c9d8e6;
+      --panel: #f8fbfe;
+      --accent: #4fae6a;
+      --paper: #ffffff;
+      --page-border: #d8e4ef;
+      --thead-bg: #f4f9fd;
+      --row-bg: #ffffff;
+      --empty-bg: #f7fafc;
+      --control-bg: #ffffff;
+      --hero-bg: linear-gradient(135deg, #1d7bd0 0%, #0f5a9f 100%);
+      --page-shadow: 0 20px 50px rgba(15, 77, 139, 0.08);
+      --body-bg:
+        radial-gradient(circle at top left, rgba(22, 115, 198, 0.12), transparent 28%),
+        linear-gradient(180deg, #f5fbff 0%, #ffffff 22%);
+    }
+
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --blue: #7fc3ff;
+      --blue-dark: #d8ebff;
+      --ink: #e5eef8;
+      --ink-strong: #f6fbff;
+      --muted: #9eb2c6;
+      --line: #2a3d51;
+      --panel: #122031;
+      --accent: #7ad09a;
+      --paper: #0d1723;
+      --page-border: #223447;
+      --thead-bg: #152537;
+      --row-bg: #0f1c2b;
+      --empty-bg: #101a26;
+      --control-bg: #132131;
+      --hero-bg: linear-gradient(135deg, #174f83 0%, #0d2f4f 100%);
+      --page-shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+      --body-bg:
+        radial-gradient(circle at top left, rgba(22, 115, 198, 0.18), transparent 30%),
+        linear-gradient(180deg, #08111a 0%, #0d1723 24%);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--body-bg);
+    }
+
+    .page {
+      width: min(1600px, calc(100vw - 48px));
+      margin: 32px auto 48px;
+      background: var(--paper);
+      border: 1px solid var(--page-border);
+      box-shadow: var(--page-shadow);
+    }
+
+    .hero {
+      padding: 28px 36px 22px;
+      background: var(--hero-bg);
+      color: #fff;
+    }
+
+    .eyebrow {
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    h1 {
+      margin: 8px 0 0;
+      font-size: 40px;
+      line-height: 1.05;
+      font-weight: 700;
+    }
+
+    .content {
+      padding: 24px 36px 40px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 42px;
+      margin-bottom: 26px;
+    }
+
+    .summary-item {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .summary-item strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 28px 0 10px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 28px;
+      color: var(--blue-dark);
+    }
+
+    .section-title .count {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: var(--panel);
+    }
+
+    thead th {
+      text-align: left;
+      font-size: 13px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--blue-dark);
+      padding: 12px 10px;
+      border-top: 2px solid var(--line);
+      border-bottom: 2px solid var(--line);
+      background: var(--thead-bg);
+    }
+
+    tbody td {
+      vertical-align: top;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+      line-height: 1.4;
+      background: var(--row-bg);
+    }
+
+    th:nth-child(1), td:nth-child(1) { width: 10%; }
+    th:nth-child(2), td:nth-child(2) { width: 23%; }
+    th:nth-child(3), td:nth-child(3) { width: 19%; }
+    th:nth-child(4), td:nth-child(4) { width: 33%; }
+    th:nth-child(5), td:nth-child(5) { width: 15%; }
+
+    .title {
+      font-weight: 700;
+      color: var(--ink-strong);
+      margin-bottom: 4px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .mono {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      white-space: nowrap;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .mini-note {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .day-group + .day-group {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+    }
+
+    .slot-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      align-items: start;
+    }
+
+    .schedule-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 18px 0 24px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .schedule-controls label {
+      font-size: 13px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .schedule-controls select {
+      min-width: 220px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: var(--control-bg);
+      color: var(--ink);
+      font: inherit;
+    }
+
+    .control-buttons {
+      display: flex;
+      gap: 8px;
+      margin-left: auto;
+    }
+
+    .ghost-button {
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--control-bg);
+      color: var(--blue-dark);
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .slot-card {
+      min-width: 0;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      overflow: hidden;
+    }
+
+    .slot-card.empty {
+      background: var(--empty-bg);
+    }
+
+    .slot-summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 16px;
+    }
+
+    .slot-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .slot-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .slot-header h3 {
+      margin: 0;
+      color: var(--blue-dark);
+      font-size: 22px;
+    }
+
+    .slot-meta {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+      text-align: right;
+    }
+
+    .slot-caret {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 84px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--control-bg);
+      color: var(--blue-dark);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: 1px solid var(--line);
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 1000;
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--control-bg);
+      color: var(--blue-dark);
+      box-shadow: var(--page-shadow);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .theme-toggle:hover {
+      transform: translateY(-1px);
+    }
+
+    .theme-toggle svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    details[open] .slot-caret::before {
+      content: "Hide";
+    }
+
+    details:not([open]) .slot-caret::before {
+      content: "Show";
+    }
+
+    .slot-summary-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .slot-body {
+      padding: 0 16px 16px;
+    }
+
+    .schedule-table {
+      margin-top: 8px;
+    }
+
+    .schedule-table th:nth-child(1), .schedule-table td:nth-child(1) { width: 12%; }
+    .schedule-table th:nth-child(2), .schedule-table td:nth-child(2) { width: 34%; }
+    .schedule-table th:nth-child(3), .schedule-table td:nth-child(3) { width: 19%; }
+    .schedule-table th:nth-child(4), .schedule-table td:nth-child(4) { width: 13%; }
+    .schedule-table th:nth-child(5), .schedule-table td:nth-child(5) { width: 22%; }
+
+    @media (max-width: 1100px) {
+      .summary-grid,
+      .slot-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .control-buttons {
+        margin-left: 0;
+      }
+
+      .slot-header,
+      .slot-summary-right {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .slot-meta {
+        text-align: left;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        width: auto;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" title="Switch color theme"></button>
+  <div class="page">
+    
+    <div class="hero">
+      <div class="eyebrow">AACR 2026</div>
+      <h1>Antibody Discovery Presentations</h1>
+    </div>
+    <div class="content">
+      
+    <table>
+      <thead>
+        <tr>
+          <th>Abstract #</th>
+          <th>Authors</th>
+          <th>Affiliation</th>
+          <th>Title / Session</th>
+          <th>Products</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td class="mono">311</td>
+  <td>Wenlin Ren, Siwen Wang, An Ouyang, Spencer Chiang, Yu Sun</td>
+  <td>ACROBiosystems Co., Ltd., Beijing, China | ACROBiosystems Inc., Newark, DE</td>
+  <td>
+    <div class="title">Integrated strategies for producing functional recombinant proteins to advance autoimmune disease therapeutics</div>
+    <div class="meta">4/19/2026 2:00:00 PM | Innovative Therapeutic Modalities and Translational Platforms</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/5549">Open abstract</a></div>
+  </td>
+  <td>Antibody Discovery</td>
+</tr>
+<tr>
+  <td class="mono">478</td>
+  <td>Marie-Claire Phélipot, Eric Chabrol, Julie Lichière, Alice Aymard, alexandre Baagnolini, Nadjiba Marès, Cécile Lemoigne, Matthieu Tassa, Sophie Mesnard, Caroline Huber, Ester Morgado, Marion Seillier, Jacques Fieschi</td>
+  <td>Mimabs, Marseille, France</td>
+  <td>
+    <div class="title">Implementation of single B-cell screening to select antibodies in one day based on affinity and multiple binding properties</div>
+    <div class="meta">4/19/2026 2:00:00 PM | RNA, Gene and Cell Therapies, and Enabling Assay Technologies</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/5612">Open abstract</a></div>
+  </td>
+  <td>Beacon; Antibody Discovery</td>
+</tr>
+<tr>
+  <td class="mono">1630</td>
+  <td>Mary Mathieu</td>
+  <td>Cartography Biosciences, Inc., South San Francisco, CA</td>
+  <td>
+    <div class="title">Preclinical investigation of a novel tumor associated antigen, cb02, as a bispecific t-cell engager in cancer</div>
+    <div class="meta">4/20/2026 9:00:00 AM | T Cell Engagers 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/4536">Open abstract</a></div>
+  </td>
+  <td>Antibody Discovery</td>
+</tr>
+<tr>
+  <td class="mono">1655</td>
+  <td>Yingjie Liu, Peter Hsueh, An Ouyang, Spencer Chiang, YuehChun Hsieh</td>
+  <td>ACROBiosystems Co., Ltd., Beijing, China | ACROBiosystems Inc., Newark, DE</td>
+  <td>
+    <div class="title">Building a recombinant Factor C assay to enable sustainable endotoxin testing in antibody development</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Antibody Technologies and Platforms 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/5480">Open abstract</a></div>
+  </td>
+  <td>Antibody Discovery</td>
+</tr>
+<tr>
+  <td class="mono">1678</td>
+  <td>Meimei Yin, Xiaoming Miao, Yang Zheng, Jingbo Ding, Jun Liu, Fang Zhang, Zhongyao Ma, Letian Kuai, Wenji Su</td>
+  <td>WuXi AppTec, Shanghai, China</td>
+  <td>
+    <div class="title">Integrated ADC platform: From discovery to functional evaluation</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Antibody-Drug Conjugates and Linker Engineering 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/5350">Open abstract</a></div>
+  </td>
+  <td>Antibody Discovery</td>
+</tr>
+<tr>
+  <td class="mono">1681</td>
+  <td>Jade Hsu, Wenjiao Zhang, Jun Du, Zhuolin Li, Yifu Zhang, Yanfei Han, Chengzhang Shang, Yi Yang</td>
+  <td>Biocytogen, Waltham, MA, MA</td>
+  <td>
+    <div class="title">RenLite® transgenic mice provide a high-quality platform for accelerating the development of fully human bispecific antibodies or ADCs worldwide</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Antibody-Drug Conjugates and Linker Engineering 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/5353">Open abstract</a></div>
+  </td>
+  <td>Antibody Discovery</td>
+</tr>
+<tr>
+  <td class="mono">1728</td>
+  <td>Kyoung-Ho Pyo, Seong-Hyun Park, Dongsop Lee, Haneol Kim, Younggyu Kong, Younggeun Lee, Hojin Yeom, Sowon Aum, Sun Hee Park, Huijo Oh, Cheyeon Kim, Hyeonseok Jin, Aera Lee, Hojeong Hong, Ju Hwan Kim, Hyungseok Choi, Mi-Kyung Kim, Taedong Han</td>
+  <td>AbTis Co., Ltd, Yongin, Korea, Republic of | Dong-A ST Research Headquarter, Yongin, Korea, Republic of</td>
+  <td>
+    <div class="title">Overcoming target heterogeneity in gastric cancer with an eKiH-engineered CLDN18.2×HER2 bispecific ADC</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Antibody-Drug Conjugates and Linker Engineering 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/5399">Open abstract</a></div>
+  </td>
+  <td>Antibody Discovery</td>
+</tr>
+<tr>
+  <td class="mono">2401</td>
+  <td>Spencer Chiang, Wenlin Ren, An Ouyang, Yu Sun, Xiaoli Li</td>
+  <td>ACROBiosystems Co., Ltd., Beijing, China | ACROBiosystems Inc., Newark, DE</td>
+  <td>
+    <div class="title">Developing a single B cell platform to accelerate antibody discovery and screening</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Antibodies, Antibody-Drug Conjugates, and Nucleic Acids</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/6478">Open abstract</a></div>
+  </td>
+  <td>Antibody Discovery; CellCelector</td>
+</tr>
+<tr>
+  <td class="mono">2402</td>
+  <td>Birthe Jessen-Park, Sarah-Jane Kellmann, Mateusz Putyrski, Manuel Cavada, Hanh Hanuschka, Christian Frisch, Achim Knappik, Francisco Ylera</td>
+  <td>Bio-Rad Laboratories, Hercules, CA | Bio-Rad Laboratories, Munich, Germany</td>
+  <td>
+    <div class="title">Rapid lead generation with the Pioneer Antibody Discovery Platform</div>
+    <div class="meta">4/20/2026 9:00:00 AM | Antibodies, Antibody-Drug Conjugates, and Nucleic Acids</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/6479">Open abstract</a></div>
+  </td>
+  <td>Antibody Discovery</td>
+</tr>
+<tr>
+  <td class="mono">3719</td>
+  <td>Yan Luo, Shaohua Guo, Yaqing Qie, Martha E. Gadd, Tanya Hundal, Hemant S. Murthy, Mohamed A. Kharfan-Dabaja, Hong Qin</td>
+  <td>Department of Cancer Biology, Mayo Clinic Florida, Jacksonville, FL | Regenerative Immunotherapy and CAR-T Translational Research Program, Mayo Clinic Florida, Jacksonville, FL | Division of Hematology and Medical Oncology, Department of Internal Medicine, Mayo Clinic Florida, Jacksonville, FL | Department of Immunology, Mayo Clinic, Rochester, MN</td>
+  <td>
+    <div class="title">From gene to bedside: Mayo Clinic’s first-in-house BAFF-R CAR-T</div>
+    <div class="meta">4/20/2026 2:00:00 PM | Adoptive Cell Therapy 1</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/9377">Open abstract</a></div>
+  </td>
+  <td>Antibody Discovery</td>
+</tr>
+<tr>
+  <td class="mono">4354</td>
+  <td>Hannah Flaherty Duncan, Shicheng Chen, Jia Cui, Tingxu Chen</td>
+  <td>KACTUS, Waltham, MA</td>
+  <td>
+    <div class="title">Harnessing VLPs and nanodiscs to unlock antibody discovery for challenging membrane proteins</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Monoclonal Antibodies and Antibody-Cytokine Platforms</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/5109">Open abstract</a></div>
+  </td>
+  <td>Antibody Discovery</td>
+</tr>
+<tr>
+  <td class="mono">4477</td>
+  <td>Lynda Chin, Ronan O&#x27;Hagan, Magali Pederzoli-Ribeil</td>
+  <td>Apricity Health, Inc., Houston, TX</td>
+  <td>
+    <div class="title">Resistance interception: Development of novel immune checkpoint inhibitor as dynamic combination with Anti-PD-1 to overcome resistance</div>
+    <div class="meta">4/21/2026 9:00:00 AM | Drug Combinations, Repurposing, and Differentiation</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/5645">Open abstract</a></div>
+  </td>
+  <td>Antibody Discovery</td>
+</tr>
+<tr>
+  <td class="mono">5535</td>
+  <td>Hayley Roth, Trevor Barnes, Daniel Rogers, Ileine Sanchez, Lewis Joe Stafford, Valerie Firers, Breanna Tyrell, Amelia M. Snyder, Kyle Doolan, Benjamin J. Doranz, Ross Chambers, Joseph B. Rucker</td>
+  <td>Integral Molecular, Philadelphia, PA</td>
+  <td>
+    <div class="title">GPRC5D multispecific antibodies: Engineering for affinity, cross-species reactivity, and bi/trispecific engagement in multiple myeloma</div>
+    <div class="meta">4/21/2026 2:00:00 PM | Bi- and Tri-Specific Antibody Therapies</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/4523">Open abstract</a></div>
+  </td>
+  <td>Antibody Discovery</td>
+</tr>
+<tr>
+  <td class="mono">6925</td>
+  <td>Daniel Montoro, Christoph Muus, Karthik Jagadeesh, Cecile Rouleau, Yueyue Shi, Sho Takahashi, James Meador, Ritika Singh</td>
+  <td>Research and Development, TenSixty Biosciences, Cambridge, MA</td>
+  <td>
+    <div class="title">Leveraging AI-enhanced multi-omics discovery of novel tumor-selective targets for ADC development</div>
+    <div class="meta">4/22/2026 9:00:00 AM | Antibody-Drug Conjugates 2</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/4292">Open abstract</a></div>
+  </td>
+  <td>Antibody Discovery</td>
+</tr>
+<tr>
+  <td class="mono"></td>
+  <td>William R. Sellers. Broad Institute, Cambridge, MA</td>
+  <td></td>
+  <td>
+    <div class="title">Chairperson</div>
+    <div class="meta">4/21/2026 10:15:00 AM | New Advances in Bispecific Antibody Development</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/311">Open abstract</a></div>
+  </td>
+  <td>Antibody Discovery</td>
+</tr>
+<tr>
+  <td class="mono"></td>
+  <td>William R. Sellers. Broad Institute, Cambridge, MA</td>
+  <td></td>
+  <td>
+    <div class="title">Chair Introduction</div>
+    <div class="meta">4/21/2026 10:15:00 AM | New Advances in Bispecific Antibody Development</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/12309">Open abstract</a></div>
+  </td>
+  <td>Antibody Discovery</td>
+</tr>
+<tr>
+  <td class="mono"></td>
+  <td>William R. Sellers. Broad Institute, Cambridge, MA</td>
+  <td></td>
+  <td>
+    <div class="title">The discovery of biparatopic antibodies and ADCs targeting FGFR2</div>
+    <div class="meta">4/21/2026 10:16:00 AM | New Advances in Bispecific Antibody Development</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/292">Open abstract</a></div>
+  </td>
+  <td>Antibody Discovery</td>
+</tr>
+<tr>
+  <td class="mono"></td>
+  <td>.</td>
+  <td></td>
+  <td>
+    <div class="title">Discussion</div>
+    <div class="meta">4/21/2026 10:36:00 AM | New Advances in Bispecific Antibody Development</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/12310">Open abstract</a></div>
+  </td>
+  <td>Antibody Discovery</td>
+</tr>
+<tr>
+  <td class="mono"></td>
+  <td>Nina E. Weisser. Zymeworks Inc., Vancouver, BC, Canada</td>
+  <td></td>
+  <td>
+    <div class="title">Unlocking novel biologies with bi- and trispecific antibodies: The importance of antibody format</div>
+    <div class="meta">4/21/2026 10:41:00 AM | New Advances in Bispecific Antibody Development</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/531">Open abstract</a></div>
+  </td>
+  <td>Antibody Discovery</td>
+</tr>
+<tr>
+  <td class="mono"></td>
+  <td>.</td>
+  <td></td>
+  <td>
+    <div class="title">Discussion</div>
+    <div class="meta">4/21/2026 11:01:00 AM | New Advances in Bispecific Antibody Development</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/12311">Open abstract</a></div>
+  </td>
+  <td>Antibody Discovery</td>
+</tr>
+<tr>
+  <td class="mono"></td>
+  <td>John Desjarlais. Xencor, Pasadena, CA</td>
+  <td></td>
+  <td>
+    <div class="title">CD3 and CD28 T cell engagers for solid tumors</div>
+    <div class="meta">4/21/2026 11:06:00 AM | New Advances in Bispecific Antibody Development</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/1246">Open abstract</a></div>
+  </td>
+  <td>Antibody Discovery</td>
+</tr>
+<tr>
+  <td class="mono"></td>
+  <td>.</td>
+  <td></td>
+  <td>
+    <div class="title">Discussion</div>
+    <div class="meta">4/21/2026 11:26:00 AM | New Advances in Bispecific Antibody Development</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/12312">Open abstract</a></div>
+  </td>
+  <td>Antibody Discovery</td>
+</tr>
+<tr>
+  <td class="mono"></td>
+  <td>.</td>
+  <td></td>
+  <td>
+    <div class="title">General Discussion</div>
+    <div class="meta">4/21/2026 11:31:00 AM | New Advances in Bispecific Antibody Development</div>
+    <div class="meta"><a href="https://www.abstractsonline.com/pp8/#!/21436/presentation/12313">Open abstract</a></div>
+  </td>
+  <td>Antibody Discovery</td>
+</tr>
+      </tbody>
+    </table>
+    
+      <div class="footer-note">
+        23 presentations matched the keyword Antibody Discovery.
+      </div>
+    </div>
+    
+  </div>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const toggle = document.getElementById("theme-toggle");
+      const sunIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"></path></svg>';
+      const moonIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.2A8.5 8.5 0 1 1 8.8 4 7 7 0 0 0 20 15.2z"></path></svg>';
+
+      function applyTheme(theme) {
+        root.dataset.theme = theme;
+        localStorage.setItem("aacr-theme", theme);
+        toggle.innerHTML = theme === "dark" ? sunIcon : moonIcon;
+        toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+        window.dispatchEvent(new CustomEvent("aacr-theme-change", { detail: { theme } }));
+      }
+
+      toggle.addEventListener("click", () => {
+        applyTheme(root.dataset.theme === "dark" ? "light" : "dark");
+      });
+
+      applyTheme(root.dataset.theme === "dark" ? "dark" : "light");
+    })();
+  </script>
+</body>
+</html>
